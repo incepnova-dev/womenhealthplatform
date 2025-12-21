@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import SignUpModal from "../../auth/SignUpModal";
 import SignInModal from "../../auth/SignInModal";
+import { getProperty } from "../../../languages";
 
-const TopBarCTA = ({ setMode }) => {
+const TopBarCTA = ({ setMode, language = "en" }) => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
 
@@ -42,17 +43,17 @@ const TopBarCTA = ({ setMode }) => {
           className="btn secondary"
           onClick={handleSignInClick}
         >
-          Sign In
+          {getProperty("button.signin", language)}
         </button>
         <button
           className="btn primary"
           onClick={handleSignUpClick}
         >
-          Sign UP
+          {getProperty("button.signup", language)}
         </button>
       </div>
-      <SignInModal isOpen={isSignInModalOpen} onClose={handleCloseSignInModal} />
-      <SignUpModal isOpen={isSignUpModalOpen} onClose={handleCloseSignUpModal} />
+      <SignInModal isOpen={isSignInModalOpen} onClose={handleCloseSignInModal} language={language} />
+      <SignUpModal isOpen={isSignUpModalOpen} onClose={handleCloseSignUpModal} language={language} />
     </>
   );
 };

@@ -1,0 +1,9 @@
+// Brand properties for Hindi
+
+const brandProperties = {
+  "brand.title": "नारीसंघ",
+  "brand.subtitle": "महिलाओं के समुदाय और देखभाल यात्राएं"
+};
+
+export default brandProperties;
+

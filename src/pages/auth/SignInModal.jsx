@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../../styles/auth/SignUpModal.css";
-import { getProperty } from "../../language/english";
+import { getProperty } from "../../languages";
 import wmhealthpic from "../../images/wmhealthpic.png";
 
-const SignInModal = ({ isOpen, onClose }) => {
+const SignInModal = ({ isOpen, onClose, language = "en" }) => {
   const [signInForm, setSignInForm] = useState({
     email: "",
     password: ""
@@ -46,29 +46,29 @@ const SignInModal = ({ isOpen, onClose }) => {
           {/* Form Section - Right Half */}
           <div className="signup-modal-form-section">
             <h2 className="wp-modal-title signup-modal-title">
-              {getProperty("signin.title")}
+              {getProperty("signin.title", language)}
             </h2>
 
             <form onSubmit={handleSignInSubmit} className="signup-modal-form">
               <div className="field signup-modal-field">
-                <label className="signup-modal-label">{getProperty("signin.email.label")}</label>
+                <label className="signup-modal-label">{getProperty("signin.email.label", language)}</label>
                 <input
                   type="email"
                   value={signInForm.email}
                   onChange={handleSignInChange("email")}
-                  placeholder={getProperty("signin.email.placeholder")}
+                  placeholder={getProperty("signin.email.placeholder", language)}
                   required
                   className="signup-modal-input"
                 />
               </div>
 
               <div className="field signup-modal-field">
-                <label className="signup-modal-label">{getProperty("signin.password.label")}</label>
+                <label className="signup-modal-label">{getProperty("signin.password.label", language)}</label>
                 <input
                   type="password"
                   value={signInForm.password}
                   onChange={handleSignInChange("password")}
-                  placeholder={getProperty("signin.password.placeholder")}
+                  placeholder={getProperty("signin.password.placeholder", language)}
                   required
                   className="signup-modal-input"
                 />
@@ -80,13 +80,13 @@ const SignInModal = ({ isOpen, onClose }) => {
                   onClick={onClose}
                   className="btn secondary small signup-modal-button-cancel"
                 >
-                  {getProperty("signin.button.cancel")}
+                  {getProperty("signin.button.cancel", language)}
                 </button>
                 <button
                   type="submit"
                   className="btn primary small signup-modal-button-submit"
                 >
-                  {getProperty("signin.button.submit")}
+                  {getProperty("signin.button.submit", language)}
                 </button>
               </div>
             </form>

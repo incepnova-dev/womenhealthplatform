@@ -1,13 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { getProperty } from "../../../languages";
 
-const BrandBlock = () => {
+const BrandBlock = ({ language = "en" }) => {
   return (
     <div className="brand-block">
-      <div className="brand-logo">NS</div>
+      <Link to="/narisangha" className="brand-logo-link">
+        <div className="brand-logo">NS</div>
+      </Link>
       <div className="brand-text">
-        <div className="brand-title">NariSangha</div>
+        <Link to="/narisangha" className="brand-title-link">
+          <div className="brand-title">{getProperty("brand.title", language)}</div>
+        </Link>
         <div className="brand-subtitle">
-          Women's communities &amp; care journeys
+          {getProperty("brand.subtitle", language)}
         </div>
       </div>
     </div>

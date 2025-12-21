@@ -1,0 +1,19 @@
+// Sign Up properties for Kannada
+
+const signupProperties = {
+  "signup.title": "ಸೈನ್ ಅಪ್",
+  "signup.fullName.label": "ಪೂರ್ಣ ಹೆಸರು",
+  "signup.fullName.placeholder": "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು ನಮೂದಿಸಿ",
+  "signup.email.label": "ಇಮೇಲ್",
+  "signup.email.placeholder": "ನಿಮ್ಮ ಇಮೇಲ್ ನಮೂದಿಸಿ",
+  "signup.password.label": "ಪಾಸ್ವರ್ಡ್",
+  "signup.password.placeholder": "ಪಾಸ್ವರ್ಡ್ ರಚಿಸಿ",
+  "signup.confirmPassword.label": "ಪಾಸ್ವರ್ಡ್ ದೃಢೀಕರಿಸಿ",
+  "signup.confirmPassword.placeholder": "ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ದೃಢೀಕರಿಸಿ",
+  "signup.button.cancel": "ರದ್ದುಮಾಡಿ",
+  "signup.button.submit": "ಸೈನ್ ಅಪ್",
+  "button.signup": "ಸೈನ್ ಅಪ್"
+};
+
+export default signupProperties;
+

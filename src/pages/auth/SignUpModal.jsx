@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../../styles/auth/SignUpModal.css";
-import { getProperty } from "../../language/english";
+import { getProperty } from "../../languages";
 import wmhealthpic from "../../images/wmhealthpic.png";
 
-const SignUpModal = ({ isOpen, onClose }) => {
+const SignUpModal = ({ isOpen, onClose, language = "en" }) => {
   const [signUpForm, setSignUpForm] = useState({
     name: "",
     email: "",
@@ -48,53 +48,53 @@ const SignUpModal = ({ isOpen, onClose }) => {
           {/* Form Section - Right Half */}
           <div className="signup-modal-form-section">
             <h2 className="wp-modal-title signup-modal-title">
-              {getProperty("signup.title")}
+              {getProperty("signup.title", language)}
             </h2>
 
             <form onSubmit={handleSignUpSubmit} className="signup-modal-form">
           <div className="field signup-modal-field">
-            <label className="signup-modal-label">{getProperty("signup.fullName.label")}</label>
+            <label className="signup-modal-label">{getProperty("signup.fullName.label", language)}</label>
             <input
               type="text"
               value={signUpForm.name}
               onChange={handleSignUpChange("name")}
-              placeholder={getProperty("signup.fullName.placeholder")}
+              placeholder={getProperty("signup.fullName.placeholder", language)}
               required
               className="signup-modal-input"
             />
           </div>
 
           <div className="field signup-modal-field">
-            <label className="signup-modal-label">{getProperty("signup.email.label")}</label>
+            <label className="signup-modal-label">{getProperty("signup.email.label", language)}</label>
             <input
               type="email"
               value={signUpForm.email}
               onChange={handleSignUpChange("email")}
-              placeholder={getProperty("signup.email.placeholder")}
+              placeholder={getProperty("signup.email.placeholder", language)}
               required
               className="signup-modal-input"
             />
           </div>
 
           <div className="field signup-modal-field">
-            <label className="signup-modal-label">{getProperty("signup.password.label")}</label>
+            <label className="signup-modal-label">{getProperty("signup.password.label", language)}</label>
             <input
               type="password"
               value={signUpForm.password}
               onChange={handleSignUpChange("password")}
-              placeholder={getProperty("signup.password.placeholder")}
+              placeholder={getProperty("signup.password.placeholder", language)}
               required
               className="signup-modal-input"
             />
           </div>
 
           <div className="field signup-modal-field">
-            <label className="signup-modal-label">{getProperty("signup.confirmPassword.label")}</label>
+            <label className="signup-modal-label">{getProperty("signup.confirmPassword.label", language)}</label>
             <input
               type="password"
               value={signUpForm.confirmPassword}
               onChange={handleSignUpChange("confirmPassword")}
-              placeholder={getProperty("signup.confirmPassword.placeholder")}
+              placeholder={getProperty("signup.confirmPassword.placeholder", language)}
               required
               className="signup-modal-input"
             />
@@ -106,13 +106,13 @@ const SignUpModal = ({ isOpen, onClose }) => {
               onClick={onClose}
               className="btn secondary small signup-modal-button-cancel"
             >
-              {getProperty("signup.button.cancel")}
+              {getProperty("signup.button.cancel", language)}
             </button>
             <button
               type="submit"
               className="btn primary small signup-modal-button-submit"
             >
-              {getProperty("signup.button.submit")}
+              {getProperty("signup.button.submit", language)}
             </button>
           </div>
         </form>

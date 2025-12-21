@@ -1,0 +1,19 @@
+// Sign Up properties for Hindi
+
+const signupProperties = {
+  "signup.title": "साइन अप करें",
+  "signup.fullName.label": "पूरा नाम",
+  "signup.fullName.placeholder": "अपना पूरा नाम दर्ज करें",
+  "signup.email.label": "ईमेल",
+  "signup.email.placeholder": "अपना ईमेल दर्ज करें",
+  "signup.password.label": "पासवर्ड",
+  "signup.password.placeholder": "एक पासवर्ड बनाएं",
+  "signup.confirmPassword.label": "पासवर्ड की पुष्टि करें",
+  "signup.confirmPassword.placeholder": "अपने पासवर्ड की पुष्टि करें",
+  "signup.button.cancel": "रद्द करें",
+  "signup.button.submit": "साइन अप करें",
+  "button.signup": "साइन अप करें"
+};
+
+export default signupProperties;
+

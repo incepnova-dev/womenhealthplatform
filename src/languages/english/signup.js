@@ -1,0 +1,19 @@
+// Sign Up properties for English
+
+const signupProperties = {
+  "signup.title": "Sign Up",
+  "signup.fullName.label": "Full Name",
+  "signup.fullName.placeholder": "Enter your full name",
+  "signup.email.label": "Email",
+  "signup.email.placeholder": "Enter your email",
+  "signup.password.label": "Password",
+  "signup.password.placeholder": "Create a password",
+  "signup.confirmPassword.label": "Confirm Password",
+  "signup.confirmPassword.placeholder": "Confirm your password",
+  "signup.button.cancel": "Cancel",
+  "signup.button.submit": "Sign Up",
+  "button.signup": "Sign UP"
+};
+
+export default signupProperties;
+

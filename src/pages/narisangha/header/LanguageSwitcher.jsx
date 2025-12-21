@@ -1,4 +1,5 @@
 import React from "react";
+import { languageOptions } from "../../../languages";
 
 const LanguageSwitcher = ({ language, setLanguage }) => {
   return (
@@ -10,10 +11,11 @@ const LanguageSwitcher = ({ language, setLanguage }) => {
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
         >
-          <option value="en">English</option>
-          <option value="hi">हिन्दी</option>
-          <option value="kn">ಕನ್ನಡ</option>
-          <option value="bn">বাংলা</option>
+          {languageOptions.map((option) => (
+            <option key={option.code} value={option.code}>
+              {option.name}
+            </option>
+          ))}
         </select>
       </div>
     </div>

@@ -54,6 +54,16 @@ header.top-bar {
   gap: 16px;
 }
 .brand-block { display: flex; align-items: center; gap: 10px; }
+.brand-logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  cursor: pointer;
+  transition: transform 0.16s ease-out;
+}
+.brand-logo-link:hover {
+  transform: scale(1.05);
+}
 .brand-logo {
   width: 34px; height: 34px; border-radius: 14px;
   background: radial-gradient(circle at 20% 0, #f97373, #9146ff);
@@ -63,6 +73,15 @@ header.top-bar {
   font-size: 18px; font-weight: 700;
 }
 .brand-text { display: flex; flex-direction: column; }
+.brand-title-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.16s ease-out;
+}
+.brand-title-link:hover {
+  color: var(--accent);
+}
 .brand-title { font-size: 18px; font-weight: 600; letter-spacing: 0.02em; }
 .brand-subtitle { font-size: 11px; color: var(--text-muted); }
 nav.nav-links { display: flex; gap: 18px; font-size: 13px; color: var(--text-soft); }
