@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import "../styles/womenchild.css";
 
 const WomenChildPage = () => {
+
+  const [language, setLanguage] = useState("en"); // en, hi, kn, bn
   // --- STATE MANAGEMENT ---
   const [activeModal, setActiveModal] = useState(null); // 'child', 'women', 'bone', 'oncology'
   const [activePatientTab, setActivePatientTab] = useState('upcoming-care');
@@ -196,6 +198,25 @@ const WomenChildPage = () => {
               Book a care pathway
             </button>
           </div>
+
+
+          {/* RIGHT: language selector */}
+          <div style={{ marginRight: "auto" }}>
+            <div className="wp-language-switcher">
+              <label htmlFor="wp-language-select">Language:</label>
+              <select
+                id="wp-language-select"
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+              >
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="bn">বাংলা</option>
+              </select>
+            </div>
+          </div>
+
         </div>
       </header>
 
@@ -1343,6 +1364,12 @@ const WomenChildPage = () => {
             <a>Product overview</a>
             <a>Partner with us</a>
             <a>Privacy & data security</a>
+            <a href="#start">Start</a>
+            <span>·</span>
+            <a href="#forum">Live Q&amp;A</a>
+            <span>·</span>
+            <a href="#safety">Safety</a>
+
           </div>
         </div>
       </footer>

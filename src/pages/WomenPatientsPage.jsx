@@ -578,6 +578,14 @@ const filteredGovernmentInitiatives =
         </div>
       </div>
     </div>
+
+    <div className="nav-cta">
+        <a className="nav-link" href="/community">For Communities</a>
+        <button className="nav-button">
+          <span className="icon">⟶</span>
+          Book a care pathway
+        </button>
+      </div>
  
 
 
@@ -1778,6 +1786,28 @@ const filteredGovernmentInitiatives =
           </div>
         </div>
       )}
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <div className="footer-dot"></div>
+            <span>Seva Health Network · Built for India's families and health systems</span>
+          </div>
+          <div className="footer-links">
+            <a>Product overview</a>
+            <a>Partner with us</a>
+            <a>Privacy & data security</a>
+            <a href="#start">Start</a>
+            <span>·</span>
+            <a href="#forum">Live Q&amp;A</a>
+            <span>·</span>
+            <a href="#safety">Safety</a>
+
+          </div>
+        </div>
+      </footer>
+
  
     </div>
   );

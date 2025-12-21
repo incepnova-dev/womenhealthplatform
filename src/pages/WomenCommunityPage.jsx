@@ -6,6 +6,8 @@ import "../styles/womencommunity.css"; // this file exists
 
 export default function WomenCommunityPage() {
   const [mode, setMode] = useState("create");
+
+
   const [createForm, setCreateForm] = useState({
     name: "",
     description: "",
@@ -22,6 +24,8 @@ export default function WomenCommunityPage() {
     platformPreference: "",
     anonymity: "ok"
   });
+
+
 
   const handleCreateChange = (field) => (e) => {
     setCreateForm({ ...createForm, [field]: e.target.value });
