@@ -582,7 +582,7 @@ const filteredGovernmentInitiatives =
     </div>
 
     <div className="nav-cta">
-        <a className="nav-link" href="/community">For Communities</a>
+        <a className="nav-link" href="/narishanga">For Communities</a>
         <button className="nav-button">
           <span className="icon">⟶</span>
           Book a care pathway
