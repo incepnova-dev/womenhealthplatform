@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/auth/SignUpModal.css";
 import { getProperty } from "../../language/english";
+import wmhealthpic from "../../images/wmhealthpic.png";
 
 const SignUpModal = ({ isOpen, onClose }) => {
   const [signUpForm, setSignUpForm] = useState({
@@ -9,18 +10,6 @@ const SignUpModal = ({ isOpen, onClose }) => {
     password: "",
     confirmPassword: ""
   });
-  const [imagePreview, setImagePreview] = useState(null);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   const handleSignUpChange = (field) => (e) => {
     setSignUpForm({ ...signUpForm, [field]: e.target.value });
@@ -33,7 +22,6 @@ const SignUpModal = ({ isOpen, onClose }) => {
     onClose();
     // Reset form
     setSignUpForm({ name: "", email: "", password: "", confirmPassword: "" });
-    setImagePreview(null);
   };
 
   if (!isOpen) return null;
@@ -49,36 +37,11 @@ const SignUpModal = ({ isOpen, onClose }) => {
           {/* Image Section - Left Half */}
           <div className="signup-modal-image-section">
             <div className="signup-modal-image-container">
-              {imagePreview ? (
-                <img src={imagePreview} alt="Profile preview" className="signup-modal-image-preview" />
-              ) : (
-                <div className="signup-modal-image-placeholder">
-                  <label htmlFor="signup-image-upload" className="signup-modal-image-upload-label">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="17 8 12 3 7 8"></polyline>
-                      <line x1="12" y1="3" x2="12" y2="15"></line>
-                    </svg>
-                    <span>Add Image</span>
-                  </label>
-                </div>
-              )}
-              <input
-                type="file"
-                id="signup-image-upload"
-                accept="image/*"
-                onChange={handleImageChange}
-                className="signup-modal-image-input"
+              <img 
+                src={wmhealthpic} 
+                alt="Women's Health" 
+                className="signup-modal-image-preview" 
               />
-              {imagePreview && (
-                <button
-                  type="button"
-                  onClick={() => setImagePreview(null)}
-                  className="signup-modal-image-remove"
-                >
-                  ✕
-                </button>
-              )}
             </div>
           </div>
 

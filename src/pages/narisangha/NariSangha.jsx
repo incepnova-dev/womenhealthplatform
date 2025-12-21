@@ -3,8 +3,7 @@ import patientData from "../../data/womenpatients.json";
 import "../../styles/narisangha/narisangha.css";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import LeftSection from "./leftsection/LeftSection";
-import RightSection from "./rightsection/RightSection";
+import MainSection from "./main/MainSection";
 
 export default function NariSangha() {
   const [mode, setMode] = useState("create");
@@ -198,45 +197,30 @@ export default function NariSangha() {
         setViewMode={setViewMode}
       />
 
-      <main className="main">
-        <div className="content-wrap" id="start">
-          <LeftSection
-            mode={mode}
-            setMode={setMode}
-            viewMode={viewMode}
-            setViewMode={setViewMode}
-            createForm={createForm}
-            handleCreateChange={handleCreateChange}
-            previewCreate={previewCreate}
-            continueCreate={continueCreate}
-            joinForm={joinForm}
-            handleJoinChange={handleJoinChange}
-            previewJoin={previewJoin}
-            continueJoin={continueJoin}
-            myCreatedGroups={myCreatedGroups}
-            myExternalGroups={myExternalGroups}
-            connections={connections}
-            connectingProvider={connectingProvider}
-            handleConnectProvider={handleConnectProvider}
-            stage={stage}
-            setStage={setStage}
-            loadingFeeds={loadingFeeds}
-            externalFeeds={externalFeeds}
-          />
-
-          <RightSection
-            stage={stage}
-            setStage={setStage}
-            externalFeeds={externalFeeds}
-            loadingFeeds={loadingFeeds}
-            fetchExternalFeeds={fetchExternalFeeds}
-            myCreatedGroups={myCreatedGroups}
-            myExternalGroups={myExternalGroups}
-            connections={connections}
-            setViewMode={setViewMode}
-          />
-        </div>
-      </main>
+      <MainSection
+        mode={mode}
+        setMode={setMode}
+        viewMode={viewMode}
+        setViewMode={setViewMode}
+        createForm={createForm}
+        handleCreateChange={handleCreateChange}
+        previewCreate={previewCreate}
+        continueCreate={continueCreate}
+        joinForm={joinForm}
+        handleJoinChange={handleJoinChange}
+        previewJoin={previewJoin}
+        continueJoin={continueJoin}
+        myCreatedGroups={myCreatedGroups}
+        myExternalGroups={myExternalGroups}
+        connections={connections}
+        connectingProvider={connectingProvider}
+        handleConnectProvider={handleConnectProvider}
+        stage={stage}
+        setStage={setStage}
+        loadingFeeds={loadingFeeds}
+        externalFeeds={externalFeeds}
+        fetchExternalFeeds={fetchExternalFeeds}
+      />
 
       <Footer setViewMode={setViewMode} />
     </div>

@@ -2,10 +2,14 @@
 .signup-modal-container {
   max-width: 50vw !important; /* Half viewport width for desktop */
   width: 50vw !important;
+  max-height: 90vh !important; /* Ensure modal fits in viewport */
   padding: 0;
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  margin: auto; /* Center the modal */
+  position: relative; /* Ensure proper positioning */
+  z-index: 10000; /* Ensure modal is above backdrop */
 }
 
 .signup-modal-content {
@@ -124,6 +128,18 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+}
+
+/* Ensure backdrop centers modal on desktop and covers entire viewport */
+.wp-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  background: rgba(15, 8, 40, 0.65) !important;
+  backdrop-filter: blur(4px) !important;
 }
 
 /* Mobile styles - full viewport */

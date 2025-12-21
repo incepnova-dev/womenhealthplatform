@@ -12,7 +12,14 @@ const properties = {
   "signup.confirmPassword.label": "Confirm Password",
   "signup.confirmPassword.placeholder": "Confirm your password",
   "signup.button.cancel": "Cancel",
-  "signup.button.submit": "Sign Up"
+  "signup.button.submit": "Sign Up",
+  "signin.title": "Sign In",
+  "signin.email.label": "Email",
+  "signin.email.placeholder": "Enter your email",
+  "signin.password.label": "Password",
+  "signin.password.placeholder": "Enter your password",
+  "signin.button.cancel": "Cancel",
+  "signin.button.submit": "Sign In"
 };
 
 // Helper function to get a property value

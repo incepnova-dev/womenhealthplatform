@@ -109,6 +109,21 @@ nav.nav-links a:hover::after { width: 100%; }
 }
 .btn.small { padding: 6px 12px; font-size: 12px; }
 main.main { flex: 1; }
+
+/* Blur main and footer when signup modal is open */
+body.signup-modal-open main.main {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+body.signup-modal-open footer.site-footer {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
 .content-wrap {
   max-width: 1240px;
   margin: 0 auto;

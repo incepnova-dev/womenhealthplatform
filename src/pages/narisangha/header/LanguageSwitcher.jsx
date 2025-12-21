@@ -4,7 +4,7 @@ const LanguageSwitcher = ({ language, setLanguage }) => {
   return (
     <div style={{ marginLeft: "auto" }}>
       <div className="wp-language-switcher">
-        <label htmlFor="wp-language-select">Language:</label>
+        {/* <label htmlFor="wp-language-select">Language:</label> */}
         <select
           id="wp-language-select"
           value={language}
