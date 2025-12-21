@@ -1,0 +1,15 @@
+The chatbot should function as follows:
+
+1. Prompts the user with "start" , "botprompt",  and gives user with problems preset in healthCategories ( "options"), based on the language selected in the language selector.
+2. The user selects one option and then the chatbot asks follow up question based on user selected option either on menstrual_health,reproductive_sexual_health, PCOS_hormonal_health, cancer_health, mental_health, or other_health
+3. Once the user selects one option , the bot gets more context from the user by asking 3 questions from questionSequences.
+4.The user selects option , and the bot further asks the user whether the user is interested in doctor information in nearby location or the user wants to provide answer for more questions.
+5. If the user selects Doctor information , the bot prompts user with City and location where the user is
+6. User selects city and should write in the chat window of his/her location
+7. Based on that the bot retrives answer from backend OPENAI of nearby gynaecologists.
+8. If the user has stated No, the bot gathers enough context of the user , formats the prompt and retrieves the answer from backend openAI.
+8. Again bot asks user whether he wants to answer more questions, and gives him Yes/No option
+9. If the user states No, bot gathers enough context of the user , formats the prompt and retrieves the answer from backend openAI
+10. if user selects Yes, the bot prompts the user with more 5 questions questionSequences (3rd question onwards, as it has already asked till 3rd question)
+11. The entire communication sequence and answers retrieved based on language selected from language selector.
+12. The answer should be within 3-5 lines and the answer should first start with "You have so and so problem based on the context and information gathered from the user , so the recommendation is ...."

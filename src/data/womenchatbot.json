@@ -1,0 +1,613 @@
+{
+  "languages": {
+    "bn": {
+      "districtResources": {
+        "বীরভূম": {
+          "centers": [
+            {
+              "name": "বীরভূম জেলা হাসপাতাল স্ত্রীরোগ বিভাগ",
+              "address": "সিউড়ি, বীরভূম"
+            },
+            {
+              "name": "মাতৃত্ব সেবা কেন্দ্র, রামপুরহাট",
+              "address": "রামপুরহাট"
+            },
+            {
+              "name": "Tele-MANAS (জাতীয় ২৪/৭ সহায়তা)",
+              "address": "২৪/৭ সরকারি সহায়তা"
+            }
+          ],
+          "doctors": [
+            "ড. মালবিকা মুখার্জী (স্ত্রীরোগ বিশেষজ্ঞ)",
+            "ড. শর্মিষ্ঠা ব্যানার্জী (প্রসূতি বিশেষজ্ঞ)"
+          ]
+        },
+        "পুরুলিয়া": {
+          "centers": [
+            {
+              "name": "পুরুলিয়া সদর হাসপাতাল স্ত্রীরোগ বিভাগ",
+              "address": "পুরুলিয়া শহর"
+            },
+            {
+              "name": "প্রাথমিক স্বাস্থ্য কেন্দ্র, ঝালদা",
+              "address": "ঝালদা"
+            }
+          ],
+          "doctors": [
+            "ড. অনিন্দিতা দাস (স্ত্রীরোগ বিশেষজ্ঞ)",
+            "ড. রীতা সেন (প্রসূতি বিশেষজ্ঞ)"
+          ]
+        },
+        "বাঁকুড়া": {
+          "centers": [
+            {
+              "name": "বাঁকুড়া সম্মিলনী মেডিকেল কলেজ স্ত্রীরোগ বিভাগ",
+              "address": "বাঁকুড়া সদর"
+            },
+            {
+              "name": "মাতৃত্ব সেবা কেন্দ্র, খাতরা",
+              "address": "খাতরা"
+            }
+          ],
+          "doctors": [
+            "ড. দেবযানী রায় (স্ত্রীরোগ বিশেষজ্ঞ)",
+            "ড. শ্রেয়সী ঘোষ (প্রসূতি বিশেষজ্ঞ)"
+          ]
+        },
+        "বর্ধমান": {
+          "centers": [
+            {
+              "name": "বর্ধমান মেডিক্যাল কলেজ স্ত্রীরোগ বিভাগ",
+              "address": "বর্ধমান শহর"
+            },
+            {
+              "name": "মাতৃত্ব সেবা কেন্দ্র, কাটোয়া",
+              "address": "কাটোয়া"
+            }
+          ],
+          "doctors": [
+            "ড. সুমিতা চট্টোপাধ্যায় (স্ত্রীরোগ বিশেষজ্ঞ)",
+            "ড. পূর্ণিমা সাহা (প্রসূতি বিশেষজ্ঞ)"
+          ]
+        },
+        "আসানসোল": {
+          "centers": [
+            {
+              "name": "আসানসোল জেলা হাসপাতাল স্ত্রীরোগ বিভাগ",
+              "address": "আসানসোল"
+            },
+            {
+              "name": "মাতৃত্ব সেবা কেন্দ্র, বার্নপুর",
+              "address": "বার্নপুর"
+            }
+          ],
+          "doctors": [
+            "ড. কল্যাণী ব্যানার্জী (স্ত্রীরোগ বিশেষজ্ঞ)",
+            "ড. মৌসুমী দাস (প্রসূতি বিশেষজ্ঞ)"
+          ]
+        }
+      },
+      "healthCategories": {
+        "start": {
+          "botPrompt": "নমস্কার! আমি নারীশক্তি, আপনার স্বাস্থ্য সংক্রান্ত প্রশ্নে সাহায্য করতে এসেছি। আপনি কোন ধরনের স্বাস্থ্য সমস্যা নিয়ে কথা বলতে চান?",
+          "options": [
+            "১. মাসিক সংক্রান্ত সমস্যা",
+            "২. প্রজনন ও যৌন স্বাস্থ্য",
+            "৩. PCOS ও হরমোনজনিত সমস্যা",
+            "৪. স্তন ও জরায়ু ক্যান্সার এবং অন্যান্য মহিলা-সম্পর্কিত ক্যান্সার",
+            "৫. মানসিক স্বাস্থ্য",
+            "৬. হৃদরোগ, ডায়াবেটিস এবং অন্যান্য দীর্ঘস্থায়ী রোগ"
+          ]
+        },
+        "menstrual_health": {
+          "botPrompt": "আপনার মাসিক সংক্রান্ত কোন সমস্যা নিয়ে আলোচনা করতে চান?",
+          "options": [
+            "অনিয়মিত পিরিয়ড",
+            "অতিরিক্ত রক্তপাত",
+            "তীব্র ব্যথা (Dysmenorrhea)",
+            "পিরিয়ড বন্ধ হয়ে যাওয়া (Amenorrhea)",
+            "অন্যান্য সমস্যা"
+          ]
+        },
+        "reproductive_sexual_health": {
+          "botPrompt": "প্রজনন স্বাস্থ্য সংক্রান্ত কোন বিষয়ে সাহায্য চান?",
+          "options": [
+            "গর্ভধারণে সমস্যা ও বন্ধ্যাত্ব",
+            "যৌন স্বাস্থ্য ও যৌনবাহিত সংক্রমণ (STI)",
+            "গর্ভনিরোধ ও পরিবার পরিকল্পনা",
+            "গর্ভাবস্থা ও প্রসবোত্তর সমস্যা",
+            "জরায়ু ফাইব্রয়েড ও এন্ডোমেট্রিওসিস"
+          ]
+        },
+        "PCOS_hormonal_health": {
+          "botPrompt": "PCOS বা হরমোনজনিত সমস্যা নিয়ে জানতে চান?",
+          "options": [
+            "PCOS এর লক্ষণ ও নির্ণয়",
+            "হরমোনের ভারসাম্যহীনতা ও অনিয়মিত মাসিক",
+            "ওজন বৃদ্ধি ও বিপাকীয় সমস্যা",
+            "খাদ্যাভ্যাস, ব্যায়াম ও জীবনযাত্রা",
+            "PCOS-এ গর্ভধারণ ও চিকিৎসা"
+          ]
+        },
+        "cancer_health": {
+          "botPrompt": "ক্যান্সার সংক্রান্ত কোন বিষয়ে জানতে চান?",
+          "options": [
+            "স্তন ক্যান্সারের লক্ষণ",
+            "জরায়ু ক্যান্সারের লক্ষণ",
+            "স্ক্রিনিং ও পরীক্ষা",
+            "প্রতিরোধ ও সচেতনতা",
+            "অন্যান্য"
+          ]
+        },
+        "mental_health": {
+          "botPrompt": "আপনার মানসিক স্বাস্থ্য সংক্রান্ত কোন সমস্যা নিয়ে আলোচনা করতে চান?",
+          "options": [
+            "বিষণ্ণতা ও মন খারাপ (Depression)",
+            "উদ্বেগ ও মানসিক চাপ (Anxiety & Stress)",
+            "প্রসবোত্তর মানসিক সমস্যা (Postpartum Issues)",
+            "ঘুমের সমস্যা ও অনিদ্রা",
+            "অন্যান্য মানসিক স্বাস্থ্য সমস্যা"
+          ]
+        },
+        "other_health": {
+          "botPrompt": "কোন স্বাস্থ্য সমস্যা নিয়ে জানতে চান?",
+          "options": [
+            "স্থূলতা ও ওজন নিয়ন্ত্রণ",
+            "উচ্চ রক্তচাপ",
+            "আর্থ্রাইটিস",
+            "থাইরয়েড সমস্যা",
+            "অন্যান্য"
+          ]
+        }
+      },
+      "questionSequences": {
+        "menstrual_health": [
+          "আপনার বয়স কত?",
+          "কতদিন ধরে এই সমস্যা হচ্ছে?",
+          "আপনার পিরিয়ড সাধারণত কতদিন স্থায়ী হয়?",
+          "আপনি কি বিবাহিত?",
+          "পিরিয়ডের সময় ব্যথার তীব্রতা কেমন? (হালকা/মাঝারি/তীব্র)",
+          "রক্তপাতের পরিমাণ কেমন - স্বাভাবিক/বেশি/কম?",
+          "আপনি কি প্যাড/কাপড় ব্যবহার করেন?",
+          "পিরিয়ডের সময় কি স্কুল/কাজে যেতে সমস্যা হয়?",
+          "পরিবারে কারো এই ধরনের সমস্যা আছে কি?",
+          "আপনি কি নিয়মিত কোন ওষুধ খান?",
+          "পুষ্টিকর খাবার - আয়রন সমৃদ্ধ খাবার খান কি?",
+          "মানসিক চাপ বা দুশ্চিন্তা বেশি থাকে কি?"
+        ],
+        "reproductive_sexual_health": [
+          "আপনার বয়স কত?",
+          "আপনি কি বিবাহিত?",
+          "কতদিন ধরে গর্ভধারণের চেষ্টা করছেন?",
+          "আগে কোন চিকিৎসা নিয়েছেন কি?",
+          "আপনার পার্টনার কি কোন পরীক্ষা করিয়েছেন?",
+          "আগে কখনো গর্ভধারণ হয়েছিল কি?",
+          "পিরিয়ড কি নিয়মিত হয়?",
+          "আপনার ওজন কেমন?",
+          "থাইরয়েড বা হরমোন সমস্যা আছে কি?",
+          "ধূমপান বা মদ্যপান করেন কি?",
+          "কোন দীর্ঘমেয়াদী রোগ আছে কি?",
+          "মানসিক চাপে থাকেন কি?"
+        ],
+        "PCOS_hormonal_health": [
+          "আপনার বয়স কত?",
+          "কতদিন আগে PCOS ধরা পড়েছে?",
+          "আপনার ওজন কেমন?",
+          "পিরিয়ড কি খুব অনিয়মিত?",
+          "মুখে বা শরীরে অতিরিক্ত লোম আছে কি?",
+          "ত্বকে ব্রণ বা কালো দাগ দেখা যায় কি?",
+          "চুল পড়ার সমস্যা আছে কি?",
+          "আপনি কি PCOS এর জন্য কোন ওষুধ খাচ্ছেন?",
+          "ডায়াবেটিস আছে কি?",
+          "চিনি বা তেলযুক্ত খাবার বেশি খান কি?",
+          "নিয়মিত ব্যায়াম করেন কি?",
+          "গর্ভধারণের ইচ্ছা আছে কি?"
+        ],
+        "cancer_health": [
+          "আপনার বয়স কত?",
+          "কোন ধরনের উপসর্গ লক্ষ্য করেছেন?",
+          "কতদিন ধরে এই উপসর্গ আছে?",
+          "পরিবারে কারো ক্যান্সারের ইতিহাস আছে কি?",
+          "আগে কখনো স্ক্রিনিং টেস্ট করিয়েছেন কি?",
+          "কোন ডাক্তারের সাথে পরামর্শ করেছেন কি?",
+          "অন্য কোন উপসর্গ আছে কি?",
+          "আপনি কি ধূমপান করেন?",
+          "মাসিক কি বন্ধ হয়ে গেছে?",
+          "কোন হরমোন থেরাপি নিয়েছেন কি?",
+          "বুকে ব্যথা বা অস্বস্তি অনুভব করেন কি?",
+          "নিয়মিত স্বাস্থ্য পরীক্ষা করান কি?"
+        ],
+        "mental_health": [
+          "আপনার বয়স কত?",
+          "কতদিন ধরে মানসিক চাপ বা দুশ্চিন্তা অনুভব করছেন?",
+          "আপনি কি নিয়মিত দুঃখী বা হতাশ বোধ করেন?",
+          "ঘুম কি ঠিকমতো হয়? (কম/বেশি/অনিয়মিত)",
+          "খাওয়ার রুচি কেমন - স্বাভাবিক/কম/বেশি?",
+          "দৈনন্দিন কাজকর্মে মনোযোগ দিতে অসুবিধা হয় কি?",
+          "আপনি কি একা বা অসহায় বোধ করেন?",
+          "পরিবার বা বন্ধুদের সাথে সম্পর্ক কেমন?",
+          "নিয়মিত ব্যায়াম বা যোগ করেন কি?",
+          "মানসিক স্বাস্থ্যের জন্য কোন ওষুধ খাচ্ছেন কি?",
+          "আগে কোন মানসিক স্বাস্থ্য পেশাদারের সাথে কথা বলেছেন কি?",
+          "জীবনে কোন বড় চাপ বা দুর্ঘটনা ঘটেছে কি?",
+          "কখনো আত্মহানির কথা ভেবেছেন কি?",
+          "আপনি কি দৈনন্দিন কাজকর্ম করতে সক্ষম?"
+        ],
+        "other_health": [
+          "আপনার বয়স কত?",
+          "কতদিন ধরে এই সমস্যা হচ্ছে?",
+          "আপনার ওজন এবং উচ্চতা কত?",
+          "নিয়মিত কোন ওষুধ খান কি?",
+          "আপনার রক্তচাপ কেমন থাকে?",
+          "ডায়াবেটিস আছে কি?",
+          "জয়েন্টে ব্যথা আছে কি?",
+          "দৈনিক কতটা শারীরিক পরিশ্রম করেন?",
+          "লবণ বা চর্বি বেশি খান কি?",
+          "ঘুম কি ঠিকমতো হয়?",
+          "পরিবারে কারো এই ধরনের রোগ আছে কি?",
+          "মানসিক চাপ থাকে কি?"
+        ]
+      },
+      "healthMainMenu": [
+        "১. মাসিক সংক্রান্ত সমস্যা",
+        "২. প্রজনন ও যৌন স্বাস্থ্য",
+        "৩. PCOS (পলিসিস্টিক ওভারি সিনড্রোম) ও হরমোনজনিত সমস্যা",
+        "৪. স্তন ও জরায়ু ক্যান্সার এবং অন্যান্য মহিলা-সম্পর্কিত ক্যান্সার",
+        "৫. মানসিক স্বাস্থ্য",
+        "৬. স্থূলতা, উচ্চ রক্তচাপ, আর্থ্রাইটিস এবং অন্যান্য দীর্ঘস্থায়ী রোগ"
+      ],
+      "nextStateMapBnToKey": {
+        "১. মাসিক সংক্রান্ত সমস্যা": "menstrual_health",
+        "২. প্রজনন ও যৌন স্বাস্থ্য": "reproductive_sexual_health",
+        "৩. PCOS ও হরমোনজনিত সমস্যা": "PCOS_hormonal_health",
+        "৪. স্তন ও জরায়ু ক্যান্সার এবং অন্যান্য মহিলা-সম্পর্কিত ক্যান্সার": "cancer_health",
+        "৫. মানসিক স্বাস্থ্য": "mental_health",
+        "৬. হৃদরোগ, ডায়াবেটিস এবং অন্যান্য দীর্ঘস্থায়ী রোগ": "other_health"
+      }
+    },
+
+    "en": {
+      "healthCategories": {
+        "start": {
+          "botPrompt": "Namaskar! I am Narishakti, here to help with your health questions. What kind of health concern would you like to talk about?",
+          "options": [
+            "1. Period and menstrual problems",
+            "2. Reproductive and sexual health",
+            "3. PCOS and hormonal problems",
+            "4. Breast, uterine and other women‑related cancers",
+            "5. Mental health",
+            "6. Heart disease, diabetes and other long‑term illnesses"
+          ]
+        },
+        "menstrual_health": {
+          "botPrompt": "What kind of period‑related problem would you like to discuss?",
+          "options": [
+            "Irregular periods",
+            "Heavy bleeding",
+            "Severe pain (dysmenorrhoea)",
+            "Periods stopped (amenorrhoea)",
+            "Other problems"
+          ]
+        },
+        "reproductive_sexual_health": {
+          "botPrompt": "Which reproductive or sexual health topic do you want help with?",
+          "options": [
+            "Difficulty conceiving and infertility",
+            "Sexual health and sexually transmitted infections (STIs)",
+            "Contraception and family planning",
+            "Pregnancy and post‑partum problems",
+            "Uterine fibroids and endometriosis"
+          ]
+        },
+        "PCOS_hormonal_health": {
+          "botPrompt": "What would you like to know about PCOS or hormonal problems?",
+          "options": [
+            "PCOS symptoms and diagnosis",
+            "Hormone imbalance and irregular periods",
+            "Weight gain and metabolic problems",
+            "Diet, exercise and lifestyle",
+            "PCOS, fertility and treatment options"
+          ]
+        },
+        "cancer_health": {
+          "botPrompt": "What cancer‑related topic would you like to know about?",
+          "options": [
+            "Breast cancer warning signs",
+            "Cervical/uterine cancer warning signs",
+            "Screening tests and check‑ups",
+            "Prevention and awareness",
+            "Other cancer questions"
+          ]
+        },
+        "mental_health": {
+          "botPrompt": "What mental health concern would you like to talk about?",
+          "options": [
+            "Low mood and depression",
+            "Anxiety and stress",
+            "Post‑partum mental health issues",
+            "Sleep problems and insomnia",
+            "Other mental health problems"
+          ]
+        },
+        "other_health": {
+          "botPrompt": "Which health problem would you like to ask about?",
+          "options": [
+            "Obesity and weight management",
+            "High blood pressure",
+            "Arthritis and joint pain",
+            "Thyroid problems",
+            "Other long‑term conditions"
+          ]
+        }
+      },
+      "questionSequences": {
+        "menstrual_health": [
+          "How old are you?",
+          "How long have you had this problem?",
+          "How many days does your period usually last?",
+          "Are you married or sexually active?",
+          "How severe is the pain during periods? (mild / moderate / severe)",
+          "How heavy is the bleeding – normal, heavy or light?",
+          "What do you usually use during periods – pads, menstrual cup or cloth?",
+          "Do your periods affect your ability to go to school, college or work?",
+          "Does anyone else in your family have similar problems?",
+          "Are you taking any regular medicines?",
+          "Do you eat iron‑rich, nutritious food regularly?",
+          "Do you feel a lot of stress or worry?"
+        ],
+        "reproductive_sexual_health": [
+          "How old are you?",
+          "Are you married or in a long‑term relationship?",
+          "How long have you been trying to conceive?",
+          "Have you taken any treatment for this before?",
+          "Has your partner had any tests or check‑ups?",
+          "Have you ever been pregnant before?",
+          "Are your periods regular?",
+          "How would you describe your weight – underweight, normal or overweight?",
+          "Do you have thyroid or other hormone problems?",
+          "Do you smoke or drink alcohol?",
+          "Do you have any long‑term illnesses?",
+          "Do you feel under a lot of mental stress?"
+        ],
+        "PCOS_hormonal_health": [
+          "How old are you?",
+          "When were you first told you have PCOS?",
+          "How would you describe your weight?",
+          "Are your periods very irregular?",
+          "Do you have excess facial or body hair?",
+          "Do you have acne or dark patches on the skin?",
+          "Are you facing hair fall or thinning on the scalp?",
+          "Are you taking any medicines for PCOS now?",
+          "Do you have diabetes or pre‑diabetes?",
+          "Do you eat a lot of sugary or oily food?",
+          "Do you exercise regularly?",
+          "Are you planning for pregnancy now or in the near future?"
+        ],
+        "cancer_health": [
+          "How old are you?",
+          "What symptoms have you noticed?",
+          "How long have these symptoms been present?",
+          "Is there any family history of cancer?",
+          "Have you ever done any cancer screening tests before?",
+          "Have you consulted any doctor about these symptoms?",
+          "Do you have any other symptoms along with this?",
+          "Do you smoke or use tobacco in any form?",
+          "Have your periods stopped (are you post‑menopausal)?",
+          "Have you taken any hormone therapy (for example HRT)?",
+          "Do you feel any pain or discomfort in the breast or chest?",
+          "Do you go for regular health check‑ups?"
+        ],
+        "mental_health": [
+          "How old are you?",
+          "For how long have you been feeling stressed or worried?",
+          "Do you often feel sad, hopeless or low in mood?",
+          "How is your sleep – too little, too much, or irregular?",
+          "How is your appetite – normal, decreased or increased?",
+          "Do you find it hard to concentrate on daily tasks?",
+          "Do you feel lonely or unsupported?",
+          "How are your relationships with family and friends?",
+          "Do you do regular exercise, yoga or relaxation practices?",
+          "Are you taking any medicines for mental health?",
+          "Have you ever spoken to a mental health professional before?",
+          "Have you faced any major stress or trauma in recent years?",
+          "Have you ever had thoughts of self‑harm or suicide?",
+          "Are you able to manage your daily responsibilities?"
+        ],
+        "other_health": [
+          "How old are you?",
+          "For how long have you had this problem?",
+          "What are your current weight and height?",
+          "Are you on any regular medicines?",
+          "How is your blood pressure usually?",
+          "Do you have diabetes?",
+          "Do you have joint pain or stiffness?",
+          "How much physical activity do you do in a day?",
+          "Do you eat a lot of salty or fatty food?",
+          "Do you sleep well at night?",
+          "Does anyone in your family have similar health problems?",
+          "Do you feel under mental or emotional stress?"
+        ]
+      },
+      "healthMainMenu": [
+        "1. Period and menstrual problems",
+        "2. Reproductive and sexual health",
+        "3. PCOS (polycystic ovary syndrome) and hormonal problems",
+        "4. Breast, uterine and other women‑related cancers",
+        "5. Mental health",
+        "6. Obesity, high blood pressure, arthritis and other long‑term diseases"
+      ]
+    },
+
+    "hi": {
+      "healthCategories": {
+        "start": {
+          "botPrompt": "नमस्कार! मैं नारीशक्ति हूँ, आपकी स्वास्थ्य से जुड़ी शंकाओं में मदद के लिए यहाँ हूँ। आप किस प्रकार की समस्या के बारे में बात करना चाहेंगी?",
+          "options": [
+            "1. माहवारी से जुड़ी समस्याएँ",
+            "2. प्रजनन और यौन स्वास्थ्य",
+            "3. PCOS और हार्मोन संबंधी समस्याएँ",
+            "4. स्तन, गर्भाशय और अन्य महिला‑सम्बंधित कैंसर",
+            "5. मानसिक स्वास्थ्य",
+            "6. हृदय रोग, मधुमेह और अन्य दीर्घकालिक बीमारियाँ"
+          ]
+        },
+        "menstrual_health": {
+          "botPrompt": "माहवारी से जुड़ी किस समस्या पर बात करना चाहेंगी?",
+          "options": [
+            "अनियमित पीरियड",
+            "बहुत ज्यादा रक्तस्राव",
+            "तेज़ दर्द (डिसमेनोरिया)",
+            "माहवारी बंद हो जाना (अमेनोरिया)",
+            "अन्य समस्या"
+          ]
+        },
+        "reproductive_sexual_health": {
+          "botPrompt": "प्रजनन या यौन स्वास्थ्य के किस विषय पर मदद चाहिए?",
+          "options": [
+            "गर्भधारण में दिक्कत और बांझपन",
+            "यौन स्वास्थ्य और यौन संचारित संक्रमण (STI)",
+            "गर्भनिरोध और परिवार नियोजन",
+            "गर्भावस्था और प्रसवोत्तर समस्याएँ",
+            "फाइब्रॉइड और एंडोमेट्रियोसिस"
+          ]
+        },
+        "PCOS_hormonal_health": {
+          "botPrompt": "आप PCOS या हार्मोन की समस्या के बारे में क्या जानना चाहेंगी?",
+          "options": [
+            "PCOS के लक्षण और जाँच",
+            "हार्मोन असंतुलन और अनियमित माहवारी",
+            "वज़न बढ़ना और मेटाबॉलिक समस्याएँ",
+            "खान‑पान, व्यायाम और जीवनशैली",
+            "PCOS, प्रेग्नेंसी और इलाज के विकल्प"
+          ]
+        },
+        "cancer_health": {
+          "botPrompt": "कैंसर से जुड़ी किस बात के बारे में जानना चाहेंगी?",
+          "options": [
+            "स्तन कैंसर के शुरुआती लक्षण",
+            "गर्भाशय/सर्वाइकल कैंसर के लक्षण",
+            "स्क्रीनिंग टेस्ट और जाँच",
+            "रोकथाम और जागरूकता",
+            "अन्य सवाल"
+          ]
+        },
+        "mental_health": {
+          "botPrompt": "मानसिक स्वास्थ्य से जुड़ी किस समस्या पर बात करना चाहेंगी?",
+          "options": [
+            "उदासी और डिप्रेशन",
+            "चिंता और तनाव",
+            "प्रसवोत्तर मानसिक समस्याएँ",
+            "नींद की समस्या और अनिद्रा",
+            "अन्य मानसिक स्वास्थ्य समस्याएँ"
+          ]
+        },
+        "other_health": {
+          "botPrompt": "आप किस स्वास्थ्य समस्या के बारे में पूछना चाहेंगी?",
+          "options": [
+            "मोटापा और वज़न नियंत्रण",
+            "उच्च रक्तचाप",
+            "आर्थराइटिस और जोड़ों का दर्द",
+            "थायरॉयड की समस्या",
+            "अन्य दीर्घकालिक बीमारियाँ"
+          ]
+        }
+      },
+      "questionSequences": {
+        "menstrual_health": [
+          "आपकी उम्र क्या है?",
+          "यह समस्या कब से चल रही है?",
+          "आपकी माहवारी सामान्यतः कितने दिन चलती है?",
+          "क्या आप विवाहित या यौन सक्रिय हैं?",
+          "पीरियड के समय दर्द कितना होता है? (हल्का / मध्यम / तेज)",
+          "रक्तस्राव की मात्रा कैसी रहती है – सामान्य, ज्यादा या कम?",
+          "आप पीरियड में क्या इस्तेमाल करती हैं – पैड, कप या कपड़ा?",
+          "क्या माहवारी के कारण स्कूल/कॉलेज/काम पर जाना मुश्किल हो जाता है?",
+          "क्या परिवार में किसी और को भी ऐसी समस्या रही है?",
+          "क्या आप कोई नियमित दवा लेती हैं?",
+          "क्या आप नियमित रूप से आयरन‑युक्त पौष्टिक भोजन लेती हैं?",
+          "क्या आपको ज़्यादा तनाव या चिंता महसूस होती है?"
+        ],
+        "reproductive_sexual_health": [
+          "आपकी उम्र क्या है?",
+          "क्या आप विवाहित हैं?",
+          "आप कब से गर्भधारण की कोशिश कर रही हैं?",
+          "क्या आपने पहले इस समस्या के लिए कोई इलाज कराया है?",
+          "क्या आपके पार्टनर की कोई जाँच हुई है?",
+          "क्या आपको पहले कभी गर्भधारण हुआ है?",
+          "क्या आपके पीरियड नियमित हैं?",
+          "आपका वज़न कैसा है – कम, सामान्य या ज़्यादा?",
+          "क्या आपको थायरॉयड या अन्य हार्मोन संबंधी समस्या है?",
+          "क्या आप धूम्रपान या शराब का सेवन करती हैं?",
+          "क्या आपको कोई लंबी चलने वाली बीमारी है?",
+          "क्या आपको बहुत ज़्यादा मानसिक तनाव रहता है?"
+        ],
+        "PCOS_hormonal_health": [
+          "आपकी उम्र क्या है?",
+          "PCOS का निदान कब हुआ था?",
+          "आपका वज़न कैसा है?",
+          "क्या आपके पीरियड बहुत अनियमित हैं?",
+          "क्या चेहरे या शरीर पर अनचाहे बाल ज़्यादा हैं?",
+          "क्या चेहरे पर मुंहासे या त्वचा पर काले धब्बे हैं?",
+          "क्या आपको बाल झड़ने या सिर के बाल पतले होने की समस्या है?",
+          "क्या आप वर्तमान में PCOS के लिए कोई दवा ले रही हैं?",
+          "क्या आपको मधुमेह या प्री‑डायबिटीज है?",
+          "क्या आप ज़्यादा मीठा या तला‑भुना भोजन लेती हैं?",
+          "क्या आप नियमित व्यायाम करती हैं?",
+          "क्या आप अभी या निकट भविष्य में गर्भधारण की योजना बना रही हैं?"
+        ],
+        "cancer_health": [
+          "आपकी उम्र क्या है?",
+          "आपने कौन‑से लक्षण महसूस किए हैं?",
+          "ये लक्षण कब से हैं?",
+          "क्या परिवार में किसी को कैंसर रहा है?",
+          "क्या आपने पहले कभी कोई कैंसर स्क्रीनिंग टेस्ट कराया है?",
+          "क्या आपने इन लक्षणों के लिए किसी डॉक्टर से सलाह ली है?",
+          "क्या इसके साथ कोई अन्य लक्षण भी हैं?",
+          "क्या आप धूम्रपान या तंबाकू का सेवन करती हैं?",
+          "क्या आपकी माहवारी बंद हो चुकी है (रजोनिवृत्ति)?",
+          "क्या आपने कभी हार्मोन थेरेपी (जैसे HRT) ली है?",
+          "क्या आपको स्तन या सीने में दर्द या असहजता महसूस होती है?",
+          "क्या आप नियमित स्वास्थ्य जाँच कराती हैं?"
+        ],
+        "mental_health": [
+          "आपकी उम्र क्या है?",
+          "आप कब से तनाव या चिंता महसूस कर रही हैं?",
+          "क्या आप अक्सर उदास या निराश महसूस करती हैं?",
+          "आपकी नींद कैसी है – कम, ज़्यादा या अनियमित?",
+          "आपकी भूख कैसी है – सामान्य, कम या ज़्यादा?",
+          "क्या आपको रोज़मर्रा के कामों पर ध्यान केंद्रित करने में कठिनाई होती है?",
+          "क्या आप खुद को अकेला या असहाय महसूस करती हैं?",
+          "आपके परिवार और दोस्तों के साथ संबंध कैसे हैं?",
+          "क्या आप नियमित व्यायाम, योग या रिलैक्सेशन करती हैं?",
+          "क्या आप मानसिक स्वास्थ्य के लिए कोई दवा ले रही हैं?",
+          "क्या आपने पहले कभी किसी मानसिक स्वास्थ्य विशेषज्ञ से बात की है?",
+          "क्या हाल के वर्षों में आपके साथ कोई बड़ा तनाव या दुर्घटना हुई है?",
+          "क्या आपके मन में कभी आत्म‑हानि या आत्महत्या के विचार आए हैं?",
+          "क्या आप रोज़मर्रा की ज़िम्मेदारियाँ संभाल पा रही हैं?"
+        ],
+        "other_health": [
+          "आपकी उम्र क्या है?",
+          "यह समस्या कब से है?",
+          "आपका वर्तमान वज़न और लंबाई क्या है?",
+          "क्या आप कोई नियमित दवा लेती हैं?",
+          "आपका रक्तचाप सामान्यतः कैसा रहता है?",
+          "क्या आपको मधुमेह है?",
+          "क्या आपको जोड़ों में दर्द या जकड़न रहती है?",
+          "आप दिन भर में कितना शारीरिक काम या व्यायाम करती हैं?",
+          "क्या आप बहुत नमकीन या तला‑भुना खाना खाती हैं?",
+          "क्या आपकी नींद ठीक से हो पाती है?",
+          "क्या परिवार में किसी को ऐसी ही बीमारी है?",
+          "क्या आपको मानसिक या भावनात्मक तनाव महसूस होता है?"
+        ]
+      },
+      "healthMainMenu": [
+        "1. माहवारी से जुड़ी समस्याएँ",
+        "2. प्रजनन और यौन स्वास्थ्य",
+        "3. PCOS (पॉलीसिस्टिक ओवरी सिंड्रोम) और हार्मोन संबंधी समस्याएँ",
+        "4. स्तन, गर्भाशय और अन्य महिला‑सम्बंधित कैंसर",
+        "5. मानसिक स्वास्थ्य",
+        "6. मोटापा, उच्च रक्तचाप, आर्थराइटिस और अन्य दीर्घकालिक रोग"
+      ]
+    }
+  }
+}
