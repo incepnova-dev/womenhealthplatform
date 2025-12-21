@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import SignUpModal from "./auth/SignUpModal";
 import "../styles/womenchild.css";
 
 const WomenChildPage = () => {
 
   const [language, setLanguage] = useState("en"); // en, hi, kn, bn
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
   // --- STATE MANAGEMENT ---
   const [activeModal, setActiveModal] = useState(null); // 'child', 'women', 'bone', 'oncology'
   const [activePatientTab, setActivePatientTab] = useState('upcoming-care');
@@ -190,24 +193,26 @@ const WomenChildPage = () => {
           </div>
           <div className="nav-cta">
             <div className="nav-link" onClick={() => scrollToSection('specialties')}>Specialties</div>
-            <a className="nav-link" href="/patients">For Patients</a>
-            <div className="nav-link">For Hospitals</div>
-            <div className="nav-link">For Insurers</div>
+            <a className="nav-link" href="/patients">Patients</a>
+            <div className="nav-link">Hospitals</div>
+            <div className="nav-link">Insurers</div>
             <button className="nav-button">
               <span className="icon">⟶</span>
               Book a care pathway
             </button>
+            <a className="nav-link" href="#signin" style={{ textDecoration: "none" }}>Sign In</a>
+            <a className="nav-link" href="#signup" style={{ textDecoration: "none", cursor: "pointer" }} onClick={(e) => { e.preventDefault(); setIsSignUpModalOpen(true); }}>Sign Up</a>
           </div>
 
 
-          {/* RIGHT: language selector */}
-          <div style={{ marginRight: "auto" }}>
+          {/* RIGHT: Language dropdown */}
+          <div style={{ marginLeft: "auto" }}>
             <div className="wp-language-switcher">
-              <label htmlFor="wp-language-select">Language:</label>
               <select
                 id="wp-language-select"
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
+                style={{ border: "none", background: "transparent", cursor: "pointer" }}
               >
                 <option value="en">English</option>
                 <option value="hi">हिन्दी</option>
@@ -1373,6 +1378,9 @@ const WomenChildPage = () => {
           </div>
         </div>
       </footer>
+
+      {/* Sign Up Modal */}
+      <SignUpModal isOpen={isSignUpModalOpen} onClose={() => setIsSignUpModalOpen(false)} />
     </div>
   );
 };

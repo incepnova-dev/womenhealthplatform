@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import chatConfig from "../data/womenchatbot.json";
 import patientData from "../data/womenpatients.json";
+import SignUpModal from "./auth/SignUpModal";
 
 import "../styles/womenpatients.css";
 import gynaeImg from "../images/gynaeo.png";
@@ -30,6 +31,7 @@ export default function WomenPatients() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCondition, setSelectedCondition] = useState(null);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
   // NEW: search bar state
   const [searchQuery, setSearchQuery] = useState(""); // NEW
@@ -585,18 +587,20 @@ const filteredGovernmentInitiatives =
           <span className="icon">⟶</span>
           Book a care pathway
         </button>
+        <a className="nav-link" href="#signin" style={{ textDecoration: "none" }}>Sign In</a>
+        <a className="nav-link" href="#signup" style={{ textDecoration: "none", cursor: "pointer" }} onClick={(e) => { e.preventDefault(); setIsSignUpModalOpen(true); }}>Sign Up</a>
       </div>
  
 
 
-    {/* RIGHT: language selector */}
+    {/* RIGHT: Language dropdown */}
     <div style={{ marginLeft: "auto" }}>
       <div className="wp-language-switcher">
-        <label htmlFor="wp-language-select">Language:</label>
         <select
           id="wp-language-select"
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
+          style={{ border: "none", background: "transparent", cursor: "pointer" }}
         >
           <option value="en">English</option>
           <option value="hi">हिन्दी</option>
@@ -1786,6 +1790,9 @@ const filteredGovernmentInitiatives =
           </div>
         </div>
       )}
+
+      {/* Sign Up Modal */}
+      <SignUpModal isOpen={isSignUpModalOpen} onClose={() => setIsSignUpModalOpen(false)} />
 
       {/* FOOTER */}
       <footer className="footer">

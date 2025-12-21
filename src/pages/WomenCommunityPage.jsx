@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import patientData from "../data/womenpatients.json";
+import SignUpModal from "./auth/SignUpModal";
 import "../styles/womencommunity.css"; // this file exists
 
 
@@ -36,6 +37,7 @@ export default function WomenCommunityPage() {
   };
 
   const [language, setLanguage] = useState("en"); // en, hi, kn, bn
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
   const callAgent = async (path, body) => {
     try {
@@ -112,6 +114,8 @@ export default function WomenCommunityPage() {
               <div className="pill-tag">
                 Agentic setup · Discord · Facebook · In‑app
               </div>
+              <a className="nav-link" href="#signin" style={{ textDecoration: "none", marginRight: "0.5rem" }}>Sign In</a>
+              <a className="nav-link" href="#signup" style={{ textDecoration: "none", marginRight: "0.5rem", cursor: "pointer" }} onClick={(e) => { e.preventDefault(); setIsSignUpModalOpen(true); }}>Sign Up</a>
               <button
                 className="btn secondary"
                 onClick={() => setMode("join")}
@@ -129,11 +133,11 @@ export default function WomenCommunityPage() {
 
           <div style={{ marginLeft: "auto" }}>
             <div className="wp-language-switcher">
-              <label htmlFor="wp-language-select">Language:</label>
               <select
                 id="wp-language-select"
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
+                style={{ border: "none", background: "transparent", cursor: "pointer" }}
               >
                 <option value="en">English</option>
                 <option value="hi">हिन्दी</option>
@@ -141,7 +145,7 @@ export default function WomenCommunityPage() {
                 <option value="bn">বাংলা</option>
               </select>
             </div>
-              </div>
+          </div>
 
           </div>
         </header>
@@ -530,6 +534,9 @@ export default function WomenCommunityPage() {
             </aside>
           </div>
         </main>
+
+        {/* Sign Up Modal */}
+        <SignUpModal isOpen={isSignUpModalOpen} onClose={() => setIsSignUpModalOpen(false)} />
 
         <footer className="site-footer">
           <div className="footer-inner">
