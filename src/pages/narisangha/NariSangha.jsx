@@ -8,6 +8,7 @@ import MainSection from "./main/MainSection";
 export default function NariSangha() {
   const [mode, setMode] = useState("create");
   const [language, setLanguage] = useState("en");
+  const [currentUser, setCurrentUser] = useState(null);
   
   // External connections and feeds state
   const [connections, setConnections] = useState({
@@ -195,6 +196,8 @@ export default function NariSangha() {
         language={language}
         setLanguage={setLanguage}
         setViewMode={setViewMode}
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
       />
 
       <MainSection

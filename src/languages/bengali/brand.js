@@ -2,7 +2,8 @@
 
 const brandProperties = {
   "brand.title": "নারিসংঘ",
-  "brand.subtitle": "নারীদের সম্প্রদায় এবং যত্নের যাত্রা"
+  "brand.subtitle": "নারীদের সম্প্রদায় এবং যত্নের যাত্রা",
+  "header.welcome": "স্বাগতম"
 };
 
 export default brandProperties;

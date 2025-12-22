@@ -8,7 +8,8 @@ const signinProperties = {
   "signin.password.placeholder": "ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ",
   "signin.button.cancel": "ರದ್ದುಮಾಡಿ",
   "signin.button.submit": "ಸೈನ್ ಇನ್",
-  "button.signin": "ಸೈನ್ ಇನ್"
+  "button.signin": "ಸೈನ್ ಇನ್",
+  "button.logout": "ಲಾಗ್ ಔಟ್"
 };
 
 export default signinProperties;

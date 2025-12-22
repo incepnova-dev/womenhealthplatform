@@ -8,7 +8,8 @@ const signinProperties = {
   "signin.password.placeholder": "Enter your password",
   "signin.button.cancel": "Cancel",
   "signin.button.submit": "Sign In",
-  "button.signin": "Sign In"
+  "button.signin": "Sign In",
+  "button.logout": "Logout"
 };
 
 export default signinProperties;

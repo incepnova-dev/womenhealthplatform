@@ -2,7 +2,8 @@
 
 const brandProperties = {
   "brand.title": "नारीसंघ",
-  "brand.subtitle": "महिलाओं के समुदाय और देखभाल यात्राएं"
+  "brand.subtitle": "महिलाओं के समुदाय और देखभाल यात्राएं",
+  "header.welcome": "स्वागत है"
 };
 
 export default brandProperties;
