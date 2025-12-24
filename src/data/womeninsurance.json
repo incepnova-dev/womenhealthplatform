@@ -1,0 +1,1568 @@
+{
+  "categories": [
+    { "id": "maternity_newborn", "name": "Maternity & Newborn", "icon": "🤱" },
+    { "id": "critical_illness", "name": "Women's Critical Illness", "icon": "🎗️" },
+    { "id": "lifestyle", "name": "Lifestyle, PCOS & Hormonal Health", "icon": "⚖️" },
+    { "id": "senior_care", "name": "Senior Women Care", "icon": "👵" },
+    { "id": "girl_child", "name": "Girl Child Protection", "icon": "👧" }
+  ],
+  "products": [
+    {
+      "id": "ins_01",
+      "name": "Star Women Care Insurance",
+      "category": "maternity_newborn",
+      "personalization": "Specifically covers in-utero fetal surgery, assisted reproduction (IVF), and newborn care including vaccinations from Day 1 under women-focused variants.",
+      "life_stage": "Adult (18-75) & Newborn",
+      "type": "Health Insurance",
+      "key_benefits": [
+        "Normal/C-section delivery coverage",
+        "Assisted Reproduction Treatment (IVF/ART) add-ons",
+        "Ante-natal (pregnancy) care outpatient expenses",
+        "Newborn baby cover including vaccination up to 12 months"
+      ],
+      "avg_premium": "₹15,000 - ₹25,000/year",
+      "sites": [
+        {
+          "name": "Star Health",
+          "link": "https://www.starhealth.in/health-insurance/women-care/"
+        },
+        {
+          "name": "PolicyBazaar",
+          "link": "https://www.policybazaar.com/insurance-companies/star-health-insurance/women-care/"
+        }
+      ]
+    },
+    {
+      "id": "ins_02",
+      "name": "HDFC ERGO my:health Women Suraksha",
+      "type": "Critical Illness",
+      "category": "critical_illness",
+      "personalization": "Women-focused critical illness plan with variants for cancer, cardiac disease, comprehensive CI and women assault/burns modules.",
+      "life_stage": "Adult (18-65)",
+      "key_benefits": [
+        "Lump-sum payout on diagnosis of 41 listed critical illnesses",
+        "Coverage for breast, cervical and ovarian cancers",
+        "Women Assault & Burns variant covering assault/acid attack",
+        "Loss of job and child education benefits in selected variants"
+      ],
+      "avg_premium": "₹8,000 - ₹12,000/year",
+      "sites": [
+        {
+          "name": "HDFC ERGO",
+          "link": "https://www.hdfcergo.com/health-insurance/women-suraksha-health-insurance"
+        },
+        {
+          "name": "PolicyX",
+          "link": "https://www.policyx.com/health-insurance/hdfc-ergo-health-insurance/my-health-women-suraksha-policy.php"
+        }
+      ]
+    },
+    {
+      "id": "ins_03",
+      "name": "Niva Bupa Aspire (M-iracle)",
+      "category": "lifestyle",
+      "type": "Health Insurance",
+      "personalization": "Young-family and women-focused health plan with ‘Lock the Clock’ feature where premium stays same as entry age until a claim is made.",
+      "life_stage": "Young Adults (18-35)",
+      "key_benefits": [
+        "Coverage for fertility and maternity across Aspire variants",
+        "Option to cover PCOS/PCOD consultations via riders",
+        "Mental health counseling and wellness-based rewards",
+        "Lock-the-clock premium benefit for claim-free years"
+      ],
+      "avg_premium": "₹10,000 - ₹18,000/year",
+      "sites": [
+        {
+          "name": "Niva Bupa",
+          "link": "https://www.nivabupa.com/family-health-insurance-plans/aspire.html"
+        },
+        {
+          "name": "PolicyBazaar",
+          "link": "https://www.policybazaar.com/insurance-companies/max-bupa-health-insurance/aspire-plan/"
+        }
+      ]
+    },
+    {
+      "id": "ins_04",
+      "name": "Care Joy Maternity Plan",
+      "category": "maternity_newborn",
+      "type": "Health Insurance",
+      "personalization": "Maternity-focused plan for couples planning pregnancy, with short waiting period on Joy Today variant.",
+      "life_stage": "Newlyweds / Planning Family",
+      "key_benefits": [
+        "Maternity coverage with 9-month waiting (Joy Today) or 24 months (Joy Tomorrow)",
+        "Covers delivery expenses for normal and C‑section",
+        "Coverage for newborn baby including certain congenital conditions",
+        "Prenatal and postnatal check-ups under defined limits"
+      ],
+      "avg_premium": "₹12,000 - ₹20,000/year",
+      "sites": [
+        {
+          "name": "Care Insurance",
+          "link": "https://www.careinsurance.com/health-insurance/maternity-health-insurance/joy-maternity-health-insurance-plan.html"
+        }
+      ]
+    },
+    {
+      "id": "ins_05",
+      "name": "Tata AIG She Care Plus",
+      "category": "lifestyle",
+      "type": "Health Insurance",
+      "personalization": "Women-centric health cover with focus on screening, vaccinations and mental wellness for working women.",
+      "life_stage": "Working Professionals (25-45)",
+      "key_benefits": [
+        "Free preventive health check-ups including Pap smear/mammography as per variant",
+        "Cervical cancer (HPV) vaccination coverage limits",
+        "Gynecology and dermatology tele-consultations",
+        "Mental wellness and PMS counseling sessions"
+      ],
+      "avg_premium": "₹11,000 - ₹16,000/year",
+      "sites": [
+        {
+          "name": "Tata AIG",
+          "link": "https://www.tataaig.com/health-insurance/women-health-insurance"
+        }
+      ]
+    },
+    {
+      "id": "ins_06",
+      "name": "Senior Citizens Red Carpet (Female Focus)",
+      "category": "senior_care",
+      "personalization": "Senior citizen plan widely used by elderly women, with waived pre-policy medicals and higher acceptance age.",
+      "life_stage": "Senior Citizens (60-85)",
+      "type": "Health Insurance",
+      "key_benefits": [
+        "No pre-policy medical check-up required up to specified ages",
+        "Coverage for cataract, joint replacements and bariatric surgery",
+        "Modern treatment coverage such as robotic surgeries",
+        "OPD consultation cover and higher entry age suitable for elderly women"
+      ],
+      "avg_premium": "₹25,000 - ₹45,000/year",
+      "sites": [
+        {
+          "name": "Star Health",
+          "link": "https://www.starhealth.in/health-insurance/senior-citizens-red-carpet"
+        }
+      ]
+    },
+    {
+      "id": "ins_07",
+      "name": "Bajaj Allianz Herizon Care",
+      "category": "critical_illness",
+      "personalization": "Comprehensive women health and protection plan including critical illnesses, violence-related events and job loss support.",
+      "life_stage": "Adult (18-65)",
+      "type": "Critical Illness",
+      "key_benefits": [
+        "Coverage for 34 female-specific critical diseases",
+        "Funds for child’s education if mother critically ill",
+        "Benefits for assault, acid attack and kidnapping with legal support add-ons",
+        "Job loss benefit and teleconsultation/wellness services"
+      ],
+      "avg_premium": "₹7,000 - ₹14,000/year",
+      "sites": [
+        {
+          "name": "Bajaj Allianz",
+          "link": "https://www.bajajallianz.com/health-insurance-plans/her-health-her-horizon.html"
+        }
+      ]
+    },
+    {
+      "id": "ins_08",
+      "name": "Future Generali Health PowHer",
+      "category": "lifestyle",
+      "personalization": "Women’s health plan covering transitions from puberty to menopause and related hormonal disorders.",
+      "life_stage": "Teenagers to Middle Age",
+      "type": "Health Insurance",
+      "key_benefits": [
+        "Coverage for puberty-related hormonal disorders",
+        "Menopause-related symptoms and therapy cover",
+        "Nutritional counseling and fitness tracking benefits",
+        "Mental health counseling for postpartum and life-stage stress"
+      ],
+      "avg_premium": "₹9,000 - ₹15,000/year",
+      "sites": [
+        {
+          "name": "Future Generali",
+          "link": "https://www.futuregenerali.in/health-insurance/health-powher"
+        }
+      ]
+    },
+    {
+      "id": "ins_09",
+      "name": "LIC Aadhaar Shila",
+      "category": "lifestyle",
+      "personalization": "Savings-cum-protection plan meant exclusively for women with Aadhaar, suitable for long-term goals and health-linked reserves.",
+      "life_stage": "Adult Women (18-55)",
+      "type": "Investment & Protection",
+      "key_benefits": [
+        "Designed only for female lives with Aadhaar linkage",
+        "Guaranteed benefits on maturity or death as per terms",
+        "Low-ticket premiums for salaried and informal workers",
+        "Can be combined with health insurance to create a safety buffer"
+      ],
+      "avg_premium": "₹6,000 - ₹20,000/year",
+      "sites": [
+        {
+          "name": "LIC",
+          "link": "https://licindia.in/web/guest/plan-details/aadhaar-shila"
+        }
+      ]
+    },
+    {
+      "id": "ins_10",
+      "name": "SBI Life Smart Woman Advantage",
+      "category": "critical_illness",
+      "type": "Investment & Critical Illness",
+      "personalization": "Unit-linked women-specific plan offering critical illness cover, pregnancy complication benefits and premium waiver.",
+      "life_stage": "Adult (18-55)",
+      "key_benefits": [
+        "Women-specific critical illness cover (e.g., breast, cervical cancer) via riders",
+        "Premium waiver on diagnosis of covered critical illness",
+        "Pregnancy complication and congenital disability benefits under certain options",
+        "Goal-based savings for education or career breaks"
+      ],
+      "avg_premium": "₹12,000 - ₹30,000/year",
+      "sites": [
+        {
+          "name": "SBI Life",
+          "link": "https://www.sbilife.co.in/en/individual-plans/ulip/smart-woman-advantage"
+        }
+      ]
+    },
+    {
+      "id": "ins_11",
+      "name": "Bajaj Allianz Women Specific Critical Illness",
+      "category": "critical_illness",
+      "personalization": "Dedicated women-specific critical illness plan with lump-sum payout on diagnosis of covered cancers and serious conditions.",
+      "life_stage": "Adult (21-65)",
+      "type": "Cancer Care",
+      "key_benefits": [
+        "Coverage for breast, ovarian, uterine/cervical, fallopian tube and vaginal cancers",
+        "Protection against permanent paralysis, burns and multitrauma",
+        "Child education benefit and congenital disability benefit",
+        "Loss of job coverage following critical illness diagnosis"
+      ],
+      "avg_premium": "₹3,000 - ₹8,000/year",
+      "sites": [
+        {
+          "name": "Bajaj Allianz",
+          "link": "https://www.bajajallianz.com/health-insurance-plans/womens-health-insurance-critical-illness.html"
+        },
+        {
+          "name": "PolicyBazaar",
+          "link": "https://www.policybazaar.com/health-insurance/bajaj-allianz-health-insurance/women-specific-critical-illness-plan/"
+        }
+      ]
+    },
+    {
+      "id": "ins_12",
+      "name": "ICICI Lombard Women Cancer Shield",
+      "category": "critical_illness",
+      "type": "Cancer Care",
+      "personalization": "Cancer-specific plan focused on women, covering minor and major stage cancers with lump-sum payout.",
+      "life_stage": "Adult (18-65)",
+      "key_benefits": [
+        "Lump-sum payout on diagnosis of covered women cancers",
+        "Stage-wise benefit for minor and major cancer stages",
+        "Financial support for treatment and income replacement",
+        "Can complement existing mediclaim to manage cancer costs"
+      ],
+      "avg_premium": "₹2,000 - ₹7,000/year",
+      "sites": [
+        {
+          "name": "ICICI Lombard",
+          "link": "https://www.icicilombard.com/health-insurance/women-cancer-shield"
+        }
+      ]
+    },
+    {
+      "id": "ins_13",
+      "name": "New India Asha Kiran",
+      "category": "girl_child",
+      "type": "Health Insurance",
+      "personalization": "Family floater health policy with incentives linked to having a girl child, aimed at encouraging girl child protection.",
+      "life_stage": "Parents with Girl Child",
+      "key_benefits": [
+        "Discount on premium where girl child is included",
+        "Hospitalization cover for mother and girl child",
+        "Floater-based coverage for both parents and children",
+        "Supports families in managing healthcare for daughters"
+      ],
+      "avg_premium": "₹8,000 - ₹18,000/year",
+      "sites": [
+        {
+          "name": "New India Assurance",
+          "link": "https://www.newindia.co.in/portal/product/health-insurance-policy-asha-kiran"
+        }
+      ]
+    },
+    {
+      "id": "ins_14",
+      "name": "Sukanya Samriddhi Yojana",
+      "category": "girl_child",
+      "type": "Investment/Savings",
+      "personalization": "Flagship small savings scheme exclusively for girl children, used for education and marriage goals.",
+      "life_stage": "Girl Child (0-10 years)",
+      "key_benefits": [
+        "Highest small savings interest rate for girl child corpus",
+        "Tax benefits under Section 80C and tax-free maturity",
+        "Deposits allowed until girl reaches 15 years; maturity at 21 years",
+        "Ideal for education and marriage planning of daughters"
+      ],
+      "avg_premium": "₹250 - ₹1,50,000/year contribution",
+      "sites": [
+        {
+          "name": "Govt of India (India Post)",
+          "link": "https://www.indiapost.gov.in/Financial/Pages/Content/Sukanya-Samriddhi-Account.aspx"
+        }
+      ]
+    },
+    {
+      "id": "ins_15",
+      "name": "Mahila Samman Savings Certificate",
+      "category": "lifestyle",
+      "personalization": "Two-year fixed income savings product exclusively for women and girl children at a guaranteed interest rate.",
+      "life_stage": "Women & Girl Children",
+      "type" : "Investment/Savings",
+      "key_benefits": [
+        "Two-year tenure with 7.5% p.a. interest credited quarterly",
+        "Available only to women and girl children up to a cap",
+        "Can be used as a health emergency reserve or pregnancy fund",
+        "Simple post office and bank distribution for rural access"
+      ],
+      "avg_premium": "₹1,000 - ₹2,00,000 one-time or staggered deposits",
+      "sites": [
+        {
+          "name": "Govt of India",
+          "link": "https://www.indiapost.gov.in/Financial/Pages/Content/Mahila-Samman-Savings-Certificate.aspx"
+        }
+      ]
+    },
+    {
+      "id": "ins_16",
+      "name": "Pradhan Mantri Matru Vandana Yojana",
+      "category": "maternity_newborn",
+      "type": "Government Incentive",
+      "personalization": "Direct benefit transfer scheme for pregnant and lactating mothers to partially compensate for wage loss and improve maternal nutrition.",
+      "life_stage": "Pregnant & Lactating Mothers (First Child, specified cases for second girl child)",
+      "key_benefits": [
+        "Cash incentive of ₹5,000 in instalments for first living child",
+        "Additional support of ₹6,000 for second girl child under revised guidelines",
+        "Linked to ANC visits, institutional delivery and child immunization milestones",
+        "Aims to improve maternal health-seeking behaviour and birth outcomes"
+      ],
+      "avg_premium": "N/A (Government cash incentive scheme)",
+      "sites": [
+        {
+          "name": "Ministry of Women & Child Development",
+          "link": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana"
+        },
+        {
+          "name": "PIB Note",
+          "link": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2152087"
+        }
+      ]
+    },
+
+{
+      "id": "ins_17",
+      "name": "Beti Bachao Beti Padhao (Awareness + Convergence)",
+      "category": "girl_child",
+      "type":"Government Awareness & Education Program",
+      "personalization": "National campaign and convergence scheme to improve child sex ratio and education of the girl child.",
+      "life_stage": "Girl Child (0-18 years)",
+      "key_benefits": [
+        "Supports states and districts with low child sex ratio",
+        "Focus on survival, protection and education of girl child",
+        "Converges schemes like Sukanya, scholarships and ICDS",
+        "Awareness drives across villages, towns and urban slums"
+      ],
+      "avg_premium": "N/A (Government convergence programme)",
+      "sites": [
+        { "name": "MyScheme – Women & Child", "link": "https://www.myscheme.gov.in/search/category/Women%20and%20Child" },
+        { "name": "Women & Child Dev.", "link": "https://wcd.nic.in/bbbp-schemes" }
+      ]
+    },
+    {
+      "id": "ins_18",
+      "name": "Deendayal Antyodaya Yojana – Self Help Groups (SHGs)",
+      "category": "lifestyle",
+      "type": "Investment/Microfinance",
+      "personalization": "Microfinance and livelihood support via women’s SHGs in rural and small-town India.",
+      "life_stage": "Adult Women (18-60)",
+      "key_benefits": [
+        "Low-interest bank linkage loans for women SHGs",
+        "Support for micro-enterprises, health shops and agri-activities",
+        "Capacity building and financial literacy for rural women",
+        "Helps build financial cushion for health and education expenses"
+      ],
+      "avg_premium": "Loan/credit linked (no premium)",
+      "sites": [
+        { "name": "NRLM – DAY", "link": "https://www.myscheme.gov.in/schemes/day-nrlm" },
+        { "name": "Women Empowerment Schemes", "link": "https://cleartax.in/s/women-empowerment-schemes-india" }
+      ]
+    },
+    {
+      "id": "ins_19",
+      "name": "Janani Suraksha Yojana",
+      "type": "Government Incentive",
+      "category": "maternity_newborn",
+      "personalization": "Safe motherhood intervention providing cash incentives for institutional deliveries, targeted to low-income pregnant women.",
+      "life_stage": "Pregnant Women (BPL/Low-income)",
+      "key_benefits": [
+        "Cash assistance for institutional delivery at public facilities",
+        "Special focus on rural, SC/ST and marginalized women",
+        "Reduces out-of-pocket delivery expenses for families",
+        "Linked to ASHA support for transport and facility linkage"
+      ],
+      "avg_premium": "N/A (Government incentive)",
+      "sites": [
+        { "name": "NHM – JSY", "link": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=841&lid=309" },
+        { "name": "MyScheme – Women & Child", "link": "https://www.myscheme.gov.in/search/category/Women%20and%20Child" }
+      ]
+    },
+    {
+      "id": "ins_20",
+      "name": "Janani Shishu Suraksha Karyakram",
+      "category": "maternity_newborn",
+      "type": "Government Entitlement",
+      "personalization": "Entitles all pregnant women and sick infants to free delivery, drugs, diagnostics and transport in public health facilities.",
+      "life_stage": "Pregnant Women & Newborns",
+      "key_benefits": [
+        "Free delivery including C-section in government facilities",
+        "Free drugs, diagnostics and blood for mother and newborn",
+        "Free transport from home to health facility and back",
+        "Zero out-of-pocket policy for public-sector deliveries"
+      ],
+      "avg_premium": "N/A (Government entitlement)",
+      "sites": [
+        { "name": "NHM – JSSK", "link": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=841&lid=309#jssk" },
+        { "name": "State Health Portals", "link": "https://www.myscheme.gov.in/search/category/Women%20and%20Child" }
+      ]
+    },
+    {
+      "id": "ins_21",
+      "name": "ICDS – Anganwadi Nutrition for Pregnant & Lactating Mothers",
+      "category": "maternity_newborn",
+      "personalization": "Supplementary nutrition and health education for pregnant women, lactating mothers and girl children via Anganwadi centres.",
+      "life_stage": "Pregnant & Lactating Women, Girl Children",
+      "type": "Government Nutrition & Health Support",
+      "key_benefits": [
+        "Take-home rations and hot cooked meals in many states",
+        "Regular health and nutrition education sessions",
+        "Growth monitoring and early referral for high-risk mothers",
+        "Core platform for rural and urban poor women and children"
+      ],
+      "avg_premium": "N/A (Nutrition entitlement)",
+      "sites": [
+        { "name": "MWCD – ICDS", "link": "https://wcd.nic.in/integrated-child-development-services-icds-scheme" },
+        { "name": "MyScheme – Women & Child", "link": "https://www.myscheme.gov.in/search/category/Women%20and%20Child" }
+      ]
+    },
+    {
+      "id": "ins_22",
+      "name": "SBI HeadStart – Savings for Girl Child",
+      "category": "girl_child",
+      "type": "Investment/Savings",
+      "personalization": "Bank-linked savings account for girls, often combined with Sukanya and education goals.",
+      "life_stage": "Girl Child & Parents",
+      "key_benefits": [
+        "Child-focused savings account with low minimum balance",
+        "ATM/debit restrictions to encourage long-term saving",
+        "Can be used to route scholarships and remittances",
+        "Available in SBI branches across villages and towns"
+      ],
+      "avg_premium": "Savings account (no premium)",
+      "sites": [
+        { "name": "SBI Child Accounts", "link": "https://sbi.co.in/web/personal-banking/deposits/saving-account" },
+        { "name": "PolicyBazaar – Girl Child Schemes", "link": "https://www.policybazaar.com/child-plans/articles/what-are-the-government-plans-for-girl-child/" }
+      ]
+    },
+    {
+      "id": "ins_23",
+      "name": "HDFC Life Smart Women ULIP Options",
+      "category": "lifestyle",
+      "type": "Investment & Protection (ULIP)",
+      "personalization": "Investment + protection options marketed to women for career breaks, maternity and long-term wealth.",
+      "life_stage": "Urban Working Women",
+      "key_benefits": [
+        "ULIP-based wealth creation with life cover",
+        "Flexibility to top-up or withdraw for pregnancy or education needs",
+        "Portfolio of equity and debt funds for long-term growth",
+        "Online access and servicing for metro and Tier‑1 users"
+      ],
+      "avg_premium": "₹25,000 - ₹1,00,000/year",
+      "sites": [
+        { "name": "HDFC Life – Women Investing", "link": "https://www.hdfclife.com/investment-plans/best-investment-plan-for-women-in-india" },
+        { "name": "HDFC Life – Health for Women", "link": "https://www.hdfclife.com/health-insurance-plans/health-insurance-for-women" }
+      ]
+    },
+    {
+      "id": "ins_24",
+      "name": "ICICI Pru Life – Plans for Women",
+      "category": "lifestyle",
+      "type": "Investment & Protection",
+      "personalization": "Life and health combo options targeted at women professionals and entrepreneurs.",
+      "life_stage": "Adult Women (25-55)",
+      "key_benefits": [
+        "Term and savings products curated for women’s needs",
+        "Optional health riders for critical illness and hospitalization",
+        "Special premium rates or features for female non-smokers",
+        "Suitable for salaried and self-employed women in cities"
+      ],
+      "avg_premium": "₹10,000 - ₹50,000/year",
+      "sites": [
+        { "name": "ICICI Pru – Women", "link": "https://www.iciciprulife.com/life-insurance/life-insurance-for-women.html" },
+        { "name": "ICICI Pru – Health for Women", "link": "https://www.iciciprulife.com/health-insurance/women-health-insurance.html" }
+      ]
+    },
+    {
+      "id": "ins_25",
+      "name": "Tata AIA Life – Women Protection & Savings",
+      "category": "lifestyle",
+      "type": "Investment & Protection",
+      "personalization": "Life insurance and savings solutions designed for women’s long-term financial independence.",
+      "life_stage": "Adult Women (25-60)",
+      "key_benefits": [
+        "Term and savings products with riders for CI and disability",
+        "Focus on wealth creation for education/retirement of women",
+        "Digital purchase journey suited for urban users",
+        "Highlight of women-specific benefits across some plans"
+      ],
+      "avg_premium": "₹8,000 - ₹40,000/year",
+      "sites": [
+        { "name": "Tata AIA – Women Life Plans", "link": "https://www.tataaia.com/life-insurance-plans/life-insurance-for-women.html" },
+        { "name": "Women Investment Options", "link": "https://www.tataaig.com/knowledge-center/health-insurance/government-schemes-for-women" }
+      ]
+    },
+    {
+      "id": "ins_26",
+      "name": "Aditya Birla Sun Life – ABSLI DigiShield (Women Focus)",
+      "category": "critical_illness",
+      "type": "Term Life Insurance",
+      "personalization": "Term plan with multiple options, often marketed with special benefits for women borrowers and earners.",
+      "life_stage": "Adult Women (25-55)",
+      "key_benefits": [
+        "10 plan options to customise life and CI cover",
+        "Enhanced benefits or rebates for female lives in some variants",
+        "Income payout options helpful for single or widowed women",
+        "Online availability for salaried and self-employed women"
+      ],
+      "avg_premium": "₹6,000 - ₹25,000/year",
+      "sites": [
+        { "name": "ABSLI DigiShield", "link": "https://www.adityabirlahealth.com/health-insurance/absli-digishield-plan" },
+        { "name": "ABSLI Women Investments", "link": "https://www.adityabirlasunlife.com/insights/top-10-investment-options-for-females" }
+      ]
+    },
+    {
+      "id": "ins_27",
+      "name": "PNB MetLife Mera Future for Women",
+      "category": "lifestyle",
+      "type": "Investment & Protection",
+      "personalization": "Wealth and protection plans highlighted for women investors and mothers.",
+      "life_stage": "Adult Women (25-55)",
+      "key_benefits": [
+        "Comprehensive protection plus savings benefits",
+        "Option to plan for children’s education and marriage",
+        "Premium options suited to middle-class women savers",
+        "Bank branches in Tier‑2/3 cities and semi‑urban areas"
+      ],
+      "avg_premium": "₹10,000 - ₹35,000/year",
+      "sites": [
+        { "name": "PNB MetLife – Women Investments", "link": "https://www.pnbmetlife.com/articles/wealth/top-6-investment-plans-for-women-in-india.html" },
+        { "name": "PNB MetLife Plans", "link": "https://www.pnbmetlife.com/term-insurance-plans.html" }
+      ]
+    },
+    {
+      "id": "ins_28",
+      "name": "HDFC ERGO Travel Insurance – Solo Woman Traveller",
+      "category": "lifestyle",
+      "personalization": "Travel insurance suitable for solo women travellers, students and professionals visiting India or abroad.",
+      "life_stage": "Adult Women (18-60)",
+      "type": "Travel Insurance",
+      "key_benefits": [
+        "Medical emergency and evacuation cover during travel",
+        "Baggage loss and trip delay/cancellation protection",
+        "24x7 assistance services useful for solo women travellers",
+        "Customisable by destination (domestic/international) and trip type"
+      ],
+      "avg_premium": "₹200 - ₹2,000/trip",
+      "sites": [
+        { "name": "PolicyBazaar – Travel", "link": "https://www.policybazaar.com/travel-insurance/" },
+        { "name": "HDFC ERGO Travel", "link": "https://www.hdfcergo.com/travel-insurance" }
+      ]
+    },
+    {
+      "id": "ins_29",
+      "name": "Tata AIG Travel Guard – Women Travellers",
+      "category": "lifestyle",
+      "type": "Term Life Insurance",
+      "personalization": "Comprehensive travel cover used widely by corporate and leisure women travellers.",
+      "life_stage": "Adult Women (18-65)",
+      "key_benefits": [
+        "Medical expenses and evacuation cover abroad",
+        "Loss of passport, baggage and trip interruption benefits",
+        "24x7 global assistance and claim support",
+        "Popular for students, IT professionals and frequent fliers"
+      ],
+      "avg_premium": "₹300 - ₹3,000/trip",
+      "sites": [
+        { "name": "Tata AIG Travel", "link": "https://www.tataaig.com/travel-insurance" },
+        { "name": "Travel Guides for Women", "link": "https://www.tataaig.com/knowledge-center/travel-insurance" }
+      ]
+    },
+    {
+      "id": "ins_30",
+      "name": "ACKO Health – Women Health Focus",
+      "category": "lifestyle",
+      "type" : "Health Insurance",
+      "personalization": "Digital-first health insurance emphasising women’s preventive care and OPD benefits.",
+      "life_stage": "Urban App-first Women",
+      "key_benefits": [
+        "Cashless network with app-based claims and teleconsults",
+        "Plans highlighting women’s health and maternity features",
+        "Lower premiums for young, digitally savvy women",
+        "Fitness rewards integrated via mobile app"
+      ],
+      "avg_premium": "₹6,000 - ₹15,000/year",
+      "sites": [
+        { "name": "ACKO – Health for Women", "link": "https://www.acko.com/health-insurance/for-women/" },
+        { "name": "ACKO – Women Insurance Guide", "link": "https://www.acko.com/health-insurance/for-women/#plans" }
+      ]
+    },
+    {
+      "id": "ins_31",
+      "name": "Reliance General Women Health Plans",
+      "category": "lifestyle",
+      "personalization": "Health insurance variants and education material focused on women policyholders.",
+      "life_stage": "Adult Women (18-60)",
+      "type" : "Health Insurance",
+      "key_benefits": [
+        "Customisable health plans for individuals and families",
+        "Articles and guidance for women-centric coverage selection",
+        "Network of hospitals in cities and emerging towns",
+        "Online purchase and renewal journey"
+      ],
+      "avg_premium": "₹5,000 - ₹20,000/year",
+      "sites": [
+        { "name": "Reliance – Health for Women", "link": "https://www.reliancegeneral.co.in/health-insurance/health-insurance-for-women" },
+        { "name": "Reliance Health Gain Plan", "link": "https://www.reliancegeneral.co.in/health-insurance/health-gain-insurance-policy" }
+      ]
+    },
+    {
+      "id": "ins_32",
+      "name": "Niva Bupa ReAssure 2.0 (Women & Family)",
+      "category": "senior_care",
+      "type": "Health Insurance (High Sum Insured)",
+      "personalization": "High-sum-insured health cover with restoration features, suitable for women and their families including elders.",
+      "life_stage": "Adult & Senior Women",
+      "key_benefits": [
+        "Unlimited restoration of sum insured for future claims",
+        "Optional maternity and newborn add-ons for younger women",
+        "High coverage slabs useful for cancer and cardiac risks",
+        "Available in metros and large Tier‑2 cities"
+      ],
+      "avg_premium": "₹20,000 - ₹60,000/year",
+      "sites": [
+        { "name": "Niva Bupa – ReAssure", "link": "https://www.nivabupa.com/health-insurance-plans/reassure-2-0.html" },
+        { "name": "PolicyBazaar – ReAssure", "link": "https://www.policybazaar.com/health-insurance/niva-bupa-health-insurance/reassure-plan/" }
+      ]
+    },
+    {
+      "id": "ins_33",
+      "name": "LIC Jeevan Shakti for Women (Example Women-friendly Endowment)",
+      "category": "senior_care",
+      "type": "Investment & Life Insurance (Endowment)",
+      "personalization": "Traditional savings plan used by middle-aged and senior women for guaranteed returns and legacy planning.",
+      "life_stage": "Middle-aged & Senior Women",
+      "key_benefits": [
+        "Guaranteed maturity sum with bonuses",
+        "Life cover for the earning or homemaker woman",
+        "Installment options helpful for retired or senior women",
+        "Sold via agents in villages, towns and cities"
+      ],
+      "avg_premium": "₹10,000 - ₹40,000/year",
+      "sites": [
+        { "name": "LIC India – Plans", "link": "https://licindia.in/web/guest/insurance-plan" },
+        { "name": "Investment Plans for Women", "link": "https://www.indiafirstlife.com/investment-plans/best-investment-plan-for-women-in-india" }
+      ]
+    },
+    {
+      "id": "ins_34",
+      "name": "India Post Recurring Deposit (Women Savers)",
+      "category": "lifestyle",
+      "type": "Investment/Savings",
+      "personalization": "Small-ticket recurring deposits used extensively by rural and small-town women for health and education contingencies.",
+      "life_stage": "Women Savers (18-60)",
+      "key_benefits": [
+        "Low minimum monthly deposit, accessible to daily wage earners",
+        "Guaranteed interest rate with government backing",
+        "Ideal for building small health emergency funds",
+        "Post offices present across villages and blocks"
+      ],
+      "avg_premium": "₹100 - ₹5,000/month deposit",
+      "sites": [
+        { "name": "India Post Savings", "link": "https://www.indiapost.gov.in/Financial/Pages/Content/Recurring-Deposit-Account.aspx" },
+        { "name": "ClearTax – Women Savings", "link": "https://cleartax.in/s/women-empowerment-schemes-india" }
+      ]
+    },
+    {
+      "id": "ins_35",
+      "name": "Women Self Help Group Health & Accident Covers (State Variants)",
+      "category": "critical_illness",
+      "personalization": "Group health and accident covers purchased by women SHGs at district level under various state initiatives.",
+      "life_stage": "Adult Women in SHGs",
+      "type": "Accidental & Health Insurance",
+      "key_benefits": [
+        "Low-cost group insurance for health and accidental death",
+        "Premium often subsidised by state governments or NRLM funds",
+        "Covers rural and small-town women engaged in SHG activities",
+        "Claim support via SHG federation and block offices"
+      ],
+      "avg_premium": "₹100 - ₹400/year (group)",
+      "sites": [
+        { "name": "NRLM – SHG Insurance Note", "link": "https://www.myscheme.gov.in/schemes/day-nrlm" },
+        { "name": "State SHG Portals", "link": "https://cleartax.in/s/women-empowerment-schemes-india" }
+      ]
+    },
+    {
+      "id": "ins_36",
+      "name": "Women Micro-Enterprise Credit Linked Insurance (PMEGP/Stand-Up)",
+      "category": "lifestyle",
+      "type": "Life & Accidental Insurance",
+      "personalization": "Credit-linked life and accident insurance bundled with loans for women micro-entrepreneurs.",
+      "life_stage": "Women Entrepreneurs (18-60)",
+      "key_benefits": [
+        "Loan-linked cover against death/disability of borrower",
+        "Supports continuity of small shops, tailoring, food units",
+        "Encourages women in Tier‑2/3 cities to start enterprises",
+        "Linked to schemes like PMEGP, Stand-Up India etc."
+      ],
+      "avg_premium": "Embedded in loan EMI",
+      "sites": [
+        { "name": "MyScheme – Women Entrepreneurship", "link": "https://www.myscheme.gov.in/search/category/Women%20and%20Child" },
+        { "name": "Government Credit Schemes", "link": "https://cleartax.in/s/women-empowerment-schemes-india" }
+      ]
+    },
+    {
+      "id": "ins_37",
+      "name": "Urban Working Women Hostel & Safety Schemes (Insurance Component)",
+      "category": "lifestyle",
+      "personalization": "Hostel and safety schemes sometimes include group insurance for women residents in metros and Tier‑1 cities.",
+      "life_stage": "Single Working Women",
+      "type": "Social Welfare (Accommodation & Group Cover)",
+      "key_benefits": [
+        "Safe subsidised accommodation in urban centres",
+        "Group accident or health cover embedded by some operators",
+        "Security and CCTV with emergency response support",
+        "Facilitates migration of women from smaller towns to cities"
+      ],
+      "avg_premium": "Embedded in hostel fees",
+      "sites": [
+        { "name": "MWCD – Working Women Hostel", "link": "https://wcd.nic.in/schemes/working-women-hostel" },
+        { "name": "State Women Schemes", "link": "https://wcdhry.gov.in/schemes-for-women/" }
+      ]
+    },
+    {
+      "id": "ins_40",
+      "name": "Top Government Schemes for Women (Multi-scheme Reference)",
+      "category": "lifestyle",
+      "tyep": "Top Government Schemes for Women",
+      "personalization": "Reference aggregations that list major central and state-level schemes for women’s safety and financial inclusion.",
+      "life_stage": "Women & Girl Children",
+      "key_benefits": [
+        "Single view of top 10–15 women schemes like Ujjwala, Ujjwala, Sakhi One Stop Centres etc.",
+        "Helps NGOs and frontline workers counsel village women",
+        "Assists urban women to discover hidden subsidies and supports",
+        "Links to official portals for direct application"
+      ],
+      "avg_premium": "N/A (Information resource)",
+      "sites": [
+        { "name": "Tata AIG – Govt Schemes for Women", "link": "https://www.tataaig.com/knowledge-center/health-insurance/government-schemes-for-women" },
+        { "name": "ClearTax – Women Schemes List", "link": "https://cleartax.in/s/women-empowerment-schemes-india" }
+      ]
+    },
+    {
+      "id": "ins_41",
+      "name": "Top Schemes for Girl Child (Multi-scheme Reference)",
+      "category": "girl_child",
+      "type": "Information Resource (Girl Child Schemes)",
+      "personalization": "Guides summarising Sukanya, scholarships, nutrition and protection schemes targeting girls from rural and urban India.",
+      "life_stage": "Girl Child (0-18 years)",
+      "key_benefits": [
+        "Overview of 10+ girl child schemes at central and state level",
+        "Helps parents combine savings, scholarship and health benefits",
+        "Useful for ASHAs, Anganwadi workers and school teachers",
+        "Points to official portals for application and more details"
+      ],
+      "avg_premium": "N/A (Information resource)",
+      "sites": [
+        { "name": "PolicyBazaar – Girl Child Schemes", "link": "https://www.policybazaar.com/child-plans/articles/what-are-the-government-plans-for-girl-child/" },
+        { "name": "Bajaj Finserv – Girl Child Schemes", "link": "https://www.bajajfinserv.in/investments/government-girl-schemes-in-india" }
+      ]
+    },
+    {
+      "id": "ins_42",
+      "name": "Women Health Insurance Overview – ICICI Pru",
+      "category": "critical_illness",
+      "personalization": "Educational resource summarising how women should combine health and life covers for cancer, pregnancy and emergencies.",
+      "life_stage": "Women Across Life Stages",
+      "type": "Information Resource (Educational)",
+      "key_benefits": [
+        "Explains importance of dedicated women health cover",
+        "Recommends mix of mediclaim, CI and savings for women",
+        "Helps rural-to-urban migrants plan their financial protection",
+        "Highlights ICICI Pru products oriented to women’s needs"
+      ],
+      "avg_premium": "N/A (Information resource)",
+      "sites": [
+        { "name": "ICICI Pru – Women Health Insurance", "link": "https://www.iciciprulife.com/health-insurance/women-health-insurance.html" },
+        { "name": "ICICI Pru – Women Life Insurance", "link": "https://www.iciciprulife.com/life-insurance/life-insurance-for-women.html" }
+      ]
+    },
+    {
+      "id": "ins_44",
+      "name": "Best Investment Options for Women – Multi-company Guides",
+      "category": "lifestyle",
+      "personalization": "Guides from insurers and AMCs detailing investment mixes for women across risk profiles.",
+      "life_stage": "Women Investors (20-60)",
+      "type": "Information Resource (Financial Education)",
+      "key_benefits": [
+        "Explains SIP, ULIP, PPF, SSY and deposits for women",
+        "Includes examples for housewives, salaried and entrepreneurs",
+        "Encourages women to build emergency and health funds",
+        "Good entry content for Tier‑2/3 city women using mobile internet"
+      ],
+      "avg_premium": "N/A (Education + product leads)",
+      "sites": [
+        { "name": "HDFC Life – Investment for Women", "link": "https://www.hdfclife.com/investment-plans/best-investment-plan-for-women-in-india" },
+        { "name": "Kotak Life – Women Investment", "link": "https://www.kotaklife.com/ulip-plans/best-investment-options-for-females" }
+      ]
+    },
+    {
+      "id": "ins_45",
+      "name": "Women & Child Category – MyScheme National Portal",
+      "category": "girl_child",
+      "personalization": "Official aggregator listing central and state schemes for women and children across India.",
+      "life_stage": "Women & Girl Children",
+      "type": "Information Resource (Government Portal)",
+      "key_benefits": [
+        "Searchable directory of hundreds of schemes",
+        "Filters by state, ministry, benefit type (education, health, income)",
+        "Helps women in villages and cities discover entitlements",
+        "Links directly to application or detailed pages"
+      ],
+      "avg_premium": "N/A (Government portal)",
+      "sites": [
+        { "name": "MyScheme – Women & Child", "link": "https://www.myscheme.gov.in/search/category/Women%20and%20Child" },
+        { "name": "MWCD Schemes", "link": "https://wcdhry.gov.in/schemes-for-women/" }
+      ]
+    },
+    {
+      "id": "ins_46",
+      "name": "Women Empowerment Schemes – Consolidated List",
+      "category": "educational",
+      "type": "Information Resource (Consolidated Schemes)",
+      "personalization": "Consolidated list of central/state schemes for women including health, education, livelihood and insurance-linked benefits.",
+      "life_stage": "Women Across Life Stages",
+      "key_benefits": [
+        "Summarises leading women empowerment schemes in one place",
+        "Covers schemes for health, nutrition, safety and livelihoods",
+        "Useful for NGOs, social workers and community leaders",
+        "Helps women assemble a portfolio of entitlements and covers"
+      ],
+      "avg_premium": "N/A (Information resource)",
+      "sites": [
+        { "name": "ClearTax – Women Schemes", "link": "https://cleartax.in/s/women-empowerment-schemes-india" },
+        { "name": "Women Schemes Overview", "link": "https://www.tataaig.com/knowledge-center/health-insurance/government-schemes-for-women" }
+      ]
+    },
+    {
+      "id": "ins_47",
+      "name": "Top Government Schemes for Girl Child – Detailed Guides",
+      "category": "girl_child",
+      "personalization": "Focused guides explaining benefits, eligibility and application process for girl child schemes.",
+      "life_stage": "Girl Child (0-18 years)",
+      "type": "Information Resource (Scheme Guide)",
+      "key_benefits": [
+        "Deep explanations of Sukanya, scholarship and protection schemes",
+        "Helps low-literacy parents understand how to apply",
+        "Guides often include examples and FAQs for villages and towns",
+        "Encourages multi-scheme stacking for better protection"
+      ],
+      "avg_premium": "N/A (Information resource)",
+      "sites": [
+        { "name": "CRY – Girl Child Schemes Guide", "link": "https://www.cry.org/blog/government-schemes-for-girl-children/" },
+        { "name": "PolicyBazaar – Girl Child Schemes", "link": "https://www.policybazaar.com/child-plans/articles/what-are-the-government-plans-for-girl-child/" }
+      ]
+    },
+    {
+      "id": "ins_48",
+      "name": "Top Health Insurance for Women – 2025 Curations",
+      "category": "educational",
+      "type": "Information Resource (Annual Curation)",
+      "personalization": "Yearly curation pages that highlight the best health plans for women, updated with latest premiums and features.",
+      "life_stage": "Adult Women (20-60)",
+      "key_benefits": [
+        "Up-to-date list of women-focused and women-suitable plans",
+        "Considers new product launches and regulatory changes",
+        "Helps in annual review of coverage by women and families",
+        "Often ranks plans by maternity, cancer, OPD and premium"
+      ],
+      "avg_premium": "N/A (curated view)",
+      "sites": [
+        { "name": "PolicyBazaar – Best Women Health Plans 2025", "link": "https://www.policybazaar.com/health-insurance/women/" },
+        { "name": "ACKO – Best Women Plans", "link": "https://www.acko.com/health-insurance/for-women/" }
+      ]
+    },
+    {
+      "id": "ins_49",
+      "name": "Investment Plans for Women – Insurer Comparisons 2025",
+      "category": "educational",
+      "type": "Information Resource (Investment Comparison)",
+      "personalization": "Comparison articles that rank investment options from multiple insurers and banks for women.",
+      "life_stage": "Women Investors (25-60)",
+      "key_benefits": [
+        "Compares ULIPs, traditional plans, deposits and mutual funds",
+        "Highlights risk-return trade-offs for different woman personas",
+        "Gives examples for homemakers, salaried and entrepreneurs",
+        "Encourages diversification across health, term and savings"
+      ],
+      "avg_premium": "Varies by chosen plan",
+      "sites": [
+        { "name": "IndiaFirst – Best Plans for Women 2025", "link": "https://www.indiafirstlife.com/investment-plans/best-investment-plan-for-women-in-india" },
+        { "name": "PnbMetLife – Best Schemes for Women", "link": "https://www.pnbmetlife.com/articles/wealth/top-6-investment-plans-for-women-in-india.html" }
+      ]
+    },
+    {
+      "id": "ins_50",
+      "name": "Women Centric Health & Savings Bundle (Concept Slot for Future Products)",
+      "category": "lifestyle",
+      "personalization": "Placeholder concept for bundling health, term, savings and travel protection specifically designed for Indian women across tiers.",
+      "life_stage": "Women Across Life Stages",
+      "type": "Investment & Health Bundle",
+      "key_benefits": [
+        "Single view of health, CI, term and small savings products",
+        "Designable as a one-stop ‘Women Health & Finance’ bundle in your app",
+        "Can be localised for rural, urban, migrant and gig workers",
+        "Future-ready slot to plug in new insurer or govt products"
+      ],
+      "avg_premium": "To be defined by platform",
+      "sites": [
+        { "name": "Your Platform – Narishakti", "link": "https://onehealthplatform.vercel.app/index_womenhealth.html" },
+        { "name": "Aggregator APIs (Concept)", "link": "https://www.policybazaar.com/" }
+      ]
+    },
+  {
+      "id": "ins_51",
+      "name": "HDFC ERGO Women Suraksha – Cancer Plus (Osteoporosis Cover)",
+     "type": "Critical Care (Cancer & Osteoporosis)",
+      "category": "senior_care",
+      "personalization": "Women cancer plus variant that also covers severe osteoporosis and autoimmune disorders common after menopause.",
+      "life_stage": "Perimenopause & Senior Women (40-75)",
+      "key_benefits": [
+        "Coverage for severe osteoporosis with benefit up to 25% of sum insured",
+        "Coverage for systemic lupus erythematosus and rheumatoid arthritis",
+        "Women cancer benefits for breast and cervical carcinoma in situ",
+        "Lump-sum benefit independent of hospitalisation bills"
+      ],
+      "avg_premium": "₹4,000 - ₹10,000/year",
+      "sites": [
+        {
+          "name": "HDFC ERGO – Women Essential/CI Plans",
+          "link": "https://www.hdfcergo.com/health-insurance/women-suraksha-health-insurance/women-essential-ci-plan"
+        },
+        {
+          "name": "PolicyX – Women Health Insurance",
+          "link": "https://www.policyx.com/health-insurance/articles/health-insurance-plans-for-women-in-india/"
+        }
+      ]
+    },
+    {
+      "id": "ins_52",
+      "name": "Care Health – Women Health & Menopause Coverage (within Care Women Programs)",
+      "category": "senior_care",
+      "type": "Health Insurance",
+      "personalization": "Care Health’s women-focused coverage including menopause-related conditions, osteoporosis and chronic diseases.",
+      "life_stage": "Women 40+ (Perimenopause & Postmenopause)",
+      "key_benefits": [
+        "Coverage for menopause-related conditions such as osteoporosis and chronic co-morbidities",
+        "Hospitalisation for fractures and bone density-related complications",
+        "OPD consults and diagnostic coverage under select plans",
+        "Useful for mothers and grandmothers in Tier‑2/3 cities"
+      ],
+      "avg_premium": "₹12,000 - ₹30,000/year",
+      "sites": [
+        {
+          "name": "InsuranceDekho – Menopause Health Insurance",
+          "link": "https://www.insurancedekho.com/health-insurance/news/health-insurance-for-menopause-treatment-10377"
+        },
+        {
+          "name": "PolicyBazaar – Women Health Plans",
+          "link": "https://www.policybazaar.com/health-insurance/women/"
+        }
+      ]
+    },
+    {
+      "id": "ins_53",
+      "name": "ACKO Health for Women – Preventive & Vitamin-linked Checkups",
+      "category": "lifestyle",
+      "type": "Health Insurance",
+      "personalization": "Digital women health plan emphasising annual checkups, vitamin deficiency screenings and lifestyle risk management.",
+      "life_stage": "Adult Women (25-55)",
+      "key_benefits": [
+        "Annual checkups including blood work for anaemia, vitamin D/B12 and metabolic markers",
+        "Preventive care focus for breast cancer, cervical cancer and lifestyle diseases",
+        "Teleconsults and e-pharmacy discounts helping women manage supplements",
+        "Cashless access to 11,500+ hospitals across India"
+      ],
+      "avg_premium": "₹6,000 - ₹15,000/year",
+      "sites": [
+        {
+          "name": "ACKO – Health Insurance for Women",
+          "link": "https://www.acko.com/health-insurance/for-women/"
+        },
+        {
+          "name": "Women Plans Guide 2025",
+          "link": "https://www.insurancedekho.com/health-insurance/articles/top-women-health-insurance-plans-in-india-537"
+        }
+      ]
+    },
+    {
+      "id": "ins_54",
+      "name": "Bajaj Allianz HERizon Care – OPD & Teleconsult Add-ons",
+      "category": "lifestyle",
+      "type": "Health Insurance (OPD & Mental Health)",
+      "personalization": "Women-centric plan with OPD teleconsults, nutrition, mental health and fertility-related consults bundled.",
+      "life_stage": "Adult Women (18-60)",
+      "key_benefits": [
+        "Diet and nutrition consultations for PCOS, weight and bone health",
+        "Teleconsult cover for gynaecology and mental wellness",
+        "OPD care and preventive checkups under value-added services",
+        "Surrogacy support and surgical infertility cover in higher variants"
+      ],
+      "avg_premium": "₹7,000 - ₹18,000/year",
+      "sites": [
+        {
+          "name": "Bajaj Allianz – Women Health Insurance",
+          "link": "https://www.bajajgeneralinsurance.com/health-insurance-plans/women-health-insurance.html"
+        },
+        {
+          "name": "PolicyBazaar – HERizon Care",
+          "link": "https://www.policybazaar.com/health-insurance/women/"
+        }
+      ]
+    },
+    {
+      "id": "ins_55",
+      "name": "ManipalCigna Lifetime Health – Infertility Cover Option",
+      "category": "lifestyle",
+      "type": "Health Insurance",
+      "personalization": "Family health plan with an optional infertility add-on that covers IVF and fertility treatments for women.",
+      "life_stage": "Couples & Women (21-42)",
+      "key_benefits": [
+        "Optional infertility cover for IVF and fertility treatments up to defined limits",
+        "Coverage over and above maternity sum insured in select options",
+        "Higher sum insured slabs for multiple IVF attempts subject to T&C",
+        "Network access across fertility centres in urban India"
+      ],
+      "avg_premium": "₹20,000 - ₹60,000/year (with add-on)",
+      "sites": [
+        {
+          "name": "ManipalCigna – Infertility Option",
+          "link": "https://www.manipalcigna.com/blog/infertility-insurance-in-india"
+        },
+        {
+          "name": "Indira IVF – IVF Coverage Guide",
+          "link": "https://www.indiraivf.com/blog/ivf-coverage-insurance"
+        }
+      ]
+    },
+    {
+      "id": "ins_56",
+      "name": "Care Classic – IVF Coverage",
+      "category": "lifestyle",
+      "type": "Health Insurance",
+      "personalization": "Health plan option from Care Insurance that includes IVF coverage after waiting period for women facing infertility.",
+      "life_stage": "Women Undergoing Fertility Treatment",
+      "key_benefits": [
+        "IVF treatment coverage as an add-on after 36-month waiting period",
+        "Coverage available every 3 policy years under specified conditions",
+        "Helps manage high IVF costs alongside maternity cover",
+        "Suitable for urban couples planning advanced fertility treatments"
+      ],
+      "avg_premium": "₹18,000 - ₹45,000/year (with IVF option)",
+      "sites": [
+        {
+          "name": "Care – IVF Coverage Insurance",
+          "link": "https://www.careinsurance.com/health-insurance/ivf-coverage-insurance"
+        },
+        {
+          "name": "Tata AIG – Infertility Coverage Guide",
+          "link": "https://www.tataaig.com/knowledge-center/health-insurance/does-health-insurance-cover-infertility-treatment"
+        }
+      ]
+    },
+    {
+      "id": "ins_57",
+      "name": "ICICI Lombard Women Cancer Shield",
+      "category": "critical_illness",
+      "type": "Critical Care",
+      "personalization": "Cancer-specific insurance plan for women covering breast, cervical, ovarian and other female cancers.",
+      "life_stage": "Adult Women (18-65)",
+      "key_benefits": [
+        "Lump-sum payout on first diagnosis of breast, cervical, uterine, ovarian, vaginal, vulvar and thyroid cancers",
+        "Optional preventive screening and assessment benefits",
+        "Teleconsultation services for cancer review and second opinions",
+        "Useful top-up over base health plans for urban and semi-urban women"
+      ],
+      "avg_premium": "₹2,000 - ₹7,000/year",
+      "sites": [
+        {
+          "name": "ICICI Lombard – Women Cancer Shield (Info)",
+          "link": "https://www.iciciprulife.com/health-insurance/women-health-insurance.html"
+        },
+        {
+          "name": "PolicyBazaar – Women Cancer Shield",
+          "link": "https://www.policybazaar.com/insurance-companies/icici-lombard-health-insurance/women-cancer-shield-plan/"
+        }
+      ]
+    },
+    {
+      "id": "ins_58",
+      "name": "Union Bank Women's Cancer Plan",
+      "category": "critical_illness",
+      "type": "Critical Care",
+      "personalization": "Bank-linked cancer cover for women specifically targeting breast, ovarian and cervical cancers.",
+      "life_stage": "Adult Women (18-65)",
+      "key_benefits": [
+        "Benefit plan paying full sum insured on detection of specified cancers",
+        "Coverage against three major women cancers: breast, ovarian and cervical",
+        "Sum insured options from ₹10 lakh to ₹30 lakh",
+        "Distributed via Union Bank channels reaching Tier‑2/3 cities"
+      ],
+      "avg_premium": "₹1,500 - ₹6,000/year",
+      "sites": [
+        {
+          "name": "Union Bank – Women's Cancer Plan PDF",
+          "link": "https://www.unionbankofindia.bank.in/pdf/womens-cancer-plan.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ins_59",
+      "name": "HDFC ERGO Women Cancer Plan",
+      "category": "critical_illness",
+      "type": "Critical Care",
+      "personalization": "Variant of Women Suraksha focusing on pre-cancer/stage 0 and invasive cancers of breast and cervix.",
+      "life_stage": "Adult Women (25-65)",
+      "key_benefits": [
+        "25% of sum insured for carcinoma in situ of breast and cervix uteri",
+        "Higher benefits at invasive cancer stages per policy terms",
+        "Part of modular Women Suraksha suite with add-ons",
+        "Ideal for women at higher familial cancer risk"
+      ],
+      "avg_premium": "₹3,000 - ₹9,000/year",
+      "sites": [
+        {
+          "name": "HDFC ERGO – Women Cancer Plan",
+          "link": "https://www.hdfcergo.com/health-insurance/women-suraksha-health-insurance/women-cancer-plan"
+        }
+      ]
+    },
+    {
+      "id": "ins_60",
+      "name": "Generic Women Health Plans with UTI & Urinary Health Coverage",
+      "category": "maternity_newborn",
+      "type": "Health Insurance",
+      "personalization": "Most comprehensive women health policies cover urinary tract infections (UTIs) and urinary issues as part of standard hospitalisation.",
+      "life_stage": "Women Across Life Stages",
+      "key_benefits": [
+        "IPD cover for UTIs, pyelonephritis and urinary complications requiring admission",
+        "OPD/teleconsult for recurrent UTI in plans with OPD benefits",
+        "Coverage integrated into women plans like Star Women Care, PowHer and ACKO Women",
+        "Relevant for pregnant, menopausal and elderly women who face higher UTI risk"
+      ],
+      "avg_premium": "₹6,000 - ₹25,000/year",
+      "sites": [
+        {
+          "name": "PolicyBazaar – Women Health Coverage Scope",
+          "link": "https://www.policyx.com/health-insurance/articles/health-insurance-plans-for-women-in-india/"
+        },
+        {
+          "name": "ACKO – Women Health Coverage Details",
+          "link": "https://www.acko.com/health-insurance/for-women/"
+        }
+      ]
+    },
+    {
+      "id": "ins_61",
+      "name": "Women Menopause Health Insurance Options",
+      "category": "senior_care",
+      "type": "Health Insurance",
+      "personalization": "Guided selection of health plans that support menopause-related conditions, bone health and chronic disease in women.",
+      "life_stage": "Women 40+",
+      "type": "Health Insurance",
+      "key_benefits": [
+        "Cover for menopause-related conditions including osteoporosis and metabolic syndromes under standard health benefits",
+        "Advice to choose plans with higher OPD, diagnostics and chronic care",
+        "Focus on preventive screenings in women over 50",
+        "Applicable via Care, HDFC and other women-focused plans"
+      ],
+      "avg_premium": "Varies by base plan",
+      "sites": [
+        {
+          "name": "InsuranceDekho – Menopause Treatment Cover",
+          "link": "https://www.insurancedekho.com/health-insurance/news/health-insurance-for-menopause-treatment-10377"
+        },
+        {
+          "name": "Universal Sompo – Women Health Guide 2025",
+          "link": "https://www.universalsompo.com/blogs/health-insurance/health-insurance-for-women-india-guide-2025/"
+        }
+      ]
+    },
+    {
+      "id": "ins_62",
+      "name": "Vidhwa Pension / Widow Pension Scheme",
+      "category": "senior_care",
+      "type": "Pension/Social Security (Widowhood)",
+      "personalization": "Social security pension that provides a fixed monthly income to widowed women from economically weaker sections.",
+      "life_stage": "Widows (18-60+)",
+      "key_benefits": [
+        "Guaranteed monthly pension (typically ₹300–₹2,000 depending on state)",
+        "Direct benefit transfer into widow’s bank account",
+        "Targeted at BPL and low-income widows who have not remarried",
+        "Implemented by states under central guidelines with simple documentation"
+      ],
+      "avg_premium": "N/A (Government pension benefit)",
+      "sites": [
+        {
+          "name": "HDFC Life – Widow Pension Guide",
+          "link": "https://www.hdfclife.com/insurance-knowledge-centre/retirement-planning/widow-pension-scheme-apply-and-avail-benefits"
+        },
+        {
+          "name": "Bajaj Finance – Widow Pension Scheme",
+          "link": "https://www.bajajfinserv.in/insurance/widow-pension-scheme"
+        }
+      ]
+    },
+    {
+      "id": "ins_63",
+      "name": "State Widow Pension (e.g., Haryana, UP, etc.)",
+      "type": "Pension/Social Security",
+      "category": "senior_care",
+      "personalization": "State-level widow pensions that complement central support for widowed women in villages, towns and slums.",
+      "life_stage": "Widows (30-60+)",
+      "key_benefits": [
+        "State-specific pension slabs and eligibility criteria",
+        "Priority for SC/ST, BPL and marginalised widows",
+        "Provides recurring income to cover food, health and basic needs",
+        "Acts as base layer atop micro-insurance and SHG savings"
+      ],
+      "avg_premium": "N/A (State social security)",
+      "sites": [
+        {
+          "name": "SBI Life – What is Widow Pension",
+          "link": "https://www.sbilife.co.in/en/knowledge-centre/insurance-basics-financial-advice/what-is-a-widow-pension"
+        },
+        {
+          "name": "IndiaFirst – Widow Pension Guide",
+          "link": "https://www.indiafirstlife.com/knowledge-center/retirement-planning/learn-about-widow-pension-scheme-mb"
+        }
+      ]
+    },
+    {
+      "id": "ins_64",
+      "name": "SBI General Arogya Plus – Women-focused Usage",
+      "category": "maternity_newborn",
+      "type": "Health Insurance",
+      "personalization": "Health policy highlighted as ideal for women, with maternity, OPD and daycare procedure coverage.",
+      "life_stage": "Women 18-65 (plus newborns on floater)",
+      "key_benefits": [
+        "Covers in-patient medical expenses and 142+ daycare procedures",
+        "Maternity expenses covered up to OPD limit (after waiting period)",
+        "OPD consultation and treatment, including gynaecology visits",
+        "No medical test up to 55 years; suitable for first-time urban buyers"
+      ],
+      "avg_premium": "₹6,000 - ₹18,000/year",
+      "sites": [
+        {
+          "name": "SBI Health Insurance for Woman – Arogya Plus",
+          "link": "https://www.insurancedekho.com/health-insurance/sbi-general/plans/woman"
+        },
+        {
+          "name": "PolicyBazaar – SBI Women Health",
+          "link": "https://www.policybazaar.com/health-insurance/sbi-health-insurance/"
+        }
+      ]
+    },
+    {
+      "id": "ins_65",
+      "name": "SBI General Senior Citizen Health Insurance",
+      "category": "senior_care",
+      "type": "Health Insurance",
+      "personalization": "High-sum-insured health plan for senior citizens, used extensively by elderly women living alone or with children.",
+      "life_stage": "Senior Women (60-75+)",
+      "key_benefits": [
+        "Sum insured options typically from ₹10–30 lakh for seniors",
+        "Hospitalisation cover for chronic diseases common in older women",
+        "Pre- and post-hospitalisation coverage with AYUSH benefits",
+        "Useful complement to widow pensions and fixed deposits for urban seniors"
+      ],
+      "avg_premium": "₹20,000 - ₹60,000/year",
+      "sites": [
+        {
+          "name": "SBI General – Senior Citizen Health",
+          "link": "https://www.sbigeneral.in/health-insurance/senior-citizen-health-insurance"
+        },
+        {
+          "name": "PolicyBazaar – SBI Senior Citizen Plans",
+          "link": "https://www.policybazaar.com/health-insurance/companies/sbi-general-health-insurance/senior-citizens/"
+        }
+      ]
+    },
+    {
+      "id": "ins_66",
+      "name": "SBI Salary Account Accident Insurance (Women Employees)",
+      "category": "critical_illness",
+      "type": "Accidental Insurance",
+      "personalization": "Free personal and air accident insurance bundled with SBI salary accounts, protecting working women during travel and daily commute.",
+      "life_stage": "Working Women with SBI Salary Account",
+      "key_benefits": [
+        "Free personal accident (death) cover for account holders",
+        "Additional air accident death cover up to specified limits",
+        "Disability cover available in newer policy years",
+        "Automatically included with many SBI salary packages—no separate premium"
+      ],
+      "avg_premium": "Embedded (no direct premium to user)",
+      "sites": [
+        {
+          "name": "SBI – Accident Insurance for Salary Accounts",
+          "link": "https://sbi.bank.in/web/salary-account/accident-insurance"
+        },
+        {
+          "name": "PolicyBazaar – SBI Personal Accident",
+          "link": "https://www.policybazaar.com/insurance-companies/sbi-general-personal-accident/"
+        }
+      ]
+    },
+    {
+      "id": "ins_66",
+      "name": "SBI General Personal Accident (Individual)",
+      "category": "critical_illness",
+      "type": "Accidental Insurance",
+      "personalization": "Standalone accident policy that women can buy to protect against accidental death, disability and income loss.",
+      "life_stage": "Adult Women (18-65)",
+      "key_benefits": [
+        "Compensation for accidental death and permanent total disability",
+        "Partial disability and weekly income options in higher variants",
+        "Can be layered on top of women health plans for extra security",
+        "Premiums affordable for salaried, self-employed and SHG women"
+      ],
+      "avg_premium": "₹500 - ₹3,000/year",
+      "sites": [
+        {
+          "name": "SBI General – Personal Accident Policy",
+          "link": "https://www.sbigeneral.in/personal-accident-insurance/individual-pa-insurance"
+        },
+        {
+          "name": "PolicyBazaar – SBI Personal Accident",
+          "link": "https://www.policybazaar.com/insurance-companies/sbi-general-personal-accident/"
+        }
+      ]
+    },
+    {
+      "id": "ins_67",
+      "name": "Kotak Personal Accident Insurance (for Working Women)",
+      "category": "critical_illness",
+      "type": "Accidental Insurance",
+      "personalization": "Accident plan that provides financial support on accidental death or disability, used by salaried and business women.",
+      "life_stage": "Adult Women (18-60)",
+      "key_benefits": [
+        "100% sum insured payout on accidental death",
+        "Benefits on permanent total/partial disability and temporary total disability",
+        "Can be taken as add-on to term cover or standalone",
+        "Useful for women commuting long distances or travelling for work"
+      ],
+      "avg_premium": "₹400 - ₹2,500/year",
+      "sites": [
+        {
+          "name": "Kotak Life – Personal Accident Insurance",
+          "link": "https://www.kotaklife.com/term-insurance/personal-accident-insurance"
+        },
+        {
+          "name": "PolicyX – Kotak vs SBI Health (Accident Features)",
+          "link": "https://www.policyx.com/health-insurance/companies/kotak-mahindra-vs-sbi-health/"
+        }
+      ]
+    },
+    {
+      "id": "ins_68",
+      "name": "LIC Term Plans under Married Women’s Property Act (MWPA)",
+      "category": "girl_child",
+      "type": "Term Life Insurance (Asset Protection)",
+      "personalization": "Life insurance policies assigned under MWPA so that benefits go only to wife and/or children, protecting widows and girl children from creditors.",
+      "life_stage": "Married Women & Widows (as beneficiaries)",
+      "key_benefits": [
+        "Death benefit paid only to wife and/or children, protected from creditors",
+        "Useful for business families with loans who want to ring-fence money for wives/daughters",
+        "Can be applied to many LIC term/endowment plans via MWPA endorsement",
+        "Acts as powerful legal layer to secure widow and girl child financial future"
+      ],
+      "avg_premium": "Varies by base LIC plan",
+      "sites": [
+        {
+          "name": "HDFC Life – MWPA & Widow Benefits (Overview)",
+          "link": "https://www.hdfclife.com/insurance-knowledge-centre/retirement-planning/widow-pension-scheme-apply-and-avail-benefits"
+        },
+        {
+          "name": "LIC India – Term & Endowment Plans",
+          "link": "https://licindia.in/web/guest/insurance-plan"
+        }
+      ]
+    },
+    {
+      "id": "ins_69",
+      "name": "SBI Life Smart Women Advantage (Widow & Single-mother Relevance)",
+      "category": "critical_illness",
+      "personalization": "Women-centric ULIP plan that supports long-term savings and critical illness benefits, highly relevant for widows and single mothers.",
+      "life_stage": "Adult Women (18-50)",
+      "type": "Investment & Critical Illness",
+      "key_benefits": [
+        "Life cover with inbuilt critical illness benefit for female-specific conditions",
+        "Premium waiver on diagnosis of major critical illness",
+        "Savings corpus can fund children’s education after husband’s death",
+        "Online and branch access for urban and semi-urban widows"
+      ],
+      "avg_premium": "₹15,000 - ₹40,000/year",
+      "sites": [
+        {
+          "name": "Coverfox – SBI Smart Women Advantage",
+          "link": "https://www.coverfox.com/life-insurance/endowment-plan/sbi-life-smart-women-advantage/"
+        },
+        {
+          "name": "SBI Life – Protection Plans",
+          "link": "https://www.sbilife.co.in/en/individual-life-insurance/protection-plans"
+        }
+      ]
+    },
+    {
+      "id": "ins_70",
+      "name": "Tata AIA Term Insurance for Housewife",
+      "category": "lifestyle",
+      "type": "Term Life Insurance",
+      "personalization": "Term insurance solutions that recognise the economic value of housewives, securing families if a homemaker woman dies.",
+      "life_stage": "Married Homemakers (18-60)",
+      "key_benefits": [
+        "Affordable term cover for non-earning women",
+        "Supports children’s education and household continuity if homemaker dies",
+        "Can be combined with health riders for cancer and CI",
+        "Useful for rural and urban households where women are primary caregivers"
+      ],
+      "avg_premium": "₹4,000 - ₹15,000/year",
+      "sites": [
+        {
+          "name": "Tata AIA – Term Insurance for Housewife",
+          "link": "https://www.tataaia.com/life-insurance-plans/term-insurance/term-insurance-for-housewife.html"
+        },
+        {
+          "name": "PolicyBazaar – Term Insurance for Women",
+          "link": "https://www.policybazaar.com/term-insurance/term-insurance-for-women/"
+        }
+      ]
+    },
+    {
+      "id": "ins_71",
+      "name": "LIC Senior Citizen Health & Pension Options for Women",
+      "category": "senior_care",
+      "personalization": "Combination of LIC annuity/pension and senior-focused covers used by older women and widows for steady income and health security.",
+      "life_stage": "Senior Women (60-80+)",
+      "type": "Pension/Annuity & Health Support",
+      "key_benefits": [
+        "Guaranteed pension or annuity streams for life or fixed term",
+        "Can be bought by senior women or by children on mother’s life",
+        "Pairs well with senior citizen mediclaim for hospitalisation needs",
+        "Delivered via LIC’s deep agent network in villages and towns"
+      ],
+      "avg_premium": "One-time or periodic contributions (₹50,000+)",
+      "sites": [
+        {
+          "name": "LIC – Pension & Annuity Plans",
+          "link": "https://licindia.in/web/guest/pension-plans"
+        },
+        {
+          "name": "SBI Life – Protection & Family Plans (Reference)",
+          "link": "https://www.sbilife.co.in/en/individual-life-insurance/protection-plans"
+        }
+      ]
+    },
+
+    {
+    "id": "ins_72",
+    "name": "Niva Bupa Aspire (M-iracle)",
+    "category": "lifestyle",
+    "type": "Health Insurance",
+    "personalization": "Young-family and women-focused health plan with ‘Lock the Clock’ feature where premium stays same as entry age until a claim is made.",
+    "life_stage": "Young Adults (18-35)",
+    "key_benefits": [
+      "Coverage for fertility and maternity across Aspire variants",
+      "Option to cover PCOS/PCOD consultations via riders",
+      "Mental health counseling and wellness-based rewards",
+      "Lock-the-clock premium benefit for claim-free years"
+    ],
+    "avg_premium": "₹10,000 - ₹18,000/year",
+    "sites": [
+      {
+        "name": "Niva Bupa",
+        "link": "https://www.nivabupa.com/family-health-insurance-plans/aspire.html"
+      },
+      {
+        "name": "PolicyBazaar",
+        "link": "https://www.policybazaar.com/insurance-companies/max-bupa-health-insurance/aspire-plan/"
+      }
+    ]
+  },
+  {
+    "id": "ins_73",
+    "name": "Tata AIG She Care Plus",
+    "category": "lifestyle",
+    "type": "Health Insurance",
+    "personalization": "Women-centric health cover with focus on screening, vaccinations and mental wellness for working women.",
+    "life_stage": "Working Professionals (25-45)",
+    "key_benefits": [
+      "Free preventive health check-ups including Pap smear/mammography as per variant",
+      "Cervical cancer (HPV) vaccination coverage limits",
+      "Gynecology and dermatology tele-consultations",
+      "Mental wellness and PMS counseling sessions"
+    ],
+    "avg_premium": "₹11,000 - ₹16,000/year",
+    "sites": [
+      {
+        "name": "Tata AIG",
+        "link": "https://www.tataaig.com/health-insurance/women-health-insurance"
+      }
+    ]
+  },
+  {
+    "id": "ins_74",
+    "name": "Future Generali Health PowHer",
+    "category": "lifestyle",
+    "type": "Health Insurance",
+    "personalization": "Women’s health plan covering transitions from puberty to menopause and related hormonal disorders.",
+    "life_stage": "Teenagers to Middle Age",
+    "key_benefits": [
+      "Coverage for puberty-related hormonal disorders",
+      "Menopause-related symptoms and therapy cover",
+      "Nutritional counseling and fitness tracking benefits",
+      "Mental health counseling for postpartum and life-stage stress"
+    ],
+    "avg_premium": "₹9,000 - ₹15,000/year",
+    "sites": [
+      {
+        "name": "Future Generali",
+        "link": "https://www.futuregenerali.in/health-insurance/health-powher"
+      }
+    ]
+  }
+]
+}
