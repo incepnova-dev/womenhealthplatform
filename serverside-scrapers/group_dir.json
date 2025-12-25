@@ -1,0 +1,1761 @@
+{
+
+  "reddit_subreddits_fetch": [
+  "PCOS",
+  "Endo",
+  "endometriosis",
+  "TryingForABaby",
+  "infertility",
+  "Menopause",
+  "pregnant",
+  "menstrualcups",
+  "BabyBumps",
+  "PregnancyAfterLoss",
+  "breastcancer",
+  "cancer",
+  "ovariancancer",
+  "cervicalcancer",
+  "thyroidhealth",
+  "Hypothyroidism",
+  "Hashimotos",
+  "ttcafterloss",
+  "IVF",
+  "stilltrying",
+  "infertilitybabies",
+  "WomensHealth",
+  "TwoXChromosomes",
+  "AskWomen",
+  "Fibromyalgia",
+  "ChronicPain",
+  "ChronicIllness",
+  "Anxiety",
+  "depression",
+  "mentalhealth",
+  "BabyBumpsandBeyondAu",
+  "PMDD",
+  "PMSrelief",
+  "PMS",
+  "Healthyhooha",
+  "TheGirlSurvivalGuide",
+  "Periods",
+  "Miscarriage",
+  "babyloss",
+  "TFMR_support",
+  "autoimmune",
+  "AutoimmuneDiseases",
+  "AskDocs",
+  "badwomensanatomy"
+],
+
+  "reddit_hashtags": [
+    {"tag": "PCOSSupport", "category": "PCOS", "followers": 95000},
+    {"tag": "EndoLife", "category": "Endometriosis", "followers": 68000},
+    {"tag": "TTCJourney", "category": "Infertility & Fertility", "followers": 152000},
+    {"tag": "MenopauseSupport", "category": "Menopause", "followers": 45000},
+    {"tag": "BreastCancerSurvivor", "category": "Breast Cancer", "followers": 78000},
+    {"tag": "ThyroidHealth", "category": "Thyroid Disorders", "followers": 89000},
+    {"tag": "PregnancyTips", "category": "Pregnancy", "followers": 234000},
+    {"tag": "MentalHealthMatters", "category": "Mental Health", "followers": 456000},
+    {"tag": "ChronicPainWarrior", "category": "Chronic Pain", "followers": 167000},
+    {"tag": "PMDDAwareness", "category": "PMS & PMDD", "followers": 34000}
+  ],
+  "instagram_hashtags_fetch": [
+    {"tag": "PCOSWarrior", "category": "PCOS", "posts": 450000},
+    {"tag": "PCOSAwareness", "category": "PCOS", "posts": 280000},
+    {"tag": "EndoWarrior", "category": "Endometriosis", "posts": 380000},
+    {"tag": "EndoStrong", "category": "Endometriosis", "posts": 195000},
+    {"tag": "TTCCommunity", "category": "Infertility & Fertility", "posts": 520000},
+    {"tag": "TTCJourney", "category": "Infertility & Fertility", "posts": 340000},
+    {"tag": "IVFJourney", "category": "Infertility & Fertility", "posts": 890000},
+    {"tag": "MenopauseMatters", "category": "Menopause", "posts": 125000},
+    {"tag": "MenopauseSupport", "category": "Menopause", "posts": 78000},
+    {"tag": "BreastCancerAwareness", "category": "Breast Cancer", "posts": 890000},
+    {"tag": "BreastCancerSurvivor", "category": "Breast Cancer", "posts": 456000},
+    {"tag": "ThyroidDisease", "category": "Thyroid Disorders", "posts": 234000},
+    {"tag": "Hypothyroidism", "category": "Thyroid Disorders", "posts": 167000},
+    {"tag": "PregnancyJourney", "category": "Pregnancy", "posts": 1200000},
+    {"tag": "BumpDate", "category": "Pregnancy", "posts": 890000},
+    {"tag": "MentalHealthAwareness", "category": "Mental Health", "posts": 2300000},
+    {"tag": "AnxietySupport", "category": "Mental Health", "posts": 678000},
+    {"tag": "FibromyalgiaWarrior", "category": "Chronic Pain", "posts": 234000},
+    {"tag": "ChronicIllness", "category": "Chronic Pain", "posts": 567000},
+    {"tag": "PMDDWarrior", "category": "PMS & PMDD", "posts": 89000},
+    {"tag": "WomensHealthMatters", "category": "General Women's Health", "posts": 280000}
+  ],
+  "twitter_hashtags_fetch": [
+    {"tag": "PCOS", "category": "PCOS", "tweets": 850000},
+    {"tag": "PCOSAwareness", "category": "PCOS", "tweets": 234000},
+    {"tag": "Endometriosis", "category": "Endometriosis", "tweets": 650000},
+    {"tag": "EndoAwareness", "category": "Endometriosis", "tweets": 189000},
+    {"tag": "TTC", "category": "Infertility & Fertility", "tweets": 1200000},
+    {"tag": "Infertility", "category": "Infertility & Fertility", "tweets": 456000},
+    {"tag": "IVF", "category": "Infertility & Fertility", "tweets": 890000},
+    {"tag": "Menopause", "category": "Menopause", "tweets": 345000},
+    {"tag": "BreastCancer", "category": "Breast Cancer", "tweets": 2300000},
+    {"tag": "BreastCancerAwareness", "category": "Breast Cancer", "tweets": 1800000},
+    {"tag": "ThyroidDisease", "category": "Thyroid Disorders", "tweets": 234000},
+    {"tag": "Pregnancy", "category": "Pregnancy", "tweets": 3400000},
+    {"tag": "PregnantLife", "category": "Pregnancy", "tweets": 567000},
+    {"tag": "MentalHealth", "category": "Mental Health", "tweets": 8900000},
+    {"tag": "MentalHealthMatters", "category": "Mental Health", "tweets": 4500000},
+    {"tag": "Fibromyalgia", "category": "Chronic Pain", "tweets": 456000},
+    {"tag": "ChronicPain", "category": "Chronic Pain", "tweets": 789000},
+    {"tag": "PMDD", "category": "PMS & PMDD", "tweets": 234000},
+    {"tag": "WomensHealth", "category": "General Women's Health", "tweets": 2300000}
+  ],
+  "facebook_hashtags_fetch": [
+    {"tag": "PCOSSupport", "category": "PCOS", "posts": 145000},
+    {"tag": "EndoStrong", "category": "Endometriosis", "posts": 89000},
+    {"tag": "TTCCommunity", "category": "Infertility & Fertility", "posts": 234000},
+    {"tag": "FertilityJourney", "category": "Infertility & Fertility", "posts": 167000},
+    {"tag": "MenopauseSupport", "category": "Menopause", "posts": 78000},
+    {"tag": "BreastCancerWarrior", "category": "Breast Cancer", "posts": 456000},
+    {"tag": "ThyroidHealth", "category": "Thyroid Disorders", "posts": 123000},
+    {"tag": "PregnancySupport", "category": "Pregnancy", "posts": 567000},
+    {"tag": "MentalHealthSupport", "category": "Mental Health", "posts": 890000},
+    {"tag": "ChronicPainWarrior", "category": "Chronic Pain", "posts": 234000},
+    {"tag": "PMDDAwareness", "category": "PMS & PMDD", "posts": 56000},
+    {"tag": "WomensHealthMatters", "category": "General Women's Health", "posts": 345000}
+  ],
+  "discord_topics_fetch": [
+    {"tag": "PCOS-Support", "category": "PCOS", "members": 12000},
+    {"tag": "Endometriosis-Chat", "category": "Endometriosis", "members": 8500},
+    {"tag": "TTC-Discussion", "category": "Infertility & Fertility", "members": 15000},
+    {"tag": "Menopause-Support", "category": "Menopause", "members": 6700},
+    {"tag": "Cancer-Support", "category": "Breast Cancer", "members": 23000},
+    {"tag": "Thyroid-Help", "category": "Thyroid Disorders", "members": 9800},
+    {"tag": "Pregnancy-Chat", "category": "Pregnancy", "members": 34000},
+    {"tag": "Mental-Health", "category": "Mental Health", "members": 45000},
+    {"tag": "Chronic-Pain", "category": "Chronic Pain", "members": 18000},
+    {"tag": "PMDD-Support", "category": "PMS & PMDD", "members": 5600}
+  ],
+  "quora_hashtags_fetch": [
+    {"tag": "PCOS-Health", "category": "PCOS", "followers": 23000},
+    {"tag": "Endometriosis-Care", "category": "Endometriosis", "followers": 15000},
+    {"tag": "Fertility-Questions", "category": "Infertility & Fertility", "followers": 67000},
+    {"tag": "Menopause-Advice", "category": "Menopause", "followers": 34000},
+    {"tag": "Breast-Cancer-Info", "category": "Breast Cancer", "followers": 89000},
+    {"tag": "Thyroid-Issues", "category": "Thyroid Disorders", "followers": 45000},
+    {"tag": "Pregnancy-Health", "category": "Pregnancy", "followers": 123000},
+    {"tag": "Mental-Wellness", "category": "Mental Health", "followers": 234000},
+    {"tag": "Chronic-Pain-Help", "category": "Chronic Pain", "followers": 56000},
+    {"tag": "Womens-Health-QA", "category": "General Women's Health", "followers": 145000}
+  ],
+  "facebook_groups_manual": [
+    {
+      "name": "PCOS Support Group",
+      "category": "PCOS",
+      "description": "A supportive community for women with PCOS to share experiences, treatments, and lifestyle tips",
+      "members": 45000,
+      "search_url": "https://www.facebook.com/search/groups/?q=pcos%20support"
+    },
+    {
+      "name": "TTC Community",
+      "category": "Infertility & Fertility",
+      "description": "Trying to conceive support group for women on their fertility journey",
+      "members": 52000,
+      "search_url": "https://www.facebook.com/search/groups/?q=trying%20to%20conceive"
+    },
+    {
+      "name": "Iron deficiency anemia",
+      "category": "Anemia",
+      "search_url": "https://www.facebook.com/search/groups/?q=Iron%20deficiency%20anemia",
+      "description" : "Iron deficiency discussion group",
+      "date_added": "2025-12-21T23:08:17.077588"
+    },
+    {
+      "name": "Menopause Support Group",
+      "category": "Menopause",
+      "description": "Community for women navigating menopause and perimenopause",
+      "members": 41000,
+      "search_url": "https://www.facebook.com/search/groups/?q=menopause%20support"
+    },
+    {
+      "name": "Breast Cancer Warriors",
+      "category": "Breast Cancer",
+      "description": "Support network for breast cancer survivors and fighters",
+      "members": 67000,
+      "search_url": "https://www.facebook.com/search/groups/?q=breast%20cancer%20support"
+    },
+    {
+      "name": "Thyroid Support Group",
+      "category": "Thyroid Disorders",
+      "description": "Community for those with hypothyroidism, hyperthyroidism, and other thyroid conditions",
+      "members": 55000,
+      "search_url": "https://www.facebook.com/search/groups/?q=thyroid%20support"
+    },
+    {
+      "name": "Pregnancy & Beyond",
+      "category": "Pregnancy",
+      "description": "Support for pregnant women and new mothers",
+      "members": 89000,
+      "search_url": "https://www.facebook.com/search/groups/?q=pregnancy%20support"
+    },
+    {
+      "name": "PMDD Support Network",
+      "category": "PMS & PMDD",
+      "description": "Community for women dealing with PMDD and severe PMS",
+      "members": 28000,
+      "search_url": "https://www.facebook.com/search/groups/?q=pmdd%20support"
+    },
+    {
+      "name": "PCOS & Polycystic Ovary Syndrome Support",
+      "category": "Polycystic Ovary Syndrome (PCOS)",
+      "description": "Global community focused on Polycystic Ovary Syndrome, symptom management, fertility, and metabolic health",
+      "members": 76000,
+      "search_url": "https://www.facebook.com/search/groups/?q=polycystic%20ovary%20syndrome%20pcos"
+    },
+    {
+      "name": "Endometriosis & Adenomyosis Warriors",
+      "category": "Endometriosis",
+      "description": "Peer support for people living with endometriosis and adenomyosis, including pain, surgery and fertility journeys",
+      "members": 62000,
+      "search_url": "https://www.facebook.com/search/groups/?q=endometriosis%20warriors"
+    },
+    {
+      "name": "Uterine Fibroids Support Circle",
+      "category": "Uterine Fibroids (Leiomyomas)",
+      "description": "Discussion space about fibroid symptoms, myomectomy, hysterectomy, and non‑surgical options",
+      "members": 33000,
+      "search_url": "https://www.facebook.com/search/groups/?q=uterine%20fibroids%20support"
+    },
+    {
+      "name": "Cervical Cancer Support & Awareness",
+      "category": "Cervical Cancer",
+      "description": "Support group for HPV, abnormal Pap results, CIN, and cervical cancer treatment and survivorship",
+      "members": 27000,
+      "search_url": "https://www.facebook.com/search/groups/?q=cervical%20cancer%20support"
+    },
+    {
+      "name": "Vaginal Health & Yeast Infection Support",
+      "category": "Vaginal Yeast Infection (Candidiasis)",
+      "description": "Safe space to talk about recurrent yeast infections, vaginal health and evidence‑based treatments",
+      "members": 21000,
+      "search_url": "https://www.facebook.com/search/groups/?q=yeast%20infection%20support"
+    },
+    {
+      "name": "UTI & Bladder Health Support",
+      "category": "Urinary Tract Infection (UTI)",
+      "description": "Community for recurrent UTIs, bladder pain, IC and pelvic floor related urinary problems",
+      "members": 36000,
+      "search_url": "https://www.facebook.com/search/groups/?q=uti%20support"
+    },
+    {
+      "name": "Ovarian Cyst & Pelvic Pain Support",
+      "category": "Ovarian Cysts",
+      "description": "Support group for women with functional cysts, dermoid cysts, pelvic pain and watch‑and‑wait decisions",
+      "members": 24000,
+      "search_url": "https://www.facebook.com/search/groups/?q=ovarian%20cyst%20support"
+    },
+    {
+      "name": "Ovarian Cancer Sisters",
+      "category": "Ovarian Cancer",
+      "description": "Space for women facing ovarian cancer, BRCA mutations, chemo and long‑term follow‑up",
+      "members": 18000,
+      "search_url": "https://www.facebook.com/search/groups/?q=ovarian%20cancer%20support"
+    },
+    {
+      "name": "Pelvic Inflammatory Disease Support",
+      "category": "Pelvic Inflammatory Disease (PID)",
+      "description": "Community for questions and lived experience around PID, chronic pelvic pain and fertility impact",
+      "members": 12000,
+      "search_url": "https://www.facebook.com/search/groups/?q=pelvic%20inflammatory%20disease%20support"
+    },
+    {
+      "name": "Fertility, IVF & TTC Support",
+      "category": "Infertility",
+      "description": "Group for women navigating infertility, IVF, IUI, egg freezing and recurrent loss",
+      "members": 73000,
+      "search_url": "https://www.facebook.com/search/groups/?q=infertility%20support%20ivf"
+    },
+    {
+      "name": "PMS & PMDD Survival Group",
+      "category": "Premenstrual Syndrome (PMS) & PMDD",
+      "description": "Focused community on hormone‑related mood changes, severe PMS and PMDD treatments",
+      "members": 32000,
+      "search_url": "https://www.facebook.com/search/groups/?q=pms%20pmdd%20support"
+    },
+    {
+      "name": "Gestational Diabetes Mamas",
+      "category": "Gestational Diabetes",
+      "description": "Support group for women diagnosed with gestational diabetes during pregnancy",
+      "members": 39000,
+      "search_url": "https://www.facebook.com/search/groups/?q=gestational%20diabetes%20support"
+    },
+    {
+      "name": "Postpartum Depression & Anxiety Support",
+      "category": "Postpartum Depression (PPD)",
+      "description": "Safe space for mothers dealing with postpartum depression, anxiety and intrusive thoughts",
+      "members": 58000,
+      "search_url": "https://www.facebook.com/search/groups/?q=postpartum%20depression%20support"
+    },
+    {
+      "name": "Osteoporosis & Bone Health for Women",
+      "category": "Osteoporosis",
+      "description": "Group focused on fracture prevention, DEXA scans, nutrition and movement for bone health",
+      "members": 26000,
+      "search_url": "https://www.facebook.com/search/groups/?q=osteoporosis%20support%20women"
+    },
+    {
+      "name": "Preeclampsia & High Risk Pregnancy Support",
+      "category": "Preeclampsia",
+      "description": "Support community for women with preeclampsia, HELLP and high blood pressure in pregnancy",
+      "members": 25000,
+      "search_url": "https://www.facebook.com/search/groups/?q=preeclampsia%20support"
+    },
+    {
+      "name": "Vaginismus & Painful Sex Support",
+      "category": "Vaginismus",
+      "description": "Peer‑led group for vaginismus, dyspareunia, pelvic floor therapy and relationship impacts",
+      "members": 17000,
+      "search_url": "https://www.facebook.com/search/groups/?q=vaginismus%20support"
+    },
+    {
+      "name": "Bacterial Vaginosis Help & Support",
+      "category": "Bacterial Vaginosis (BV)",
+      "description": "Women sharing experiences with recurrent BV, microbiome‑focused care and partner questions",
+      "members": 22000,
+      "search_url": "https://www.facebook.com/search/groups/?q=bacterial%20vaginosis%20support"
+    },
+    {
+      "name": "Women with Autoimmune Disease",
+      "category": "Autoimmune Diseases",
+      "description": "Intersectional group for women living with lupus, RA, Hashimoto’s and other autoimmune conditions",
+      "members": 64000,
+      "search_url": "https://www.facebook.com/search/groups/?q=autoimmune%20disease%20women"
+    },
+    {
+      "name": "Women’s Mental Health Collective",
+      "category": "Women Mental Health",
+      "description": "Mental health support space for anxiety, depression, ADHD, trauma and burnout in women",
+      "members": 71000,
+      "search_url": "https://www.facebook.com/search/groups/?q=women%27s%20mental%20health"
+    },
+    {
+      "name": "Pregnancy, Birth & Fertility Journey",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "End‑to‑end community from trying to conceive through pregnancy, birth and early parenting",
+      "members": 96000,
+      "search_url": "https://www.facebook.com/search/groups/?q=pregnancy%20trying%20to%20conceive%20fertility"
+    },
+  {
+    "name": "PCOS Diet Support",
+    "category": "PCOS",
+    "description": "Diet and nutrition for PCOS management",
+    "members": "100K+",
+    "invite": "https://www.facebook.com/groups/pcosdiet/"
+  },
+  {
+    "name": "PCOS Weight Loss Support",
+    "category": "PCOS",
+    "description": "Weight loss support for women with PCOS",
+    "members": "80K+",
+    "invite": "https://www.facebook.com/groups/pcosweightloss/"
+  },
+  {
+    "name": "Breast Cancer Support Group",
+    "category": "Breast Cancer",
+    "description": "Support for breast cancer patients and survivors",
+    "members": "200K+",
+    "invite": "https://www.facebook.com/groups/breastcancersupport/"
+  },
+  {
+    "name": "Young Survival Coalition",
+    "category": "Breast Cancer",
+    "description": "Support for young women affected by breast cancer",
+    "members": "150K+",
+    "invite": "https://www.facebook.com/YoungSurvivalCoalition/"
+  },
+  {
+    "name": "Cervical Cancer Support",
+    "category": "Cervical Cancer",
+    "description": "Support group for cervical cancer patients",
+    "members": "30K+",
+    "invite": "https://www.facebook.com/groups/cervicalcancersupport/"
+  },
+  {
+    "name": "Jo's Cervical Cancer Trust",
+    "category": "Cervical Cancer",
+    "description": "UK charity dedicated to cervical cancer",
+    "members": "50K+",
+    "invite": "https://www.facebook.com/JoTrust/"
+  },
+  {
+    "name": "Pregnancy Support Group",
+    "category": "Pregnancy",
+    "description": "Support for expectant mothers",
+    "members": "500K+",
+    "invite": "https://www.facebook.com/groups/pregnancysupport/"
+  },
+  {
+    "name": "What to Expect Community",
+    "category": "Pregnancy",
+    "description": "Pregnancy and parenting community",
+    "members": "3M+",
+    "invite": "https://www.facebook.com/WhatToExpect/"
+  },
+  {
+    "name": "The Bump",
+    "category": "Pregnancy",
+    "description": "Pregnancy, parenting, and baby information",
+    "members": "2M+",
+    "invite": "https://www.facebook.com/TheBump/"
+  },
+  {
+    "name": "High Risk Pregnancy Support",
+    "category": "Pregnancy",
+    "description": "Support for high-risk pregnancies",
+    "members": "40K+",
+    "invite": "https://www.facebook.com/groups/highriskpregnancy/"
+  },
+  {
+    "name": "The Menopause Society",
+    "category": "Menopause",
+    "description": "Professional menopause information",
+    "members": "80K+",
+    "invite": "https://www.facebook.com/TheMenopauseSociety/"
+  },
+  {
+    "name": "Menopause Matters",
+    "category": "Menopause",
+    "description": "UK menopause support and information",
+    "members": "60K+",
+    "invite": "https://www.facebook.com/MenopauseMatters/"
+  },
+  {
+    "name": "Iron Deficiency Anemia Support",
+    "category": "Anemia",
+    "description": "Support for people with iron deficiency anemia",
+    "members": "25K+",
+    "invite": "https://www.facebook.com/groups/irondeficiencyanemia/"
+  },
+  {
+    "name": "Anemia Support and Information",
+    "category": "Anemia",
+    "description": "Support group for all types of anemia",
+    "members": "20K+",
+    "invite": "https://www.facebook.com/groups/anemiasupport/"
+  },
+  {
+    "name": "Endometriosis Support",
+    "category": "Endometriosis",
+    "description": "Support for women with endometriosis",
+    "members": "180K+",
+    "invite": "https://www.facebook.com/groups/endometriosissupport/"
+  },
+  {
+    "name": "Endometriosis Association",
+    "category": "Endometriosis",
+    "description": "Leading endometriosis organization",
+    "members": "100K+",
+    "invite": "https://www.facebook.com/EndometriosisAssn/"
+  },
+  {
+    "name": "Ovarian Cancer Support",
+    "category": "Ovarian Cancer",
+    "description": "Support for ovarian cancer patients",
+    "members": "40K+",
+    "invite": "https://www.facebook.com/groups/ovariancancersupport/"
+  },
+  {
+    "name": "Ovarian Cancer Research Alliance",
+    "category": "Ovarian Cancer",
+    "description": "Ovarian cancer research and support",
+    "members": "70K+",
+    "invite": "https://www.facebook.com/ocrahope/"
+  },
+  {
+    "name": "Thyroid Disease Support Group",
+    "category": "Thyroid",
+    "description": "Support for thyroid conditions",
+    "members": "200K+",
+    "invite": "https://www.facebook.com/groups/thyroidsupport/"
+  },
+  {
+    "name": "Hashimoto's Disease Support",
+    "category": "Thyroid",
+    "description": "Support for Hashimoto's thyroiditis",
+    "members": "150K+",
+    "invite": "https://www.facebook.com/groups/hashimotossupport/"
+  },
+  {
+    "name": "Fibromyalgia Support Group",
+    "category": "Fibromyalgia",
+    "description": "Support for fibromyalgia patients",
+    "members": "300K+",
+    "invite": "https://www.facebook.com/groups/fibromyalgiasupport/"
+  },
+  {
+    "name": "Trying to Conceive (TTC) Support",
+    "category": "Infertility",
+    "description": "Support for couples trying to conceive",
+    "members": "250K+",
+    "invite": "https://www.facebook.com/groups/ttcsupport/"
+  },
+  {
+    "name": "IVF Support Group",
+    "category": "Infertility",
+    "description": "Support for IVF journey",
+    "members": "180K+",
+    "invite": "https://www.facebook.com/groups/ivfsupport/"
+  },
+  {
+    "name": "Women's Health Matters",
+    "category": "General Women's Health",
+    "description": "General women's health information",
+    "members": "500K+",
+    "invite": "https://www.facebook.com/womenshealthmatters/"
+  },
+  {
+    "name": "Women Supporting Women - Health",
+    "category": "General Women's Health",
+    "description": "Community for women's health support",
+    "members": "400K+",
+    "invite": "https://www.facebook.com/groups/womensupportingwomenhealth/"
+  }
+  ],
+  "quora_topics_manual_search" :[
+
+    {
+    "id": "quora_womens_health",
+    "platform": "Quora",
+    "community_name": "Women's Health",
+    "source": "Womens-Health",
+    "category": "General Women's Health",
+    "title": "Women's Health - Quora Topic",
+    "content": "Discussions, questions, and expert answers about women's health topics, medical conditions, wellness, and healthcare concerns affecting women.",
+    "url": "https://www.quora.com/topic/Womens-Health",
+    "number_members": "4.3M",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 215000,
+    "engagement_score": 94.0,
+    "number_members_num": 4300000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_endometriosis",
+    "platform": "Quora",
+    "community_name": "Endometriosis",
+    "source": "Endometriosis",
+    "category": "Endometriosis",
+    "title": "Endometriosis - Quora Topic",
+    "content": "Community discussions about endometriosis, chronic pain management, diagnosis experiences, treatment options, surgery, and coping with endometriosis.",
+    "url": "https://www.quora.com/topic/Endometriosis",
+    "number_members": "144K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 7200,
+    "engagement_score": 87.0,
+    "number_members_num": 144000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_pregnancy",
+    "platform": "Quora",
+    "community_name": "Pregnancy",
+    "source": "Pregnancy",
+    "category": "Pregnancy",
+    "title": "Pregnancy - Quora Topic",
+    "content": "Questions and advice about pregnancy, prenatal care, symptoms, trimesters, labor and delivery, pregnancy complications, and expectant mother experiences.",
+    "url": "https://www.quora.com/topic/Pregnancy",
+    "number_members": "2.1M",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 105000,
+    "engagement_score": 94.0,
+    "number_members_num": 2100000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_infertility",
+    "platform": "Quora",
+    "community_name": "Infertility",
+    "source": "Infertility",
+    "category": "Infertility & Fertility",
+    "title": "Infertility - Quora Topic",
+    "content": "Support and information about infertility challenges, fertility treatments, IVF, IUI, adoption, emotional aspects of infertility, and conception difficulties.",
+    "url": "https://www.quora.com/topic/Infertility",
+    "number_members": "288K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 14400,
+    "engagement_score": 94.0,
+    "number_members_num": 288000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_menopause",
+    "platform": "Quora",
+    "community_name": "Menopause",
+    "source": "Menopause",
+    "category": "Menopause",
+    "title": "Menopause - Quora Topic",
+    "content": "Discussions about menopause symptoms, hot flashes, hormone replacement therapy, natural remedies, emotional changes, and navigating the menopausal transition.",
+    "url": "https://www.quora.com/topic/Menopause",
+    "number_members": "195K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 9750,
+    "engagement_score": 93.38,
+    "number_members_num": 195000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_breast_cancer",
+    "platform": "Quora",
+    "community_name": "Breast Cancer",
+    "source": "Breast-Cancer",
+    "category": "Breast Cancer",
+    "title": "Breast Cancer - Quora Topic",
+    "content": "Questions and support about breast cancer diagnosis, treatment options, chemotherapy, radiation, mastectomy, reconstruction, survivor stories, and prevention.",
+    "url": "https://www.quora.com/topic/Breast-Cancer",
+    "number_members": "382K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 19100,
+    "engagement_score": 94.0,
+    "number_members_num": 382000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_mental_health",
+    "platform": "Quora",
+    "community_name": "Mental Health",
+    "source": "Mental-Health",
+    "category": "Mental Health",
+    "title": "Mental Health - Quora Topic",
+    "content": "Open discussions about mental health conditions, therapy, medication, coping strategies, anxiety, depression, and emotional wellbeing.",
+    "url": "https://www.quora.com/topic/Mental-Health",
+    "number_members": "12.5M",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 625000,
+    "engagement_score": 94.0,
+    "number_members_num": 12500000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_thyroid_disorders",
+    "platform": "Quora",
+    "community_name": "Thyroid Disorders",
+    "source": "Thyroid-Disorders",
+    "category": "Thyroid Disorders",
+    "title": "Thyroid Disorders - Quora Topic",
+    "content": "Information and experiences about thyroid conditions, hypothyroidism, hyperthyroidism, Hashimoto's, thyroid nodules, and thyroid hormone management.",
+    "url": "https://www.quora.com/topic/Thyroid-Disorders",
+    "number_members": "112K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 5600,
+    "engagement_score": 83.0,
+    "number_members_num": 112000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_uterine_fibroids",
+    "platform": "Quora",
+    "community_name": "Uterine Fibroids",
+    "source": "Uterine-Fibroids",
+    "category": "Uterine Fibroids (Leiomyomas)",
+    "title": "Uterine Fibroids - Quora Topic",
+    "content": "Discussions about uterine fibroids, symptoms like heavy bleeding, treatment options including surgery and embolization, and living with fibroids.",
+    "url": "https://www.quora.com/topic/Uterine-Fibroids",
+    "number_members": "48K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 2400,
+    "engagement_score": 54.2,
+    "number_members_num": 48000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_cervical_cancer",
+    "platform": "Quora",
+    "community_name": "Cervical Cancer",
+    "source": "Cervical-Cancer",
+    "category": "Cervical Cancer",
+    "title": "Cervical Cancer - Quora Topic",
+    "content": "Information about cervical cancer screening, HPV vaccination, Pap smears, diagnosis, treatment, prevention, and survivor experiences.",
+    "url": "https://www.quora.com/topic/Cervical-Cancer",
+    "number_members": "76K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 3800,
+    "engagement_score": 68.9,
+    "number_members_num": 76000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_yeast_infection",
+    "platform": "Quora",
+    "community_name": "Vaginal Yeast Infection",
+    "source": "Vaginal-Yeast-Infection",
+    "category": "Vaginal Yeast Infection (Candidiasis)",
+    "title": "Vaginal Yeast Infection - Quora Topic",
+    "content": "Questions about yeast infections, symptoms, over-the-counter treatments, prevention tips, recurring infections, and natural remedies.",
+    "url": "https://www.quora.com/topic/Yeast-Infections",
+    "number_members": "118K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 5900,
+    "engagement_score": 83.75,
+    "number_members_num": 118000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_uti",
+    "platform": "Quora",
+    "community_name": "Urinary Tract Infections",
+    "source": "Urinary-Tract-Infections",
+    "category": "Urinary Tract Infection (UTI)",
+    "title": "Urinary Tract Infections - Quora Topic",
+    "content": "Information about UTI symptoms, causes, antibiotic treatment, home remedies, prevention strategies, and when to see a doctor.",
+    "url": "https://www.quora.com/topic/Urinary-Tract-Infections",
+    "number_members": "85K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 4250,
+    "engagement_score": 73.62,
+    "number_members_num": 85000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_ovarian_cysts",
+    "platform": "Quora",
+    "community_name": "Ovarian Cysts",
+    "source": "Ovarian-Cysts",
+    "category": "Ovarian Cysts",
+    "title": "Ovarian Cysts - Quora Topic",
+    "content": "Questions about ovarian cysts, symptoms, diagnosis through ultrasound, when surgery is needed, pain management, and functional versus complex cysts.",
+    "url": "https://www.quora.com/topic/Ovarian-Cysts",
+    "number_members": "64K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 3200,
+    "engagement_score": 62.6,
+    "number_members_num": 64000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_ovarian_cancer",
+    "platform": "Quora",
+    "community_name": "Ovarian Cancer",
+    "source": "Ovarian-Cancer",
+    "category": "Ovarian Cancer",
+    "title": "Ovarian Cancer - Quora Topic",
+    "content": "Information and support about ovarian cancer symptoms, early detection challenges, treatment options, chemotherapy, surgery, and survivor stories.",
+    "url": "https://www.quora.com/topic/Ovarian-Cancer",
+    "number_members": "102K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 5100,
+    "engagement_score": 81.75,
+    "number_members_num": 102000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_pid",
+    "platform": "Quora",
+    "community_name": "Pelvic Inflammatory Disease",
+    "source": "Pelvic-Inflammatory-Disease",
+    "category": "Pelvic Inflammatory Disease (PID)",
+    "title": "Pelvic Inflammatory Disease - Quora Topic",
+    "content": "Discussions about PID causes, symptoms, antibiotic treatment, complications affecting fertility, prevention, and recovery experiences.",
+    "url": "https://www.quora.com/topic/Pelvic-Inflammatory-Disease",
+    "number_members": "28K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 1400,
+    "engagement_score": 43.7,
+    "number_members_num": 28000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_pms",
+    "platform": "Quora",
+    "community_name": "Premenstrual Syndrome",
+    "source": "Premenstrual-Syndrome",
+    "category": "Premenstrual Syndrome (PMS)",
+    "title": "Premenstrual Syndrome - Quora Topic",
+    "content": "Questions about PMS symptoms including mood swings, bloating, cramps, headaches, coping strategies, lifestyle changes, and medical treatments.",
+    "url": "https://www.quora.com/topic/Premenstrual-Syndrome",
+    "number_members": "135K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 6750,
+    "engagement_score": 85.88,
+    "number_members_num": 135000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_gestational_diabetes",
+    "platform": "Quora",
+    "community_name": "Gestational Diabetes",
+    "source": "Gestational-Diabetes",
+    "category": "Gestational Diabetes",
+    "title": "Gestational Diabetes - Quora Topic",
+    "content": "Information about gestational diabetes during pregnancy, blood sugar management, diet modifications, insulin use, and postpartum monitoring.",
+    "url": "https://www.quora.com/topic/Gestational-Diabetes",
+    "number_members": "37K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 1850,
+    "engagement_score": 48.42,
+    "number_members_num": 37000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_preeclampsia",
+    "platform": "Quora",
+    "community_name": "Preeclampsia",
+    "source": "Preeclampsia",
+    "category": "Preeclampsia",
+    "title": "Preeclampsia - Quora Topic",
+    "content": "Questions about preeclampsia symptoms, high blood pressure during pregnancy, risks to mother and baby, treatment, and delivery timing.",
+    "url": "https://www.quora.com/topic/Preeclampsia",
+    "number_members": "22K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 1100,
+    "engagement_score": 40.55,
+    "number_members_num": 22000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_postpartum_depression",
+    "platform": "Quora",
+    "community_name": "Postpartum Depression",
+    "source": "Postpartum-Depression",
+    "category": "Postpartum Depression (PPD)",
+    "title": "Postpartum Depression - Quora Topic",
+    "content": "Discussions about postpartum depression, symptoms, treatment with therapy and medication, support resources, and recovery experiences.",
+    "url": "https://www.quora.com/topic/Postpartum-Depression",
+    "number_members": "174K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 8700,
+    "engagement_score": 90.75,
+    "number_members_num": 174000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_postpartum_recovery",
+    "platform": "Quora",
+    "community_name": "Postpartum Recovery",
+    "source": "Postpartum-Recovery",
+    "category": "Postpartum Health",
+    "title": "Postpartum Recovery - Quora Topic",
+    "content": "Questions about postpartum healing, physical recovery after childbirth, C-section recovery, breastfeeding challenges, and adjusting to motherhood.",
+    "url": "https://www.quora.com/topic/Postpartum-Recovery",
+    "number_members": "55K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 2750,
+    "engagement_score": 57.88,
+    "number_members_num": 55000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_osteoporosis",
+    "platform": "Quora",
+    "community_name": "Osteoporosis",
+    "source": "Osteoporosis",
+    "category": "Osteoporosis",
+    "title": "Osteoporosis - Quora Topic",
+    "content": "Information about osteoporosis, bone density loss, prevention through diet and exercise, medications, fracture risks, and managing bone health.",
+    "url": "https://www.quora.com/topic/Osteoporosis",
+    "number_members": "72K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 3600,
+    "engagement_score": 66.8,
+    "number_members_num": 72000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_vaginismus",
+    "platform": "Quora",
+    "community_name": "Vaginismus",
+    "source": "Vaginismus",
+    "category": "Vaginismus",
+    "title": "Vaginismus - Quora Topic",
+    "content": "Support for vaginismus, involuntary muscle spasms making penetration painful or impossible, treatment with dilators, pelvic floor therapy, and emotional support.",
+    "url": "https://www.quora.com/topic/Vaginismus",
+    "number_members": "18K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 900,
+    "engagement_score": 38.45,
+    "number_members_num": 18000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_autoimmune_diseases",
+    "platform": "Quora",
+    "community_name": "Autoimmune Diseases",
+    "source": "Autoimmune-Diseases",
+    "category": "Autoimmune Diseases",
+    "title": "Autoimmune Diseases - Quora Topic",
+    "content": "Discussions about autoimmune conditions including lupus, rheumatoid arthritis, Sjögren's syndrome, diagnosis, treatment, and living with chronic illness.",
+    "url": "https://www.quora.com/topic/Autoimmune-Diseases",
+    "number_members": "240K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 12000,
+    "engagement_score": 94.0,
+    "number_members_num": 240000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_womens_mental_health",
+    "platform": "Quora",
+    "community_name": "Women's Mental Health",
+    "source": "Womens-Mental-Health",
+    "category": "Women Mental Health",
+    "title": "Women's Mental Health - Quora Topic",
+    "content": "Discussions specific to women's mental health issues, anxiety, depression in women, perinatal mental health, and gender-specific mental health challenges.",
+    "url": "https://www.quora.com/topic/Womens-Mental-Health",
+    "number_members": "315K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 15750,
+    "engagement_score": 94.0,
+    "number_members_num": 315000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_perimenopause",
+    "platform": "Quora",
+    "community_name": "Perimenopause",
+    "source": "Perimenopause",
+    "category": "Perimenopause",
+    "title": "Perimenopause - Quora Topic",
+    "content": "Support for perimenopause transition, irregular periods, symptoms like hot flashes and mood changes, hormone therapy options, and managing the transition.",
+    "url": "https://www.quora.com/topic/Perimenopause",
+    "number_members": "42K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 2100,
+    "engagement_score": 51.05,
+    "number_members_num": 42000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_reproductive_endocrinology",
+    "platform": "Quora",
+    "community_name": "Reproductive Endocrinology",
+    "source": "Reproductive-Endocrinology",
+    "category": "Hormonal & Fertility Disorders",
+    "title": "Reproductive Endocrinology - Quora Topic",
+    "content": "Information about reproductive hormones, fertility specialists, endocrine disorders affecting reproduction, and hormonal fertility treatments.",
+    "url": "https://www.quora.com/topic/Reproductive-Endocrinology",
+    "number_members": "12K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 600,
+    "engagement_score": 35.3,
+    "number_members_num": 12000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_fertility",
+    "platform": "Quora",
+    "community_name": "Fertility",
+    "source": "Fertility",
+    "category": "Fertility",
+    "title": "Fertility - Quora Topic",
+    "content": "Questions about fertility, ovulation tracking, improving fertility naturally, fertility testing, conception tips, and understanding reproductive health.",
+    "url": "https://www.quora.com/topic/Fertility",
+    "number_members": "485K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 24250,
+    "engagement_score": 94.0,
+    "number_members_num": 485000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_trying_to_conceive",
+    "platform": "Quora",
+    "community_name": "Trying to Conceive",
+    "source": "Trying-to-Conceive",
+    "category": "Pregnancy, Conceiving and Fertility",
+    "title": "Trying to Conceive - Quora Topic",
+    "content": "Support for couples trying to conceive, TTC journey, ovulation tracking, timing intercourse, fertility awareness, and emotional aspects of conception attempts.",
+    "url": "https://www.quora.com/topic/Trying-to-Conceive",
+    "number_members": "215K",
+    "author": "Quora Community",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 10750,
+    "engagement_score": 94.0,
+    "number_members_num": 215000,
+    "fetched_date": "2025-12-24"
+  },
+  {
+    "id": "quora_manipal_hospitals",
+    "platform": "Quora",
+    "community_name": "Manipal Hospitals",
+    "source": "Manipal-Hospitals",
+    "category": "General Women's Health",
+    "title": "Manipal Hospitals - Quora Profile",
+    "content": "Official Quora profile of Manipal Hospitals, providing expert medical advice, health information, and answers to healthcare questions from one of India's leading multi-specialty hospital chains.",
+    "url": "https://www.quora.com/profile/Manipal-Hospitals-2",
+    "number_members": "14K",
+    "author": "Manipal Hospitals",
+    "created_at": "2011-01-01T00:00:00Z",
+    "created_utc": "2011-01-01T00:00:00Z",
+    "num_comments": 700,
+    "engagement_score": 36.35,
+    "number_members_num": 14000,
+    "fetched_date": "2025-12-24"
+    }
+  ],
+  "discord_servers_manual": [
+    {
+      "name": "Women's Health Hub",
+      "category": "General Women’s Health",
+      "description": "General women’s health support and discussion server",
+      "members": 12000,
+      "invite": "https://discord.gg/womenshealth"
+    },
+    {
+      "name": "PCOS Warriors",
+      "category": "PCOS",
+      "description": "Discord community for PCOS support, tips, and shared experiences",
+      "members": 8500,
+      "invite": "https://discord.gg/pcos"
+    },
+    {
+      "name": "TTC Journey",
+      "category": "Infertility & Fertility",
+      "description": "Trying to conceive support server with daily check-ins",
+      "members": 9800,
+      "invite": "https://discord.gg/ttc"
+    },
+    {
+      "name": "Mental Health Haven",
+      "category": "Mental Health",
+      "description": "Safe space for mental health discussions and peer support",
+      "members": 15000,
+      "invite": "https://discord.gg/mentalhealth"
+    },
+    {
+      "name": "PCOS & Hormone Health Lounge",
+      "category": "Polycystic Ovary Syndrome (PCOS)",
+      "description": "Chat-focused server for people with PCOS discussing hormones, cycles, weight, and fertility",
+      "members": 6400,
+      "invite": "https://discord.gg/pcos-hormones"
+    },
+    {
+      "name": "More Than Endo",
+      "category": "Endometriosis",
+      "description": "Support for endometriosis, adenomyosis, PCOS, pelvic pain, vaginismus and vulvodynia",
+      "members": 7200,
+      "invite": "https://discord.gg/morethanendo"
+    },
+    {
+      "name": "Fibroids & Uterine Health",
+      "category": "Uterine Fibroids (Leiomyomas)",
+      "description": "Discussion space for fibroids, heavy bleeding, surgery decisions and uterus-sparing options",
+      "members": 3100,
+      "invite": "https://discord.gg/uterine-fibroids"
+    },
+    {
+      "name": "Breast Cancer Circle",
+      "category": "Breast Cancer",
+      "description": "Peer support for women in active treatment, remission, or high-risk screening for breast cancer",
+      "members": 5600,
+      "invite": "https://discord.gg/breastcancer"
+    },
+    {
+      "name": "Cervical & Gynecologic Cancers",
+      "category": "Cervical Cancer",
+      "description": "Community for HPV, cervical dysplasia, cervical and gynecologic cancers",
+      "members": 2800,
+      "invite": "https://discord.gg/cervicalcancer"
+    },
+    {
+      "name": "Peri & Menopause Lounge",
+      "category": "Menopause and Perimenopause",
+      "description": "Menopause chat server covering hot flushes, HRT, mood changes and midlife health",
+      "members": 6900,
+      "invite": "https://discord.gg/menopause"
+    },
+    {
+      "name": "Vaginal Health & Infections",
+      "category": "Vaginal Yeast Infection (Candidiasis)",
+      "description": "Anonymous chat about recurrent yeast infections, discharge, itching and evidence-based care",
+      "members": 3500,
+      "invite": "https://discord.gg/vaginalhealth"
+    },
+    {
+      "name": "UTI & Bladder Support",
+      "category": "Urinary Tract Infection (UTI)",
+      "description": "Support for recurrent UTIs, bladder pain and antibiotic stewardship",
+      "members": 4200,
+      "invite": "https://discord.gg/uti-support"
+    },
+    {
+      "name": "Ovarian Cyst & Pelvic Pain Chat",
+      "category": "Ovarian Cysts",
+      "description": "Real-time chat for ovarian cysts, intermittent pain and scan results",
+      "members": 2600,
+      "invite": "https://discord.gg/ovarian-cysts"
+    },
+    {
+      "name": "Ovarian Cancer Voices",
+      "category": "Ovarian Cancer",
+      "description": "Smaller support community for women living with or after ovarian cancer",
+      "members": 1800,
+      "invite": "https://discord.gg/ovarian-cancer"
+    },
+    {
+      "name": "Pelvic Inflammatory Disease Support",
+      "category": "Pelvic Inflammatory Disease (PID)",
+      "description": "PID, chronic pelvic pain and fertility impact discussion server",
+      "members": 1400,
+      "invite": "https://discord.gg/pid-support"
+    },
+    {
+      "name": "Infertility, IVF & Loss",
+      "category": "Infertility",
+      "description": "Infertility-focused server with channels for IVF, IUI, loss and donor conception",
+      "members": 10400,
+      "invite": "https://discord.gg/infertility-ivf"
+    },
+    {
+      "name": "PMS & PMDD Chatroom",
+      "category": "Premenstrual Syndrome (PMS) & PMDD",
+      "description": "Live support for PMDD, severe PMS, mood swings and treatment options",
+      "members": 5200,
+      "invite": "https://discord.gg/pmdd-support"
+    },
+    {
+      "name": "Gestational Diabetes Friends",
+      "category": "Gestational Diabetes",
+      "description": "Server for blood sugar logs, meal ideas and GD-friendly pregnancy tips",
+      "members": 3100,
+      "invite": "https://discord.gg/gestational-diabetes"
+    },
+    {
+      "name": "Postpartum Mood & PPD",
+      "category": "Postpartum Depression (PPD)",
+      "description": "Dedicated space for postpartum depression, anxiety and rage discussions",
+      "members": 6700,
+      "invite": "https://discord.gg/ppd-support"
+    },
+    {
+      "name": "Thyroid & Hormone Balance",
+      "category": "Thyroid Disorders (Hypo/Hyper)",
+      "description": "Hypothyroid, hyperthyroid, Hashimoto’s and Graves’ chat community",
+      "members": 5900,
+      "invite": "https://discord.gg/thyroid-health"
+    },
+    {
+      "name": "Bone Health & Osteoporosis",
+      "category": "Osteoporosis",
+      "description": "Discussion of bone density, fractures, calcium, vitamin D and movement",
+      "members": 2300,
+      "invite": "https://discord.gg/osteoporosis"
+    },
+    {
+      "name": "High Risk Pregnancy & Preeclampsia",
+      "category": "Preeclampsia",
+      "description": "For women with preeclampsia, HELLP, and high blood pressure in pregnancy",
+      "members": 2800,
+      "invite": "https://discord.gg/preeclampsia"
+    },
+    {
+      "name": "Vaginismus & Pelvic Floor Support",
+      "category": "Vaginismus",
+      "description": "Anonymous server for vaginismus, painful sex and pelvic floor therapy",
+      "members": 3100,
+      "invite": "https://discord.gg/vaginismus"
+    },
+    {
+      "name": "BV & Vaginal Microbiome",
+      "category": "Bacterial Vaginosis (BV)",
+      "description": "Focused on recurrent BV, pH, microbiome-friendly strategies and partner questions",
+      "members": 2900,
+      "invite": "https://discord.gg/bv-support"
+    },
+    {
+      "name": "Autoimmune Women’s Lounge",
+      "category": "Autoimmune Diseases",
+      "description": "Women living with lupus, RA, Sjögren’s, MS and overlapping autoimmune issues",
+      "members": 8800,
+      "invite": "https://discord.gg/autoimmune-women"
+    },
+    {
+      "name": "Women’s Mental Health Café",
+      "category": "Women Mental health",
+      "description": "Chat space for women’s anxiety, depression, ADHD, OCD and trauma recovery",
+      "members": 13400,
+      "invite": "https://discord.gg/womens-mental-health"
+    },
+    {
+      "name": "Pregnancy, TTC & Fertility Chat",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "Combined TTC, pregnancy and early parenting Discord with age-gated channels",
+      "members": 11800,
+      "invite": "https://discord.gg/pregnancy-ttc"
+    }
+  ],
+  "twitter_communities_manual": [
+    {
+      "name": "Women's Health Twitter",
+      "category": "General Women’s Health",
+      "description": "Follow #WomensHealth for discussions, news, and support",
+      "members": 250000,
+      "url": "https://twitter.com/search?q=%23WomensHealth"
+    },
+    {
+      "name": "PCOS Twitter Community",
+      "category": "PCOS",
+      "description": "Active PCOS community using #PCOS and #PCOSAwareness",
+      "members": 85000,
+      "url": "https://twitter.com/search?q=%23PCOS"
+    },
+    {
+      "name": "Endometriosis Awareness",
+      "category": "Endometriosis",
+      "description": "Endometriosis community and awareness on Twitter",
+      "members": 65000,
+      "url": "https://twitter.com/search?q=%23Endometriosis"
+    },
+    {
+      "name": "TTC Twitter",
+      "category": "Infertility & Fertility",
+      "description": "Trying to conceive community on Twitter",
+      "members": 120000,
+      "url": "https://twitter.com/search?q=%23TTC"
+    },
+    {
+      "name": "Breast Cancer Support",
+      "category": "Breast Cancer",
+      "description": "Breast cancer awareness and support community",
+      "members": 180000,
+      "url": "https://twitter.com/search?q=%23BreastCancer"
+    },
+    {
+      "name": "Cervical Cancer Community",
+      "category": "Cervical Cancer",
+      "description": "News, advocacy and lived experience shared via #CervicalCancer and #CervicalCancerAwareness",
+      "members": 42000,
+      "url": "https://twitter.com/search?q=%23CervicalCancer"
+    },
+    {
+      "name": "Menopause & Perimenopause Chat",
+      "category": "Menopause and Perimenopause",
+      "description": "Midlife health conversations using #Menopause, #Perimenopause and #MenopauseMatters",
+      "members": 78000,
+      "url": "https://twitter.com/search?q=%23Menopause%20OR%20%23Perimenopause"
+    },
+    {
+      "name": "Fibroids & Uterine Health",
+      "category": "Uterine Fibroids (Leiomyomas)",
+      "description": "Discussion on fibroids, heavy bleeding and treatment tagged with #Fibroids and #UterineFibroids",
+      "members": 36000,
+      "url": "https://twitter.com/search?q=%23Fibroids%20OR%20%23UterineFibroids"
+    },
+    {
+      "name": "Vaginal Health & Yeast Infections",
+      "category": "Vaginal Yeast Infection (Candidiasis)",
+      "description": "Tweets about thrush, candidiasis and vaginal microbiome via #YeastInfection and #VaginalHealth",
+      "members": 29000,
+      "url": "https://twitter.com/search?q=%23YeastInfection%20OR%20%23VaginalHealth"
+    },
+    {
+      "name": "UTI & Bladder Health",
+      "category": "Urinary Tract Infection (UTI)",
+      "description": "Community discussions on UTIs and bladder health using #UTI and #BladderHealth",
+      "members": 34000,
+      "url": "https://twitter.com/search?q=%23UTI%20OR%20%23BladderHealth"
+    },
+    {
+      "name": "Ovarian Cyst & Ovarian Health",
+      "category": "Ovarian Cysts",
+      "description": "Stories and education around ovarian cysts shared with #OvarianCyst and #OvarianHealth",
+      "members": 27000,
+      "url": "https://twitter.com/search?q=%23OvarianCyst%20OR%20%23OvarianHealth"
+    },
+    {
+      "name": "Ovarian Cancer Voices",
+      "category": "Ovarian Cancer",
+      "description": "Advocacy and survivorship community using #OvarianCancer and #TealRibbon",
+      "members": 52000,
+      "url": "https://twitter.com/search?q=%23OvarianCancer"
+    },
+    {
+      "name": "PID & Pelvic Pain Awareness",
+      "category": "Pelvic Inflammatory Disease (PID)",
+      "description": "Pelvic inflammatory disease and chronic pelvic pain tagged with #PID and #PelvicPain",
+      "members": 19000,
+      "url": "https://twitter.com/search?q=%23PID%20OR%20%23PelvicPain"
+    },
+    {
+      "name": "PMS & PMDD Twitter",
+      "category": "Premenstrual Syndrome (PMS) & PMDD",
+      "description": "Hormone mood chat using #PMS, #PMDD and #PMDDAwareness",
+      "members": 58000,
+      "url": "https://twitter.com/search?q=%23PMDD%20OR%20%23PMS"
+    },
+    {
+      "name": "Gestational Diabetes Talk",
+      "category": "Gestational Diabetes",
+      "description": "Pregnancy blood sugar discussions via #GestationalDiabetes and #GDM",
+      "members": 31000,
+      "url": "https://twitter.com/search?q=%23GestationalDiabetes%20OR%20%23GDM"
+    },
+    {
+      "name": "Postpartum Depression & Anxiety",
+      "category": "Postpartum Depression (PPD)",
+      "description": "Perinatal mental health community sharing under #PostpartumDepression and #PPD",
+      "members": 76000,
+      "url": "https://twitter.com/search?q=%23PostpartumDepression%20OR%20%23PPD"
+    },
+    {
+      "name": "Thyroid & Hormone Twitter",
+      "category": "Thyroid Disorders (Hypo/Hyper)",
+      "description": "Hashimoto’s, Graves’, hypo and hyperthyroidism posts via #Thyroid and #ThyroidDisease",
+      "members": 83000,
+      "url": "https://twitter.com/search?q=%23Thyroid%20OR%20%23ThyroidDisease"
+    },
+    {
+      "name": "Osteoporosis & Bone Health",
+      "category": "Osteoporosis",
+      "description": "Bone density and fracture prevention community using #Osteoporosis and #BoneHealth",
+      "members": 28000,
+      "url": "https://twitter.com/search?q=%23Osteoporosis%20OR%20%23BoneHealth"
+    },
+    {
+      "name": "Preeclampsia & High Risk Pregnancy",
+      "category": "Preeclampsia",
+      "description": "High-risk pregnancy and preeclampsia stories shared with #Preeclampsia",
+      "members": 23000,
+      "url": "https://twitter.com/search?q=%23Preeclampsia"
+    },
+    {
+      "name": "Vaginismus & Painful Sex",
+      "category": "Vaginismus",
+      "description": "Sexual pain, vaginismus and pelvic floor chat via #Vaginismus and #PelvicFloor",
+      "members": 21000,
+      "url": "https://twitter.com/search?q=%23Vaginismus%20OR%20%23PelvicFloor"
+    },
+    {
+      "name": "BV & Vaginal Microbiome",
+      "category": "Bacterial Vaginosis (BV)",
+      "description": "Bacterial vaginosis and microbiome-focused care discussed with #BacterialVaginosis and #BV",
+      "members": 26000,
+      "url": "https://twitter.com/search?q=%23BacterialVaginosis%20OR%20%23BV"
+    },
+    {
+      "name": "Autoimmune Women on X",
+      "category": "Autoimmune Diseases",
+      "description": "Women sharing lupus, RA, MS and related experiences with #AutoimmuneDiseases and #Spoonie",
+      "members": 97000,
+      "url": "https://twitter.com/search?q=%23AutoimmuneDiseases%20OR%20%23Autoimmune"
+    },
+    {
+      "name": "Women’s Mental Health Twitter",
+      "category": "Women Mental health",
+      "description": "Conversations about anxiety, depression and trauma under #WomensMentalHealth",
+      "members": 112000,
+      "url": "https://twitter.com/search?q=%23WomensMentalHealth"
+    },
+    {
+      "name": "Pregnancy, TTC & Fertility",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "Combined TTC and pregnancy chat using #TryingToConceive, #Pregnancy and #Fertility",
+      "members": 145000,
+      "url": "https://twitter.com/search?q=%23TryingToConceive%20OR%20%23Pregnancy%20OR%20%23Fertility"
+    }
+  ],
+  "instagram_communities_manual": [
+    {
+      "name": "#PCOSWarrior",
+      "category": "PCOS",
+      "description": "PCOS community sharing experiences, symptoms, and treatments",
+      "posts": 450000,
+      "url": "https://www.instagram.com/explore/tags/pcoswarrior/"
+    },
+    {
+      "name": "#EndoWarrior",
+      "category": "Endometriosis",
+      "description": "Endometriosis awareness and support community",
+      "posts": 380000,
+      "url": "https://www.instagram.com/explore/tags/endowarrior/"
+    },
+    {
+      "name": "#TTCCommunity",
+      "category": "Infertility & Fertility",
+      "description": "Trying to conceive journey sharing and support",
+      "posts": 520000,
+      "url": "https://www.instagram.com/explore/tags/ttccommunity/"
+    },
+    {
+      "name": "#MenopauseMatters",
+      "category": "Menopause",
+      "description": "Menopause awareness and support",
+      "posts": 125000,
+      "url": "https://www.instagram.com/explore/tags/menopausematters/"
+    },
+    {
+      "name": "#BreastCancerAwareness",
+      "category": "Breast Cancer",
+      "description": "Breast cancer awareness, support, and survivor stories",
+      "posts": 890000,
+      "url": "https://www.instagram.com/explore/tags/breastcancerawareness/"
+    },
+    {
+      "name": "#WomensHealthMatters",
+      "category": "General Women's Health",
+      "description": "General women’s health advocacy and education",
+      "posts": 280000,
+      "url": "https://www.instagram.com/explore/tags/womenshealthmatters/"
+    },
+    {
+      "name": "#PCOSAwareness",
+      "category": "PCOS",
+      "description": "Education and advocacy around Polycystic Ovary Syndrome",
+      "posts": 290000,
+      "url": "https://www.instagram.com/explore/tags/pcosawareness/"
+    },
+    {
+      "name": "#PCOSJourney",
+      "category": "PCOS",
+      "description": "Personal journeys of living with and managing PCOS",
+      "posts": 100000,
+      "url": "https://www.instagram.com/explore/tags/pcosjourney/"
+    },
+    {
+      "name": "#PCOSCysters",
+      "category": "PCOS",
+      "description": "Community of women with PCOS supporting each other",
+      "posts": 76000,
+      "url": "https://www.instagram.com/explore/tags/pcoscysters/"
+    },
+    {
+      "name": "#EndometriosisAwareness",
+      "category": "Endometriosis",
+      "description": "Raising awareness about endometriosis symptoms and care",
+      "posts": 350000,
+      "url": "https://www.instagram.com/explore/tags/endometriosisawareness/"
+    },
+    {
+      "name": "#EndometriosisWarrior",
+      "category": "Endometriosis",
+      "description": "Stories and support from people living with endometriosis",
+      "posts": 60000,
+      "url": "https://www.instagram.com/explore/tags/endometriosiswarrior/"
+    },
+    {
+      "name": "#EndoSisters",
+      "category": "Endometriosis",
+      "description": "Peer support and community for endometriosis fighters",
+      "posts": 80000,
+      "url": "https://www.instagram.com/explore/tags/endosisters/"
+    },
+    {
+      "name": "#FibroidAwareness",
+      "category": "Uterine Fibroids",
+      "description": "Awareness and education on uterine fibroids and treatment options",
+      "posts": 85000,
+      "url": "https://www.instagram.com/explore/tags/fibroidawareness/"
+    },
+    {
+      "name": "#FibroidsSuck",
+      "category": "Uterine Fibroids",
+      "description": "Lived experiences of women dealing with fibroids",
+      "posts": 45000,
+      "url": "https://www.instagram.com/explore/tags/fibroidssuck/"
+    },
+    {
+      "name": "#BreastCancerSurvivor",
+      "category": "Breast Cancer",
+      "description": "Survivor stories and hope after breast cancer treatment",
+      "posts": 420000,
+      "url": "https://www.instagram.com/explore/tags/breastcancersurvivor/"
+    },
+    {
+      "name": "#PinkRibbon",
+      "category": "Breast Cancer",
+      "description": "Global breast cancer awareness and solidarity symbol",
+      "posts": 2700000,
+      "url": "https://www.instagram.com/explore/tags/pinkribbon/"
+    },
+    {
+      "name": "#CervicalCancerAwareness",
+      "category": "Cervical Cancer",
+      "description": "HPV, screening, and cervical cancer prevention and support",
+      "posts": 120000,
+      "url": "https://www.instagram.com/explore/tags/cervicalcancerawareness/"
+    },
+    {
+      "name": "#Perimenopause",
+      "category": "Menopause & Perimenopause",
+      "description": "Experiences and education about the perimenopause transition",
+      "posts": 200000,
+      "url": "https://www.instagram.com/explore/tags/perimenopause/"
+    },
+    {
+      "name": "#MenopauseSupport",
+      "category": "Menopause",
+      "description": "Supportive community for managing menopause symptoms",
+      "posts": 90000,
+      "url": "https://www.instagram.com/explore/tags/menopausesupport/"
+    },
+    {
+      "name": "#VaginalHealth",
+      "category": "Vaginal Yeast Infection & BV",
+      "description": "Education on vaginal infections, pH balance, and hygiene",
+      "posts": 75000,
+      "url": "https://www.instagram.com/explore/tags/vaginalhealth/"
+    },
+    {
+      "name": "#BacterialVaginosis",
+      "category": "Bacterial Vaginosis (BV)",
+      "description": "Discussion and awareness around BV symptoms and treatment",
+      "posts": 25000,
+      "url": "https://www.instagram.com/explore/tags/bacterialvaginosis/"
+    },
+    {
+      "name": "#UTIAwareness",
+      "category": "Urinary Tract Infection (UTI)",
+      "description": "Information and prevention tips for urinary tract infections",
+      "posts": 30000,
+      "url": "https://www.instagram.com/explore/tags/utiawareness/"
+    },
+    {
+      "name": "#OvarianCyst",
+      "category": "Ovarian Cysts",
+      "description": "Sharing experiences and guidance about ovarian cysts",
+      "posts": 60000,
+      "url": "https://www.instagram.com/explore/tags/ovariancyst/"
+    },
+    {
+      "name": "#OvarianCancerAwareness",
+      "category": "Ovarian Cancer",
+      "description": "Raising awareness of ovarian cancer signs and early detection",
+      "posts": 180000,
+      "url": "https://www.instagram.com/explore/tags/ovariancancerawareness/"
+    },
+    {
+      "name": "#PelvicInflammatoryDisease",
+      "category": "Pelvic Inflammatory Disease (PID)",
+      "description": "Education and experiences around PID and pelvic pain",
+      "posts": 15000,
+      "url": "https://www.instagram.com/explore/tags/pelvicinflammatorydisease/"
+    },
+    {
+      "name": "#InfertilitySupport",
+      "category": "Infertility",
+      "description": "Emotional and practical support for infertility journeys",
+      "posts": 260000,
+      "url": "https://www.instagram.com/explore/tags/infertilitysupport/"
+    },
+    {
+      "name": "#TTCJourney",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "Personal stories of trying to conceive and fertility treatments",
+      "posts": 470000,
+      "url": "https://www.instagram.com/explore/tags/ttcjourney/"
+    },
+    {
+      "name": "#PMSRelief",
+      "category": "Premenstrual Syndrome (PMS)",
+      "description": "Tips and support for managing PMS symptoms",
+      "posts": 55000,
+      "url": "https://www.instagram.com/explore/tags/pmsrelief/"
+    },
+    {
+      "name": "#PMDDWarrior",
+      "category": "PMDD",
+      "description": "Community for people living with premenstrual dysphoric disorder",
+      "posts": 35000,
+      "url": "https://www.instagram.com/explore/tags/pmddwarrior/"
+    },
+    {
+      "name": "#GestationalDiabetes",
+      "category": "Gestational Diabetes",
+      "description": "Managing blood sugars and pregnancy with gestational diabetes",
+      "posts": 90000,
+      "url": "https://www.instagram.com/explore/tags/gestationaldiabetes/"
+    },
+    {
+      "name": "#PregnancyJourney",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "Sharing the emotional and physical journey of pregnancy",
+      "posts": 1200000,
+      "url": "https://www.instagram.com/explore/tags/pregnancyjourney/"
+    },
+    {
+      "name": "#PostpartumDepression",
+      "category": "Postpartum Depression (PPD)",
+      "description": "Awareness and real stories around postpartum depression",
+      "posts": 180000,
+      "url": "https://www.instagram.com/explore/tags/postpartumdepression/"
+    },
+    {
+      "name": "#PostpartumSupport",
+      "category": "Postpartum Depression (PPD)",
+      "description": "Support for mental and physical health after childbirth",
+      "posts": 95000,
+      "url": "https://www.instagram.com/explore/tags/postpartumsupport/"
+    },
+    {
+      "name": "#ThyroidHealth",
+      "category": "Thyroid Disorders",
+      "description": "Education and support for hypothyroidism and hyperthyroidism",
+      "posts": 140000,
+      "url": "https://www.instagram.com/explore/tags/thyroidhealth/"
+    },
+    {
+      "name": "#HormoneHealth",
+      "category": "Hormonal Health",
+      "description": "Balancing hormones, cycles, and related women’s health issues",
+      "posts": 500000,
+      "url": "https://www.instagram.com/explore/tags/hormonehealth/"
+    },
+    {
+      "name": "#BoneHealth",
+      "category": "Osteoporosis",
+      "description": "Prevention and management of bone loss and fractures",
+      "posts": 80000,
+      "url": "https://www.instagram.com/explore/tags/bonehealth/"
+    },
+    {
+      "name": "#OsteoporosisAwareness",
+      "category": "Osteoporosis",
+      "description": "Awareness about osteoporosis risk, screening, and lifestyle",
+      "posts": 60000,
+      "url": "https://www.instagram.com/explore/tags/osteoporosisawareness/"
+    },
+    {
+      "name": "#PreeclampsiaAwareness",
+      "category": "Preeclampsia",
+      "description": "Education on signs, risks, and stories around preeclampsia",
+      "posts": 40000,
+      "url": "https://www.instagram.com/explore/tags/preeclampsiaawareness/"
+    },
+    {
+      "name": "#Vaginismus",
+      "category": "Vaginismus",
+      "description": "Stories, resources, and therapy journeys for vaginismus",
+      "posts": 45000,
+      "url": "https://www.instagram.com/explore/tags/vaginismus/"
+    },
+    {
+      "name": "#AutoimmuneWarrior",
+      "category": "Autoimmune Diseases",
+      "description": "Living with autoimmune conditions that affect women’s health",
+      "posts": 300000,
+      "url": "https://www.instagram.com/explore/tags/autoimmunewarrior/"
+    },
+    {
+      "name": "#ChronicIllnessWarrior",
+      "category": "Autoimmune & Chronic Illness",
+      "description": "Community for women managing chronic and invisible illnesses",
+      "posts": 390000,
+      "url": "https://www.instagram.com/explore/tags/chronicillnesswarrior/"
+    },
+    {
+      "name": "#WomensMentalHealth",
+      "category": "Women Mental Health",
+      "description": "Focus on emotional wellbeing and mental health in women",
+      "posts": 150000,
+      "url": "https://www.instagram.com/explore/tags/womensmentalhealth/"
+    },
+    {
+      "name": "#MentalHealthMatters",
+      "category": "Women Mental Health",
+      "description": "Advocacy and destigmatizing conversations around mental health",
+      "posts": 3400000,
+      "url": "https://www.instagram.com/explore/tags/mentalhealthmatters/"
+    },
+    {
+      "name": "#FertilityJourney",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "Stories of IVF, IUI, and natural conception journeys",
+      "posts": 210000,
+      "url": "https://www.instagram.com/explore/tags/fertilityjourney/"
+    },
+    {
+      "name": "#TryingToConceive",
+      "category": "Pregnancy, Conceiving and Fertility",
+      "description": "Trying to conceive journeys and peer support",
+      "posts": 600000,
+      "url": "https://www.instagram.com/explore/tags/tryingtoconceive/"
+    }
+  ],
+  "quora_topics_manual": [
+    ["Womens-Health", "General Women's Health"],
+    ["PCOS-Polycystic-Ovary-Syndrome", "PCOS"],
+    ["Endometriosis", "Endometriosis"],
+    ["Pregnancy", "Pregnancy"],
+    ["Infertility", "Infertility & Fertility"],
+    ["Menopause", "Menopause"],
+    ["Breast-Cancer", "Breast Cancer"],
+    ["Mental-Health", "Mental Health"],
+    ["Thyroid-Disorders", "Thyroid Disorders"],
+    ["Uterine-Fibroids", "Uterine Fibroids (Leiomyomas)"],
+    ["Fibroid-Tumors", "Uterine Fibroids"],
+    ["Cervical-Cancer", "Cervical Cancer"],
+    ["HPV-and-Cervical-Cancer", "Cervical Cancer"],
+    ["Vaginal-Yeast-Infection", "Vaginal Yeast Infection (Candidiasis)"],
+    ["Bacterial-Vaginosis", "Bacterial Vaginosis (BV)"],
+    ["Urinary-Tract-Infections", "Urinary Tract Infection (UTI)"],
+    ["Recurrent-UTI", "Urinary Tract Infection (UTI)"],
+    ["Ovarian-Cysts", "Ovarian Cysts"],
+    ["Ovarian-Cancer", "Ovarian Cancer"],
+    ["Pelvic-Inflammatory-Disease", "Pelvic Inflammatory Disease (PID)"],
+    ["Premenstrual-Syndrome", "Premenstrual Syndrome (PMS)"],
+    ["PMDD-Premenstrual-Dysphoric-Disorder", "PMDD"],
+    ["Gestational-Diabetes", "Gestational Diabetes"],
+    ["Preeclampsia", "Preeclampsia"],
+    ["High-Risk-Pregnancy", "Pregnancy, Conceiving and Fertility"],
+    ["Postpartum-Depression", "Postpartum Depression (PPD)"],
+    ["Postpartum-Recovery", "Postpartum Health"],
+    ["Osteoporosis", "Osteoporosis"],
+    ["Bone-Health", "Bone Health"],
+    ["Vaginismus", "Vaginismus"],
+    ["Painful-Intercourse", "Dyspareunia & Vaginismus"],
+    ["Autoimmune-Diseases", "Autoimmune Diseases"],
+    ["Women-and-Autoimmune-Disease", "Autoimmune Diseases in Women"],
+    ["Womens-Mental-Health", "Women Mental Health"],
+    ["Hormonal-Imbalance", "Hormonal Health"],
+    ["Perimenopause", "Perimenopause"],
+    ["Reproductive-Endocrinology", "Hormonal & Fertility Disorders"],
+    ["Fertility", "Fertility"],
+    ["Trying-to-Conceive", "Pregnancy, Conceiving and Fertility"]
+  ]
+}
