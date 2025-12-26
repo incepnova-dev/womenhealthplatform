@@ -1,0 +1,536 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Charcha - Android Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #000;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 12px #333,
+                0 30px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #F9F7F7;
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: linear-gradient(135deg, #E91E63, #D81B60);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .app-header {
+            height: 56px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .app-title {
+            color: #E91E63;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            color: #666;
+        }
+        
+        .content-area {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+            padding: 16px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
+        }
+        
+        .hero-title {
+            color: #333;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .hero-subtitle {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .search-bar {
+            height: 48px;
+            background: #F5F5F5;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .search-icon {
+            color: #757575;
+            margin-right: 12px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: #9E9E9E;
+            font-size: 14px;
+        }
+        
+        .analytics-section {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .analytics-card {
+            flex: 1;
+            height: 100px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .analytics-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .analytics-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .posts-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .post-card {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        
+        .post-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1A1B1E;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .post-preview {
+            font-size: 14px;
+            color: #5E5E5E;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 12px;
+            color: #9E9E9E;
+            margin-bottom: 12px;
+        }
+        
+        .engagement-metrics {
+            display: flex;
+            gap: 16px;
+            background: #F5F5F5;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .action-button {
+            padding: 8px 16px;
+            background: #E91E63;
+            color: white;
+            border: none;
+            border-radius: 18px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .action-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9E9E9E;
+            font-size: 10px;
+            text-decoration: none;
+        }
+        
+        .nav-item.active {
+            color: #E91E63;
+        }
+        
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+        
+        .floating-button {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #E91E63, #D81B60);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+            cursor: pointer;
+        }
+        
+        .fire-icon {
+            color: #FF9800;
+        }
+        
+        .comment-icon {
+            color: #2196F3;
+        }
+        
+        .heart-icon {
+            color: #E91E63;
+        }
+        
+        .clock-icon {
+            color: #9E9E9E;
+        }
+        
+        .person-icon {
+            color: #9E9E9E;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <span>11:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>📡</span>
+                    <span>🔋 89%</span>
+                </div>
+            </div>
+            
+            <!-- App Header -->
+            <div class="app-header">
+                <div class="app-title">Nari Swasthya Charcha</div>
+                <div class="header-icons">
+                    <span>🔍</span>
+                    <span>🔔</span>
+                </div>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <div class="hero-title">Find and Learn From Lived Experiences</div>
+                    <div class="hero-subtitle">Explore real conversations and community wisdom from healthcare platforms worldwide.</div>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" placeholder="Search posts by title or content...">
+                </div>
+                
+                <!-- Analytics Cards -->
+                <div class="analytics-section">
+                    <div class="analytics-card">
+                        <div class="analytics-number" style="color: #E91E63;">2243</div>
+                        <div class="analytics-label">Discussions</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-number" style="color: #2196F3;">23</div>
+                        <div class="analytics-label">Categories</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-number" style="color: #4DB6AC;">6</div>
+                        <div class="analytics-label">Platforms</div>
+                    </div>
+                </div>
+                
+                <!-- Section Title -->
+                <div class="section-title">
+                    <span class="fire-icon">🔥</span> TRENDING POSTS
+                </div>
+                
+                <!-- Posts Grid -->
+                <div class="posts-grid">
+                    <!-- Post 1 -->
+                    <div class="post-card" style="border-left-color: #2196F3;">
+                        <div class="category-tag" style="background: #2196F3;">General Women's Health</div>
+                        <div class="post-title">My CA27-29 levels fluctuate - anyone else?</div>
+                        <div class="post-preview">My CA27-29 a year ago was 42. The doctor wanted to wait until June to retest it. In June it was 38, now it's back up to 42...</div>
+                        <div class="post-meta">
+                            <span class="clock-icon">⏰ Jan 1, 1970</span>
+                            <span class="person-icon">👤 Community Member</span>
+                        </div>
+                        <div class="engagement-metrics">
+                            <span class="comment-icon">💬 12</span>
+                            <span class="heart-icon">👍 24</span>
+                        </div>
+                        <button class="action-button">View Discussion</button>
+                    </div>
+                    
+                    <!-- Post 2 -->
+                    <div class="post-card" style="border-left-color: #E91E63;">
+                        <div class="category-tag" style="background: #E91E63;">Breast Cancer</div>
+                        <div class="post-title">Stage 4 breast cancer—feeling lost and scared</div>
+                        <div class="post-preview">I found out I had stage 3 cancer but to come to find out it was more advanced than they thought so now I'm stage 4...</div>
+                        <div class="post-meta">
+                            <span class="clock-icon">⏰ 2 days ago</span>
+                            <span class="person-icon">👤 Anonymous</span>
+                        </div>
+                        <div class="engagement-metrics">
+                            <span class="comment-icon">💬 47</span>
+                            <span class="heart-icon">💗 89</span>
+                        </div>
+                        <button class="action-button" style="background: #E91E63;">💗 Support</button>
+                    </div>
+                    
+                    <!-- Post 3 -->
+                    <div class="post-card" style="border-left-color: #FF9800;">
+                        <div class="category-tag" style="background: #FF9800;">⚠️ Site Feedback</div>
+                        <div class="post-title">ATTENTION: SITE ADMINISTRATORS</div>
+                        <div class="post-preview">Dear Admins, I hope you rethink how and when you display these beta AI responses to members' questions and issues...</div>
+                        <div class="post-meta">
+                            <span class="clock-icon">⏰ Jan 1, 1970</span>
+                            <span class="person-icon">👤 Community Member</span>
+                        </div>
+                        <div class="engagement-metrics">
+                            <span>⚠️ Important</span>
+                        </div>
+                        <button class="action-button" style="background: #FF9800;">View Notice</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Action Button -->
+            <div class="floating-button">
+                ➕
+            </div>
+            
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔍</span>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📖</span>
+                    <span>Learn</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">💾</span>
+                    <span>Saved</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span>Profile</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity
+        document.querySelectorAll('.action-button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+                
+                // Show feedback
+                const originalText = this.textContent;
+                this.textContent = 'Opening...';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 1000);
+            });
+        });
+        
+        // Search bar focus effect
+        const searchInput = document.querySelector('.search-input');
+        const searchBar = document.querySelector('.search-bar');
+        
+        searchInput.addEventListener('focus', () => {
+            searchBar.style.boxShadow = '0 4px 12px rgba(233, 30, 99, 0.2)';
+            searchBar.style.border = '2px solid #E91E63';
+        });
+        
+        searchInput.addEventListener('blur', () => {
+            searchBar.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+            searchBar.style.border = 'none';
+        });
+        
+        // Card hover effects
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+            });
+        });
+        
+        // Floating button animation
+        const fab = document.querySelector('.floating-button');
+        fab.addEventListener('click', function() {
+            this.style.transform = 'rotate(90deg) scale(1.1)';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0) scale(1)';
+            }, 300);
+            
+            // Show new post prompt
+            alert('Start a new discussion about women\'s health...');
+        });
+        
+        // Analytics cards click
+        document.querySelectorAll('.analytics-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const number = this.querySelector('.analytics-number').textContent;
+                const label = this.querySelector('.analytics-label').textContent;
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+                
+                console.log(`Viewing ${label}: ${number}`);
+            });
+        });
+    </script>
+</body>
+</html>

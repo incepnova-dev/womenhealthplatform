@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Communities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #F9F7F7 0%, #FFF5F7 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 28px 28px 0 0;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .app-header {
+            height: 56px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            box-shadow: 0 2px 12px rgba(233, 30, 99, 0.1);
+        }
+        
+        .app-title {
+            color: #E91E63;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            color: #666;
+        }
+        
+        .content-area {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+            padding: 16px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+        
+        .hero-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        .stats-badge {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .search-section {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        .search-bar {
+            height: 48px;
+            background: #F5F5F5;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            margin-bottom: 16px;
+        }
+        
+        .search-icon {
+            color: #757575;
+            margin-right: 12px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .filter-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        
+        .tag {
+            padding: 6px 12px;
+            background: #F0F7FF;
+            border-radius: 16px;
+            font-size: 12px;
+            color: #2196F3;
+            font-weight: 500;
+            border: 1px solid rgba(33, 150, 243, 0.2);
+        }
+        
+        .tag.active {
+            background: #2196F3;
+            color: white;
+        }
+        
+        .platform-filter {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+        
+        .platform-chip {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #E0E0E0;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .platform-chip.active {
+            background: #E91E63;
+            border-color: #E91E63;
+            color: white;
+        }
+        
+        .analytics-section {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .analytics-card {
+            flex: 1;
+            height: 100px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .analytics-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .analytics-card:nth-child(1) {
+            border-top: 4px solid #E91E63;
+        }
+        
+        .analytics-card:nth-child(2) {
+            border-top: 4px solid #2196F3;
+        }
+        
+        .analytics-card:nth-child(3) {
+            border-top: 4px solid #4DB6AC;
+        }
+        
+        .analytics-number {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .analytics-card:nth-child(2) .analytics-number {
+            background: linear-gradient(135deg, #2196F3, #21CBF3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .analytics-card:nth-child(3) .analytics-number {
+            background: linear-gradient(135deg, #4DB6AC, #26C6DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .analytics-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .section-title h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .sort-dropdown {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #E0E0E0;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .communities-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .community-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .community-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            border-color: #FFE4EC;
+        }
+        
+        .community-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .community-category {
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .category-mental {
+            background: linear-gradient(135deg, #9C27B0, #E040FB);
+        }
+        
+        .category-general {
+            background: linear-gradient(135deg, #2196F3, #03A9F4);
+        }
+        
+        .category-cancer {
+            background: linear-gradient(135deg, #E91E63, #F50057);
+        }
+        
+        .category-pregnancy {
+            background: linear-gradient(135deg, #4CAF50, #00E676);
+        }
+        
+        .community-badge {
+            background: #FF4081;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        
+        .community-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1A1B1E;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .community-description {
+            font-size: 14px;
+            color: #5E5E5E;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .community-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .members-count {
+            font-size: 20px;
+            font-weight: 800;
+            color: #E91E63;
+        }
+        
+        .members-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .join-button {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.25);
+        }
+        
+        .join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.35);
+        }
+        
+        .join-button.joined {
+            background: linear-gradient(135deg, #4CAF50, #00E676);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.25);
+        }
+        
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 0 0 28px 28px;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9E9E9E;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+        
+        .nav-item.active {
+            color: #E91E63;
+            background: #FFF5F7;
+        }
+        
+        .nav-icon {
+            font-size: 22px;
+            margin-bottom: 2px;
+        }
+        
+        .nav-label {
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        .floating-button {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .floating-button:hover {
+            transform: rotate(90deg) scale(1.1);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.5);
+        }
+        
+        .platform-icon {
+            font-size: 14px;
+        }
+        
+        .engagement-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .category-filters {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .category-filter {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #E0E0E0;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .category-filter.active {
+            background: #E91E63;
+            border-color: #E91E63;
+            color: white;
+        }
+        
+        /* Custom Scrollbar */
+        .content-area::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .content-area::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .content-area::-webkit-scrollbar-thumb {
+            background: rgba(233, 30, 99, 0.3);
+            border-radius: 3px;
+        }
+        
+        .content-area::-webkit-scrollbar-thumb:hover {
+            background: rgba(233, 30, 99, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <span>11:30 AM</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>📡</span>
+                    <span>🔋 100%</span>
+                </div>
+            </div>
+            
+            <!-- App Header -->
+            <div class="app-header">
+                <div class="app-title">Nari Swasthya Samuday</div>
+                <div class="header-icons">
+                    <span>🔔</span>
+                    <span>👤</span>
+                </div>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <div class="hero-title">Discover Your Support Community</div>
+                    <div class="hero-subtitle">Connect with supportive communities across all platforms - from Reddit and Facebook to Instagram and Quora</div>
+                    <div class="stats-badge">45 Active Communities</div>
+                </div>
+                
+                <!-- Search Section -->
+                <div class="search-section">
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search communities or topics...">
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="filter-tags">
+                        <span class="tag">#mentalhealth</span>
+                        <span class="tag active">#pregnancy</span>
+                        <span class="tag">#breastcancer</span>
+                        <span class="tag">#womenshealth</span>
+                    </div>
+                    
+                    <!-- Platform Filter -->
+                    <div class="platform-filter">
+                        <div class="platform-chip active">🌐 All Platforms</div>
+                        <div class="platform-chip">📱 Instagram</div>
+                        <div class="platform-chip">👥 Facebook</div>
+                        <div class="platform-chip">🟥 Reddit</div>
+                        <div class="platform-chip">🐦 Twitter/X</div>
+                        <div class="platform-chip">💬 Discord</div>
+                        <div class="platform-chip">❓ Quora</div>
+                    </div>
+                </div>
+                
+                <!-- Analytics Cards -->
+                <div class="analytics-section">
+                    <div class="analytics-card">
+                        <div class="analytics-number">45</div>
+                        <div class="analytics-label">Active Communities</div>
+                        <div class="engagement-badge">🔥 Trending</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-number">6</div>
+                        <div class="analytics-label">Platforms</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-number">69.7M</div>
+                        <div class="analytics-label">Total Members</div>
+                    </div>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <div class="category-filter active">All Categories</div>
+                    <div class="category-filter">Mental Health</div>
+                    <div class="category-filter">Breast Cancer</div>
+                    <div class="category-filter">Pregnancy</div>
+                    <div class="category-filter">General Health</div>
+                </div>
+                
+                <!-- Section Title -->
+                <div class="section-title">
+                    <h2>🏆 Top Communities</h2>
+                    <select class="sort-dropdown">
+                        <option>Highest Members</option>
+                        <option>Highest Engagement</option>
+                        <option>Newest</option>
+                    </select>
+                </div>
+                
+                <!-- Communities Grid -->
+                <div class="communities-grid">
+                    <!-- Community 1 -->
+                    <div class="community-card">
+                        <div class="community-header">
+                            <div class="community-category category-general">General Women's Health</div>
+                            <div class="community-badge">NEW</div>
+                        </div>
+                        <div class="community-title">TwoXChromosomes</div>
+                        <div class="community-description">
+                            Welcome to TwoXChromosomes, a subreddit for both serious and silly content, intended for women's perspectives. We support the rights of all genders.
+                        </div>
+                        <div class="community-stats">
+                            <div>
+                                <div class="members-count">13.6M</div>
+                                <div class="members-label">Members</div>
+                            </div>
+                            <button class="join-button">Join Community</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Community 2 -->
+                    <div class="community-card">
+                        <div class="community-header">
+                            <div class="community-category category-mental">Women Mental Health</div>
+                        </div>
+                        <div class="community-title">#MentalHealthMatters</div>
+                        <div class="community-description">
+                            Advocacy and destigmatizing conversations around mental health. A safe space for women to share and support each other.
+                        </div>
+                        <div class="community-stats">
+                            <div>
+                                <div class="members-count">3.4M</div>
+                                <div class="members-label">Members</div>
+                            </div>
+                            <button class="join-button joined">✓ Joined</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Community 3 -->
+                    <div class="community-card">
+                        <div class="community-header">
+                            <div class="community-category category-cancer">Breast Cancer</div>
+                        </div>
+                        <div class="community-title">#PinkRibbon</div>
+                        <div class="community-description">
+                            Global breast cancer awareness and solidarity symbol. Support, resources, and community for those affected by breast cancer.
+                        </div>
+                        <div class="community-stats">
+                            <div>
+                                <div class="members-count">2.7M</div>
+                                <div class="members-label">Members</div>
+                            </div>
+                            <button class="join-button">Join Community</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Community 4 -->
+                    <div class="community-card">
+                        <div class="community-header">
+                            <div class="community-category category-pregnancy">Pregnancy & Fertility</div>
+                            <div class="community-badge">HOT</div>
+                        </div>
+                        <div class="community-title">#PregnancyJourney</div>
+                        <div class="community-description">
+                            Sharing the emotional and physical journey of pregnancy. A supportive community for expecting mothers and those trying to conceive.
+                        </div>
+                        <div class="community-stats">
+                            <div>
+                                <div class="members-count">1.5M</div>
+                                <div class="members-label">Members</div>
+                            </div>
+                            <button class="join-button">Join Community</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Community 5 -->
+                    <div class="community-card">
+                        <div class="community-header">
+                            <div class="community-category category-mental">Mental Health</div>
+                        </div>
+                        <div class="community-title">#AskWomen</div>
+                        <div class="community-description">
+                            A dedicated space for asking women questions about their thoughts, lives, and experiences in a non-judgmental environment.
+                        </div>
+                        <div class="community-stats">
+                            <div>
+                                <div class="members-count">5.6M</div>
+                                <div class="members-label">Members</div>
+                            </div>
+                            <button class="join-button joined">✓ Joined</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Action Button -->
+            <div class="floating-button">
+                ➕
+            </div>
+            
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-label">Communities</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-label">Discover</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">💬</span>
+                    <span class="nav-label">Chat</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-label">Profile</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Join button functionality
+            const joinButtons = document.querySelectorAll('.join-button');
+            joinButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.classList.contains('joined')) {
+                        this.classList.remove('joined');
+                        this.textContent = 'Join Community';
+                        // Show feedback
+                        showToast('Left community');
+                    } else {
+                        this.classList.add('joined');
+                        this.textContent = '✓ Joined';
+                        // Show feedback
+                        showToast('Joined community!');
+                    }
+                    
+                    // Animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+            
+            // Platform filter chips
+            const platformChips = document.querySelectorAll('.platform-chip');
+            platformChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    platformChips.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Category filter chips
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    categoryFilters.forEach(f => f.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            searchInput.addEventListener('focus', function() {
+                this.parentElement.style.boxShadow = '0 4px 16px rgba(233, 30, 99, 0.2)';
+                this.parentElement.style.border = '2px solid #E91E63';
+            });
+            
+            searchInput.addEventListener('blur', function() {
+                this.parentElement.style.boxShadow = 'none';
+                this.parentElement.style.border = 'none';
+            });
+            
+            // Community card hover effects
+            const communityCards = document.querySelectorAll('.community-card');
+            communityCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Analytics card interaction
+            const analyticsCards = document.querySelectorAll('.analytics-card');
+            analyticsCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+            
+            // Toast notification function
+            function showToast(message) {
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: linear-gradient(135deg, #E91E63, #FF4081);
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 24px;
+                    font-weight: 600;
+                    box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
+                    z-index: 1000;
+                    animation: slideIn 0.3s ease;
+                `;
+                
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(toast);
+                    }, 300);
+                }, 2000);
+            }
+            
+            // Add CSS for animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-50%) translateY(-20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                }
+                
+                @keyframes slideOut {
+                    from {
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                    to {
+                        opacity: 0;
+                        transform: translateX(-50%) translateY(-20px);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Floating button interaction
+            const fab = document.querySelector('.floating-button');
+            fab.addEventListener('click', function() {
+                this.style.transform = 'rotate(180deg) scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'rotate(0) scale(1)';
+                }, 300);
+                showToast('Create new community');
+            });
+        });
+    </script>
+</body>
+</html>

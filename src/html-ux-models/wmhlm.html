@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya - Wellness Directory</title>
+    <style>
+        /* EXACT THEME AND LAYOUT FROM wmins.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #F9F7F7 0%, #FFF5F7 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 28px 28px 0 0;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .app-header {
+            height: 56px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            box-shadow: 0 2px 12px rgba(233, 30, 99, 0.1);
+        }
+        
+        .app-title {
+            color: #E91E63;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .content-area {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+            padding: 16px;
+        }
+        
+        /* COMPONENTS STYLED AS wmins.html */
+        .hero-section {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.25);
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .search-section {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        .search-bar {
+            height: 48px;
+            background: #F5F5F5;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .filter-section-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #333;
+            margin: 16px 0 8px 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .chip-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+        .chip-scroll::-webkit-scrollbar { display: none; }
+
+        .chip {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #E0E0E0;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            white-space: nowrap;
+        }
+        
+        .chip.active {
+            background: #E91E63;
+            border-color: #E91E63;
+            color: white;
+        }
+
+        /* PRODUCT CARDS - REPLACING INSURANCE CARDS */
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .product-type {
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #2196F3, #03A9F4);
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .deal-item {
+            background: #F9F9F9;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #EEE;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .deal-item.best {
+            background: #FFF5F7;
+            border-color: #FFE4EC;
+        }
+
+        .price-text {
+            color: #E91E63;
+            font-weight: 800;
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        .bottom-nav {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 0 0 28px 28px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9E9E9E;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .nav-item.active {
+            color: #E91E63;
+        }
+
+        .floating-button {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <span>12:45 PM</span>
+                <div class="status-icons">📶 🔋 98%</div>
+            </div>
+            
+            <div class="app-header">
+                <div class="app-title">Nari Swasthya</div>
+                <div style="color: #666;">🔔 👤</div>
+            </div>
+            
+            <div class="content-area">
+                <div class="hero-section">
+                    <div class="hero-title">Wellness For Less</div>
+                    <div class="hero-subtitle">Real-time price tracking for essential women's health products across India's top pharmacies.</div>
+                </div>
+                
+                <div class="search-section">
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" class="search-input" placeholder="Search medicines or brands...">
+                    </div>
+                    
+                    <div class="filter-section-title">Categories</div>
+                    <div class="chip-scroll">
+                        <div class="chip active">All Products</div>
+                        <div class="chip">Contraceptives</div>
+                        <div class="chip">Maternity</div>
+                        <div class="chip">Wellness</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-type">Contraceptive</div>
+                    <h3 style="font-size: 16px; margin-bottom: 4px;">Emergency Pill (1.5mg)</h3>
+                    <p style="font-size: 12px; color: #666; margin-bottom: 12px;">Standard emergency contraceptive tablet.</p>
+                    
+                    <div class="deal-item best">
+                        <div>
+                            <div style="font-weight: 700; font-size: 13px;">Tata 1mg</div>
+                            <div style="font-size: 10px; color: #666;">⭐ 4.8 | Delivery in 24h</div>
+                        </div>
+                        <div class="price-text">₹85.00</div>
+                    </div>
+
+                    <div class="deal-item">
+                        <div>
+                            <div style="font-weight: 700; font-size: 13px;">Netmeds</div>
+                            <div style="font-size: 10px; color: #666;">⭐ 4.5 | Delivery in 48h</div>
+                        </div>
+                        <div class="price-text" style="color: #444;">₹92.00</div>
+                    </div>
+
+                    <button class="btn-primary">Compare All Sellers</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-type" style="background: linear-gradient(135deg, #9C27B0, #E91E63);">Maternity</div>
+                    <h3 style="font-size: 16px; margin-bottom: 4px;">Prenatal Vitamins</h3>
+                    <p style="font-size: 12px; color: #666; margin-bottom: 12px;">Folic Acid & Iron supplement (30 Tabs).</p>
+                    
+                    <div class="deal-item best">
+                        <div>
+                            <div style="font-weight: 700; font-size: 13px;">Apollo Pharmacy</div>
+                            <div style="font-size: 10px; color: #666;">⭐ 4.9 | 2-hour delivery</div>
+                        </div>
+                        <div class="price-text">₹450.00</div>
+                    </div>
+
+                    <button class="btn-primary">Compare All Sellers</button>
+                </div>
+            </div>
+            
+            <div class="floating-button">🛒</div>
+            
+            <div class="bottom-nav">
+                <a href="#" class="nav-item"><span>🏠</span><span>Home</span></a>
+                <a href="#" class="nav-item"><span>👥</span><span>Community</span></a>
+                <a href="#" class="nav-item active"><span>💊</span><span>Products</span></a>
+                <a href="#" class="nav-item"><span>👤</span><span>Profile</span></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.chip').forEach(chip => {
+            chip.addEventListener('click', function() {
+                this.parentElement.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
