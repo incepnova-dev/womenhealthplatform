@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Account Recovery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        /* Recovery Screen */
+        .recovery-screen {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-right: 40px;
+        }
+        
+        .form-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .recovery-illustration {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .recovery-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FF9800, #FF6F00);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 32px rgba(255, 152, 0, 0.3);
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .section-subtitle {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+        
+        .recovery-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 30px;
+        }
+        
+        .recovery-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .recovery-card:hover {
+            border-color: #E91E63;
+            transform: translateY(-2px);
+        }
+        
+        .recovery-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .recovery-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #FFE4EC, #FFF5F7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .recovery-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .recovery-card-description {
+            font-size: 14px;
+            color: #666;
+            margin-left: 64px;
+        }
+        
+        .alias-note {
+            background: linear-gradient(135deg, #FFF5F7, #FFFFFF);
+            border-left: 4px solid #E91E63;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 20px;
+        }
+        
+        .alias-note-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #E91E63;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .alias-note-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .btn-container {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Screen 9: Account Recovery -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="recovery-screen">
+                    <div class="status-bar">
+                        <span>11:30 AM</span>
+                        <div class="status-icons">
+                            <span>📶</span>
+                            <span>🔋 100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="header">
+                        <button class="back-btn">←</button>
+                        <div class="header-title">Account Recovery</div>
+                    </div>
+                    
+                    <div class="form-container">
+                        <div class="recovery-illustration">
+                            <div class="recovery-icon">🔑</div>
+                        </div>
+                        
+                        <div class="section-title">Recover your account</div>
+                        <div class="section-subtitle">
+                            Choose how you'd like to recover your account
+                        </div>
+                        
+                        <div class="recovery-options">
+                            <div class="recovery-card">
+                                <div class="recovery-card-header">
+                                    <div class="recovery-card-icon">📱</div>
+                                    <div class="recovery-card-title">Via Phone Number</div>
+                                </div>
+                                <div class="recovery-card-description">
+                                    We'll send a verification code to your registered mobile number ending in ****3210
+                                </div>
+                            </div>
+                            
+                            <div class="recovery-card">
+                                <div class="recovery-card-header">
+                                    <div class="recovery-card-icon">📧</div>
+                                    <div class="recovery-card-title">Via Email</div>
+                                </div>
+                                <div class="recovery-card-description">
+                                    We'll send a recovery link to your registered email address s****a@example.com
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alias-note">
+                            <div class="alias-note-title">
+                                🔐 Security Notice
+                            </div>
+                            <div class="alias-note-text">
+                                For your protection, you may be asked to verify sensitive actions like password reset or device change with an additional OTP.
+                            </div>
+                        </div>
+                        
+                        <div class="btn-container">
+                            <button class="btn btn-primary">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">9. Account Recovery</div>
+        </div>
+    </div>
+</body>
+</html>
+

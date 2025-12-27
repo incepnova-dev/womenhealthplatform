@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Region Selection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        /* Region Selection Screen */
+        .region-screen {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-right: 40px;
+        }
+        
+        .screen-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .section-subtitle {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+        
+        .region-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .region-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .region-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .region-card.selected {
+            border-color: #E91E63;
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFFFFF 100%);
+        }
+        
+        .region-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .region-flag {
+            font-size: 40px;
+        }
+        
+        .region-info h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .region-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .region-features {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .feature-icon {
+            color: #4CAF50;
+        }
+        
+        .btn-container {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Screen 2: Region Selection -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="region-screen">
+                    <div class="status-bar">
+                        <span>11:30 AM</span>
+                        <div class="status-icons">
+                            <span>📶</span>
+                            <span>🔋 100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="header">
+                        <button class="back-btn">←</button>
+                        <div class="header-title">Select Your Region</div>
+                    </div>
+                    
+                    <div class="screen-content">
+                        <div class="section-title">Where are you from?</div>
+                        <div class="section-subtitle">
+                            We'll customize your experience based on your location
+                        </div>
+                        
+                        <div class="region-cards">
+                            <div class="region-card selected">
+                                <div class="region-header">
+                                    <div class="region-flag">🇮🇳</div>
+                                    <div class="region-info">
+                                        <h3>India</h3>
+                                        <p>भारतीय उपयोगकर्ता</p>
+                                    </div>
+                                </div>
+                                <div class="region-features">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span>Phone number + OTP (Primary)</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span>Regional language support</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span>Aadhaar verification (optional)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="region-card">
+                                <div class="region-header">
+                                    <div class="region-flag">🌍</div>
+                                    <div class="region-info">
+                                        <h3>Global</h3>
+                                        <p>International users</p>
+                                    </div>
+                                </div>
+                                <div class="region-features">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span>Email or phone signup</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span>Multi-language support</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span>International standards</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="btn-container">
+                            <button class="btn btn-primary">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">2. Region Selection</div>
+        </div>
+    </div>
+</body>
+</html>
+

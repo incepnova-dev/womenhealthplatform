@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Sign In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        /* Sign In Screen */
+        .signin-screen {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-right: 40px;
+        }
+        
+        .form-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .signin-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .signin-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .section-subtitle {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+        
+        .tab-switcher {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            background: #F5F5F5;
+            border-radius: 16px;
+            padding: 4px;
+        }
+        
+        .tab {
+            flex: 1;
+            height: 48px;
+            border-radius: 12px;
+            border: none;
+            background: transparent;
+            font-size: 15px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: white;
+            color: #E91E63;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .form-input {
+            width: 100%;
+            height: 56px;
+            border-radius: 16px;
+            border: 2px solid #E0E0E0;
+            padding: 0 20px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #E91E63;
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.1);
+        }
+        
+        .phone-input-container {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .country-code {
+            width: 100px;
+            height: 56px;
+            border-radius: 16px;
+            border: 2px solid #E0E0E0;
+            padding: 0 16px;
+            font-size: 16px;
+            font-weight: 600;
+            background: white;
+        }
+        
+        .password-input-container {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #999;
+        }
+        
+        .forgot-password {
+            text-align: right;
+            margin-top: -12px;
+            margin-bottom: 24px;
+        }
+        
+        .forgot-link {
+            color: #E91E63;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+            margin-bottom: 24px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(233, 30, 99, 0.1);
+            color: #E91E63;
+            border: 2px solid #E91E63;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(233, 30, 99, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 24px 0;
+        }
+        
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: #E0E0E0;
+        }
+        
+        .divider-text {
+            font-size: 14px;
+            color: #999;
+            font-weight: 500;
+        }
+        
+        .terms-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .terms-link {
+            color: #E91E63;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Screen 8: Sign In -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="signin-screen">
+                    <div class="status-bar">
+                        <span>11:30 AM</span>
+                        <div class="status-icons">
+                            <span>📶</span>
+                            <span>🔋 100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="header">
+                        <button class="back-btn">←</button>
+                        <div class="header-title">Sign In</div>
+                    </div>
+                    
+                    <div class="form-container">
+                        <div class="signin-header">
+                            <div class="signin-icon">🌸</div>
+                        </div>
+                        
+                        <div class="section-title">Welcome back!</div>
+                        <div class="section-subtitle">
+                            Sign in to continue to your account
+                        </div>
+                        
+                        <div class="tab-switcher">
+                            <button class="tab active">Phone</button>
+                            <button class="tab">Email</button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Mobile Number</label>
+                            <div class="phone-input-container">
+                                <select class="country-code">
+                                    <option>🇮🇳 +91</option>
+                                </select>
+                                <input type="tel" class="form-input" placeholder="Enter mobile number">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <div class="password-input-container">
+                                <input type="password" class="form-input" placeholder="Enter password">
+                                <button class="toggle-password">👁️</button>
+                            </div>
+                        </div>
+                        
+                        <div class="forgot-password">
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        
+                        <button class="btn btn-primary">Sign In</button>
+                        
+                        <div class="divider">
+                            <div class="divider-line"></div>
+                            <div class="divider-text">OR</div>
+                            <div class="divider-line"></div>
+                        </div>
+                        
+                        <button class="btn btn-secondary">Sign In with OTP</button>
+                        
+                        <div class="terms-text">
+                            Don't have an account? <a href="#" class="terms-link">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">8. Sign In</div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab-switcher').forEach(switcher => {
+            switcher.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    switcher.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+        
+        // Toggle password visibility
+        document.querySelectorAll('.toggle-password').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    this.textContent = '🙈';
+                } else {
+                    input.type = 'password';
+                    this.textContent = '👁️';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

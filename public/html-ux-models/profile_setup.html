@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Profile Setup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        /* Profile Setup Screen */
+        .profile-screen {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-right: 40px;
+        }
+        
+        .form-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: #F0F0F0;
+            border-radius: 2px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #E91E63, #FF4081);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .section-subtitle {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+        
+        .avatar-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .avatar-upload {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            background: linear-gradient(135deg, #FFE4EC, #FFF5F7);
+            border: 4px solid #E91E63;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin: 0 auto 16px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .camera-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            background: #E91E63;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            border: 3px solid white;
+        }
+        
+        .avatar-text {
+            font-size: 14px;
+            color: #E91E63;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .form-input {
+            width: 100%;
+            height: 56px;
+            border-radius: 16px;
+            border: 2px solid #E0E0E0;
+            padding: 0 20px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #E91E63;
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.1);
+        }
+        
+        .input-hint {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .alias-note {
+            background: linear-gradient(135deg, #FFF5F7, #FFFFFF);
+            border-left: 4px solid #E91E63;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 20px;
+        }
+        
+        .alias-note-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #E91E63;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .alias-note-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .btn-container {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Screen 6: Profile Setup -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="profile-screen">
+                    <div class="status-bar">
+                        <span>11:30 AM</span>
+                        <div class="status-icons">
+                            <span>📶</span>
+                            <span>🔋 100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="header">
+                        <button class="back-btn">←</button>
+                        <div class="header-title">Complete Profile</div>
+                    </div>
+                    
+                    <div class="form-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        
+                        <div class="section-title">Tell us about you</div>
+                        <div class="section-subtitle">
+                            Create your profile (you can change this later)
+                        </div>
+                        
+                        <div class="avatar-section">
+                            <div class="avatar-upload">
+                                👤
+                                <div class="camera-badge">📷</div>
+                            </div>
+                            <div class="avatar-text">Add profile photo</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Display Name / Alias</label>
+                            <input type="text" class="form-input" placeholder="Choose a display name">
+                            <div class="input-hint">
+                                ✨ This name will be visible in community discussions
+                            </div>
+                        </div>
+                        
+                        <div class="alias-note">
+                            <div class="alias-note-title">
+                                🔐 Privacy First
+                            </div>
+                            <div class="alias-note-text">
+                                Your display name keeps your real identity private. You can always use a pseudonym in community areas while keeping your real name for clinical consultations.
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Full Name (Optional - For Clinical Use Only)</label>
+                            <input type="text" class="form-input" placeholder="Enter your full name">
+                            <div class="input-hint">
+                                👩‍⚕️ Only used for doctor consultations
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" class="form-input">
+                        </div>
+                        
+                        <div class="btn-container">
+                            <button class="btn btn-primary">Complete Setup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">6. Profile Setup</div>
+        </div>
+    </div>
+</body>
+</html>
+

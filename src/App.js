@@ -9,6 +9,7 @@ import WomenHealthCommunitiesDashboard from "./pages/WomenHealthCommunitiesDashb
 import WomenHealthProducts from "./pages/WomenHealthProducts";
 import WomenInsuranceProductCatlg from "./pages/WomenInsuranceProductCatlg";
 import WomenDiscordHealthApp from "./pages/WomenDiscordHealthApp";
+import DemoHtmlPage from "./pages/DemoHtmlPage";
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
          <Route path="/Womenhealthproducts" element={<WomenHealthProducts/>} />
          <Route path="/Womeninsuranceprods" element={<WomenInsuranceProductCatlg/>} />
          <Route path="/discordapp" element={<WomenDiscordHealthApp/>} />
+         
+         <Route path="/demohtml/:fileName?" element={<DemoHtmlPage/>} />
       </Routes>
     </BrowserRouter>
   );

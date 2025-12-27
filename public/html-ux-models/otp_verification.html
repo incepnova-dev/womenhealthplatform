@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - OTP Verification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        /* OTP Screen */
+        .otp-screen {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-right: 40px;
+        }
+        
+        .screen-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: #F0F0F0;
+            border-radius: 2px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #E91E63, #FF4081);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        
+        .otp-illustration {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .otp-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 40px rgba(233, 30, 99, 0.3);
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .otp-message {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        
+        .otp-number {
+            color: #E91E63;
+            font-weight: 700;
+        }
+        
+        .otp-inputs {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .otp-digit {
+            width: 56px;
+            height: 64px;
+            border-radius: 16px;
+            border: 2px solid #E0E0E0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            background: white;
+        }
+        
+        .otp-digit:focus {
+            outline: none;
+            border-color: #E91E63;
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.1);
+        }
+        
+        .resend-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .resend-text {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .resend-btn {
+            background: none;
+            border: none;
+            color: #E91E63;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        
+        .btn-container {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Screen 5: OTP Verification -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="otp-screen">
+                    <div class="status-bar">
+                        <span>11:30 AM</span>
+                        <div class="status-icons">
+                            <span>📶</span>
+                            <span>🔋 100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="header">
+                        <button class="back-btn">←</button>
+                        <div class="header-title">Verify OTP</div>
+                    </div>
+                    
+                    <div class="screen-content">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 66%"></div>
+                        </div>
+                        
+                        <div class="otp-illustration">
+                            <div class="otp-icon">📱</div>
+                        </div>
+                        
+                        <div class="section-title">Enter verification code</div>
+                        <div class="otp-message">
+                            We've sent a 6-digit code to<br>
+                            <span class="otp-number">+91 98765 43210</span>
+                        </div>
+                        
+                        <div class="otp-inputs">
+                            <input type="text" class="otp-digit" maxlength="1">
+                            <input type="text" class="otp-digit" maxlength="1">
+                            <input type="text" class="otp-digit" maxlength="1">
+                            <input type="text" class="otp-digit" maxlength="1">
+                            <input type="text" class="otp-digit" maxlength="1">
+                            <input type="text" class="otp-digit" maxlength="1">
+                        </div>
+                        
+                        <div class="resend-section">
+                            <div class="resend-text">Didn't receive the code?</div>
+                            <button class="resend-btn">Resend OTP (00:45)</button>
+                        </div>
+                        
+                        <div class="btn-container">
+                            <button class="btn btn-primary">Verify & Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">5. OTP Verification</div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-focus next OTP input
+        document.querySelectorAll('.otp-digit').forEach((input, index, inputs) => {
+            input.addEventListener('input', function() {
+                if (this.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+            
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && this.value === '' && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
