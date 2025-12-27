@@ -1,0 +1,1167 @@
+{
+ "healthConditions": [
+  {
+  "title": "Periods & Cycles",
+  "description": "Understand what’s normal for your cycle and when pain, heavy bleeding, or irregular periods may need a gynecologist’s review.",
+  "symptoms": [
+    "Late or skipped periods, very heavy flow, or bleeding between periods.",
+    "Severe cramps that stop you from work or school.",
+    "Very short (under 21 days) or long (over 35 days) cycles.",
+    "Brain fog, brittle nails, or craving ice (signs of iron deficiency pica).",
+    "Feeling exhausted even after a full night's sleep."
+  ],
+  "tests": [
+    "Pelvic examination and menstrual history review.",
+    "Pregnancy test if periods are late or missed.",
+    "Hormone blood tests (thyroid, prolactin, FSH/LH, androgens) for irregular cycles.",
+    "Pelvic ultrasound to look for fibroids, PCOS or structural causes.",
+    "Complete blood count (CBC) and Ferritin (iron stores) test if bleeding is very heavy."
+  ],
+  "critical_notes": [
+    "The Anemia Connection: If you have heavy periods, you are at high risk for Iron Deficiency.",
+    "Treatment often involves simple iron supplementation or dietary changes."
+  ]
+},
+   {
+  "title": "Thalassemia & Iron Deficiency Anemia",
+  "description": "Blood disorders that reduce the body’s ability to carry oxygen, often presenting with overlapping symptoms but requiring different management strategies.",
+  "symptoms": [
+    "Persistent fatigue, weakness, or shortness of breath.",
+    "Pale skin, cold hands and feet, or brittle nails.",
+    "Dizziness, lightheadedness, or chronic 'brain fog.'",
+    "Pica: Unusual cravings for non-food items like ice, dirt, or starch.",
+    "Rapid or irregular heartbeat (palpitations)."
+  ],
+  "causes": [
+    "Iron Deficiency: Blood loss from heavy periods, pregnancy, or low dietary iron intake.",
+    "Thalassemia: An inherited (genetic) blood disorder that causes the body to produce less hemoglobin than normal.",
+    "Nutritional Gaps: Malabsorption issues or diets lacking in Vitamin B12 and Folate."
+  ],
+  "tests": [
+    "Complete Blood Count (CBC): To check hemoglobin levels and Mean Corpuscular Volume (MCV).",
+    "Ferritin Test: To measure the body’s stored iron levels (crucial for distinguishing deficiency).",
+    "Hemoglobin Electrophoresis: To screen for Thalassemia traits or other genetic blood disorders.",
+    "Reticulocyte Count: To measure how fast red blood cells are being produced by the bone marrow."
+  ],
+  "treatments": [
+    "Iron Supplementation: Oral tablets or IV iron infusions (for severe deficiency/heavy periods).",
+    "Dietary Changes: Increasing intake of heme iron (meat) and non-heme iron (leafy greens) paired with Vitamin C.",
+    "Folic Acid Supplements: Often required for managing Thalassemia symptoms.",
+    "Blood Transfusions: Only in severe cases of Thalassemia or acute symptomatic anemia."
+  ]
+},
+  {
+    "title": "Infections & discharge",
+    "description": "Learn about common vaginal infections and discharge patterns — and when smell, colour or itching mean you should get checked.",
+    "symptoms": [
+      "New discharge with a strong odour or unusual colour.",
+      "Burning or pain when you pass urine.",
+      "Persistent itching, rash or sores around the vulva."
+    ],
+    "tests": [
+      "Speculum exam with vaginal swab for microscopy and culture.",
+      "Tests for yeast, bacterial vaginosis and trichomoniasis.",
+      "Urine routine and culture if there is burning or frequency.",
+      "Targeted STI tests (e.g., chlamydia, gonorrhea, syphilis, HIV) when indicated.",
+      "Visual exam of vulva and cervix to rule out ulcers, warts or lesions."
+    ]
+  },
+  {
+    "title": "Fertility & pregnancy",
+    "description": "Guidance on when to start trying, when to ask for help, and what to expect from gynecology and fertility teams.",
+    "symptoms": [
+      "Trying to conceive for 12 months (6 if over 35) without success.",
+      "Multiple early miscarriages or very irregular ovulation.",
+      "Questions about safe pregnancy, medicines and chronic conditions."
+    ],
+    "tests": [
+      "Ovulation assessment (cycle tracking, progesterone levels, ovulation kits).",
+      "Hormone profile (FSH, LH, AMH, prolactin, thyroid, androgens).",
+      "Pelvic ultrasound to assess ovaries, uterus and follicle development.",
+      "Semen analysis for the male partner.",
+      "Tubal patency tests (HSG/HyCoSy) and further fertility work‑up when needed.",
+      "Early pregnancy blood tests and ultrasound once conception occurs."
+    ]
+  },
+  {
+    "title": "Pelvic Pain & Other Symptoms",
+    "description": "Pelvic pain, pain during sex, or pressure in the lower abdomen can have many causes — from fibroids and cysts to infections and pelvic floor dysfunction.",
+    "symptoms": [
+      "Sudden severe pain with fever, nausea, or dizziness.",
+      "Ongoing pain during sex or bowel movements.",
+      "Feeling a lump, bulge, or heaviness in the vagina (Prolapse).",
+      "Leaking urine when coughing/sneezing (Stress Incontinence) or a constant urgent need to go."
+    ],
+    "focus_pelvic_floor": {
+      "description": "The 'hammock' of muscles supporting your bladder, uterus, and bowel.",
+      "recommended_actions": [
+        "Consult a Pelvic Floor Physical Therapist.",
+        "Perform regular 'Kegel' exercises.",
+        "Maintain a healthy weight to prevent long-term issues after childbirth or during menopause."
+      ]
+    },
+    "tests": [
+      "Detailed pelvic examination and pain history.",
+      "Pelvic ultrasound to look for cysts, fibroids, or masses.",
+      "Pregnancy test and urgent scan if ectopic pregnancy is suspected.",
+      "Urine tests and vaginal swabs for infection.",
+      "MRI or laparoscopy in selected cases (e.g., suspected endometriosis).",
+      "Pelvic floor assessment if there is a bulge or prolapse."
+    ]
+  },
+ {
+  "title": "Routine Visits",
+  "description": "Most women benefit from a first gynecology visit in their teens and regular preventive check‑ups from early adulthood.",
+  "symptoms": [
+    "Yearly well‑woman check‑ups to review periods, contraception and overall health.",
+    "Pap / HPV tests starting in early adulthood, as advised by your doctor.",
+    "Breast exams and mammograms when you reach the recommended age or risk level."
+  ],
+  "tests": [
+    "General physical and pelvic examination.",
+    "Pap smear and/or HPV test at recommended intervals.",
+    "Breast examination and mammography or ultrasound as per age and risk.",
+    "Blood pressure, BMI and basic blood tests (e.g., lipids, sugar) when indicated.",
+    "Contraception review and pregnancy testing if needed."
+  ],
+  "quick_guide": {
+    "title": "How to Prepare for Your Visit",
+    "description": "To get the most out of your appointment, come prepared with:",
+    "preparation_steps": [
+      "Your Cycle History: Use a tracking app or diary to show your last 3 period start dates.",
+      "A Symptom Map: When did the pain start? What makes it better or worse?",
+      "Family History: Note any relatives with breast, ovarian, or uterine cancers.",
+      "Current Meds: Include 'natural' supplements, as these can interfere with hormone tests."
+    ]
+  }
+},
+  {
+    "title": "Red‑flag symptoms",
+    "description": "Book a gynecology visit soon if you notice any of these changes between your usual check‑ups.",
+    "symptoms": [
+      "Any bleeding after sex, after menopause, or between periods.",
+      "New severe pelvic pain, or pain with fever and feeling unwell.",
+      "Lumps in the breast, vulva or vagina, or discharge with strong smell.",
+      "Painful sex, new urinary leakage, or trouble controlling bowels."
+    ],
+    "tests": [
+      "Urgent pelvic exam and transvaginal or abdominal ultrasound.",
+      "Pap / HPV test and colposcopy if cervical changes are suspected.",
+      "Endometrial sampling or hysteroscopy for abnormal uterine bleeding.",
+      "Breast imaging (ultrasound/mammogram) and further work‑up of any lump.",
+      "Urine tests, stool tests or referral to uro‑gynecology / colorectal teams when needed.",
+      "Blood tests and infection work‑up if fever or systemic illness is present."
+    ]
+  },
+  {
+    "title": "Screening & vaccines",
+    "description": "Preventive tests and vaccines catch problems early and lower your lifetime risk.",
+    "symptoms": [
+      "Pap / HPV tests for cervical cancer prevention at the recommended intervals.",
+      "HPV vaccination for eligible girls and young women.",
+      "Regular breast self‑awareness and age‑appropriate mammograms."
+    ],
+    "tests": [
+      "Pap smear and HPV co‑testing according to national or local guidelines.",
+      "Clinical breast examination and scheduled mammograms/ultrasound.",
+      "Bone density scans (DEXA) when at risk for osteoporosis.",
+      "Blood pressure, blood sugar and cholesterol checks during preventive visits.",
+      "Documentation of HPV and other relevant vaccines (e.g., hepatitis B, rubella)."
+    ]
+  },
+  {
+    "title": "Daily habits that protect you",
+    "description": "Small, steady changes in food, movement and sleep improve hormones, bones and heart health.",
+    "symptoms": [
+      "Balanced meals with enough protein, iron and calcium; limiting ultra‑processed foods.",
+      "Regular movement most days of the week, matched to your joints and energy level.",
+      "Good sleep routines and stress‑management practices you can actually stick with."
+    ],
+    "tests": [
+      "Periodic BMI and waist‑circumference checks.",
+      "Blood tests for anemia, vitamin D, lipids and blood sugar when lifestyle risks are present.",
+      "Blood pressure checks during routine visits.",
+      "Bone density scan in midlife or earlier if at higher fracture risk."
+    ]
+  },
+  {
+  "title": "Sexual Health & Safety",
+  "description": "Sexual health includes pleasure, safety, and consent — not just infection testing. Choosing contraception is about more than pregnancy prevention; it's also about cycle control.",
+  "symptoms": [
+    "STI testing when you have new partners or concerning symptoms.",
+    "Knowing where to seek help if you ever feel unsafe or pressured.",
+    "Understanding Your Options: Selecting a method that fits your body, future plans, and medical needs."
+  ],
+  "contraception_options": [
+    "LARC (Long-Acting): IUDs and hormonal implants. These are 'set and forget' and the most effective.",
+    "Hormonal: Pills, patches, and rings. Often used to treat painful periods or PCOS.",
+    "Barrier: Condoms (Essential for STI protection, even if using other birth control).",
+    "Permanent: Tubal ligation (for those certain they do not want future pregnancies)."
+  ],
+  "tests": [
+    "STI panel when there are new partners or symptoms (chlamydia, gonorrhea, HIV, syphilis, hepatitis, etc.).",
+    "Pregnancy testing when periods are late or contraception fails.",
+    "Pelvic exam and swabs for vaginal or cervical infections.",
+    "Counseling, mental‑health screening, and safety‑planning assessment when abuse is suspected."
+  ]
+ }
+],
+ "healthConditionsDetailed": [
+  {
+    "name": "Polycystic Ovary Syndrome (PCOS)",
+    "category": "Hormonal Disorder",
+    "introText": "PCOS is a common hormonal condition that can disrupt ovulation, periods, skin, weight, and long‑term metabolic health.",
+    "symptoms": [
+      "Irregular or missed periods",
+      "Excess facial and body hair (hirsutism)",
+      "Acne and oily skin",
+      "Weight gain or difficulty losing weight",
+      "Thinning hair on scalp",
+      "Dark patches of skin (insulin resistance)",
+      "Difficulty getting pregnant"
+    ],
+    "causes": [
+      "Insulin resistance and high insulin levels",
+      "Hormonal imbalance (excess androgens)",
+      "Low-grade inflammation",
+      "Genetic factors and family history"
+    ],
+    "treatment": [
+      "Birth control pills to regulate periods",
+      "Metformin for insulin resistance",
+      "Lifestyle changes (diet and exercise)",
+      "Clomiphene for fertility treatment",
+      "Hair removal treatments for hirsutism",
+      "Weight management programs"
+    ],
+    "prevention": "Maintain healthy weight, regular exercise, balanced diet low in refined carbohydrates, stress management.",
+    "imageUrl": "https://images.unsplash.com/photo-1596766465011-893322d99d3d?w=900&q=80",
+    "citation": "WHO. Polycystic ovary syndrome. 2025. | Mayo Clinic. PCOS Symptoms & Causes. 2022."
+  },
+  {
+    "name": "Endometriosis",
+    "category": "Tissue Disorder",
+    "introText": "Endometriosis happens when tissue like the uterine lining grows outside the uterus, causing pain and sometimes fertility problems.",
+    "symptoms": [
+      "Painful periods (dysmenorrhea)",
+      "Chronic pelvic pain, often worse during periods",
+      "Painful intercourse (dyspareunia)",
+      "Painful bowel movements or urination",
+      "Excessive bleeding",
+      "Infertility or difficulty conceiving",
+      "Fatigue, nausea, bloating"
+    ],
+    "causes": [
+      "Retrograde menstruation (menstrual blood flows back into pelvis)",
+      "Induction theory (non-uterine cells convert to endometrial cells)",
+      "Embryonic cell transformation",
+      "Surgical scar implantation",
+      "Immune system disorder"
+    ],
+    "treatment": [
+      "Pain medication (NSAIDs)",
+      "Hormone therapy (birth control, GnRH agonists)",
+      "Laparoscopic surgery to remove endometrial tissue",
+      "Hysterectomy (last resort for severe cases)",
+      "Acupuncture and dietary changes for symptom management"
+    ],
+    "prevention": "No proven prevention. Early diagnosis and management are key to preventing chronic pain and progression.",
+    "imageUrl": "https://images.unsplash.com/photo-1579737151121-65476a213e45?w=900&q=80",
+    "citation": "Mayo Clinic. Endometriosis Overview. 2023."
+  },
+  {
+    "name": "Uterine Fibroids (Leiomyomas)",
+    "category": "Benign Tumor",
+    "introText": "Uterine fibroids are non‑cancerous growths in the womb that can cause heavy periods, pain, and pressure symptoms.",
+    "symptoms": [
+      "Heavy menstrual bleeding",
+      "Prolonged periods (over a week)",
+      "Pelvic pressure or pain",
+      "Frequent urination",
+      "Constipation and backache",
+      "Difficulty emptying bladder",
+      "Anemia due to blood loss"
+    ],
+    "causes": [
+      "Genetic changes in the muscle cells",
+      "Hormonal factors (Estrogen and Progesterone promotion)",
+      "Extracellular matrix accumulation",
+      "Family history"
+    ],
+    "treatment": [
+      "Medication to control bleeding (GnRH agonists, IUD)",
+      "Non-invasive procedures (focused ultrasound surgery)",
+      "Minimally invasive procedures (Uterine artery embolization)",
+      "Surgery (Myomectomy to remove fibroids, Hysterectomy)",
+      "Iron supplements for anemia"
+    ],
+    "prevention": "Maintaining a healthy weight, exercising regularly, and eating a diet rich in fruits and vegetables may lower the risk.",
+    "imageUrl": "https://images.unsplash.com/photo-1520281200388-348507204f14?w=900&q=80",
+    "citation": "Office on Women’s Health. Uterine Fibroids. 2024."
+  },
+  {
+    "name": "Breast Cancer",
+    "category": "Oncological Condition",
+    "introText": "Breast cancer develops when breast cells grow abnormally, but early screening greatly improves treatment options and outcomes.",
+    "symptoms": [
+      "Lump or thickening in the breast or underarm",
+      "Change in the size or shape of the breast",
+      "Dimpling or irritation of the breast skin",
+      "Redness or flaky skin in the nipple area or breast",
+      "Nipple discharge other than breast milk",
+      "Inverted nipple",
+      "Pain in the breast or nipple"
+    ],
+    "causes": [
+      "Genetic mutations (BRCA1 and BRCA2)",
+      "Age (risk increases with age)",
+      "Family history of breast cancer",
+      "Obesity and lack of physical activity",
+      "Alcohol consumption",
+      "Exposure to radiation",
+      "Hormone replacement therapy"
+    ],
+    "treatment": [
+      "Surgery (lumpectomy or mastectomy)",
+      "Chemotherapy",
+      "Radiation therapy",
+      "Hormone therapy (e.g., Tamoxifen)",
+      "Targeted drug therapy",
+      "Immunotherapy"
+    ],
+    "prevention": "Regular self-exams and clinical exams, mammograms starting at 40-50, maintaining healthy weight, limiting alcohol, breastfeeding, and physical activity.",
+    "imageUrl": "https://images.unsplash.com/photo-1627883391216-56214309e3e7?w=900&q=80",
+    "citation": "CDC. Breast Cancer Prevention. 2023."
+  },
+  {
+    "name": "Cervical Cancer",
+    "category": "Oncological Condition",
+    "introText": "Cervical cancer is strongly linked to HPV infection, and vaccination plus screening can prevent most cases.",
+    "symptoms": [
+      "Abnormal vaginal bleeding (after intercourse, between periods)",
+      "Pelvic pain or pain during intercourse",
+      "Watery, bloody, or foul-smelling vaginal discharge",
+      "Pain during urination (late stage)",
+      "Swelling in the legs (late stage)",
+      "Weight loss and fatigue (late stage)"
+    ],
+    "causes": [
+      "Human Papillomavirus (HPV) infection (most common cause)",
+      "Multiple sexual partners",
+      "Early sexual activity",
+      "Smoking",
+      "Weakened immune system",
+      "Long-term use of oral contraceptives"
+    ],
+    "treatment": [
+      "Surgery (hysterectomy, conization)",
+      "Radiation therapy",
+      "Chemotherapy",
+      "Targeted drug therapy (for advanced cases)"
+    ],
+    "prevention": "HPV vaccination (ages 9-26), regular Pap tests (starting at age 21) and HPV co-testing, practicing safe sex, not smoking.",
+    "imageUrl": "https://images.unsplash.com/photo-1627883441551-766b44a30e71?w=900&q=80",
+    "citation": "WHO. Cervical Cancer Key Facts. 2024."
+  },
+  {
+    "name": "Menopause and Perimenopause",
+    "category": "Life Stage/Hormonal Shift",
+    "introText": "Perimenopause and menopause mark the natural end of periods and can bring hot flashes, mood changes, and long‑term bone and heart risks.",
+    "symptoms": [
+      "Hot flashes and night sweats",
+      "Irregular periods (perimenopause)",
+      "Vaginal dryness and painful intercourse",
+      "Mood changes (irritability, depression)",
+      "Sleep disturbances (insomnia)",
+      "Thinning hair and dry skin",
+      "Decreased libido"
+    ],
+    "causes": [
+      "Natural decline in reproductive hormones (Estrogen and Progesterone)",
+      "Aging (typically occurs in the late 40s or early 50s)",
+      "Hysterectomy or Oophorectomy (surgical removal of ovaries)",
+      "Chemotherapy or radiation therapy"
+    ],
+    "treatment": [
+      "Hormone Replacement Therapy (HRT)",
+      "Lifestyle changes (diet, exercise, stress reduction)",
+      "Non-hormonal medications for hot flashes (SSRIs)",
+      "Vaginal estrogen creams for dryness",
+      "Mindfulness and cognitive behavioral therapy (CBT)"
+    ],
+    "prevention": "Not preventable, as it is a natural life stage. Management focuses on minimizing symptoms and preventing long-term issues like osteoporosis and heart disease.",
+    "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=900&q=80",
+    "citation": "National Institute on Aging. Menopause Information. 2023."
+  },
+   {
+  "condition": "Perinatal Mental Health (Depression & Anxiety)",
+  "description": "Mood disorders occurring during pregnancy (Antenatal) or up to one year after birth (Postpartum). Early intervention protects both parent and baby.",
+  "symptoms": [
+    "Anxiety: Racing thoughts or constant 'dread' regarding the baby's health.",
+    "Sleep Issues: Inability to sleep even when the baby is sleeping.",
+    "Intrusive Thoughts: Scary, unwanted, or repetitive 'what-if' thoughts.",
+    "Emotional Distress: Persistent sadness, hopelessness, or irritability.",
+    "Physical Tension: Panic attacks, heart palpitations, or restlessness."
+  ],
+  "causes": [
+    "Biological Shifts: Massive hormonal fluctuations during and after pregnancy.",
+    "Physical Toll: Extreme sleep deprivation and exhaustion.",
+    "Psychological Stress: The high pressure of new caregiving responsibilities.",
+    "History: Personal or family history of depression or anxiety."
+  ],
+  "treatments": [
+    "Specialized Counseling: Cognitive Behavioral Therapy (CBT) tailored for parents.",
+    "Medication: Breastfeeding-safe antidepressants or anti-anxiety medications.",
+    "Support Groups: Connecting with others experiencing similar challenges.",
+    "Self-Care: Prioritizing rest and delegating household tasks."
+  ],
+  "prevention": [
+    "Early Screening: Regular mental health check-ins during prenatal visits.",
+    "Education: Learning to identify intrusive thoughts vs. reality.",
+    "Support Network: Building a 'village' for practical help before the birth.",
+    "Open Communication: Discussing fears and symptoms early with a provider."
+  ]
+},
+  {
+    "name": "Vaginal Yeast Infection (Candidiasis)",
+    "category": "Infection",
+    "introText": "A vaginal yeast infection is a common fungal overgrowth that causes intense itching, irritation, and thick discharge.",
+    "symptoms": [
+      "Itching and irritation in the vagina and vulva",
+      "Burning sensation, especially during intercourse or urination",
+      "Redness and swelling of the vulva",
+      "Thick, white, odor-free vaginal discharge (cottage cheese appearance)",
+      "Vaginal soreness and pain"
+    ],
+    "causes": [
+      "Overgrowth of the fungus Candida albicans",
+      "Antibiotic use (reduces protective bacteria)",
+      "Pregnancy and uncontrolled diabetes",
+      "Weakened immune system",
+      "Hormone changes (near menstrual cycle)"
+    ],
+    "treatment": [
+      "Antifungal creams, ointments, or suppositories (over-the-counter)",
+      "Oral antifungal medication (e.g., Fluconazole) for severe cases",
+      "Boric acid capsules (for resistant infections)"
+    ],
+    "prevention": "Wearing cotton underwear, avoiding tight-fitting clothes, not douching, changing out of wet swimwear promptly, and managing blood sugar if diabetic.",
+    "imageUrl": "https://images.unsplash.com/photo-1543336332-9457222474f1?w=900&q=80",
+    "citation": "CDC. Genital Candidiasis. 2023. https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html"
+  },
+  {
+    "name": "Urinary Tract Infection (UTI)",
+    "category": "Infection",
+    "introText": "UTIs are bacterial infections of the urinary tract that cause burning, urgency, and pelvic discomfort but respond well to prompt treatment.",
+    "symptoms": [
+      "Strong, persistent urge to urinate",
+      "Burning sensation when urinating (dysuria)",
+      "Passing frequent, small amounts of urine",
+      "Cloudy, dark, or foul-smelling urine",
+      "Pelvic pain in women",
+      "Blood in the urine (hematuria)"
+    ],
+    "causes": [
+      "Bacteria (most commonly E. coli) entering the urinary tract",
+      "Sexual activity and frequent intercourse",
+      "Wiping back to front after using the toilet",
+      "Use of certain birth control (diaphragms)",
+      "Menopause (estrogen decline)"
+    ],
+    "treatment": [
+      "Antibiotics (e.g., Trimethoprim/sulfamethoxazole, Ciprofloxacin)",
+      "Phenazopyridine for pain relief",
+      "Increased fluid intake"
+    ],
+    "prevention": "Wiping front to back, drinking plenty of fluids, urinating after intercourse, avoiding irritating feminine products, and considering topical estrogen after menopause.",
+    "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=900&q=80",
+    "citation": "Mayo Clinic. UTI Overview. 2022. https://www.mayoclinic.org/diseases-conditions/urinary-tract-infection/symptoms-causes/syc-20353447"
+  },
+  {
+    "name": "Ovarian Cysts",
+    "category": "Fluid-Filled Sac",
+    "introText": "Ovarian cysts are fluid‑filled sacs on the ovary that are often harmless but can sometimes cause pain or complications.",
+    "symptoms": [
+      "Most are asymptomatic and resolve on their own",
+      "Pelvic pain (dull or sharp)",
+      "Fullness or heaviness in the abdomen",
+      "Bloating",
+      "Pain during intercourse",
+      "Sudden severe pain (if cyst ruptures or causes ovarian torsion)",
+      "Frequent urge to urinate"
+    ],
+    "causes": [
+      "Normal menstrual cycle function (Follicular and Corpus Luteum cysts)",
+      "Endometriosis",
+      "PCOS (multiple small cysts)",
+      "Severe pelvic infection"
+    ],
+    "treatment": [
+      "Watchful waiting and monitoring (for small, simple cysts)",
+      "Birth control pills to prevent new cysts",
+      "Laparoscopic surgery to remove large or problematic cysts",
+      "Emergency surgery for torsion or rupture"
+    ],
+    "prevention": "Birth control pills may reduce the risk of new functional cysts in women who frequently develop them.",
+    "imageUrl": "https://images.unsplash.com/photo-1579737151121-65476a213e45?w=900&q=80",
+    "citation": "Cleveland Clinic. Ovarian Cysts. 2024. https://my.clevelandclinic.org/health/diseases/17435-ovarian-cysts"
+  },
+  {
+    "name": "Pelvic Inflammatory Disease (PID)",
+    "category": "Infection",
+    "introText": "Pelvic inflammatory disease is an infection of the reproductive organs that can cause chronic pain and infertility if untreated.",
+    "symptoms": [
+      "Pain in your lower abdomen and pelvis",
+      "Heavy or foul-smelling vaginal discharge",
+      "Fever and chills",
+      "Painful intercourse",
+      "Painful or difficult urination",
+      "Irregular bleeding"
+    ],
+    "causes": [
+      "Untreated sexually transmitted infections (STIs) like Chlamydia and Gonorrhea",
+      "Douching (disrupts natural bacterial balance)",
+      "Previous history of PID",
+      "IUD insertion (rarely and usually only at the time of insertion)"
+    ],
+    "treatment": [
+      "Antibiotics (oral or intravenous) to treat the infection",
+      "Treatment for partners to prevent reinfection",
+      "Pain management"
+    ],
+    "prevention": "Practicing safe sex, getting tested for STIs, avoiding douching, and seeking prompt treatment for any signs of infection.",
+    "imageUrl": "https://images.unsplash.com/photo-1520281200388-348507204f14?w=900&q=80",
+    "citation": "CDC. Pelvic Inflammatory Disease (PID) Fact Sheet. 2022. https://www.cdc.gov/std/pid/stdfact-pid.htm"
+  },
+  {
+    "name": "Infertility",
+    "category": "Reproductive Health Condition",
+    "introText": "Infertility means difficulty conceiving despite regular unprotected sex, and it can involve egg, sperm, tube, or uterine factors.",
+    "symptoms": [
+      "Inability to conceive after 1 year of unprotected intercourse (or 6 months if over 35)",
+      "Irregular or absent menstrual cycles",
+      "Painful or heavy periods",
+      "Symptoms related to hormonal imbalance (e.g., hirsutism, acne)",
+      "Recurrent pregnancy loss"
+    ],
+    "causes": [
+      "Ovulation disorders (PCOS, premature ovarian failure)",
+      "Fallopian tube damage (due to PID, endometriosis)",
+      "Uterine/Cervical factors (fibroids, polyps)",
+      "Advanced maternal age",
+      "Thyroid disorders",
+      "Male factor infertility (accounts for 30-40% of cases)"
+    ],
+    "treatment": [
+      "Fertility drugs (e.g., Clomiphene, Gonadotropins)",
+      "In Vitro Fertilization (IVF)",
+      "Intrauterine Insemination (IUI)",
+      "Surgery to correct uterine or tubal problems",
+      "Lifestyle modifications"
+    ],
+    "prevention": "Maintaining a healthy weight, avoiding smoking/excessive alcohol, getting prompt STI treatment, and knowing your reproductive window.",
+    "imageUrl": "https://images.unsplash.com/photo-1627883391216-56214309e3e7?w=900&q=80",
+    "citation": "ACOG. Infertility FAQ. 2023. https://www.acog.org/womens-health/faqs/infertility"
+  },
+  {
+    "name": "Premenstrual Syndrome (PMS) & PMDD",
+    "category": "Hormonal/Mood Disorder",
+    "introText": "PMS and PMDD are cyclical mood and physical symptoms that appear before periods and can range from mild to severely disabling.",
+    "symptoms": [
+      "Mood swings, irritability, anxiety (PMDD is severe)",
+      "Depression, feeling out of control (PMDD)",
+      "Bloating and breast tenderness",
+      "Fatigue and sleep problems",
+      "Headaches and joint or muscle pain",
+      "Food cravings and appetite changes",
+      "Symptoms occur 1-2 weeks before period and stop after it starts"
+    ],
+    "causes": [
+      "Cyclic changes in hormones (Estrogen and Progesterone)",
+      "Fluctuations in brain chemicals (Serotonin)",
+      "Genetic predisposition",
+      "Nutritional deficiencies (Calcium, Magnesium)"
+    ],
+    "treatment": [
+      "Lifestyle adjustments (diet, exercise, stress reduction)",
+      "Nutritional supplements (Calcium, Vitamin B6)",
+      "NSAIDs for pain and cramps",
+      "Hormonal birth control pills",
+      "Antidepressants (SSRIs) for PMDD symptoms"
+    ],
+    "prevention": "Regular aerobic exercise, stress management techniques, dietary changes (reducing salt, caffeine, sugar), and adequate sleep.",
+    "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=900&q=80",
+    "citation": "Johns Hopkins Medicine. PMDD. 2024. https://www.hopkinsmedicine.org/health/conditions-and-diseases/premenstrual-dysphoric-disorder-pmdd"
+  },
+  {
+    "name": "Gestational Diabetes",
+    "category": "Pregnancy Condition",
+    "introText": "Gestational diabetes is high blood sugar first detected in pregnancy and needs close monitoring to protect mother and baby.",
+    "symptoms": [
+      "Usually asymptomatic, detected via routine screening",
+      "Increased thirst",
+      "Frequent urination",
+      "Fatigue",
+      "Blurred vision (rarely)"
+    ],
+    "causes": [
+      "Hormones from the placenta block the mother's insulin from working (insulin resistance)",
+      "Pancreas cannot produce enough insulin to overcome the block",
+      "Risk factors: Overweight/Obesity, family history of diabetes, age over 25"
+    ],
+    "treatment": [
+      "Special diet and physical activity",
+      "Daily blood glucose monitoring",
+      "Insulin injections or oral medication (Metformin)",
+      "Closer monitoring of the fetus"
+    ],
+    "prevention": "Achieving a healthy weight before pregnancy, exercising before and during pregnancy, and eating a balanced diet.",
+    "imageUrl": "https://images.unsplash.com/photo-1543336332-9457222474f1?w=900&q=80",
+    "citation": "CDC. Gestational Diabetes Basics. 2023. https://www.cdc.gov/diabetes/basics/gestational.html"
+  },
+  {
+    "name": "Postpartum Depression (PPD)",
+    "category": "Mental Health Condition",
+    "introText": "Postpartum depression is a serious mood disorder after childbirth that affects bonding, energy, and daily functioning.",
+    "symptoms": [
+      "Severe mood swings and excessive crying",
+      "Difficulty bonding with the baby",
+      "Withdrawing from family and friends",
+      "Loss of appetite or eating much more than usual",
+      "Severe anxiety and panic attacks",
+      "Thoughts of harming yourself or the baby",
+      "Occurs after childbirth, can start during pregnancy"
+    ],
+    "causes": [
+      "Dramatic drop in hormones (Estrogen and Progesterone) after birth",
+      "Sleep deprivation and physical pain of childbirth",
+      "Emotional stress, history of depression",
+      "Lack of support system"
+    ],
+    "treatment": [
+      "Psychotherapy or counseling",
+      "Antidepressant medication (SSRIs)",
+      "Support groups",
+      "Hormone therapy (in some cases)",
+      "Prioritizing sleep and rest"
+    ],
+    "prevention": "Seeking early screening, having a strong support network, attending postpartum checkups, and maintaining open communication with healthcare providers.",
+    "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=900&q=80",
+    "citation": "NIMH. Postpartum Depression. 2023. https://www.nimh.nih.gov/health/topics/postpartum-depression"
+  },
+  {
+    "name": "Thyroid Disorders (Hypo/Hyper)",
+    "category": "Hormonal Disorder",
+    "introText": "Thyroid disorders occur when the gland is underactive or overactive, affecting energy, weight, mood, and menstrual cycles.",
+    "symptoms": [
+      "Hypo: Fatigue, weight gain, depression, cold intolerance, dry skin, heavy periods",
+      "Hyper: Weight loss, anxiety, rapid heartbeat, heat intolerance, light periods",
+      "Lump in the neck (Goiter)",
+      "Hair loss and muscle weakness",
+      "Mood changes"
+    ],
+    "causes": [
+      "Autoimmune conditions (Hashimoto's - Hypo, Graves' - Hyper)",
+      "Iodine deficiency or excess",
+      "Pregnancy and childbirth",
+      "Thyroiditis (inflammation)",
+      "Genetic factors"
+    ],
+    "treatment": [
+      "Hypothyroidism: Synthetic thyroid hormone (Levothyroxine)",
+      "Hyperthyroidism: Anti-thyroid drugs, radioactive iodine, surgery",
+      "Regular blood testing to monitor hormone levels"
+    ],
+    "prevention": "Ensure adequate iodine intake (but avoid excessive amounts), regular monitoring if you have a family history or other autoimmune disorders.",
+    "imageUrl": "https://images.unsplash.com/photo-1627883391216-56214309e3e7?w=900&q=80",
+    "citation": "Office on Women’s Health. Thyroid Disease. 2024. https://www.womenshealth.gov/a-z-topics/thyroid-disease"
+  },
+  {
+    "name": "Osteoporosis",
+    "category": "Bone Health Condition",
+    "introText": "Osteoporosis is a bone‑thinning disease that makes fractures more likely, especially after menopause.",
+    "symptoms": [
+      "Often no symptoms until a bone fracture occurs",
+      "Back pain, caused by a fractured or collapsed vertebra",
+      "Loss of height over time",
+      "A stooped posture (Kyphosis)",
+      "Bones that break easily"
+    ],
+    "causes": [
+      "Decrease in estrogen levels after menopause (primary cause in women)",
+      "Aging (bone density naturally decreases)",
+      "Long-term corticosteroid use",
+      "Thyroid issues and other hormonal problems",
+      "Low calcium and Vitamin D intake"
+    ],
+    "treatment": [
+      "Bisphosphonates and other bone-building medications",
+      "Hormone replacement therapy (HRT)",
+      "Calcium and Vitamin D supplements",
+      "Weight-bearing exercises"
+    ],
+    "prevention": "Adequate calcium and Vitamin D intake throughout life, regular weight-bearing exercise (walking, jogging), avoiding smoking, limiting alcohol.",
+    "imageUrl": "https://images.unsplash.com/photo-1596766465011-893322d99d3d?w=900&q=80",
+    "citation": "NIH. Osteoporosis Overview. 2023. https://www.bones.nih.gov/health-info/bone/osteoporosis/overview"
+  },
+  {
+    "name": "Preeclampsia",
+    "category": "Pregnancy Condition",
+    "introText": "Preeclampsia is a pregnancy complication with high blood pressure and organ stress that can be dangerous without close monitoring.",
+    "symptoms": [
+      "High blood pressure (hypertension) after 20 weeks of pregnancy",
+      "Protein in the urine (proteinuria)",
+      "Severe headaches and vision changes",
+      "Upper abdominal pain (usually under the ribs on the right side)",
+      "Nausea or vomiting",
+      "Swelling in the face and hands"
+    ],
+    "causes": [
+      "Abnormal development and function of the placenta",
+      "Genetic factors and inadequate blood flow to the uterus",
+      "Autoimmune and vascular issues",
+      "First pregnancy, history of high blood pressure, age >40"
+    ],
+    "treatment": [
+      "Delivery of the baby and placenta (the cure)",
+      "Close monitoring (blood pressure, urine, blood tests)",
+      "Medications to lower blood pressure and prevent seizures (Magnesium Sulfate)",
+      "Bed rest (in some cases)"
+    ],
+    "prevention": "Low-dose aspirin starting in the second trimester (for high-risk women), adequate prenatal care, managing pre-existing hypertension or diabetes.",
+    "imageUrl": "https://images.unsplash.com/photo-1543336332-9457222474f1?w=900&q=80",
+    "citation": "Preeclampsia Foundation. What is Preeclampsia? 2024. https://www.preeclampsia.org/about-preeclampsia/what-is-preeclampsia"
+  },
+  {
+    "name": "Vaginismus",
+    "category": "Sexual Health Condition",
+    "introText": "Vaginismus involves involuntary tightening of vaginal muscles that makes penetration or exams painful or impossible.",
+    "symptoms": [
+      "Involuntary muscle spasms of the pelvic floor muscles",
+      "Painful intercourse (dyspareunia)",
+      "Inability to tolerate a gynecological exam or tampon insertion",
+      "Burning or stinging pain",
+      "Fear or anxiety related to sexual penetration"
+    ],
+    "causes": [
+      "Fear of pain or penetration (psychological cause)",
+      "Past sexual trauma or abuse",
+      "Painful first intercourse",
+      "Medical conditions (UTI, yeast infection, endometriosis, menopause)",
+      "Emotional distress and anxiety"
+    ],
+    "treatment": [
+      "Pelvic floor physical therapy (PFPT)",
+      "Vaginal dilator therapy (graduated sizes)",
+      "Counseling or sex therapy",
+      "Pain management and muscle relaxants (Botox, local anesthesia)",
+      "Treating any underlying medical cause"
+    ],
+    "prevention": "Open communication, comprehensive sex education, addressing psychological factors early, and gentle progression during sexual activity or exams.",
+    "imageUrl": "https://images.unsplash.com/photo-1579737151121-65476a213e45?w=900&q=80",
+    "citation": "ACOG. Vaginismus FAQ. 2023. https://www.acog.org/womens-health/faqs/vaginismus"
+  },
+  {
+    "name": "Bacterial Vaginosis (BV)",
+    "category": "Infection",
+    "introText": "Bacterial vaginosis is an imbalance of vaginal bacteria that causes discharge and odor but is usually easily treated.",
+    "symptoms": [
+      "Thin, gray, white, or green vaginal discharge",
+      "Strong, unpleasant \"fishy\" odor (especially after sex)",
+      "Vaginal itching or burning",
+      "Burning during urination (less common)"
+    ],
+    "causes": [
+      "Overgrowth of certain bacteria, disrupting the natural balance",
+      "Douching or vaginal washing with harsh soaps",
+      "Having new or multiple sex partners",
+      "Naturally lacking in Lactobacillus bacteria",
+      "Often confused with a yeast infection"
+    ],
+    "treatment": [
+      "Antibiotics (Metronidazole or Clindamycin) - oral or vaginal gel/cream",
+      "Probiotics (Lactobacillus strains) to restore balance"
+    ],
+    "prevention": "Avoiding douching, limiting sex partners, using mild soap (if any) only on the outside of the vagina, and completing the full course of antibiotics if prescribed.",
+    "imageUrl": "https://images.unsplash.com/photo-1627883441551-766b44a30e71?w=900&q=80",
+    "citation": "CDC. Bacterial Vaginosis (BV) Fact Sheet. 2022. https://www.cdc.gov/std/bv/stdfact-bacterial-vaginosis.htm"
+  },
+  {
+    "name": "Autoimmune Diseases",
+    "category": "Immune System Disorder",
+    "introText": "Autoimmune diseases happen when the immune system attacks the body’s own tissues, and many of them disproportionately affect women.",
+    "symptoms": [
+      "Lupus: Butterfly rash on face, joint pain, fatigue",
+      "Rheumatoid Arthritis: Painful swollen joints, morning stiffness",
+      "Thyroid Disease: Weight changes, fatigue, mood changes",
+      "Multiple Sclerosis: Numbness, vision problems, weakness",
+      "Type 1 Diabetes: Excessive thirst, frequent urination",
+      "Inflammatory Bowel Disease: Abdominal pain, diarrhea",
+      "Sjogren's Syndrome: Dry eyes and mouth",
+      "General: Chronic fatigue, inflammation, organ-specific symptoms"
+    ],
+    "causes": [
+      "Immune system attacks body's own tissues",
+      "Genetic predisposition",
+      "Hormonal factors (estrogen influence)",
+      "Environmental triggers",
+      "X chromosome factors",
+      "Infections or illnesses",
+      "Unknown factors (ongoing research)"
+    ],
+    "treatment": [
+      "Disease-modifying medications",
+      "Immunosuppressants to reduce immune response",
+      "Anti-inflammatory drugs (NSAIDs, corticosteroids)",
+      "Hormone replacement for thyroid disease",
+      "Biologic therapies for targeted treatment",
+      "Physical therapy and rehabilitation",
+      "Lifestyle modifications and symptom management"
+    ],
+    "prevention": "75% of autoimmune disease cases occur in women. Women with lupus should undergo periodic thyroid monitoring. Prevention: no proven prevention, but early diagnosis and treatment prevent complications. Regular monitoring crucial for women with family history.",
+    "imageUrl": "https://images.unsplash.com/photo-1520281200388-348507204f14?w=900&q=80",
+    "citation": "Hospital for Special Surgery. Lupus and Autoimmune Thyroid Diseases. 2025. | Ferrari SM, et al. Systemic Lupus Erythematosus and Thyroid Autoimmunity. Front Endocrinol. 2017."
+  },
+  {
+    "title": "Female Sexual Pain & Dysfunction",
+    "description": "Recognize pain with sex and changes in sexual desire that affect comfort, relationships, and overall wellbeing.",
+    "symptoms": [
+      "Pain at the vaginal opening or deeper inside during intercourse, tampon use, or pelvic exams.",
+      "Burning, stinging, or raw soreness around the vulva that can persist after sex.",
+      "Tightening or spasms of the vaginal muscles that make penetration difficult or impossible.",
+      "Reduced sexual desire, trouble becoming aroused or reaching orgasm, with distress about sex for several months."
+    ],
+    "tests": [
+      "Detailed sexual and pain history taken in a private, non‑judgmental setting.",
+      "Visual inspection of the vulva and vagina plus gentle cotton‑swab testing to map tender areas.",
+      "Single‑finger pelvic exam to assess pelvic floor muscle spasm, tenderness, and check for endometriosis or pelvic masses.",
+      "Screening for infections (yeast, bacterial vaginosis, STIs) and hormonal causes such as vaginal atrophy.",
+      "Mental‑health and relationship screening if trauma, mood symptoms, or high distress are present."
+    ],
+    "critical_notes": [
+      "Sexual pain and low desire are common in women and often go unreported; they are treatable medical issues, not something to “just tolerate.”",
+      "Early evaluation can prevent worsening pain cycles, relationship strain, and mental‑health complications."
+    ]
+  },
+  {
+    "title": "Heart, Metabolic & Brain Health in Women",
+    "description": "Understand how heart disease, diabetes, stroke, and brain health conditions can look different in women and why they need early screening.",
+    "symptoms": [
+      "Chest discomfort that may feel like pressure, burning, indigestion, or pain in the back, jaw, neck, or arm instead of classic crushing chest pain.",
+      "Shortness of breath, unusual fatigue, nausea, or lightheadedness with or without chest pain.",
+      "New headaches, vision changes, trouble speaking, facial droop, or weakness on one side of the body.",
+      "Ongoing fatigue, weight changes, brain fog, or mood changes, especially with a history of pregnancy complications or early menopause."
+    ],
+    "tests": [
+      "Regular blood pressure checks plus fasting glucose or HbA1c and cholesterol profile.",
+      "ECG (electrocardiogram) when women present with chest discomfort, breathlessness, or unexplained fatigue.",
+      "Stress test or cardiac imaging (echocardiogram, coronary imaging) if heart disease is suspected.",
+      "Neurological exam and urgent brain imaging (CT/MRI) for sudden stroke‑like symptoms.",
+      "Long‑term follow‑up linking pregnancy complications (preeclampsia, gestational diabetes) with future heart and metabolic screening."
+    ],
+    "critical_notes": [
+      "Heart disease is a leading cause of death in women and can present with subtle, non‑classic symptoms.",
+      "History of preeclampsia, gestational diabetes, or early menopause increases later‑life risk of heart and metabolic disease and should trigger more proactive screening."
+    ]
+  },
+  {
+    "title": "Safety, Trauma & Intimate Partner Violence (IPV)",
+    "description": "Recognize how violence, coercion, and unsafe relationships affect physical, reproductive, and mental health.",
+    "symptoms": [
+      "Unexplained bruises, injuries, or frequent “accidents,” especially with vague or changing stories.",
+      "Chronic pelvic or abdominal pain, recurrent STIs, repeated pregnancy tests, or unplanned pregnancies where the woman feels pressured.",
+      "Visible fear, anxiety, or distress when discussing home, partner, or sexual relationships.",
+      "Ongoing anxiety, depression, sleep problems, or PTSD‑like symptoms linked to relationship or home stress."
+    ],
+    "tests": [
+      "Confidential, trauma‑informed screening questions for intimate partner violence during routine and prenatal visits.",
+      "Physical examination and, when indicated, imaging or labs to evaluate injuries and chronic pain.",
+      "STI testing, pregnancy testing, and contraception counseling that explicitly addresses reproductive coercion.",
+      "Mental‑health assessment for depression, anxiety, PTSD, and substance use related to abuse.",
+      "Referral pathways to social work, legal aid, shelters, and crisis services, with careful documentation that protects safety and privacy."
+    ],
+    "critical_notes": [
+      "Intimate partner violence is common and can affect anyone regardless of age, income, or education; it is a health and safety issue, not the victim’s fault.",
+      "Healthcare settings can be a safe entry point for support; even one honest disclosure can lead to safety planning and life‑saving help."
+    ]
+  }
+ ],
+  "findGynecologist": [
+    {
+      "title": "Choosing the right gynecologist",
+      "description": "The right doctor depends on your age, life stage and specific concerns — from teenage periods to high‑risk pregnancy or menopause.",
+      "items": [
+        "Adolescents & young adults: period problems, PCOS, contraception, sexual health.",
+        "Reproductive age: fertility, pregnancy, fibroids, endometriosis, infections.",
+        "Perimenopause & menopause: hot flashes, bleeding changes, bone and heart health."
+      ]
+    },
+    {
+      "title": "Questions to ask at your visit",
+      "description": "Going with a short question list helps you use your appointment time well and feel more in control.",
+      "items": [
+        "What could be causing my symptoms, and what tests do I really need?",
+        "What are my treatment options, and what are the pros and cons of each?",
+        "What should I watch for at home, and when should I come back or go to emergency?"
+      ]
+    }
+  ],
+  "whenToSeeGynecologist": [
+    {
+      "title": "Period and cycle problems",
+      "items": [
+        "Very heavy bleeding, soaking pads or tampons every 1–2 hours.",
+        "Cycles shorter than 21 days or longer than 35 days for several months.",
+        "Severe cramps that stop you from school, work or daily activities."
+      ]
+    },
+    {
+      "title": "Unusual discharge or infection signs",
+      "items": [
+        "New discharge with strong smell, unusual colour or cottage‑cheese texture.",
+        "Burning or pain when passing urine or during sex.",
+        "Persistent itching, rash, blisters or sores around the vulva."
+      ]
+    },
+    {
+      "title": "Fertility and pregnancy concerns",
+      "items": [
+        "Trying to conceive for 12 months (6 months if over 35) without success.",
+        "More than one early miscarriage.",
+        "Positive pregnancy test with bleeding, strong pain or feeling unwell."
+      ]
+    },
+    {
+      "title": "Pelvic pain and red‑flag symptoms",
+      "items": [
+        "Sudden, severe lower‑abdominal pain with fever, nausea or dizziness.",
+        "Any bleeding after sex, between periods or after menopause.",
+        "New lump, bulge or heaviness in the vagina or pelvis."
+      ]
+    },
+    {
+      "title": "Routine and preventive visits",
+      "items": [
+        "First gynecology visit in the teens for period, puberty or sexual‑health questions.",
+        "Regular well‑woman check‑ups in adulthood for contraception and screening.",
+        "Check‑ups around perimenopause and menopause to review bleeding and long‑term health."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How often should I visit a gynecologist?",
+      "answer": "Most women benefit from an annual gynecology visit for preventive care, even if no urgent problems are present. These checkups are used to review periods, contraception, sexual health, screening needs, and new symptoms, with visit frequency increased if you have ongoing conditions such as PCOS, fibroids, or high‑risk pregnancies.[file:10]"
+    },
+    {
+      "question": "What are the most common signs of PCOS?",
+      "answer": "Common PCOS signs include irregular or missed periods, excess facial or body hair (hirsutism), acne and oily skin, weight gain or difficulty losing weight, thinning hair on the scalp, dark patches of skin from insulin resistance, and difficulty getting pregnant.[file:10]"
+    },
+    {
+      "question": "Is it safe to exercise during pregnancy?",
+      "answer": "In an uncomplicated pregnancy, moderate exercise like walking, prenatal yoga, or swimming is generally safe and can reduce back pain, improve sleep, and lower the risk of gestational diabetes and high blood pressure. Women with high‑risk conditions such as severe anemia, placenta problems, or preterm labor signs need personalised advice before starting or continuing exercise.[file:10]"
+    },
+    {
+      "question": "What is the importance of the HPV vaccine?",
+      "answer": "The HPV vaccine protects against high‑risk human papillomavirus types that cause most cervical cancers and many anal, vulvar, vaginal, penile, and throat cancers.[file:10] It is most effective when given before sexual debut, typically between ages 9 and 14, but catch‑up vaccination up to at least age 26 still provides important protection.[file:10]"
+    },
+    {
+      "question": "What lifestyle changes can help manage endometriosis pain?",
+      "answer": "Regular exercise, anti‑inflammatory eating patterns rich in fruits, vegetables, whole grains, and omega‑3 fats, plus good sleep and stress‑reduction can ease chronic pelvic pain and fatigue in endometriosis.[file:10] Many women also benefit from heat therapy, pelvic physiotherapy, and avoiding smoking and heavy alcohol, alongside medical treatment from a gynecologist.[file:10]"
+    },
+    {
+      "question": "When should I start getting a mammogram?",
+      "answer": "Many guidelines advise starting routine mammograms between ages 40 and 50, with repeat screening every 1 to 2 years depending on personal and family risk factors.[file:10] Women with strong family histories, BRCA mutations, or prior chest radiation may need earlier and more frequent imaging, sometimes with MRI in addition to mammography.[file:10]"
+    },
+    {
+      "question": "Is it normal to experience mood changes during menopause?",
+      "answer": "Yes, mood swings, irritability, anxiety, and low mood are common during perimenopause and menopause because of fluctuating and then declining estrogen and progesterone levels.[file:10] Persistent or severe symptoms, especially when they affect sleep, work, or relationships, deserve evaluation as treatable depression or anxiety rather than being dismissed as “just hormones.”[file:10]"
+    },
+    {
+      "question": "What is the difference between PMS and PMDD?",
+      "answer": "Premenstrual Syndrome (PMS) causes physical and emotional symptoms such as bloating, breast tenderness, irritability, and fatigue in the 1–2 weeks before a period that usually improve once bleeding starts.[file:10] Premenstrual Dysphoric Disorder (PMDD) is a severe form where mood symptoms like depression, rage, or hopelessness are intense enough to impair daily functioning and often need targeted treatments such as SSRIs and structured therapy.[file:10]"
+    },
+    {
+      "question": "How do I know if I have a yeast infection or Bacterial Vaginosis (BV)?",
+      "answer": "Yeast infections typically cause intense itching, redness, burning, and a thick white discharge that looks like cottage cheese but usually has little or no odor.[file:10] Bacterial Vaginosis more often leads to thin gray‑white discharge with a strong fishy smell, especially after sex, and may have only mild itching, so a clinician exam and tests are important because treatments differ.[file:10]"
+    },
+    {
+      "question": "Why are women more prone to autoimmune diseases?",
+      "answer": "Around 75% of autoimmune disease cases occur in women, and the causes are thought to involve multiple overlapping factors.[file:10] Key contributors include hormonal influences such as estrogen, genetic factors linked to the X chromosome which carries many immune‑related genes, and a generally stronger female immune response that is more effective against infections but also more likely to misfire and attack the body’s own tissues.[file:10]"
+    }
+  ],
+   "preventionCare": [
+    {
+    "title": "Essential Health Practices",
+    "icon": "🌿",
+    "items": [
+      "👩‍⚕️ Regular health screenings and check-ups",
+      "🥗 Maintain a balanced diet rich in nutrients",
+      "🏃‍♀️ Regular physical activity (around 30 minutes daily)",
+      "🧘‍♀️ Stress management and mental wellness practices",
+      "😴 Adequate sleep (7–9 hours most nights)",
+      "💧 Stay hydrated throughout the day",
+      "🚭 Avoid tobacco and second-hand smoke exposure",
+      "🍹 Limit sugary drinks and ultra‑processed foods",
+      "👭 Build strong social connections and support networks",
+      "📅 Keep a personal health record and set reminders for tests and visits"
+    ]
+  },
+  {
+    "title": "Screening Guidelines",
+    "icon": "📋",
+    "items": [
+      "🎀 Breast Cancer: Annual or biennial mammogram after age 40 (earlier if high risk)",
+      "🩺 Cervical Cancer: Pap test every 3 years for ages 21–29; Pap + HPV co‑test every 5 years for ages 30–65",
+      "🦴 Bone Health: DEXA scan after menopause or earlier if fracture risk is high",
+      "❤️ Heart Health: Regular blood pressure, cholesterol and BMI checks",
+      "🍬 Diabetes: Regular fasting blood sugar or HbA1c monitoring, especially with PCOS or overweight",
+      "🧪 Thyroid: TSH testing when there are symptoms or in high‑risk women",
+      "👁️ Eye Health: Periodic eye exams, especially with diabetes or hypertension",
+      "🦷 Dental Health: Dental check‑ups and cleaning at least once a year"
+    ]
+  },
+  {
+    "title": "Preventive Measures",
+    "icon": "🛡️",
+    "items": [
+      "💉 HPV vaccination for cervical and other HPV‑related cancer prevention",
+      "🤲 Regular self‑breast examination and breast self‑awareness",
+      "⚖️ Maintaining a healthy weight with diet and exercise",
+      "🍷 Limiting alcohol consumption to recommended limits or less",
+      "🚭 Avoiding smoking and vaping; seeking help to quit if needed",
+      "☀️ Safe sun exposure with SPF protection and protective clothing",
+      "🧻 Safe sex practices, including condom use and regular STI testing when indicated",
+      "🧴 Good intimate hygiene without harsh soaps or douching",
+      "🧯 Fall‑prevention habits at home to protect bones in midlife and older age"
+    ]
+  },
+{
+    "title": "Childhood Vaccination for Girls (0–12 years)",
+    "icon": "👧",
+    "items": [
+      "MMR (measles, mumps, rubella): 2 documented doses in childhood, at least 4 weeks apart, as per national schedule.",
+      "Varicella (chickenpox): 2 doses 4–8 weeks apart if she has never had chickenpox or the vaccine.",
+      "Hepatitis B: 3‑dose series at 0, 1 and 6 months in infancy/childhood; ensure the full series is completed.",
+      "Hepatitis A: 2‑dose series 6 months apart for girls with liver disease, or those living in / travelling to high‑risk areas.",
+      "Typhoid: Single dose every 3 years (injectable polysaccharide or conjugate) in typhoid‑endemic or outbreak settings, usually after early childhood."
+    ]
+  },
+  {
+    "title": "Pre‑Teen & Teen Vaccination (12–18 years)",
+    "icon": "🧒",
+    "items": [
+      "HPV (cervical cancer prevention): Best between 9–14 years as a 2‑dose schedule (0 and 6–12 months), ideally before sexual debut.",
+      "HPV catch‑up: From 15–18 years usually as a 3‑dose schedule (0, 1–2, 6 months) if not vaccinated earlier.",
+      "MMR (measles, mumps, rubella): Check that 2 doses are completed; give missing doses at least 4 weeks apart.",
+      "Varicella (chickenpox): Complete 2‑dose series if not immune from past infection or vaccination.",
+      "Hepatitis B: Ensure 3‑dose series is complete; give catch‑up doses if records are uncertain.",
+      "Hepatitis A: 2‑dose series 6 months apart for teens with liver disease, travel or other risk factors.",
+      "Typhoid: Single dose every 3 years for adolescents in typhoid‑endemic or outbreak areas.",
+      "Meningococcal: For adolescents in hostels/boarding schools or with special medical risks, as per product schedule."
+    ]
+  },
+  {
+    "title": "Adult Women’s Vaccination (18 years+)",
+    "icon": "👩",
+    "items": [
+      "HPV: Catch‑up vaccination up to about 45 years depending on national guidance (usually 3 doses at 0, 1–2 and 6 months) if not fully vaccinated earlier.",
+      "Td/Tdap (tetanus, diphtheria, pertussis): One Tdap in adulthood if never taken, then Td or Tdap booster every 10 years; give 1 Tdap dose in every pregnancy between 27–36 weeks.",
+      "Influenza (flu): One dose every year, especially in pregnancy, chronic lung/heart disease, diabetes and older age.",
+      "MMR (measles, mumps, rubella): Ensure 2 lifetime doses if born after 1957 and not immune; avoid during pregnancy and take at least 1 month before conception.",
+      "Rubella focus: All non‑pregnant women of reproductive age without proof of immunity should receive 1 rubella‑containing dose (usually MMR) before pregnancy.",
+      "Varicella (chickenpox): 2 doses 4–8 weeks apart for women without past disease or vaccination; complete series before pregnancy and avoid conception for 1 month after each dose.",
+      "Hepatitis B: 3‑dose series at 0, 1 and 6 months for unvaccinated adults, especially healthcare workers and women with diabetes, kidney or liver disease, or multiple partners.",
+      "Hepatitis A: 2‑dose series 6 months apart for women with liver disease, travellers to endemic areas or other risks.",
+      "COVID‑19: Primary series plus boosters according to current national guidelines, including during pregnancy and breastfeeding unless contraindicated.",
+      "Pneumococcal: At age ≥65 years, or earlier with chronic heart, lung, liver, kidney disease, diabetes or immunocompromise; follow PCV then PPSV23 schedule.",
+      "Zoster (shingles): From about 50–60 years onwards (per national policy), usually a 2‑dose recombinant vaccine 2–6 months apart.",
+      "Typhoid: Single booster every 3 years for women living in or travelling to typhoid‑endemic or outbreak areas.",
+      "Meningococcal: For students in hostels, travellers to epidemic regions or women with specific medical risks, as a single or multi‑dose series as advised.",
+      "HPV and other catch‑up: Use post‑partum visits and routine gynecology checks to review HPV, rubella, varicella and hepatitis status and finish missed doses."
+    ]
+  }
+
+],
+
+ "preventionCareQA": [
+  {
+    "icon": "🏃‍♀️",
+    "headline": "Regular Exercise",
+    "text": "The American Cancer Society recommends at least 150 minutes of moderate-intensity physical activity per week for breast cancer prevention. Physical activity helps regulate hormones, manage weight, reduce stress, and improve overall reproductive health. For women with family history of breast cancer, adherence to exercise guidelines is associated with 44–53% lower overall mortality.<br><br><strong>Benefits:</strong> Reduced menstrual cramps, better hormone balance, lower risk of PCOS complications, improved fertility, significant breast cancer risk reduction.<br><br><em><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC9455068/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--color-info);\">📚 Exercise Guidelines for Cancer Prevention - NIH 2022</a></em>",
+    "citation": "American Cancer Society (ACS). Exercise and Physical Activity. 2023."
+  },
+  {
+    "icon": "🍎",
+    "headline": "Balanced Nutrition & Healthy Weight",
+    "text": "Maintaining a healthy body weight is one of the most effective ways to lower the risk of many women's cancers (breast, endometrial, ovarian) and manage hormonal conditions like PCOS. A diet rich in fruits, vegetables, whole grains, and lean proteins, while limiting red and processed meats, sugar, and alcohol, is recommended.<br><br><strong>Key Diet Tips:</strong> Increase fiber intake, limit refined carbohydrates, ensure adequate Vitamin D and Calcium for bone health.<br><br><em><a href=\"https://www.who.int/news-room/fact-sheets/detail/cancer\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--color-info);\">📚 WHO Cancer Fact Sheet 2024</a></em>",
+    "citation": "World Health Organization (WHO). Diet, Nutrition and the Prevention of Chronic Diseases. 2003."
+  },
+  {
+    "icon": "💉",
+    "headline": "Vaccinations (HPV & Flu)",
+    "text": "The <strong>HPV vaccine</strong> (Gardasil 9) protects against the types of Human Papillomavirus that cause over 90% of cervical cancers, as well as most anal, vaginal, vulvar, and oropharyngeal cancers. Recommended for ages 9–26, and a shared clinical decision for ages 27–45.<br><br>The <strong>Flu vaccine</strong> and <strong>COVID‑19 vaccine</strong> are also crucial for overall health, especially during pregnancy.<br><br><em><a href=\"https://www.cdc.gov/cervical-cancer/prevention/index.html\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--color-info);\">📚 CDC - Reducing Risk for Cervical Cancer 2025</a></em>",
+    "citation": "CDC. HPV Vaccine Recommendations. 2024."
+  },
+  {
+    "icon": "🩺",
+    "headline": "Screening Guidelines (Pap Smear & Mammography)",
+    "text": "Adhering to screening schedules is critical for early detection:<br><br>• <strong>Cervical Cancer Screening (Pap Smear):</strong> Begin at age 21. Pap test alone every 3 years (ages 21–29). Pap test + HPV test (co‑testing) every 5 years (ages 30–65).<br>• <strong>Breast Cancer Screening (Mammography):</strong> Average‑risk women typically start between 40–50; screening every 1–2 years through at least age 74.<br><br><strong>High‑risk women:</strong> Those with BRCA mutations or strong family history may need earlier screening and MRI in addition to mammography.<br><br><em><a href=\"https://www.hrsa.gov/womens-guidelines-2016\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--color-info);\">📚 WPSI Guidelines - HRSA 2016</a></em>",
+    "citation": "USPSTF. Screening for Breast and Cervical Cancer. 2024."
+  },
+  {
+    "icon": "🧘‍♀️",
+    "headline": "Stress Management & Mental Health",
+    "text": "Chronic stress can disrupt hormonal balance, impact the menstrual cycle, worsen conditions like PCOS and endometriosis, and increase the risk of depression and anxiety, which are about twice as common in women.<br><br><strong>Strategies:</strong> Mindfulness, yoga, meditation, adequate sleep (7–9 hours), social connection, and timely professional help when needed.<br><br><em><a href=\"https://www.womenshealth.gov/mental-health/mental-health-conditions/depression\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--color-info);\">📚 Office on Women's Health - Depression 2021</a></em>",
+    "citation": "NIMH. Stress Management. 2023."
+  },
+  {
+    "icon": "🏋️‍♀️",
+    "headline": "Pelvic Floor Health & Kegel Exercises",
+    "text": "Pelvic floor muscles support the bladder, uterus and bowels. Strengthening them with Kegel exercises is important in pregnancy, after childbirth and with ageing.<br><br><strong>Benefits:</strong> Lower incontinence risk, better pelvic organ support, improved recovery after birth and reduced risk of pelvic organ prolapse.<br><br><em><a href=\"https://www.cdc.gov/womens-health/index.html\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--color-info);\">📚 CDC Office of Women's Health 2025</a></em>",
+    "citation": "ACOG. Pelvic Floor Dysfunction. 2023."
+  },
+  {
+    "icon": "🛡️",
+    "headline": "Cervical Cancer Prevention",
+    "text": "Get the <strong>HPV vaccine</strong> (recommended for ages 9–26) and attend <strong>regular Pap and HPV screenings</strong>. Using condoms helps reduce HPV transmission risk.",
+    "citation": "CDC. Cervical Cancer Prevention. 2023."
+  },
+  {
+    "icon": "🎀",
+    "headline": "Breast Cancer Prevention",
+    "text": "Perform <strong>self‑breast awareness</strong>, have <strong>clinical breast exams</strong> as advised, and follow mammogram guidance (often starting between 40–50). Maintain a healthy weight and limit alcohol.",
+    "citation": "American Cancer Society. Breast Cancer Screening Guidelines. 2024."
+  },
+  {
+    "icon": "🏃‍♀️",
+    "headline": "PCOS and Diabetes Prevention",
+    "text": "Maintain a healthy, stable weight, exercise 3–5 times per week, and follow a balanced, lower‑sugar diet to improve insulin sensitivity and reduce risk of diabetes.",
+    "citation": "International PCOS and diabetes prevention consensus. 2023."
+  },
+  {
+    "icon": "🦴",
+    "headline": "Bone Health (Osteoporosis) Prevention",
+    "text": "Ensure enough daily <strong>Calcium and Vitamin D</strong> and do regular weight‑bearing exercise (walking, jogging, dancing), especially after menopause, to keep bones strong.",
+    "citation": "NIH. Osteoporosis and Bone Health. 2023."
+  },
+  {
+    "icon": "🛡️",
+    "headline": "Sexual Violence Prevention & Safety",
+    "text": "Learn about consent, build safe relationships, know local support resources and seek help early. Community awareness and empowerment protect against sexual violence.",
+    "citation": "WHO. Violence against women fact sheet. 2021."
+  },
+  {
+    "icon": "💚",
+    "headline": "Mental Health: Depression & Anxiety Prevention",
+    "text": "Protect mood with regular activity, a healthy diet, strong social support and good sleep, and seek professional help if low mood, worry or loss of interest persist.",
+    "citation": "NIMH. Women and Mental Health. 2022."
+  },
+  {
+    "icon": "⚖️",
+    "headline": "Obesity Prevention & Weight Management",
+    "text": "Maintain a healthy weight with daily movement and balanced meals; even 5–10% weight loss can lower risk of heart disease, diabetes and hormone‑related cancers.",
+    "citation": "WHO. Obesity and overweight. 2024."
+  }
+ ]
+}

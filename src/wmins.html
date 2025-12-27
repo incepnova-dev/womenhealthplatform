@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Suraksha - Insurance Directory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #F9F7F7 0%, #FFF5F7 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 28px 28px 0 0;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .app-header {
+            height: 56px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            box-shadow: 0 2px 12px rgba(233, 30, 99, 0.1);
+        }
+        
+        .app-title {
+            color: #E91E63;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            color: #666;
+        }
+        
+        .content-area {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+            padding: 16px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+        
+        .certified-badge {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .hero-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .search-section {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        .search-bar {
+            height: 48px;
+            background: #F5F5F5;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+        }
+        
+        .search-icon {
+            color: #757575;
+            margin-right: 12px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .filter-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #333;
+            margin: 16px 0 8px 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .chip-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+        
+        .chip-scroll::-webkit-scrollbar { display: none; }
+
+        .chip {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #E0E0E0;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .chip.active {
+            background: #E91E63;
+            border-color: #E91E63;
+            color: white;
+        }
+        
+        .insurance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+        
+        .insurance-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            border-color: #FFE4EC;
+        }
+        
+        .insurance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .insurance-type {
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, #2196F3, #03A9F4);
+        }
+        
+        .premium-text {
+            color: #E91E63;
+            font-weight: 800;
+            font-size: 14px;
+        }
+        
+        .insurance-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1A1B1E;
+            margin-bottom: 8px;
+        }
+        
+        .insurance-description {
+            font-size: 14px;
+            color: #5E5E5E;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .provider-list {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .provider-tag {
+            padding: 4px 10px;
+            background: #F5F5F5;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .provider-dot {
+            width: 6px;
+            height: 6px;
+            background: #E91E63;
+            border-radius: 50%;
+        }
+        
+        .action-group {
+            display: flex;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .btn-primary {
+            flex: 2;
+            padding: 10px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+        }
+        
+        .btn-secondary {
+            flex: 1;
+            padding: 10px;
+            background: white;
+            color: #666;
+            border: 2px solid #E0E0E0;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .engagement-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 0 0 28px 28px;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9E9E9E;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 12px;
+            flex: 1;
+        }
+        
+        .nav-item.active {
+            color: #E91E63;
+            background: #FFF5F7;
+        }
+        
+        .nav-icon { font-size: 20px; }
+        .nav-label { font-size: 10px; font-weight: 600; }
+
+        .floating-button {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        /* Custom Scrollbar */
+        .content-area::-webkit-scrollbar { width: 4px; }
+        .content-area::-webkit-scrollbar-thumb { background: rgba(233, 30, 99, 0.2); border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <span>2:30 PM</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋 92%</span>
+                </div>
+            </div>
+            
+            <div class="app-header">
+                <div class="app-title">Nari Suraksha</div>
+                <div class="header-icons">
+                    <span>🔔</span>
+                    <span>👤</span>
+                </div>
+            </div>
+            
+            <div class="content-area">
+                <div class="hero-section">
+                    <div class="hero-title">Secure Your Future</div>
+                    <div class="hero-subtitle">Trusted insurance partners specifically designed for women's health and wellness.</div>
+                    <div class="certified-badge">🛡️ IRDAI Certified</div>
+                </div>
+                
+                <div class="search-section">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search plans or providers...">
+                    </div>
+                    
+                    <div class="filter-section-title">Budget</div>
+                    <div class="chip-scroll">
+                        <div class="chip active">All Budgets</div>
+                        <div class="chip">Under ₹10k</div>
+                        <div class="chip">₹10k - ₹20k</div>
+                        <div class="chip">₹20k+</div>
+                    </div>
+
+                    <div class="filter-section-title">Categories</div>
+                    <div class="chip-scroll">
+                        <div class="chip active">All Plans</div>
+                        <div class="chip">Maternity</div>
+                        <div class="chip">Critical Illness</div>
+                        <div class="chip">Senior Care</div>
+                    </div>
+                </div>
+                
+                <div class="insurance-cards">
+                    <div class="insurance-card">
+                        <div class="engagement-badge">🔥 Popular</div>
+                        <div class="insurance-header">
+                            <div class="insurance-type">Health</div>
+                            <div class="premium-text">₹15,000/yr</div>
+                        </div>
+                        <div class="insurance-title">Star Women Care</div>
+                        <div class="insurance-description">
+                            Covers IVF, newborn care from Day 1, and specialized women-focused screenings.
+                        </div>
+                        <div class="provider-list">
+                            <div class="provider-tag"><span class="provider-dot"></span> Star Health</div>
+                            <div class="provider-tag"><span class="provider-dot"></span> PolicyBazaar</div>
+                        </div>
+                        <div class="action-group">
+                            <button class="btn-primary">View Plan</button>
+                            <button class="btn-secondary">Compare</button>
+                        </div>
+                    </div>
+
+                    <div class="insurance-card">
+                        <div class="insurance-header">
+                            <div class="insurance-type" style="background: linear-gradient(135deg, #E91E63, #F50057);">Critical</div>
+                            <div class="premium-text">₹8,500/yr</div>
+                        </div>
+                        <div class="insurance-title">HDFC Women Suraksha</div>
+                        <div class="insurance-description">
+                            Comprehensive coverage for cancer, cardiac diseases, and women-specific ailments.
+                        </div>
+                        <div class="provider-list">
+                            <div class="provider-tag"><span class="provider-dot"></span> HDFC ERGO</div>
+                        </div>
+                        <div class="action-group">
+                            <button class="btn-primary">View Plan</button>
+                            <button class="btn-secondary">Compare</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="floating-button">💬</div>
+            
+            <div class="bottom-nav">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-label">Community</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🛡️</span>
+                    <span class="nav-label">Insurance</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-label">Profile</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chips = document.querySelectorAll('.chip');
+            chips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    this.parentElement.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => this.style.transform = 'scale(1)', 100);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

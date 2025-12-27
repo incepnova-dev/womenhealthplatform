@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Mukabala - Comparison</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0f0c29;
+            --bg-gradient: linear-gradient(to bottom, #130f40, #000000);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --primary-pink: #d63384;
+            --primary-blue: #00d2ff;
+            --accent-purple: #6a11cb;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .logo-text h1 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            margin: 0;
+            opacity: 0.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: left;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .highlight-blue { color: var(--primary-blue); }
+        .highlight-pink {
+            background: #ff4d8d;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+
+        .search-container {
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Categories Filter */
+        .categories-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cat-tag {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.05);
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cat-tag:hover, .cat-tag.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Pharmacist Note */
+        .pharmacist-note {
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 15px 25px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-pink);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Product Comparison Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 24px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            color: #ff8fa3;
+            font-size: 18px;
+        }
+
+        .price-badge {
+            background: white;
+            color: black;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Retailer Rows */
+        .retailer-row {
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .retailer-row:hover {
+            border-color: var(--primary-pink);
+            background: rgba(255, 51, 132, 0.05);
+        }
+
+        .retailer-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .retailer-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .retailer-price {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .retailer-meta {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rating {
+            color: #f1c40f;
+            font-size: 12px;
+        }
+
+        .delivery {
+            font-size: 11px;
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .view-btn {
+            background: var(--primary-pink);
+            color: white;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-section">
+            <div class="logo-icon">🌸</div>
+            <div class="logo-text">
+                <h1>Nari Swasthya Mukabala</h1>
+                <p>Women's Wellness Directory</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <span style="opacity: 0.8; font-size: 14px;">Products &nbsp; Community &nbsp; Resources</span>
+            <div style="background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px; font-size: 12px;">Live Prices</div>
+            <button style="background: #a12cff; border: none; color: white; padding: 8px 20px; border-radius: 20px; cursor: pointer;">Sign In</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div style="display: flex; gap: 10px;">
+            <span style="border: 1px solid #4CAF50; color: #4CAF50; font-size: 10px; padding: 2px 10px; border-radius: 10px;">● 24/7 Price Tracking</span>
+            <span style="border: 1px solid rgba(255,255,255,0.3); font-size: 10px; padding: 2px 10px; border-radius: 10px;">Certified Retailers Only</span>
+        </div>
+        <h2>Find the Best <span class="highlight-blue">Care</span> <span class="highlight-pink">For Less</span></h2>
+        <p style="opacity: 0.7; max-width: 600px;">Compare prices for essential women's health products across India's top pharmacies. Real-time updates for contraceptives, prenatal care, and daily wellness.</p>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search medicines, brands, or symptoms...">
+        </div>
+
+        <div class="categories-grid">
+            <div class="cat-tag active">🍱 All Products</div>
+            <div class="cat-tag">💊 Contraceptives</div>
+            <div class="cat-tag">🌸 Menstrual Care</div>
+            <div class="cat-tag">🤱 Pregnancy</div>
+            <div class="cat-tag">🦴 Bone Health</div>
+            <div class="cat-tag">💪 Vitamins</div>
+            <div class="cat-tag">✨ Skincare</div>
+        </div>
+    </section>
+
+    <div class="pharmacist-note">
+        <strong style="font-size: 14px;">ⓘ Pharmacist's Note</strong><br>
+        <span style="font-size: 12px; opacity: 0.6;">Prices are illustrative. Click "Check Price" for the final checkout value including shipping.</span>
+    </div>
+
+    <main class="product-grid">
+        <div class="product-card">
+            <div class="card-header">
+                <div>
+                    <h3>Emergency Contraceptive Pill (i-Pill / Unwanted 72)</h3>
+                    <p style="font-size: 11px; opacity: 0.5; margin-top: 5px;">Levonorgestrel 1.5mg - Single dose emergency contraception</p>
+                </div>
+                <div class="price-badge">₹62 min</div>
+            </div>
+
+            <div class="retailer-row">
+                <div class="retailer-info">
+                    <span class="retailer-name">📦 Amazon</span>
+                    <span class="retailer-price">₹62-85</span>
+                </div>
+                <div class="retailer-meta">
+                    <span class="rating">★ 4.2</span>
+                    <span class="delivery">1-2 days</span>
+                    <a href="#" class="view-btn">View ↗</a>
+                </div>
+            </div>
+
+            <div class="retailer-row">
+                <div class="retailer-info">
+                    <span class="retailer-name">🛒 Flipkart</span>
+                    <span class="retailer-price">₹65-90</span>
+                </div>
+                <div class="retailer-meta">
+                    <span class="rating">★ 4.1</span>
+                    <span class="delivery">2-3 days</span>
+                    <a href="#" class="view-btn">View ↗</a>
+                </div>
+            </div>
+            
+            <div class="retailer-row">
+                <div class="retailer-info">
+                    <span class="retailer-name">⚕️ 1mg</span>
+                    <span class="retailer-price">₹75-95</span>
+                </div>
+                <div class="retailer-meta">
+                    <span class="rating">★ 4.5</span>
+                    <span class="delivery">1-2 days</span>
+                    <a href="#" class="view-btn">View ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <div>
+                    <h3>Birth Control Pills (Oral Contraceptive - 21 tablets)</h3>
+                    <p style="font-size: 11px; opacity: 0.5; margin-top: 5px;">Combined oral contraceptive - Monthly supply</p>
+                </div>
+                <div class="price-badge">₹145 min</div>
+            </div>
+
+            <div class="retailer-row">
+                <div class="retailer-info">
+                    <span class="retailer-name">📦 Amazon</span>
+                    <span class="retailer-price">₹150-350</span>
+                </div>
+                <div class="retailer-meta">
+                    <span class="rating">★ 4.3</span>
+                    <span class="delivery">2-3 days</span>
+                    <a href="#" class="view-btn">View ↗</a>
+                </div>
+            </div>
+
+            <div class="retailer-row">
+                <div class="retailer-info">
+                    <span class="retailer-name">⚕️ 1mg</span>
+                    <span class="retailer-price">₹145-320</span>
+                </div>
+                <div class="retailer-meta">
+                    <span class="rating">★ 4.6</span>
+                    <span class="delivery">1-2 days</span>
+                    <a href="#" class="view-btn">View ↗</a>
+                </div>
+            </div>
+
+            <div class="retailer-row">
+                <div class="retailer-info">
+                    <span class="retailer-name">💊 PharmEasy</span>
+                    <span class="retailer-price">₹155-340</span>
+                </div>
+                <div class="retailer-meta">
+                    <span class="rating">★ 4.4</span>
+                    <span class="delivery">1-2 days</span>
+                    <a href="#" class="view-btn">View ↗</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Community - Discord Messenger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 min-h-screen p-4">
+    <div class="max-w-3xl mx-auto" id="app">
+        <!-- Header -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <div class="flex items-center justify-center mb-4">
+                <svg class="w-12 h-12 text-pink-500 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <h1 class="text-3xl font-bold text-gray-800">Women's Health Community</h1>
+            </div>
+            <p class="text-center text-gray-600">Share your health journey, get support, and connect with others</p>
+        </div>
+
+        <!-- Webhook Setup -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Discord Setup</h2>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Discord Webhook URL</label>
+            <input 
+                type="text" 
+                id="webhookUrl" 
+                placeholder="https://discord.com/api/webhooks/..." 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none mb-3"
+            />
+            <button 
+                onclick="testConnection()" 
+                id="testBtn"
+                class="w-full py-2 bg-blue-100 hover:bg-blue-200 text-blue-800 rounded-lg font-medium transition-colors"
+            >
+                🔗 Test Connection
+            </button>
+        </div>
+
+        <!-- Message Composer -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <div class="space-y-4">
+                <!-- Username -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Your Name (Optional)</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        value="Health Community Member"
+                        placeholder="How should we call you?" 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                    />
+                </div>
+
+                <!-- Category -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Topic Category</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="categories"></div>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                    <textarea 
+                        id="message" 
+                        rows="6" 
+                        placeholder="Share your thoughts, questions, or experiences..."
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none resize-none"
+                    ></textarea>
+                    <p class="text-xs text-gray-500 mt-1"><span id="charCount">0</span> characters</p>
+                </div>
+
+                <!-- Send Button -->
+                <button 
+                    onclick="sendMessage()" 
+                    id="sendBtn"
+                    class="w-full py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all flex items-center justify-center"
+                >
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    Send to Community
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Messages -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Quick Support Messages</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button onclick="sendQuick('💪 Stay strong! You\\'ve got this!')" class="p-3 bg-green-100 hover:bg-green-200 rounded-lg text-sm font-medium text-green-800 transition-colors">
+                    💪 Send Encouragement
+                </button>
+                <button onclick="sendQuick('🤗 Sending virtual hugs and support!')" class="p-3 bg-pink-100 hover:bg-pink-200 rounded-lg text-sm font-medium text-pink-800 transition-colors">
+                    🤗 Send Virtual Hug
+                </button>
+                <button onclick="sendQuick('✨ Remember to take care of yourself today!')" class="p-3 bg-purple-100 hover:bg-purple-200 rounded-lg text-sm font-medium text-purple-800 transition-colors">
+                    ✨ Self-Care Reminder
+                </button>
+                <button onclick="sendQuick('🌸 You are not alone in this journey!')" class="p-3 bg-yellow-100 hover:bg-yellow-200 rounded-lg text-sm font-medium text-yellow-800 transition-colors">
+                    🌸 Solidarity Message
+                </button>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div id="status" class="hidden rounded-xl p-4 mb-6"></div>
+
+        <!-- Footer -->
+        <div class="text-center text-sm text-gray-500 mt-6">
+            <p>💜 Built with care for women's health communities</p>
+            <p class="mt-2">Remember: This is a supportive space. Always consult healthcare professionals for medical advice.</p>
+        </div>
+    </div>
+
+    <script>
+        const categories = [
+            { value: 'general', label: '💬 General Discussion', color: 3447003 },
+            { value: 'nutrition', label: '🥗 Nutrition & Diet', color: 3066993 },
+            { value: 'fitness', label: '💪 Fitness & Exercise', color: 10181046 },
+            { value: 'mental', label: '🧠 Mental Health', color: 15418782 },
+            { value: 'pregnancy', label: '🤰 Pregnancy & Maternity', color: 16776960 },
+            { value: 'menstrual', label: '🌸 Menstrual Health', color: 15548997 },
+            { value: 'support', label: '💖 Support & Encouragement', color: 5793266 }
+        ];
+
+        let selectedCategory = 'general';
+
+        // Initialize categories
+        const categoriesDiv = document.getElementById('categories');
+        categories.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = 'p-3 rounded-lg border-2 transition-all border-gray-200 hover:border-purple-300';
+            btn.innerHTML = `<span class="text-sm font-medium">${cat.label}</span>`;
+            btn.onclick = () => selectCategory(cat.value, btn);
+            if (cat.value === 'general') {
+                btn.className = 'p-3 rounded-lg border-2 transition-all border-purple-500 bg-purple-50 shadow-md';
+            }
+            categoriesDiv.appendChild(btn);
+        });
+
+        function selectCategory(value, btn) {
+            selectedCategory = value;
+            document.querySelectorAll('#categories button').forEach(b => {
+                b.className = 'p-3 rounded-lg border-2 transition-all border-gray-200 hover:border-purple-300';
+            });
+            btn.className = 'p-3 rounded-lg border-2 transition-all border-purple-500 bg-purple-50 shadow-md';
+        }
+
+        // Character counter
+        document.getElementById('message').addEventListener('input', (e) => {
+            document.getElementById('charCount').textContent = e.target.value.length;
+        });
+
+        function showStatus(type, message) {
+            const status = document.getElementById('status');
+            status.className = `rounded-xl p-4 mb-6 flex items-start ${
+                type === 'success' 
+                    ? 'bg-green-50 border border-green-200' 
+                    : 'bg-red-50 border border-red-200'
+            }`;
+            status.innerHTML = `
+                <svg class="w-6 h-6 ${type === 'success' ? 'text-green-600' : 'text-red-600'} mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    ${type === 'success' 
+                        ? '<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>'
+                        : '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>'
+                    }
+                </svg>
+                <p class="text-sm ${type === 'success' ? 'text-green-800' : 'text-red-800'}">${message}</p>
+            `;
+            status.classList.remove('hidden');
+            if (type === 'success') {
+                setTimeout(() => status.classList.add('hidden'), 5000);
+            }
+        }
+
+        async function testConnection() {
+            const webhookUrl = document.getElementById('webhookUrl').value.trim();
+            if (!webhookUrl) {
+                showStatus('error', 'Please enter your Discord webhook URL');
+                return;
+            }
+
+            const btn = document.getElementById('testBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<div class="spinner inline-block w-5 h-5 border-b-2 border-blue-800 rounded-full mr-2"></div>Testing...';
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        content: '✅ Test message from Women\'s Health Community App - Connection successful!'
+                    })
+                });
+
+                if (response.ok || response.status === 204) {
+                    showStatus('success', '✅ Connection successful! Check your Discord channel for the test message.');
+                } else {
+                    showStatus('error', `Connection failed (Status: ${response.status}). Please verify your webhook URL.`);
+                }
+            } catch (error) {
+                showStatus('error', `Connection failed: ${error.message}`);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '🔗 Test Connection';
+            }
+        }
+
+        async function sendMessage() {
+            const webhookUrl = document.getElementById('webhookUrl').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const username = document.getElementById('username').value.trim() || 'Health Community Member';
+
+            if (!webhookUrl) {
+                showStatus('error', 'Please enter your Discord webhook URL');
+                return;
+            }
+
+            if (!message) {
+                showStatus('error', 'Please enter a message to send');
+                return;
+            }
+
+            const btn = document.getElementById('sendBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<div class="spinner inline-block w-5 h-5 border-b-2 border-white rounded-full mr-2"></div>Sending...';
+
+            try {
+                const category = categories.find(c => c.value === selectedCategory);
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        username: username,
+                        embeds: [{
+                            title: category.label,
+                            description: message,
+                            color: category.color,
+                            footer: { text: `Posted by ${username}` },
+                            timestamp: new Date().toISOString()
+                        }]
+                    })
+                });
+
+                if (response.ok || response.status === 204) {
+                    showStatus('success', '✨ Message sent successfully to your women\'s health community!');
+                    document.getElementById('message').value = '';
+                    document.getElementById('charCount').textContent = '0';
+                } else {
+                    showStatus('error', `Failed to send message (Status: ${response.status})`);
+                }
+            } catch (error) {
+                showStatus('error', `Error: ${error.message}`);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>Send to Community';
+            }
+        }
+
+        async function sendQuick(msg) {
+            const webhookUrl = document.getElementById('webhookUrl').value.trim();
+            if (!webhookUrl) {
+                showStatus('error', 'Please enter your Discord webhook URL first');
+                return;
+            }
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: 'Health Bot', content: msg })
+                });
+
+                if (response.ok || response.status === 204) {
+                    showStatus('success', '✨ Quick message sent successfully!');
+                }
+            } catch (error) {
+                showStatus('error', `Error: ${error.message}`);
+            }
+        }
+    </script>
+</body>
+</html>

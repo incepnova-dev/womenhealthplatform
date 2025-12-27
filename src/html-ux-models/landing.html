@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Home</title>
+    <style>
+        /* Theme extracted from communitydiscovery.html */
+        :root {
+            --primary-pink: #E91E63;
+            --secondary-pink: #FF4081;
+            --dark-pink: #C2185B;
+            --bg-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --card-gradient: linear-gradient(180deg, #E91E63 0%, #C2185B 100%);
+            --light-bg: #F9F7F7;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--bg-gradient); /* */
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 0 0 14px #222, 0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: var(--light-bg); /* */
+            border-radius: 28px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header Area matching landing.jpg */
+        .header-top {
+            padding: 50px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #ddd;
+            border: 2px solid var(--primary-pink);
+        }
+
+        .greeting h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .search-container {
+            flex: 1;
+            margin-left: 15px;
+            position: relative;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px 15px 10px 35px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            background: #f8f8f8;
+            font-size: 12px;
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* Dashboard Grid Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 24px;
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 4px solid var(--primary-pink); /* */
+        }
+
+        .menu-card:active {
+            transform: scale(0.95);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-bg);
+            border-radius: 18px;
+            color: var(--primary-pink); /* */
+            font-size: 30px;
+        }
+
+        .menu-card h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .menu-card p {
+            font-size: 10px;
+            color: #777;
+        }
+
+        /* Bottom Nav matching landing.jpg and communitydiscovery.html */
+        .bottom-nav {
+            height: 70px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #999;
+            font-size: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: var(--primary-pink); /* */
+        }
+
+        .nav-icon {
+            font-size: 22px;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="header-top">
+                <div class="user-profile">
+                    <div class="avatar"></div>
+                    <div class="greeting">
+                        <p style="font-size: 12px; color: #777;">Hello,</p>
+                        <h2>Priya!</h2>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-bar" placeholder="Search for health topics...">
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="menu-card">
+                    <div class="icon-box">📖</div>
+                    <h3>Knowledge Hub</h3>
+                    <p>Diseases & Conditions</p>
+                </div>
+                <div class="menu-card">
+                    <div class="icon-box">💉</div>
+                    <h3>Vaccination</h3>
+                    <p>Schedule & Tracking</p>
+                </div>
+                <div class="menu-card">
+                    <div class="icon-box">🏥</div>
+                    <h3>Find Clinics</h3>
+                    <p>Nearby Hospitals & Centers</p>
+                </div>
+                <div class="menu-card">
+                    <div class="icon-box">🛡️</div>
+                    <h3>Insurance</h3>
+                    <p>Compare Products</p>
+                </div>
+                <div class="menu-card">
+                    <div class="icon-box">👩‍⚕️</div>
+                    <h3>Gynecologists</h3>
+                    <p>Book Appointments</p>
+                </div>
+                <div class="menu-card">
+                    <div class="icon-box">🛒</div>
+                    <h3>Product Finder</h3>
+                    <p>Compare like Skyscanner</p>
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <div class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-icon">❤️</span>
+                    <span>Health</span>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Community</span>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span>Profile</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

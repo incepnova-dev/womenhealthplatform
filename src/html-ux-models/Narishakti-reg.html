@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narishakti - Women's Health</title>
+    <style>
+        /* Color Palette and Theme from communitydiscovery.html */
+        :root {
+            --primary-pink: #E91E63;
+            --secondary-pink: #FF4081;
+            --dark-pink: #C2185B;
+            --light-bg: #FFF5F7;
+            --body-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --header-gradient: linear-gradient(135deg, #E91E63, #C2185B);
+            --button-gradient: linear-gradient(135deg, #E91E63, #FF4081);
+            --text-main: #1A1B1E;
+            --text-muted: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--body-gradient);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 0 0 14px #222, 0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #F9F7F7 0%, var(--light-bg) 100%);
+            border-radius: 28px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Status Bar Theme */
+        .status-bar {
+            height: 44px;
+            background: var(--header-gradient);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Narishakti Branding */
+        .branding-header {
+            padding: 40px 20px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--primary-pink);
+        }
+
+        .logo-icon {
+            font-size: 60px;
+            color: var(--primary-pink);
+        }
+
+        .app-title {
+            color: var(--primary-pink);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Illustration Area */
+        .image-section {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .narishakti-image {
+            max-width: 90%;
+            height: auto;
+            border-radius: 20px;
+            /* Placeholder for your narishakti.jpg */
+            background: #eee;
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.15);
+        }
+
+        .hero-text {
+            margin-top: 25px;
+            padding: 0 10px;
+        }
+
+        .hero-text h1 {
+            color: #333;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .hero-text p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Button Action Theme */
+        .action-area {
+            padding: 30px 20px 60px;
+        }
+
+        .start-button {
+            width: 100%;
+            padding: 16px;
+            background: var(--button-gradient);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .start-button:active {
+            transform: scale(0.98);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .login-link span {
+            color: var(--primary-pink);
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <span>9:41 AM</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="branding-header">
+                <div class="logo-container">
+                    <span class="logo-icon">🌸</span>
+                </div>
+                <div class="app-title">Nari Shakti</div>
+                <div class="app-subtitle">Empowering Women</div>
+            </div>
+            
+            <div class="image-section">
+                <img src="narishakti.jpg" alt="Nari Shakti Illustration" class="narishakti-image">
+                
+                <div class="hero-text">
+                    <h1>Your Health, Your Community</h1>
+                    <p>Connect with experts and peers in a safe, supportive pink-themed sanctuary designed just for you.</p>
+                </div>
+            </div>
+            
+            <div class="action-area">
+                <button class="start-button">Get Started</button>
+                <div class="login-link">
+                    Already have an account? <span>Sign In</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

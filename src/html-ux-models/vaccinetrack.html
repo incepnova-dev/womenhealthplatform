@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Vaccination Tracker</title>
+    <style>
+        /* Extracting exact theme colors from communitydiscovery.html */
+        :root {
+            --primary-pink: #E91E63;
+            --secondary-pink: #FF4081;
+            --dark-pink: #C2185B;
+            --bg-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --header-gradient: linear-gradient(135deg, #E91E63, #C2185B);
+            --card-gradient: linear-gradient(135deg, #E91E63, #FF4081);
+            --light-pink-bg: #FFF5F7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--bg-gradient); /* */
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 0 0 14px #222, 0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #F9F7F7;
+            border-radius: 28px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header matching vaccine.jpg layout */
+        .header {
+            background: var(--header-gradient); /* */
+            padding: 45px 20px 60px; /* Reduced bottom padding slightly */
+            color: white;
+            position: relative;
+            text-align: center;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 45px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        /* Main Content with adjusted spacing to bring the card down */
+        .main-content {
+            padding: 0 20px;
+            /* Adjusted margin-top from -45px to -15px to bring the card slowly down for better visibility */
+            margin-top: -15px; 
+            flex: 1;
+        }
+
+        /* Next Due Card - Rose Pink Theme */
+        .reminder-card {
+            background: var(--card-gradient); /* */
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+            margin-bottom: 25px;
+        }
+
+        .reminder-label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .reminder-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .due-date {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .set-reminder-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1.5px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* Vaccination Timeline List matching vaccine.jpg layout */
+        .vaccine-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+        }
+
+        .vaccine-item {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .item-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .status-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .status-done {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .status-pending {
+            border: 2px solid #D1D1D1;
+            color: #999;
+        }
+
+        .vaccine-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .check-icon {
+            color: #4CAF50;
+            margin-left: 5px;
+        }
+
+        .chevron {
+            color: #CCC;
+            font-size: 12px;
+        }
+
+        /* Footer Action Buttons with Deep Berry Theme */
+        .footer-actions {
+            background: var(--dark-pink); /* */
+            padding: 25px 20px 45px;
+            border-radius: 35px 35px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 25px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-custom {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+        }
+
+        .btn-download {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="header">
+                <div class="back-btn">←</div>
+                <h1>Vaccination Tracker</h1>
+                <p>Nari Swasthya Samuday</p>
+            </div>
+
+            <div class="main-content">
+                
+                <div class="reminder-card">
+                    <span class="reminder-label">Next Due: HPV Vaccine - 2nd Dose</span>
+                    <div class="reminder-row">
+                        <div class="due-date">15 Mar 2024</div>
+                        <button class="set-reminder-btn">Set Reminder</button>
+                    </div>
+                </div>
+
+                <div class="vaccine-list">
+                    <div class="vaccine-item">
+                        <div class="item-left">
+                            <div class="status-circle status-done">✓</div>
+                            <span class="vaccine-name">HPV - 1st Dose <span class="check-icon">✓</span></span>
+                        </div>
+                        <div class="chevron">▼</div>
+                    </div>
+
+                    <div class="vaccine-item">
+                        <div class="item-left">
+                            <div class="status-circle status-done">✓</div>
+                            <span class="vaccine-name">Tetanus Booster <span class="check-icon">✓</span></span>
+                        </div>
+                        <div class="chevron">▼</div>
+                    </div>
+
+                    <div class="vaccine-item">
+                        <div class="item-left">
+                            <div class="status-circle status-pending">🕒</div>
+                            <span class="vaccine-name">HPV - 2nd Dose</span>
+                        </div>
+                        <div class="chevron">▼</div>
+                    </div>
+
+                    <div class="vaccine-item">
+                        <div class="item-left">
+                            <div class="status-circle status-pending">🕒</div>
+                            <span class="vaccine-name">Flu Vaccine</span>
+                        </div>
+                        <div class="chevron">▼</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-actions">
+                <div class="btn btn-custom">Add Custom Vaccine</div>
+                <div class="btn btn-download">Download Certificate</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

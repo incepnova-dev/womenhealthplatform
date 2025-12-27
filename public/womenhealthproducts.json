@@ -1,0 +1,2160 @@
+{
+   "categories":[
+      {
+         "id":"all",
+         "name":"All Products",
+         "icon":"🏥"
+      },
+      {
+         "id":"contraceptives",
+         "name":"Contraceptives",
+         "icon":"💊"
+      },
+      {
+         "id":"menstrual",
+         "name":"Menstrual Care",
+         "icon":"🌸"
+      },
+      {
+         "id":"pregnancy",
+         "name":"Pregnancy",
+         "icon":"🤰"
+      },
+      {
+         "id":"osteoporosis",
+         "name":"Bone Health",
+         "icon":"🦴"
+      },
+      {
+         "id":"vitamins",
+         "name":"Vitamins & Supplements",
+         "icon":"💪"
+      },
+      {
+         "id":"fertility",
+         "name":"Fertility & PCOS",
+         "icon":"🌺"
+      },
+      {
+         "id":"intimate",
+         "name":"Intimate Hygiene",
+         "icon":"🧴"
+      },
+      {
+         "id":"skincare",
+         "name":"Women's Skincare",
+         "icon":"✨"
+      },
+      {
+         "id":"haircare",
+         "name":"Hair Care",
+         "icon":"💇‍♀️"
+      },
+      {
+         "id":"breastfeeding",
+         "name":"Breastfeeding",
+         "icon":"🤱"
+      },
+      {
+         "id":"menopause",
+         "name":"Menopause Support",
+         "icon":"🌸"
+      },
+      {
+         "id":"urinary",
+         "name":"Urinary Health",
+         "icon":"💧"
+      },
+      {
+         "id":"hygiene",
+         "name":"Personal Hygiene",
+         "icon":"🧼"
+      },
+      {
+         "id":"cancer_support",
+         "name":"Cancer Support",
+         "icon":"🎗️"
+      },
+      {
+         "id":"adolescent",
+         "name":"Adolescent Health",
+         "icon":"🎒"
+      },
+      {
+         "id":"postpartum_care",
+         "name":"Postpartum Recovery",
+         "icon":"🤱"
+      },
+      {
+         "id":"pain_management",
+         "name":"Chronic Pain & PCOS",
+         "icon":"⚡"
+      }
+   ],
+   "products":[
+      {
+         "id":1,
+         "name":"Emergency Contraceptive Pill (i-Pill / Unwanted 72)",
+         "category":"contraceptives",
+         "description":"Levonorgestrel 1.5mg - Single dose emergency contraception",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹62-85",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=emergency+contraceptive+pill"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹65-90",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=emergency+contraceptive"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹75-95",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=emergency+contraceptive"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹70-88",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=emergency+contraceptive"
+            }
+         ]
+      },
+      {
+         "id":2,
+         "name":"Birth Control Pills (Oral Contraceptive - 21 tablets)",
+         "category":"contraceptives",
+         "description":"Combined oral contraceptive - Monthly supply",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹150-350",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=oral+contraceptive+pills"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹180-380",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=birth+control+pills"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹145-320",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=oral+contraceptive"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹155-340",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=oral+contraceptive"
+            }
+         ]
+      },
+      {
+         "id":3,
+         "name":"Sanitary Pads - Ultra Thin (Pack of 30-40)",
+         "category":"menstrual",
+         "description":"Whisper, Stayfree, Sofy - Ultra-thin, hypoallergenic pads",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹250-450",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=sanitary+pads"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹280-480",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=sanitary+napkins"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹260-470",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=sanitary+pads"
+            },
+            {
+               "name":"BigBasket",
+               "priceRange":"₹270-460",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"🛍️",
+               "link":"https://www.bigbasket.com/ps/?q=sanitary+pads"
+            }
+         ]
+      },
+      {
+         "id":4,
+         "name":"Menstrual Cup - Medical Grade Silicone",
+         "category":"menstrual",
+         "description":"Reusable, eco-friendly menstrual cup (Small/Medium/Large)",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹299-799",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=menstrual+cup"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹350-850",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=menstrual+cup"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹320-750",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=menstrual+cup"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹399-899",
+               "rating":4.0,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=menstrual+cup"
+            }
+         ]
+      },
+      {
+         "id":5,
+         "name":"Period Pain Relief Tablets (Meftal Spas / Cyclopam)",
+         "category":"menstrual",
+         "description":"For menstrual cramps and pain - 10-20 tablets",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹35-65",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=period+pain+relief"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹40-70",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=menstrual+pain+relief"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹32-58",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=meftal+spas"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹34-62",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=period+pain"
+            }
+         ]
+      },
+      {
+         "id":6,
+         "name":"Prenatal Vitamins with Folic Acid (HealthKart, Carbamide Forte)",
+         "category":"pregnancy",
+         "description":"Complete prenatal supplement - 60-90 tablets",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹599-1,299",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=prenatal+vitamins"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹650-1,350",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=prenatal+supplements"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹549-1,199",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=prenatal+vitamins"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹575-1,250",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=prenatal+vitamins"
+            }
+         ]
+      },
+      {
+         "id":7,
+         "name":"Pregnancy Test Kit (Prega News / i-Can - 3 pack)",
+         "category":"pregnancy",
+         "description":"Early detection, 99% accurate home pregnancy test",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹75-150",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=pregnancy+test+kit"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹85-160",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=pregnancy+test"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹70-145",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=pregnancy+test"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹72-148",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=pregnancy+test"
+            }
+         ]
+      },
+      {
+         "id":8,
+         "name":"Pregnancy Stretch Mark Cream (Mama Earth, Palmer\\'s)",
+         "category":"pregnancy",
+         "description":"Natural ingredients, hypoallergenic - 200ml",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹349-799",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=stretch+mark+cream+pregnancy"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹380-850",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=pregnancy+stretch+marks"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹360-780",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=stretch+mark+cream"
+            },
+            {
+               "name":"FirstCry",
+               "priceRange":"₹370-820",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"👶",
+               "link":"https://www.firstcry.com/search?q=stretch+mark+cream"
+            }
+         ]
+      },
+      {
+         "id":9,
+         "name":"Calcium + Vitamin D3 Tablets (Shelcal, Calcitas)",
+         "category":"osteoporosis",
+         "description":"Bone strength support - 30-60 tablets",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹150-320",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=calcium+vitamin+d3"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹165-340",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=calcium+tablets"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹145-310",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=calcium+vitamin+d3"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹148-315",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=calcium+vitamin+d"
+            }
+         ]
+      },
+      {
+         "id":10,
+         "name":"Bone Density Support Formula (Calcium + Magnesium + K2)",
+         "category":"osteoporosis",
+         "description":"Complete bone health supplement - 60 capsules",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹699-1,499",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=bone+health+supplement"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹750-1,550",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=bone+density+supplement"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹649-1,399",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=bone+health"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹675-1,450",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=bone+health"
+            }
+         ]
+      },
+      {
+         "id":11,
+         "name":"Women\\'s Daily Multivitamin (HealthKart, Carbamide Forte)",
+         "category":"vitamins",
+         "description":"Complete daily nutrition - 60-90 tablets",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-899",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=women+multivitamin"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-950",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=women+multivitamin"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹379-849",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=women+multivitamin"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹389-879",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=women+multivitamin"
+            }
+         ]
+      },
+      {
+         "id":12,
+         "name":"Iron Supplement with Vitamin C (Feronia, Orofer)",
+         "category":"vitamins",
+         "description":"For anemia prevention - 30-60 tablets",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹180-450",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=iron+supplement+women"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹200-480",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=iron+tablets"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹175-440",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=iron+supplement"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹178-445",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=iron+tablets"
+            }
+         ]
+      },
+      {
+         "id":13,
+         "name":"Ovulation Test Kit (5 strips)",
+         "category":"fertility",
+         "description":"LH hormone detection for fertility tracking",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹199-399",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=ovulation+test+kit"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹220-420",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=ovulation+test"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹189-389",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=ovulation+test"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹195-395",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=ovulation+test"
+            }
+         ]
+      },
+      {
+         "id":14,
+         "name":"PCOS/PCOD Supplements (Inositol + Folic Acid)",
+         "category":"fertility",
+         "description":"Hormonal balance support - 60 tablets",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹599-1,299",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=pcos+supplement"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹650-1,350",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=pcos+tablets"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹549-1,199",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=pcos+supplement"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹575-1,250",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=pcos+supplement"
+            }
+         ]
+      },
+      {
+         "id":15,
+         "name":"Fertility Lubricant (Pre-Seed / Conceive Plus)",
+         "category":"fertility",
+         "description":"Sperm-friendly lubricant - 40ml",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹899-1,599",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=fertility+lubricant"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹950-1,650",
+               "rating":4.0,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=conceive+plus"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹920-1,620",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=fertility+lubricant"
+            },
+            {
+               "name":"FirstCry",
+               "priceRange":"₹899-1,599",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"👶",
+               "link":"https://www.firstcry.com/search?q=fertility+lubricant"
+            }
+         ]
+      },
+      {
+         "id":16,
+         "name":"Intimate Wash (pH Balanced - 200ml)",
+         "category":"intimate",
+         "description":"Vaginal pH balanced wash - Lactic Acid formula",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹249-549",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=intimate+wash+women"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹270-580",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=intimate+hygiene+wash"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹240-540",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=intimate+wash"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹250-550",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=intimate+wash"
+            }
+         ]
+      },
+      {
+         "id":17,
+         "name":"Panty Liners (Pack of 30)",
+         "category":"intimate",
+         "description":"Daily use breathable panty liners",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹99-249",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=panty+liners"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹110-260",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=panty+liners"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹105-255",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=panty+liners"
+            },
+            {
+               "name":"BigBasket",
+               "priceRange":"₹100-250",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"🛍️",
+               "link":"https://www.bigbasket.com/ps/?q=panty+liners"
+            }
+         ]
+      },
+      {
+         "id":18,
+         "name":"Intimate Wipes (Pack of 20)",
+         "category":"intimate",
+         "description":"pH balanced, alcohol-free intimate wipes",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹149-349",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=intimate+wipes"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹160-360",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=intimate+wipes"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹145-345",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=intimate+wipes"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹150-350",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"💊",
+               "link":"https://pharmeasy.in/search/all?name=intimate+wipes"
+            }
+         ]
+      },
+      {
+         "id":19,
+         "name":"Anti-Aging Night Cream (50g)",
+         "category":"skincare",
+         "description":"Retinol & Hyaluronic Acid formula",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-1,299",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=anti+aging+night+cream"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-1,350",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=anti+aging+cream"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹380-1,250",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=anti+aging+cream"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹390-1,280",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=anti+aging"
+            }
+         ]
+      },
+      {
+         "id":20,
+         "name":"Vitamin C Serum (30ml)",
+         "category":"skincare",
+         "description":"Brightening & anti-pigmentation serum",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹349-899",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=vitamin+c+serum"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹380-950",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=vitamin+c+serum"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹330-880",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=vitamin+c+serum"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹340-890",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=vitamin+c+serum"
+            }
+         ]
+      },
+      {
+         "id":21,
+         "name":"SPF 50 Sunscreen (100ml)",
+         "category":"skincare",
+         "description":"Broad spectrum UV protection - Non-greasy",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹299-799",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=sunscreen+spf+50"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹320-820",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=sunscreen+women"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹290-780",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=sunscreen+spf+50"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹295-790",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=sunscreen"
+            }
+         ]
+      },
+      {
+         "id":22,
+         "name":"Hair Growth Serum (100ml)",
+         "category":"haircare",
+         "description":"Biotin, Caffeine & Peptide formula for hair fall",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-1,199",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=hair+growth+serum"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-1,250",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=hair+growth+serum"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹380-1,180",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=hair+growth+serum"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹390-1,190",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=hair+serum"
+            }
+         ]
+      },
+      {
+         "id":23,
+         "name":"Biotin Tablets for Hair (60 tablets)",
+         "category":"haircare",
+         "description":"Biotin 10,000mcg for hair, skin & nails",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-899",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=biotin+tablets"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-950",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=biotin+supplements"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹379-849",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=biotin"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹389-879",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=biotin"
+            }
+         ]
+      },
+      {
+         "id":24,
+         "name":"Anti-Dandruff Shampoo (400ml)",
+         "category":"haircare",
+         "description":"Ketoconazole / Zinc Pyrithione formula",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹249-599",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=anti+dandruff+shampoo"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹270-620",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=dandruff+shampoo"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹240-590",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=anti+dandruff"
+            },
+            {
+               "name":"BigBasket",
+               "priceRange":"₹250-600",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"🛍️",
+               "link":"https://www.bigbasket.com/ps/?q=anti+dandruff+shampoo"
+            }
+         ]
+      },
+      {
+         "id":25,
+         "name":"Breast Pump (Electric)",
+         "category":"breastfeeding",
+         "description":"Rechargeable electric breast pump with bottles",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹1,999-4,999",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=breast+pump+electric"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹2,200-5,200",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=breast+pump"
+            },
+            {
+               "name":"FirstCry",
+               "priceRange":"₹1,899-4,899",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"👶",
+               "link":"https://www.firstcry.com/search?q=breast+pump"
+            },
+            {
+               "name":"BabyChakra",
+               "priceRange":"₹1,950-4,950",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🍼",
+               "link":"https://www.babychakra.com/search?q=breast+pump"
+            }
+         ]
+      },
+      {
+         "id":26,
+         "name":"Nursing Pads (Disposable - Pack of 60)",
+         "category":"breastfeeding",
+         "description":"Ultra-absorbent breast pads",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹299-599",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=nursing+pads"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹320-620",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=breast+pads"
+            },
+            {
+               "name":"FirstCry",
+               "priceRange":"₹290-590",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"👶",
+               "link":"https://www.firstcry.com/search?q=nursing+pads"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹295-595",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=nursing+pads"
+            }
+         ]
+      },
+      {
+         "id":27,
+         "name":"Lactation Supplements (60 capsules)",
+         "category":"breastfeeding",
+         "description":"Fenugreek & Shatavari for milk production",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹499-1,199",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=lactation+supplement"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹550-1,250",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=lactation+pills"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹479-1,149",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=lactation"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹489-1,179",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=lactation+supplement"
+            }
+         ]
+      },
+      {
+         "id":28,
+         "name":"Nipple Cream (30g)",
+         "category":"breastfeeding",
+         "description":"Lanolin-based cream for sore nipples",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-799",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=nipple+cream"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹420-820",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=nipple+cream"
+            },
+            {
+               "name":"FirstCry",
+               "priceRange":"₹390-790",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"👶",
+               "link":"https://www.firstcry.com/search?q=nipple+cream"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹395-795",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=nipple+cream"
+            }
+         ]
+      },
+      {
+         "id":29,
+         "name":"Menopause Relief Supplements",
+         "category":"menopause",
+         "description":"Black Cohosh & Soy Isoflavones - 60 capsules",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹699-1,599",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=menopause+supplement"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹750-1,650",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=menopause+relief"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹649-1,549",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=menopause"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹675-1,575",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=menopause+supplement"
+            }
+         ]
+      },
+      {
+         "id":30,
+         "name":"Evening Primrose Oil (60 capsules)",
+         "category":"menopause",
+         "description":"For hot flashes and hormonal balance",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹599-1,299",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=evening+primrose+oil"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹650-1,350",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=evening+primrose"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹549-1,249",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=evening+primrose"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹575-1,279",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=evening+primrose"
+            }
+         ]
+      },
+      {
+         "id":31,
+         "name":"Cranberry Extract Tablets (60 tablets)",
+         "category":"urinary",
+         "description":"For UTI prevention and urinary tract health",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-899",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=cranberry+tablets"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-950",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=cranberry+supplement"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹379-849",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=cranberry"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹389-879",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=cranberry"
+            }
+         ]
+      },
+      {
+         "id":32,
+         "name":"D-Mannose Powder (100g)",
+         "category":"urinary",
+         "description":"Natural UTI prevention supplement",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹799-1,599",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=d+mannose"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹850-1,650",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=d+mannose"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹749-1,549",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🏋️",
+               "link":"https://www.healthkart.com/search?q=d+mannose"
+            },
+            {
+               "name":"1mg",
+               "priceRange":"₹775-1,575",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"⚕️",
+               "link":"https://www.1mg.com/search/all?name=d+mannose"
+            }
+         ]
+      },
+      {
+         "id":33,
+         "name":"Reusable Cloth Pads (Pack of 6)",
+         "category":"hygiene",
+         "description":"Eco-friendly, washable sanitary pads",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-899",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=reusable+cloth+pads"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-950",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=cloth+pads"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹380-880",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=reusable+pads"
+            },
+            {
+               "name":"GreenSoul",
+               "priceRange":"₹390-890",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🌿",
+               "link":"https://www.amazon.in/s?k=washable+pads"
+            }
+         ]
+      },
+      {
+         "id":34,
+         "name":"Period Underwear (Pack of 3)",
+         "category":"hygiene",
+         "description":"Leak-proof, reusable menstrual underwear",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹999-2,499",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=period+underwear"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,100-2,600",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=period+panties"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹950-2,450",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=period+underwear"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹980-2,480",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=period+underwear"
+            }
+         ]
+      },
+      {
+         "id":35,
+         "name":"Feminine Deodorant Spray (150ml)",
+         "category":"hygiene",
+         "description":"Odor control intimate spray",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹249-549",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=feminine+deodorant"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹270-580",
+               "rating":4.0,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=intimate+spray"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹240-540",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=feminine+spray"
+            },
+            {
+               "name":"Purplle",
+               "priceRange":"₹245-545",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💜",
+               "link":"https://www.purplle.com/search?q=intimate+deodorant"
+            }
+         ]
+      },
+      {
+         "id":36,
+         "name":"Post-Mastectomy Silicone Breast Form",
+         "category":"cancer_support",
+         "description":"External prosthesis for silhouette restoration post-surgery",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹1,200-3,500",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=silicone+breast+form"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,150-3,200",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"4-6 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=breast+prosthesis"
+            },
+            {
+               "name":"HealthKart",
+               "priceRange":"₹1,400-3,800",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"💊",
+               "link":"https://www.healthkart.com/search?q=mastectomy+forms"
+            }
+         ]
+      },
+      {
+         "id":37,
+         "name":"Bamboo Chemo Turban / Head Cover",
+         "category":"cancer_support",
+         "description":"Soft, breathable, non-irritating fabric for sensitive scalps",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹450-950",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=chemo+turbans"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹499-1,100",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=bamboo+chemo+hat"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹550-1,200",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=head+wraps"
+            }
+         ]
+      },
+      {
+         "id":38,
+         "name":"Teen Period Panties (Leak-proof)",
+         "category":"adolescent",
+         "description":"High-absorbency reusable underwear for school-going girls",
+         "sites":[
+            {
+               "name":"Nykaa",
+               "priceRange":"₹799-1,499",
+               "rating":4.7,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=period+panties"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹650-1,200",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=teen+period+underwear"
+            },
+            {
+               "name":"Zivame",
+               "priceRange":"₹899-1,600",
+               "rating":4.8,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"👙",
+               "link":"https://www.zivame.com/search?q=period+panty"
+            }
+         ]
+      },
+      {
+         "id":39,
+         "name":"First Period Puberty Kit",
+         "category":"adolescent",
+         "description":"Curated box with pads, guide book, and period tracker calendar",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹599-1,200",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=period+starter+kit"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹550-1,100",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/search?q=puberty+kit"
+            },
+            {
+               "name":"FirstCry",
+               "priceRange":"₹600-1,300",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"👶",
+               "link":"https://www.firstcry.com/search?q=period+kit"
+            }
+         ]
+      },
+      {
+         "id":41,
+         "name":"EMS Pelvic Floor Muscle Trainer",
+         "category":"pelvic_health",
+         "description":"USB rechargeable device for pelvic muscle strengthening and urinary incontinence support.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹820-850",
+               "rating":3.9,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/maycreate-usb-rechargeable-ems-pelvic-floor-trainer-men-women-home-fitness-ab-exerciser/p/itm56b38aae38a07"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹799-1,200",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=ems+pelvic+floor+trainer"
+            },
+            {
+               "name":"Biotronix",
+               "priceRange":"₹4,236",
+               "rating":4.0,
+               "inStock":true,
+               "delivery":"5-7 days",
+               "logo":"⚕️",
+               "link":"https://www.flipkart.com/biotronix-pelvic-floor-exercise-urinary-incontinence-vaginal-probe-portable-medical-reacher-grabber/p/itm0d76c0cbd5473"
+            }
+         ]
+      },
+      {
+         "id":42,
+         "name":"Medical Grade Vaginal Dilator Set (Pack of 6)",
+         "category":"pelvic_health",
+         "description":"BPA-free trainer set for pelvic therapy, vaginismus recovery, and tissue elasticity.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹670-680",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/b-arm-medical-dilators-set-6-sizes-with-firm-holder-vaginal-dilator/p/itme9e9d6d8d6d8d"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹699-1,389",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=vaginal+dilator+set"
+            },
+            {
+               "name":"Bos Medicare",
+               "priceRange":"₹186-214",
+               "rating":3.7,
+               "inStock":true,
+               "delivery":"4-6 days",
+               "logo":"🏥",
+               "link":"https://www.flipkart.com/bos-medicare-surgical-dilator-set-pvc-vaginal-dilator/p/itmbd20299879852"
+            }
+         ]
+      },
+      {
+         "id":43,
+         "name":"Postpartum Instant Ice Maxi Pads",
+         "category":"maternity_recovery",
+         "description":"Instant-chill cooling pads with built-in cold therapy for perineal healing after delivery.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,650-1,999",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/b-arm-instant-ice-maxi-pads-pack-5-newmoms-after-delivery-postpartum-maternity-sanitary-pad/p/itm6fb69f077d836"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹1,700-2,100",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=instant+ice+maxi+pads"
+            },
+            {
+               "name":"Nykaa",
+               "priceRange":"₹1,850",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "logo":"💄",
+               "link":"https://www.nykaa.com/search/result/?q=maternity+cooling+pads"
+            }
+         ]
+      },
+      {
+         "id":44,
+         "name":"Postpartum Abdominal Support Binder",
+         "category":"maternity_recovery",
+         "description":"Medical-grade compression belt to support abdominal muscles after C-section or natural birth.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹280-740",
+               "rating":3.7,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/coif-abdominal-binder-post-surgery-men-women-postpartum-tummy-tuck-belt/p/itm5fff0b68f7da7"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹350-1,599",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=postpartum+abdominal+binder"
+            }
+         ]
+      },
+      {
+         "id":45,
+         "name":"Wearable TENS Device for Period Pain",
+         "category":"chronic_pain",
+         "description":"Drug-free nerve stimulation device (TENS + Heat) for instant menstrual cramp relief.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,284-2,857",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/ultracare-pro-moi-instant-period-pain-relief-product-menstrual-cramp-device-tens-plus-heating-combination-rechargeable-wireless-wearable-massager/p/itmcdfb4a500c7ea"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹1,500-3,500",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=tens+machine+for+period+pain"
+            },
+            {
+               "name":"UltraCare Pro",
+               "priceRange":"₹2,500-3,000",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"4-5 days",
+               "logo":"⚡",
+               "link":"https://ultracarepro.in/product/moi-instant-period-pain-relief-device/"
+            }
+         ]
+      },
+      {
+         "id":46,
+         "name":"Portable Bladeless Neck Fan",
+         "category":"chronic_pain",
+         "description":"Hands-free cooling wearable for managing hot flashes and menopause-related heat discomfort.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹498-597",
+               "rating":3.8,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "logo":"🛒",
+               "link":"https://www.flipkart.com/befunky-portable-neck-fan-3-speed-rechargeable-bladeless-adjustable-personal-women-men-modern-design-great-cooling-usb/p/itm3b5eacad1900b"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹550-1,090",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "logo":"📦",
+               "link":"https://www.amazon.in/s?k=portable+neck+fan"
+            }
+         ]
+      },
+      {
+         "id":50,
+         "name":"Smart Pelvic Floor Trainer (Biofeedback)",
+         "category":"pelvic_health",
+         "description":"App-connected Kegel exerciser for postpartum recovery and bladder control.",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹12,500-15,000",
+               "rating":4.8,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "link":"https://www.amazon.in/s?k=smart+pelvic+floor+trainer"
+            },
+            {
+               "name":"B-Arm Medical",
+               "priceRange":"₹11,999",
+               "rating":4.9,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "link":"https://b-arm.com/product-category/womens-care/dilators/"
+            }
+         ]
+      },
+      {
+         "id":51,
+         "name":"Medical Grade Vaginal Dilator Set (6 Sizes)",
+         "category":"pelvic_health",
+         "description":"BPA-free silicone dilators for vaginismus and pelvic physical therapy.",
+         "sites":[
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,615-1,800",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "link":"https://www.flipkart.com/search?q=vaginal+dilator+set"
+            },
+            {
+               "name":"Amazon",
+               "priceRange":"₹1,389-2,500",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "link":"https://www.amazon.in/s?k=vaginal+dilator"
+            }
+         ]
+      },
+      {
+         "id":52,
+         "name":"Instant Ice Maxi Pads (Perineal Cooling)",
+         "category":"postpartum_care",
+         "description":"2-in-1 absorbent pads with instant crack-and-cool technology for post-delivery relief.",
+         "sites":[
+            {
+               "name":"B-Arm",
+               "priceRange":"₹1,399-1,999",
+               "rating":4.7,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "link":"https://b-arm.com/product/b-arm-2-in-1-postpartum-pads-for-newmoms/"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,650",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "link":"https://www.flipkart.com/search?q=postpartum+ice+pads"
+            }
+         ]
+      },
+      {
+         "id":53,
+         "name":"Postpartum Abdominal Support Binder",
+         "category":"postpartum_care",
+         "description":"Medical-grade wrap for C-section recovery and abdominal muscle support.",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹399-1,200",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "link":"https://www.amazon.in/s?k=postpartum+belly+belt"
+            },
+            {
+               "name":"B-Arm",
+               "priceRange":"₹369-439",
+               "rating":4.5,
+               "inStock":true,
+               "delivery":"2-4 days",
+               "link":"https://b-arm.com/product/b-arm-postpartum-belly-belt/"
+            }
+         ]
+      },
+      {
+         "id":54,
+         "name":"i-know Menopause Testing Kit",
+         "category":"menopause",
+         "description":"Home-based FSH urine test kit to detect early stages of menopause.",
+         "sites":[
+            {
+               "name":"Apollo Pharmacy",
+               "priceRange":"₹1,137-1,197",
+               "rating":4.4,
+               "inStock":true,
+               "delivery":"Same Day",
+               "link":"https://www.apollopharmacy.in/otc/i-know-menopause-testing-kit-3-s"
+            },
+            {
+               "name":"PharmEasy",
+               "priceRange":"₹1,140",
+               "rating":4.2,
+               "inStock":true,
+               "delivery":"1-2 days",
+               "link":"https://pharmeasy.in/health-care/products/i-know---menopause-testing-kit-3-strips-3977895"
+            }
+         ]
+      },
+      {
+         "id":55,
+         "name":"Portable Bladeless Neck Fan",
+         "category":"menopause",
+         "description":"Hands-free cooling wearable for managing hot flashes and night sweats.",
+         "sites":[
+            {
+               "name":"Amazon",
+               "priceRange":"₹599-1,200",
+               "rating":4.3,
+               "inStock":true,
+               "delivery":"2 days",
+               "link":"https://www.amazon.in/s?k=neck+fan+bladeless"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹498-550",
+               "rating":3.9,
+               "inStock":true,
+               "delivery":"3-4 days",
+               "link":"https://www.flipkart.com/search?q=neck+fan"
+            }
+         ]
+      },
+      {
+         "id":56,
+         "name":"TENS + Heat Period Pain Device (MOI)",
+         "category":"pain_management",
+         "description":"Wearable wireless device using pulse therapy and heat for instant cramp relief.",
+         "sites":[
+            {
+               "name":"UltraCare Pro",
+               "priceRange":"₹3,499",
+               "rating":4.8,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "link":"https://ultracarepro.in/products/moi-wireless-instant-period-pain-relief-device"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹2,857-3,000",
+               "rating":4.1,
+               "inStock":true,
+               "delivery":"2-3 days",
+               "link":"https://www.flipkart.com/ultracare-pro-moi-instant-period-pain-relief-product/p/itmcdfb4a500c7ea"
+            }
+         ]
+      },
+      {
+         "id":57,
+         "name":"Comprezon Lymphedema Sleeve",
+         "category":"cancer_support",
+         "description":"Graduated compression sleeve for arm swelling post-mastectomy.",
+         "sites":[
+            {
+               "name":"Dynamic Medicals",
+               "priceRange":"₹1,399",
+               "rating":4.6,
+               "inStock":true,
+               "delivery":"4-5 days",
+               "link":"https://www.dynamictechnomedicals.com/shop/compression-therapy/lymphoedema-sleeves-comprezon/"
+            },
+            {
+               "name":"Flipkart",
+               "priceRange":"₹1,588",
+               "rating":3.8,
+               "inStock":true,
+               "delivery":"3-5 days",
+               "link":"https://www.flipkart.com/search?q=lymphedema+sleeve"
+            }
+         ]
+      }
+   ]
+}

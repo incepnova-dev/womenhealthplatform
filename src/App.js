@@ -1,17 +1,29 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import WomenPatientsPage from "./pages/WomenPatientsPage";
-import NariSangha from "./pages/narisangha/NariSangha";
-import WomenChildPage from "./pages/WomenChildPage";
 
+
+import WomenHealthConditionsPage from "./pages/WomenHealthConditionsPage";
+
+import WomenHealthPostsDashboard from "./pages/WomenHealthPostsDashboard";
+import WomenHealthCommunitiesDashboard from "./pages/WomenHealthCommunitiesDashboard";
+
+import WomenHealthProducts from "./pages/WomenHealthProducts";
+import WomenInsuranceProductCatlg from "./pages/WomenInsuranceProductCatlg";
+import WomenDiscordHealthApp from "./pages/WomenDiscordHealthApp";
 
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/narisangha" element={<NariSangha />} />
-         <Route path="/patients" element={<WomenPatientsPage />} />
-         <Route path="/womenChild" element={<WomenChildPage />} />
+
+         <Route path="/wmhealthconditions" element={<WomenHealthConditionsPage />} />
+
+         <Route path="/wmhealthpostsdashboard" element={<WomenHealthPostsDashboard />} />
+         <Route path="/wmhealthcommhdashboard" element={<WomenHealthCommunitiesDashboard />} />
+       
+         <Route path="/Womenhealthproducts" element={<WomenHealthProducts/>} />
+         <Route path="/Womeninsuranceprods" element={<WomenInsuranceProductCatlg/>} />
+         <Route path="/discordapp" element={<WomenDiscordHealthApp/>} />
       </Routes>
     </BrowserRouter>
   );
