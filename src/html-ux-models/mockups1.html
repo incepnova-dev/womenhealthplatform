@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Health Information Mockups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .screens-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+            gap: 40px;
+            max-width: 1800px;
+            width: 100%;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 30px;
+            background: black;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px 8px;
+            font-size: 13px;
+        }
+        
+        .screen-header {
+            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(255, 20, 147, 0.3);
+        }
+        
+        .header-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .header-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .search-bar {
+            margin: 15px 20px;
+            padding: 12px 15px;
+            background: #F5F5F5;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+        
+        .content-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 0 80px 0;
+        }
+        
+        .disease-card {
+            margin: 15px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+            border-left: 4px solid #FF69B4;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .disease-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.25);
+        }
+        
+        .disease-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .disease-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .disease-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #FFE4E1, #FFB6C1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .disease-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .detail-section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #FF1493;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .detail-list {
+            list-style: none;
+        }
+        
+        .detail-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #F0F0F0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .detail-list li:before {
+            content: "•";
+            color: #FF69B4;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            left: 5px;
+        }
+        
+        .detail-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .vaccination-card {
+            margin: 15px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+            overflow: hidden;
+        }
+        
+        .vaccination-header {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .vaccination-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #F0F0F0;
+        }
+        
+        .vaccination-item:last-child {
+            border-bottom: none;
+        }
+        
+        .vaccine-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .vaccine-details {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .vaccine-age {
+            display: inline-block;
+            background: #FFE4E1;
+            color: #FF1493;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        
+        .tab-navigation {
+            display: flex;
+            padding: 10px 20px;
+            background: white;
+            gap: 10px;
+            overflow-x: auto;
+        }
+        
+        .tab-button {
+            padding: 10px 20px;
+            background: #F5F5F5;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+        }
+        
+        .tracking-flow-step {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+            position: relative;
+        }
+        
+        .step-number {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .flow-connector {
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(180deg, #FF69B4, #FFB6C1);
+            margin: 0 auto;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #F0F0F0;
+            border-radius: 12px;
+            font-size: 14px;
+            margin-top: 10px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .input-field:focus {
+            border-color: #FF69B4;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 1px solid #F0F0F0;
+        }
+        
+        .checkbox-item:last-child {
+            border-bottom: none;
+        }
+        
+        .custom-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #FF69B4;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            background: white;
+        }
+        
+        .custom-checkbox.checked {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+        }
+        
+        .action-button {
+            margin: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+        }
+        
+        .faq-item {
+            margin: 15px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+        }
+        
+        .faq-question {
+            font-size: 15px;
+            font-weight: 600;
+            color: #FF1493;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .faq-answer {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            padding-left: 30px;
+        }
+        
+        .screening-card {
+            margin: 15px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+            border-left: 4px solid #FF1493;
+        }
+        
+        .screening-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .screening-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .screening-age {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFE4E1, #FFB6C1);
+            color: #FF1493;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: #999;
+            font-size: 11px;
+        }
+        
+        .nav-item.active {
+            color: #FF1493;
+        }
+        
+        .nav-icon {
+            font-size: 22px;
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="screens-container">
+        
+        <!-- Screen 1: Disease Information Master Screen -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header">
+                    <div class="header-title">स्वास्थ्य जानकारी</div>
+                    <div class="header-subtitle">Health Information</div>
+                </div>
+                
+                <div class="search-bar">
+                    <span>🔍</span>
+                    <input type="text" placeholder="Search diseases...">
+                </div>
+                
+                <div class="content-area">
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">PCOS / पीसीओएस</div>
+                            <div class="disease-icon">🩺</div>
+                        </div>
+                        <div class="disease-description">
+                            Polycystic Ovary Syndrome - hormonal disorder affecting reproductive age women
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">एंडोमेट्रियोसिस</div>
+                            <div class="disease-icon">🔬</div>
+                        </div>
+                        <div class="disease-description">
+                            Endometriosis - tissue similar to uterine lining grows outside the uterus
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">UTI / मूत्र मार्ग संक्रमण</div>
+                            <div class="disease-icon">💊</div>
+                        </div>
+                        <div class="disease-description">
+                            Urinary Tract Infection - bacterial infection affecting urinary system
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">अनियमित माहवारी</div>
+                            <div class="disease-icon">📅</div>
+                        </div>
+                        <div class="disease-description">
+                            Irregular Periods - menstrual cycle variations and disorders
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">योनि संक्रमण</div>
+                            <div class="disease-icon">🧪</div>
+                        </div>
+                        <div class="disease-description">
+                            Vaginal Infections - bacterial vaginosis, yeast infections
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">थायरॉइड विकार</div>
+                            <div class="disease-icon">⚕️</div>
+                        </div>
+                        <div class="disease-description">
+                            Thyroid Disorders - affecting women's metabolism and hormones
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-card-header">
+                            <div class="disease-name">एनीमिया / खून की कमी</div>
+                            <div class="disease-icon">💉</div>
+                        </div>
+                        <div class="disease-description">
+                            Anemia - iron deficiency common in women
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item active">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Disease Information - Master Screen</div>
+        </div>
+        
+        <!-- Screen 2: Disease Detail Screen (PCOS Example) -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">PCOS / पीसीओएस</div>
+                    <div class="header-subtitle">Polycystic Ovary Syndrome</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="detail-section">
+                        <div class="section-title">
+                            <div class="section-icon">🔍</div>
+                            लक्षण / Symptoms
+                        </div>
+                        <ul class="detail-list">
+                            <li>Irregular or missed periods (अनियमित माहवारी)</li>
+                            <li>Excessive hair growth on face, chest, and back (अत्यधिक बाल)</li>
+                            <li>Weight gain or difficulty losing weight (वजन बढ़ना)</li>
+                            <li>Acne and oily skin (मुंहासे)</li>
+                            <li>Thinning hair or hair loss (बालों का गिरना)</li>
+                            <li>Darkening of skin (त्वचा का काला होना)</li>
+                            <li>Difficulty getting pregnant (गर्भधारण में समस्या)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <div class="section-title">
+                            <div class="section-icon">🧬</div>
+                            कारण / Causes
+                        </div>
+                        <ul class="detail-list">
+                            <li>Excess insulin production causing high androgen levels</li>
+                            <li>Hormonal imbalance affecting ovulation</li>
+                            <li>Genetic factors and family history</li>
+                            <li>Low-grade inflammation in the body</li>
+                            <li>Insulin resistance affecting metabolism</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <div class="section-title">
+                            <div class="section-icon">💊</div>
+                            उपचार / Treatment Plan
+                        </div>
+                        <ul class="detail-list">
+                            <li>Birth control pills to regulate periods</li>
+                            <li>Metformin for insulin resistance</li>
+                            <li>Anti-androgen medications for hair growth</li>
+                            <li>Fertility medications if trying to conceive</li>
+                            <li>Regular gynecological check-ups</li>
+                            <li>Blood sugar monitoring</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <div class="section-title">
+                            <div class="section-icon">🛡️</div>
+                            रोकथाम / Prevention Steps
+                        </div>
+                        <ul class="detail-list">
+                            <li>Maintain healthy weight through diet and exercise</li>
+                            <li>Follow a balanced diet low in refined carbohydrates</li>
+                            <li>Regular physical activity (30 minutes daily)</li>
+                            <li>Manage stress through yoga and meditation</li>
+                            <li>Get adequate sleep (7-8 hours)</li>
+                            <li>Regular health screenings</li>
+                            <li>Avoid smoking and excessive alcohol</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item active">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Disease Detail Screen - PCOS Example</div>
+        </div>
+        
+        <!-- Screen 3: Vaccination Schedule Master Screen -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header">
+                    <div class="header-title">टीकाकरण अनुसूची</div>
+                    <div class="header-subtitle">Vaccination Schedule</div>
+                </div>
+                
+                <div class="tab-navigation">
+                    <button class="tab-button active">Newborn-12 Yrs</button>
+                    <button class="tab-button">12-18 Years</button>
+                    <button class="tab-button">Adult Women</button>
+                </div>
+                
+                <div class="content-area">
+                    <div class="vaccination-card">
+                        <div class="vaccination-header">
+                            👶 Newborn to 12 Years
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">BCG Vaccine</div>
+                            <div class="vaccine-details">
+                                Protection against tuberculosis (TB)
+                            </div>
+                            <span class="vaccine-age">At Birth</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Hepatitis B</div>
+                            <div class="vaccine-details">
+                                Protects liver from Hepatitis B virus
+                            </div>
+                            <span class="vaccine-age">Birth, 1-2 months, 6 months</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Polio (OPV/IPV)</div>
+                            <div class="vaccine-details">
+                                Prevention of poliomyelitis
+                            </div>
+                            <span class="vaccine-age">Birth, 6, 10, 14 weeks</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">DPT (Diphtheria, Pertussis, Tetanus)</div>
+                            <div class="vaccine-details">
+                                Triple antigen protection
+                            </div>
+                            <span class="vaccine-age">6, 10, 14 weeks</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">MMR (Measles, Mumps, Rubella)</div>
+                            <div class="vaccine-details">
+                                Protection against three viral diseases
+                            </div>
+                            <span class="vaccine-age">9 months, 15-18 months</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Chickenpox (Varicella)</div>
+                            <div class="vaccine-details">
+                                Prevents chickenpox infection
+                            </div>
+                            <span class="vaccine-age">15 months, 4-6 years</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Typhoid</div>
+                            <div class="vaccine-details">
+                                Protection against typhoid fever
+                            </div>
+                            <span class="vaccine-age">2 years onwards</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Vaccination Schedule - Newborn to 12 Years</div>
+        </div>
+        
+        <!-- Screen 4: Vaccination Schedule - Adolescent (12-18 Years) -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header">
+                    <div class="header-title">टीकाकरण अनुसूची</div>
+                    <div class="header-subtitle">Vaccination Schedule</div>
+                </div>
+                
+                <div class="tab-navigation">
+                    <button class="tab-button">Newborn-12 Yrs</button>
+                    <button class="tab-button active">12-18 Years</button>
+                    <button class="tab-button">Adult Women</button>
+                </div>
+                
+                <div class="content-area">
+                    <div class="vaccination-card">
+                        <div class="vaccination-header">
+                            👧 Adolescent Girls (12-18 Years)
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">HPV Vaccine (Human Papillomavirus)</div>
+                            <div class="vaccine-details">
+                                Prevents cervical cancer and genital warts. Two or three doses depending on age at first dose.
+                            </div>
+                            <span class="vaccine-age">9-14 years (2 doses) or 15+ years (3 doses)</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Tdap Booster</div>
+                            <div class="vaccine-details">
+                                Tetanus, diphtheria, and pertussis booster
+                            </div>
+                            <span class="vaccine-age">11-12 years</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Meningococcal Vaccine</div>
+                            <div class="vaccine-details">
+                                Protection against meningitis
+                            </div>
+                            <span class="vaccine-age">11-12 years, booster at 16</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Hepatitis A</div>
+                            <div class="vaccine-details">
+                                Protects against Hepatitis A virus
+                            </div>
+                            <span class="vaccine-age">12-23 months (2 doses)</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Influenza (Flu) Vaccine</div>
+                            <div class="vaccine-details">
+                                Annual protection against seasonal flu
+                            </div>
+                            <span class="vaccine-age">Annually</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 20px; padding: 15px; background: #FFF3E0; border-radius: 12px; border-left: 4px solid #FF9800;">
+                        <div style="font-weight: 600; color: #E65100; margin-bottom: 8px;">
+                            ⚠️ Important Note
+                        </div>
+                        <div style="font-size: 13px; color: #555; line-height: 1.5;">
+                            HPV vaccine is most effective when given before becoming sexually active. Consult your healthcare provider for personalized recommendations.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Vaccination Schedule - Adolescent (12-18 Years)</div>
+        </div>
+        
+        <!-- Screen 5: Vaccination Schedule - Adult Women -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header">
+                    <div class="header-title">टीकाकरण अनुसूची</div>
+                    <div class="header-subtitle">Vaccination Schedule</div>
+                </div>
+                
+                <div class="tab-navigation">
+                    <button class="tab-button">Newborn-12 Yrs</button>
+                    <button class="tab-button">12-18 Years</button>
+                    <button class="tab-button active">Adult Women</button>
+                </div>
+                
+                <div class="content-area">
+                    <div class="vaccination-card">
+                        <div class="vaccination-header">
+                            👩 Adult Women (19+ Years)
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Tetanus-Diphtheria (Td/Tdap)</div>
+                            <div class="vaccine-details">
+                                Booster every 10 years. Tdap recommended once, especially before pregnancy.
+                            </div>
+                            <span class="vaccine-age">Every 10 years</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">HPV Vaccine</div>
+                            <div class="vaccine-details">
+                                For women up to age 26 (in some cases up to 45) who haven't been vaccinated
+                            </div>
+                            <span class="vaccine-age">Up to age 26-45</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Influenza (Flu)</div>
+                            <div class="vaccine-details">
+                                Annual vaccination recommended for all adults
+                            </div>
+                            <span class="vaccine-age">Annually</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Pneumococcal (PCV/PPSV)</div>
+                            <div class="vaccine-details">
+                                For women with certain health conditions or age 65+
+                            </div>
+                            <span class="vaccine-age">19+ (risk factors) or 65+</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">MMR (If not immune)</div>
+                            <div class="vaccine-details">
+                                For women without evidence of immunity
+                            </div>
+                            <span class="vaccine-age">If needed</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Hepatitis A & B</div>
+                            <div class="vaccine-details">
+                                Based on risk factors and lifestyle
+                            </div>
+                            <span class="vaccine-age">As per risk assessment</span>
+                        </div>
+                        <div class="vaccination-item">
+                            <div class="vaccine-name">Shingles (Herpes Zoster)</div>
+                            <div class="vaccine-details">
+                                Recommended for women 50 years and older
+                            </div>
+                            <span class="vaccine-age">50+ years</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 20px; padding: 15px; background: #E8F5E9; border-radius: 12px; border-left: 4px solid #4CAF50;">
+                        <div style="font-weight: 600; color: #2E7D32; margin-bottom: 8px;">
+                            🤰 Pregnancy Considerations
+                        </div>
+                        <div style="font-size: 13px; color: #555; line-height: 1.5;">
+                            Tdap vaccine is recommended during each pregnancy (27-36 weeks). Flu vaccine is safe during any trimester. Avoid live vaccines during pregnancy.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Vaccination Schedule - Adult Women</div>
+        </div>
+        
+        <!-- Screen 6: Vaccination Tracking Flow - Step 1 -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">मेरा टीकाकरण</div>
+                    <div class="header-subtitle">My Vaccination Tracker</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="tracking-flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Select Age Group</div>
+                        <div class="step-description">
+                            Choose the appropriate age category to view relevant vaccinations
+                        </div>
+                        
+                        <div style="margin-top: 15px;">
+                            <div class="checkbox-item">
+                                <div class="custom-checkbox">✓</div>
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; font-size: 14px;">Child (0-12 years)</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="custom-checkbox"></div>
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; font-size: 14px;">Adolescent (12-18 years)</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="custom-checkbox"></div>
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; font-size: 14px;">Adult (19+ years)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-connector"></div>
+                    
+                    <div class="tracking-flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Enter Basic Information</div>
+                        <div class="step-description">
+                            Provide details for personalized tracking
+                        </div>
+                        
+                        <input type="text" class="input-field" placeholder="Full Name / पूरा नाम">
+                        <input type="date" class="input-field" placeholder="Date of Birth / जन्म तिथि">
+                    </div>
+                    
+                    <div class="flow-connector"></div>
+                    
+                    <div class="tracking-flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Review Vaccination List</div>
+                        <div class="step-description">
+                            See all recommended vaccines for your age group
+                        </div>
+                    </div>
+                    
+                    <button class="action-button">
+                        Continue to Vaccination List →
+                    </button>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Vaccination Tracking Flow - Setup</div>
+        </div>
+        
+        <!-- Screen 7: Vaccination Tracking Flow - Mark Completed -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">टीकाकरण रिकॉर्ड</div>
+                    <div class="header-subtitle">Update Vaccination Records</div>
+                </div>
+                
+                <div class="content-area">
+                    <div style="margin: 20px; padding: 15px; background: #E3F2FD; border-radius: 12px; border-left: 4px solid #2196F3;">
+                        <div style="font-weight: 600; color: #1565C0; margin-bottom: 8px;">
+                            📋 How to Update Your Records
+                        </div>
+                        <div style="font-size: 13px; color: #555; line-height: 1.5;">
+                            Mark vaccines as completed when you receive them. Add dates and notes for your records.
+                        </div>
+                    </div>
+                    
+                    <div class="vaccination-card">
+                        <div class="vaccination-header">
+                            Your Vaccination Checklist
+                        </div>
+                        <div class="vaccination-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="flex: 1;">
+                                    <div class="vaccine-name">HPV Vaccine (Dose 1)</div>
+                                    <span class="vaccine-age">Due: Age 11-12</span>
+                                </div>
+                                <div class="custom-checkbox checked">✓</div>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 12px; color: #4CAF50;">
+                                ✓ Completed on: 15 Jan 2024
+                            </div>
+                        </div>
+                        <div class="vaccination-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="flex: 1;">
+                                    <div class="vaccine-name">HPV Vaccine (Dose 2)</div>
+                                    <span class="vaccine-age">Due: 6 months after dose 1</span>
+                                </div>
+                                <div class="custom-checkbox"></div>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <input type="date" class="input-field" placeholder="Select completion date">
+                            </div>
+                        </div>
+                        <div class="vaccination-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="flex: 1;">
+                                    <div class="vaccine-name">Tdap Booster</div>
+                                    <span class="vaccine-age">Due: Age 11-12</span>
+                                </div>
+                                <div class="custom-checkbox"></div>
+                            </div>
+                        </div>
+                        <div class="vaccination-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="flex: 1;">
+                                    <div class="vaccine-name">Meningococcal</div>
+                                    <span class="vaccine-age">Due: Age 11-12</span>
+                                </div>
+                                <div class="custom-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 20px;">
+                        <div style="font-size: 14px; font-weight: 600; color: #333; margin-bottom: 10px;">
+                            Add Notes (Optional)
+                        </div>
+                        <textarea class="input-field" rows="3" placeholder="Any reactions or notes about the vaccination..."></textarea>
+                    </div>
+                    
+                    <button class="action-button">
+                        Save Vaccination Record
+                    </button>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Update Vaccination Records</div>
+        </div>
+        
+        <!-- Screen 8: FAQ Section -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header">
+                    <div class="header-title">सामान्य प्रश्न</div>
+                    <div class="header-subtitle">Frequently Asked Questions</div>
+                </div>
+                
+                <div class="search-bar">
+                    <span>🔍</span>
+                    <input type="text" placeholder="Search questions...">
+                </div>
+                
+                <div class="content-area">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>What is a normal menstrual cycle?</span>
+                        </div>
+                        <div class="faq-answer">
+                            A normal menstrual cycle lasts 21-35 days, with bleeding lasting 2-7 days. The cycle is counted from the first day of one period to the first day of the next. Variations are common and can be affected by stress, diet, and health conditions.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>How do I know if my period is irregular?</span>
+                        </div>
+                        <div class="faq-answer">
+                            Your period is considered irregular if: cycles are shorter than 21 days or longer than 35 days, you miss periods, bleeding is very heavy or very light, or periods last longer than 7 days. Track your cycle for 3 months to identify patterns.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>What are signs of a UTI (urinary tract infection)?</span>
+                        </div>
+                        <div class="faq-answer">
+                            Common UTI symptoms include: burning sensation during urination, frequent urge to urinate, cloudy or strong-smelling urine, pelvic pain, and sometimes fever. Drink plenty of water and see a doctor for antibiotics if symptoms persist.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>How can I manage PCOS symptoms naturally?</span>
+                        </div>
+                        <div class="faq-answer">
+                            Natural management includes: maintaining healthy weight through diet and exercise, eating low-glycemic foods, reducing stress, getting adequate sleep, and staying physically active. However, always consult a doctor for proper diagnosis and treatment plan.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>What is the difference between PMS and PMDD?</span>
+                        </div>
+                        <div class="faq-answer">
+                            PMS (Premenstrual Syndrome) causes mild to moderate symptoms like mood changes, bloating, and fatigue. PMDD (Premenstrual Dysphoric Disorder) is more severe, causing intense mood swings, depression, and anxiety that interfere with daily life. PMDD requires medical treatment.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>How often should I check my breast health?</span>
+                        </div>
+                        <div class="faq-answer">
+                            Perform monthly breast self-examinations a few days after your period ends. Look for lumps, changes in size or shape, skin changes, or nipple discharge. Women over 40 should get annual mammograms, or earlier if there's family history.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>❓</span>
+                            <span>What are the warning signs of endometriosis?</span>
+                        </div>
+                        <div class="faq-answer">
+                            Key signs include: painful periods, chronic pelvic pain, pain during intercourse, painful bowel movements or urination during periods, excessive bleeding, and infertility. Early diagnosis and treatment can help manage symptoms effectively.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">FAQ Section - Women's Health</div>
+        </div>
+        
+        <!-- Screen 9: When to Visit Gynecologist for Screening -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">स्क्रीनिंग गाइड</div>
+                    <div class="header-subtitle">When to Visit a Gynecologist</div>
+                </div>
+                
+                <div class="content-area">
+                    <div style="margin: 20px; padding: 15px; background: #FCE4EC; border-radius: 12px; border-left: 4px solid #E91E63;">
+                        <div style="font-weight: 600; color: #C2185B; margin-bottom: 8px;">
+                            🏥 Regular Screening is Important
+                        </div>
+                        <div style="font-size: 13px; color: #555; line-height: 1.5;">
+                            Regular gynecological check-ups help detect potential health issues early. Don't wait for symptoms to appear.
+                        </div>
+                    </div>
+                    
+                    <div class="screening-card">
+                        <div class="screening-title">Annual Well-Woman Exam</div>
+                        <div class="screening-description">
+                            Every woman should have an annual check-up including pelvic exam, breast exam, and health discussion.
+                        </div>
+                        <span class="screening-age">Starting Age: 13-15 years</span>
+                    </div>
+                    
+                    <div class="screening-card">
+                        <div class="screening-title">Pap Smear (Cervical Cancer Screening)</div>
+                        <div class="screening-description">
+                            Tests for cervical cancer and pre-cancerous changes. Essential for early detection.
+                        </div>
+                        <span class="screening-age">Age: 21-65 years, Every 3 years</span>
+                    </div>
+                    
+                    <div class="screening-card">
+                        <div class="screening-title">HPV Testing</div>
+                        <div class="screening-description">
+                            Human Papillomavirus test, often done with Pap smear for women over 30.
+                        </div>
+                        <span class="screening-age">Age: 30+ years, Every 5 years</span>
+                    </div>
+                    
+                    <div class="screening-card">
+                        <div class="screening-title">STI/STD Screening</div>
+                        <div class="screening-description">
+                            Testing for sexually transmitted infections if sexually active, changing partners, or planning pregnancy.
+                        </div>
+                        <span class="screening-age">As recommended by doctor</span>
+                    </div>
+                    
+                    <div class="screening-card">
+                        <div class="screening-title">Breast Examination</div>
+                        <div class="screening-description">
+                            Clinical breast exam by healthcare provider to check for lumps or abnormalities.
+                        </div>
+                        <span class="screening-age">Annual from age 20, Monthly self-exam</span>
+                    </div>
+                    
+                    <div class="screening-card">
+                        <div class="screening-title">Mammogram</div>
+                        <div class="screening-description">
+                            X-ray screening for breast cancer detection. Earlier if family history exists.
+                        </div>
+                        <span class="screening-age">Age: 40+ years, Every 1-2 years</span>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <div class="section-title">
+                            <div class="section-icon">🚨</div>
+                            Visit Immediately If You Experience:
+                        </div>
+                        <ul class="detail-list">
+                            <li>Unusual vaginal bleeding or spotting between periods</li>
+                            <li>Severe menstrual cramps or pelvic pain</li>
+                            <li>Abnormal vaginal discharge with odor or color changes</li>
+                            <li>Pain during sexual intercourse</li>
+                            <li>Missed periods (if sexually active) or irregular cycles</li>
+                            <li>Breast lumps or nipple discharge</li>
+                            <li>Severe PMS symptoms affecting daily life</li>
+                            <li>Symptoms of infection (itching, burning, fever)</li>
+                            <li>Planning pregnancy or contraception consultation</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 20px; padding: 15px; background: #E8F5E9; border-radius: 12px; border-left: 4px solid #4CAF50;">
+                        <div style="font-weight: 600; color: #2E7D32; margin-bottom: 8px;">
+                            💚 Prevention is Better Than Cure
+                        </div>
+                        <div style="font-size: 13px; color: #555; line-height: 1.5;">
+                            Regular screenings can detect problems early when they're most treatable. Don't skip your annual check-ups even if you feel healthy.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏥</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">💉</div>
+                        <div>Vaccines</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">❓</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Gynecologist Screening Guide</div>
+        </div>
+        
+    </div>
+</body>
+</html>

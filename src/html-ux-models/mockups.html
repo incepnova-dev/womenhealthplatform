@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Complete App Mockups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E1 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .screens-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+            gap: 40px;
+            max-width: 1800px;
+            width: 100%;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+            justify-self: center;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+            border-radius: 28px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        .phone-screen::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .phone-screen::-webkit-scrollbar-thumb {
+            background: rgba(233, 30, 99, 0.3);
+            border-radius: 2px;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .status-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        /* Common Elements */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 44px;
+            background: linear-gradient(180deg, #FFF5F7 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            z-index: 99;
+        }
+        
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: rgba(255, 182, 193, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-right: 40px;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #E91E63;
+            border: 2px solid #E91E63;
+        }
+        
+        /* Terms & Conditions Screen */
+        .terms-screen {
+            padding: 20px;
+            padding-bottom: 100px;
+        }
+        
+        .terms-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 20px auto;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+        }
+        
+        .terms-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .terms-subtitle {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .terms-content {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .terms-section {
+            margin-bottom: 24px;
+        }
+        
+        .terms-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #E91E63;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .terms-section-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .terms-list {
+            padding-left: 20px;
+            margin: 12px 0;
+        }
+        
+        .terms-list li {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        
+        .acceptance-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .acceptance-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid #E0E0E0;
+            transition: all 0.3s ease;
+        }
+        
+        .acceptance-card.active {
+            border-color: #E91E63;
+            background: linear-gradient(135deg, #FFF5F7, #FFFFFF);
+        }
+        
+        .acceptance-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+            border: 2px solid #E91E63;
+            appearance: none;
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .checkbox:checked {
+            background: #E91E63;
+        }
+        
+        .checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .acceptance-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .acceptance-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .acceptance-link {
+            color: #E91E63;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        
+        .button-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.95) 80%, transparent 100%);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Landing Page / Home Screen */
+        .home-screen {
+            padding-bottom: 80px;
+        }
+        
+        .home-header {
+            background: linear-gradient(135deg, #E91E63, #FF4081);
+            padding: 20px;
+            padding-top: 10px;
+            border-radius: 0 0 30px 30px;
+            color: white;
+        }
+        
+        .welcome-section {
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+        
+        .welcome-name {
+            font-size: 28px;
+            font-weight: 800;
+        }
+        
+        .search-bar {
+            background: white;
+            border-radius: 20px;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-bar input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            color: #333;
+        }
+        
+        .search-icon {
+            font-size: 20px;
+            color: #E91E63;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .quick-action-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 16px 8px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-action-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .quick-action-icon {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+        
+        .quick-action-text {
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        .content-section {
+            padding: 24px 20px;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #333;
+        }
+        
+        .see-all {
+            font-size: 14px;
+            color: #E91E63;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Product Cards */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(135deg, #FFE4EC, #FFF5F7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            position: relative;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #FF4081;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .product-info {
+            padding: 12px;
+        }
+        
+        .product-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .product-brand {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        
+        .product-pricing {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: 800;
+            color: #E91E63;
+        }
+        
+        .product-original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+        }
+        
+        .platform-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        
+        .platform-tag {
+            font-size: 10px;
+            padding: 4px 8px;
+            border-radius: 8px;
+            background: #F5F5F5;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        /* Insurance Cards */
+        .insurance-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .insurance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .insurance-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .insurance-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .insurance-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 28px;
+            background: linear-gradient(135deg, #FFE4EC, #FFF5F7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        
+        .insurance-title {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .insurance-provider {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .insurance-features {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .insurance-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #555;
+        }
+        
+        .feature-check {
+            color: #4CAF50;
+        }
+        
+        .insurance-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 12px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .insurance-amount {
+            font-size: 20px;
+            font-weight: 800;
+            color: #E91E63;
+        }
+        
+        .insurance-period {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        /* Health Conditions List */
+        .conditions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .condition-card {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .condition-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .condition-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .condition-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #FFE4EC, #FFF5F7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        
+        .condition-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .condition-snippet {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .condition-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        
+        .condition-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .tag-symptom {
+            background: #FFE4EC;
+            color: #E91E63;
+        }
+        
+        .tag-prevention {
+            background: #E8F5E9;
+            color: #4CAF50;
+        }
+        
+        .tag-cause {
+            background: #FFF3E0;
+            color: #FF9800;
+        }
+        
+        /* Hospital Cards */
+        .hospital-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .hospital-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hospital-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .hospital-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hospital-location {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .hospital-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .hospital-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #FF9800;
+        }
+        
+        .hospital-distance {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .hospital-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .action-primary {
+            background: #E91E63;
+            color: white;
+        }
+        
+        .action-secondary {
+            background: #F5F5F5;
+            color: #666;
+        }
+        
+        /* Doctor Cards */
+        .doctor-list {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+        
+        .doctor-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            min-width: 280px;
+            transition: all 0.3s ease;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .doctor-header {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .doctor-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, #FFE4EC, #FFF5F7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .doctor-info {
+            flex: 1;
+        }
+        
+        .doctor-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .doctor-specialty {
+            font-size: 13px;
+            color: #E91E63;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .doctor-experience {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .doctor-stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .stat-value {
+            font-weight: 700;
+            color: #333;
+        }
+        
+        /* Screening Guidelines */
+        .screening-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .screening-card {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            border-left: 4px solid #E91E63;
+        }
+        
+        .screening-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 6px;
+        }
+        
+        .screening-age {
+            font-size: 12px;
+            color: #E91E63;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .screening-frequency {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        /* Vaccination Cards */
+        .vaccination-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .vaccination-card {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
+        
+        .vaccination-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .vaccination-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .vaccination-purpose {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .vaccination-status {
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        
+        .status-due {
+            background: #FFE4EC;
+            color: #E91E63;
+        }
+        
+        .status-upcoming {
+            background: #FFF3E0;
+            color: #FF9800;
+        }
+        
+        .status-completed {
+            background: #E8F5E9;
+            color: #4CAF50;
+        }
+        
+        .vaccination-date {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        /* Safe Parking Cards */
+        .parking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .parking-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .parking-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #4CAF50, #00E676);
+        }
+        
+        .parking-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .parking-address {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+        
+        .parking-features {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .parking-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        
+        .parking-distance-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #F0F0F0;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+            color: #999;
+        }
+        
+        .nav-item.active .nav-icon {
+            color: #E91E63;
+        }
+        
+        .nav-label {
+            font-size: 11px;
+            color: #999;
+            font-weight: 600;
+        }
+        
+        .nav-item.active .nav-label {
+            color: #E91E63;
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .screens-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="screens-container">
+        
+        <!-- Screen 1: Terms & Conditions -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span>11:30 AM</span>
+                    <div class="status-icons">
+                        <span>📶</span>
+                        <span>🔋 100%</span>
+                    </div>
+                </div>
+                
+                <div class="header">
+                    <button class="back-btn">←</button>
+                    <div class="header-title">Terms & Privacy</div>
+                </div>
+                
+                <div class="terms-screen">
+                    <div class="terms-icon">📋</div>
+                    <div class="terms-title">Terms of Service</div>
+                    <div class="terms-subtitle">Please review and accept our terms to continue</div>
+                    
+                    <div class="terms-content">
+                        <div class="terms-section">
+                            <div class="terms-section-title">🔒 Privacy & Data Protection</div>
+                            <div class="terms-section-text">
+                                Your health data is encrypted and securely stored. We never share your personal information without explicit consent.
+                            </div>
+                            <ul class="terms-list">
+                                <li>End-to-end encryption for all communications</li>
+                                <li>Anonymous browsing in community forums</li>
+                                <li>Complete control over data sharing</li>
+                                <li>HIPAA compliant data storage</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="terms-section">
+                            <div class="terms-section-title">💬 Community Guidelines</div>
+                            <div class="terms-section-text">
+                                Maintain a respectful, supportive environment for all members:
+                            </div>
+                            <ul class="terms-list">
+                                <li>No harassment or discrimination</li>
+                                <li>Respect privacy and confidentiality</li>
+                                <li>Share experiences, not medical advice</li>
+                                <li>Report inappropriate content</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="terms-section">
+                            <div class="terms-section-title">⚕️ Medical Disclaimer</div>
+                            <div class="terms-section-text">
+                                This app provides health information and connects you with medical professionals, but does not replace professional medical advice, diagnosis, or treatment.
+                            </div>
+                        </div>
+                        
+                        <div class="terms-section">
+                            <div class="terms-section-title">🔔 Notifications & Alerts</div>
+                            <div class="terms-section-text">
+                                We'll send you important health reminders, vaccination alerts, and screening notifications. You can customize these in settings.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="acceptance-cards">
+                        <div class="acceptance-card active">
+                            <div class="acceptance-header">
+                                <input type="checkbox" class="checkbox" checked>
+                                <div>
+                                    <div class="acceptance-title">I accept the Terms of Service</div>
+                                    <div class="acceptance-text">
+                                        I have read and agree to the <a href="#" class="acceptance-link">Terms of Service</a> and understand the guidelines for using this platform.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="acceptance-card active">
+                            <div class="acceptance-header">
+                                <input type="checkbox" class="checkbox" checked>
+                                <div>
+                                    <div class="acceptance-title">I accept the Privacy Policy</div>
+                                    <div class="acceptance-text">
+                                        I consent to the collection and processing of my health data as described in the <a href="#" class="acceptance-link">Privacy Policy</a> and understand my data rights.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="acceptance-card">
+                            <div class="acceptance-header">
+                                <input type="checkbox" class="checkbox">
+                                <div>
+                                    <div class="acceptance-title">Send me health tips & updates (Optional)</div>
+                                    <div class="acceptance-text">
+                                        Receive personalized health tips, wellness articles, and community updates via email.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="button-container">
+                        <button class="btn btn-primary">Accept & Continue</button>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">1. Terms & Privacy Acceptance</div>
+        </div>
+        
+        <!-- Screen 2: Home / Landing Page -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="home-screen">
+                    <div class="status-bar">
+                        <span>11:30 AM</span>
+                        <div class="status-icons">
+                            <span>📶</span>
+                            <span>🔋 100%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="home-header">
+                        <div class="welcome-section">
+                            <div class="welcome-text">Welcome back,</div>
+                            <div class="welcome-name">Priya 👋</div>
+                        </div>
+                        
+                        <div class="search-bar">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" placeholder="Search products, conditions, doctors...">
+                        </div>
+                        
+                        <div class="quick-actions">
+                            <div class="quick-action-btn">
+                                <div class="quick-action-icon">🛍️</div>
+                                <div class="quick-action-text">Shop</div>
+                            </div>
+                            <div class="quick-action-btn">
+                                <div class="quick-action-icon">🏥</div>
+                                <div class="quick-action-text">Hospitals</div>
+                            </div>
+                            <div class="quick-action-btn">
+                                <div class="quick-action-icon">👩‍⚕️</div>
+                                <div class="quick-action-text">Doctors</div>
+                            </div>
+                            <div class="quick-action-btn">
+                                <div class="quick-action-icon">📅</div>
+                                <div class="quick-action-text">Calendar</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Section -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <div class="section-title">Healthcare Products</div>
+                            <div class="see-all">See All →</div>
+                        </div>
+                        
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    🧴
+                                    <div class="discount-badge">30% OFF</div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Prenatal Vitamins</div>
+                                    <div class="product-brand">HealthPlus</div>
+                                    <div class="product-pricing">
+                                        <div class="product-price">₹349</div>
+                                        <div class="product-original-price">₹499</div>
+                                    </div>
+                                    <div class="platform-tags">
+                                        <div class="platform-tag">🛒 Amazon</div>
+                                        <div class="platform-tag">💊 1mg</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    🩺
+                                    <div class="discount-badge">25% OFF</div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Menstrual Pain Relief</div>
+                                    <div class="product-brand">WellnessRx</div>
+                                    <div class="product-pricing">
+                                        <div class="product-price">₹225</div>
+                                        <div class="product-original-price">₹300</div>
+                                    </div>
+                                    <div class="platform-tags">
+                                        <div class="platform-tag">📦 Flipkart</div>
+                                        <div class="platform-tag">💊 Netmeds</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">🧘‍♀️</div>
+                                <div class="product-info">
+                                    <div class="product-name">Yoga Mat Premium</div>
+                                    <div class="product-brand">FitLife</div>
+                                    <div class="product-pricing">
+                                        <div class="product-price">₹799</div>
+                                        <div class="product-original-price">₹999</div>
+                                    </div>
+                                    <div class="platform-tags">
+                                        <div class="platform-tag">🛒 Amazon</div>
+                                        <div class="platform-tag">🏃 Decathlon</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    💊
+                                    <div class="discount-badge">40% OFF</div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Iron Supplements</div>
+                                    <div class="product-brand">NutriCare</div>
+                                    <div class="product-pricing">
+                                        <div class="product-price">₹299</div>
+                                        <div class="product-original-price">₹499</div>
+                                    </div>
+                                    <div class="platform-tags">
+                                        <div class="platform-tag">💊 PharmEasy</div>
+                                        <div class="platform-tag">💊 Apollo</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Insurance Section -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <div class="section-title">Insurance Plans</div>
+                            <div class="see-all">See All →</div>
+                        </div>
+                        
+                        <div class="insurance-list">
+                            <div class="insurance-card">
+                                <div class="insurance-header">
+                                    <div class="insurance-icon">🛡️</div>
+                                    <div>
+                                        <div class="insurance-title">Women's Health Shield</div>
+                                        <div class="insurance-provider">Star Health Insurance</div>
+                                    </div>
+                                </div>
+                                <div class="insurance-features">
+                                    <div class="insurance-feature">
+                                        <span class="feature-check">✓</span>
+                                        <span>Maternity coverage up to ₹2L</span>
+                                    </div>
+                                    <div class="insurance-feature">
+                                        <span class="feature-check">✓</span>
+                                        <span>Cancer treatment covered</span>
+                                    </div>
+                                    <div class="insurance-feature">
+                                        <span class="feature-check">✓</span>
+                                        <span>Annual health checkup included</span>
+                                    </div>
+                                </div>
+                                <div class="insurance-price">
+                                    <div>
+                                        <div class="insurance-amount">₹8,999</div>
+                                        <div class="insurance-period">per year</div>
+                                    </div>
+                                    <button class="btn btn-secondary" style="width: auto; height: 40px; padding: 0 20px; font-size: 14px;">View Details</button>
+                                </div>
+                            </div>
+                            
+                            <div class="insurance-card">
+                                <div class="insurance-header">
+                                    <div class="insurance-icon">💝</div>
+                                    <div>
+                                        <div class="insurance-title">Maternity Care Plus</div>
+                                        <div class="insurance-provider">ICICI Lombard</div>
+                                    </div>
+                                </div>
+                                <div class="insurance-features">
+                                    <div class="insurance-feature">
+                                        <span class="feature-check">✓</span>
+                                        <span>Pre & post natal coverage</span>
+                                    </div>
+                                    <div class="insurance-feature">
+                                        <span class="feature-check">✓</span>
+                                        <span>Newborn baby cover (90 days)</span>
+                                    </div>
+                                    <div class="insurance-feature">
+                                        <span class="feature-check">✓</span>
+                                        <span>Ambulance charges covered</span>
+                                    </div>
+                                </div>
+                                <div class="insurance-price">
+                                    <div>
+                                        <div class="insurance-amount">₹12,499</div>
+                                        <div class="insurance-period">per year</div>
+                                    </div>
+                                    <button class="btn btn-secondary" style="width: auto; height: 40px; padding: 0 20px; font-size: 14px;">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Conditions Section -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <div class="section-title">Health Conditions Guide</div>
+                            <div class="see-all">View All 20 →</div>
+                        </div>
+                        
+                        <div class="conditions-list">
+                            <div class="condition-card">
+                                <div class="condition-header">
+                                    <div class="condition-icon">🩺</div>
+                                    <div class="condition-name">Polycystic Ovary Syndrome (PCOS)</div>
+                                </div>
+                                <div class="condition-snippet">
+                                    Hormonal disorder causing enlarged ovaries with small cysts. Affects 1 in 10 women of childbearing age.
+                                </div>
+                                <div class="condition-tags">
+                                    <div class="condition-tag tag-symptom">Irregular periods</div>
+                                    <div class="condition-tag tag-prevention">Lifestyle changes</div>
+                                    <div class="condition-tag tag-cause">Hormonal imbalance</div>
+                                </div>
+                            </div>
+                            
+                            <div class="condition-card">
+                                <div class="condition-header">
+                                    <div class="condition-icon">🎀</div>
+                                    <div class="condition-name">Breast Cancer</div>
+                                </div>
+                                <div class="condition-snippet">
+                                    Cancer that forms in breast cells. Early detection through regular screening significantly improves outcomes.
+                                </div>
+                                <div class="condition-tags">
+                                    <div class="condition-tag tag-symptom">Breast lump</div>
+                                    <div class="condition-tag tag-prevention">Regular screening</div>
+                                    <div class="condition-tag tag-cause">Genetic factors</div>
+                                </div>
+                            </div>
+                            
+                            <div class="condition-card">
+                                <div class="condition-header">
+                                    <div class="condition-icon">🤰</div>
+                                    <div class="condition-name">Endometriosis</div>
+                                </div>
+                                <div class="condition-snippet">
+                                    Tissue similar to uterine lining grows outside the uterus, causing pain and fertility issues.
+                                </div>
+                                <div class="condition-tags">
+                                    <div class="condition-tag tag-symptom">Pelvic pain</div>
+                                    <div class="condition-tag tag-prevention">Early diagnosis</div>
+                                    <div class="condition-tag tag-cause">Unknown origin</div>
+                                </div>
+                            </div>
+                            
+                            <div class="condition-card">
+                                <div class="condition-header">
+                                    <div class="condition-icon">💔</div>
+                                    <div class="condition-name">Osteoporosis</div>
+                                </div>
+                                <div class="condition-snippet">
+                                    Bone disease that weakens bones, making them fragile. More common in postmenopausal women.
+                                </div>
+                                <div class="condition-tags">
+                                    <div class="condition-tag tag-symptom">Bone fractures</div>
+                                    <div class="condition-tag tag-prevention">Calcium & Vit D</div>
+                                    <div class="condition-tag tag-cause">Low bone density</div>
+                                </div>
+                            </div>
+                            
+                            <div class="condition-card">
+                                <div class="condition-header">
+                                    <div class="condition-icon">🔴</div>
+                                    <div class="condition-name">Anemia</div>
+                                </div>
+                                <div class="condition-snippet">
+                                    Lack of healthy red blood cells to carry adequate oxygen. Very common in women due to menstruation.
+                                </div>
+                                <div class="condition-tags">
+                                    <div class="condition-tag tag-symptom">Fatigue</div>
+                                    <div class="condition-tag tag-prevention">Iron-rich diet</div>
+                                    <div class="condition-tag tag-cause">Iron deficiency</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="height: 80px;"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item active">
+                        <div class="nav-icon">🏠</div>
+                        <div class="nav-label">Home</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">💬</div>
+                        <div class="nav-label">Community</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">📊</div>
+                        <div class="nav-label">Health</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div class="nav-label">Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">2. Landing Page - Home</div>
+        </div>
+        
+        <!-- Screen 3: Hospitals & Doctors -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span>11:30 AM</span>
+                    <div class="status-icons">
+                        <span>📶</span>
+                        <span>🔋 100%</span>
+                    </div>
+                </div>
+                
+                <div class="header">
+                    <button class="back-btn">←</button>
+                    <div class="header-title">Hospitals & Doctors</div>
+                </div>
+                
+                <div style="padding: 20px; padding-bottom: 100px;">
+                    <!-- Hospitals Section -->
+                    <div class="section-header">
+                        <div class="section-title">Nearby Hospitals</div>
+                        <div class="see-all">View All →</div>
+                    </div>
+                    
+                    <div class="hospital-list">
+                        <div class="hospital-card">
+                            <div class="hospital-name">
+                                🏥 Apollo Women's Hospital
+                            </div>
+                            <div class="hospital-location">
+                                📍 Jubilee Hills, Hyderabad
+                            </div>
+                            <div class="hospital-info-row">
+                                <div class="hospital-rating">
+                                    ⭐ 4.8 <span style="color: #999; font-weight: 400;">(2.3k reviews)</span>
+                                </div>
+                                <div class="hospital-distance">📍 3.2 km away</div>
+                            </div>
+                            <div class="hospital-actions">
+                                <button class="action-btn action-primary">📞 Call Now</button>
+                                <button class="action-btn action-secondary">🗺️ Directions</button>
+                                <button class="action-btn action-secondary">ℹ️ Info</button>
+                            </div>
+                        </div>
+                        
+                        <div class="hospital-card">
+                            <div class="hospital-name">
+                                🏥 Cloudnine Hospital
+                            </div>
+                            <div class="hospital-location">
+                                📍 Banjara Hills, Hyderabad
+                            </div>
+                            <div class="hospital-info-row">
+                                <div class="hospital-rating">
+                                    ⭐ 4.7 <span style="color: #999; font-weight: 400;">(1.8k reviews)</span>
+                                </div>
+                                <div class="hospital-distance">📍 4.5 km away</div>
+                            </div>
+                            <div class="hospital-actions">
+                                <button class="action-btn action-primary">📞 Call Now</button>
+                                <button class="action-btn action-secondary">🗺️ Directions</button>
+                                <button class="action-btn action-secondary">ℹ️ Info</button>
+                            </div>
+                        </div>
+                        
+                        <div class="hospital-card">
+                            <div class="hospital-name">
+                                🏥 Rainbow Children's Hospital
+                            </div>
+                            <div class="hospital-location">
+                                📍 Kondapur, Hyderabad
+                            </div>
+                            <div class="hospital-info-row">
+                                <div class="hospital-rating">
+                                    ⭐ 4.6 <span style="color: #999; font-weight: 400;">(1.5k reviews)</span>
+                                </div>
+                                <div class="hospital-distance">📍 5.8 km away</div>
+                            </div>
+                            <div class="hospital-actions">
+                                <button class="action-btn action-primary">📞 Call Now</button>
+                                <button class="action-btn action-secondary">🗺️ Directions</button>
+                                <button class="action-btn action-secondary">ℹ️ Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gynecologists Section -->
+                    <div class="section-header" style="margin-top: 32px;">
+                        <div class="section-title">Top Gynecologists</div>
+                        <div class="see-all">View All →</div>
+                    </div>
+                    
+                    <div class="doctor-list">
+                        <div class="doctor-card">
+                            <div class="doctor-header">
+                                <div class="doctor-avatar">👩‍⚕️</div>
+                                <div class="doctor-info">
+                                    <div class="doctor-name">Dr. Anitha Reddy</div>
+                                    <div class="doctor-specialty">Gynecologist & Obstetrician</div>
+                                    <div class="doctor-experience">18 years experience</div>
+                                </div>
+                            </div>
+                            <div class="doctor-stats">
+                                <div class="stat-item">
+                                    ⭐ <span class="stat-value">4.9</span>
+                                </div>
+                                <div class="stat-item">
+                                    👥 <span class="stat-value">5000+</span> patients
+                                </div>
+                                <div class="stat-item">
+                                    💰 <span class="stat-value">₹800</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="height: 44px;">📅 Book Appointment</button>
+                        </div>
+                        
+                        <div class="doctor-card">
+                            <div class="doctor-header">
+                                <div class="doctor-avatar">👩‍⚕️</div>
+                                <div class="doctor-info">
+                                    <div class="doctor-name">Dr. Priya Sharma</div>
+                                    <div class="doctor-specialty">Fertility Specialist</div>
+                                    <div class="doctor-experience">15 years experience</div>
+                                </div>
+                            </div>
+                            <div class="doctor-stats">
+                                <div class="stat-item">
+                                    ⭐ <span class="stat-value">4.8</span>
+                                </div>
+                                <div class="stat-item">
+                                    👥 <span class="stat-value">4200+</span> patients
+                                </div>
+                                <div class="stat-item">
+                                    💰 <span class="stat-value">₹1000</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="height: 44px;">📅 Book Appointment</button>
+                        </div>
+                        
+                        <div class="doctor-card">
+                            <div class="doctor-header">
+                                <div class="doctor-avatar">👩‍⚕️</div>
+                                <div class="doctor-info">
+                                    <div class="doctor-name">Dr. Meera Patel</div>
+                                    <div class="doctor-specialty">Maternal-Fetal Medicine</div>
+                                    <div class="doctor-experience">20 years experience</div>
+                                </div>
+                            </div>
+                            <div class="doctor-stats">
+                                <div class="stat-item">
+                                    ⭐ <span class="stat-value">4.9</span>
+                                </div>
+                                <div class="stat-item">
+                                    👥 <span class="stat-value">6500+</span> patients
+                                </div>
+                                <div class="stat-item">
+                                    💰 <span class="stat-value">₹1200</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="height: 44px;">📅 Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">3. Hospitals & Gynecologists</div>
+        </div>
+        
+        <!-- Screen 4: Screening Guidelines & Vaccinations -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span>11:30 AM</span>
+                    <div class="status-icons">
+                        <span>📶</span>
+                        <span>🔋 100%</span>
+                    </div>
+                </div>
+                
+                <div class="header">
+                    <button class="back-btn">←</button>
+                    <div class="header-title">Health Screenings</div>
+                </div>
+                
+                <div style="padding: 20px; padding-bottom: 100px;">
+                    <!-- Screening Guidelines -->
+                    <div class="section-header">
+                        <div class="section-title">Screening Guidelines</div>
+                        <div class="see-all">View All →</div>
+                    </div>
+                    
+                    <div class="screening-list">
+                        <div class="screening-card">
+                            <div class="screening-title">🎀 Mammogram (Breast Cancer)</div>
+                            <div class="screening-age">Recommended: Age 40+</div>
+                            <div class="screening-frequency">
+                                🔄 Every 1-2 years
+                            </div>
+                        </div>
+                        
+                        <div class="screening-card">
+                            <div class="screening-title">🔬 Pap Smear (Cervical Cancer)</div>
+                            <div class="screening-age">Recommended: Age 21-65</div>
+                            <div class="screening-frequency">
+                                🔄 Every 3 years
+                            </div>
+                        </div>
+                        
+                        <div class="screening-card">
+                            <div class="screening-title">🩺 Bone Density Test</div>
+                            <div class="screening-age">Recommended: Age 65+ (or earlier if at risk)</div>
+                            <div class="screening-frequency">
+                                🔄 Every 2 years
+                            </div>
+                        </div>
+                        
+                        <div class="screening-card">
+                            <div class="screening-title">🔴 Anemia Screening</div>
+                            <div class="screening-age">Recommended: All menstruating women</div>
+                            <div class="screening-frequency">
+                                🔄 Annually
+                            </div>
+                        </div>
+                        
+                        <div class="screening-card">
+                            <div class="screening-title">💉 Diabetes Screening</div>
+                            <div class="screening-age">Recommended: Age 35+</div>
+                            <div class="screening-frequency">
+                                🔄 Every 3 years
+                            </div>
+                        </div>
+                        
+                        <div class="screening-card">
+                            <div class="screening-title">❤️ Blood Pressure Check</div>
+                            <div class="screening-age">Recommended: All adults</div>
+                            <div class="screening-frequency">
+                                🔄 Every 2 years (or annually if at risk)
+                            </div>
+                        </div>
+                        
+                        <div class="screening-card">
+                            <div class="screening-title">🧬 HPV Test</div>
+                            <div class="screening-age">Recommended: Age 30-65</div>
+                            <div class="screening-frequency">
+                                🔄 Every 5 years (with Pap smear)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vaccinations -->
+                    <div class="section-header" style="margin-top: 32px;">
+                        <div class="section-title">Vaccination Schedule</div>
+                        <div class="see-all">Manage →</div>
+                    </div>
+                    
+                    <div class="vaccination-list">
+                        <div class="vaccination-card">
+                            <div class="vaccination-header">
+                                <div>
+                                    <div class="vaccination-name">💉 HPV Vaccine</div>
+                                    <div class="vaccination-purpose">Prevents cervical cancer</div>
+                                </div>
+                                <div class="vaccination-status status-due">DUE NOW</div>
+                            </div>
+                            <div class="vaccination-date">
+                                📅 2nd dose - Scheduled for Dec 30, 2025
+                            </div>
+                        </div>
+                        
+                        <div class="vaccination-card">
+                            <div class="vaccination-header">
+                                <div>
+                                    <div class="vaccination-name">💉 Flu Shot</div>
+                                    <div class="vaccination-purpose">Annual influenza protection</div>
+                                </div>
+                                <div class="vaccination-status status-upcoming">UPCOMING</div>
+                            </div>
+                            <div class="vaccination-date">
+                                📅 Due in 15 days - Jan 12, 2026
+                            </div>
+                        </div>
+                        
+                        <div class="vaccination-card">
+                            <div class="vaccination-header">
+                                <div>
+                                    <div class="vaccination-name">💉 Tetanus Booster</div>
+                                    <div class="vaccination-purpose">Tetanus-diphtheria protection</div>
+                                </div>
+                                <div class="vaccination-status status-completed">COMPLETED</div>
+                            </div>
+                            <div class="vaccination-date">
+                                ✓ Completed on Oct 15, 2025
+                            </div>
+                        </div>
+                        
+                        <div class="vaccination-card">
+                            <div class="vaccination-header">
+                                <div>
+                                    <div class="vaccination-name">💉 COVID-19 Booster</div>
+                                    <div class="vaccination-purpose">COVID-19 protection</div>
+                                </div>
+                                <div class="vaccination-status status-upcoming">UPCOMING</div>
+                            </div>
+                            <div class="vaccination-date">
+                                📅 Due in 45 days - Feb 11, 2026
+                            </div>
+                        </div>
+                        
+                        <div class="vaccination-card">
+                            <div class="vaccination-header">
+                                <div>
+                                    <div class="vaccination-name">💉 Hepatitis B</div>
+                                    <div class="vaccination-purpose">Liver disease prevention</div>
+                                </div>
+                                <div class="vaccination-status status-completed">COMPLETED</div>
+                            </div>
+                            <div class="vaccination-date">
+                                ✓ Series completed on Jun 20, 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">4. Screening Guidelines & Vaccinations</div>
+        </div>
+        
+        <!-- Screen 5: Calendar & Reminders -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span>11:30 AM</span>
+                    <div class="status-icons">
+                        <span>📶</span>
+                        <span>🔋 100%</span>
+                    </div>
+                </div>
+                
+                <div class="header">
+                    <button class="back-btn">←</button>
+                    <div class="header-title">Health Calendar</div>
+                </div>
+                
+                <div style="padding: 20px; padding-bottom: 100px;">
+                    <div style="background: white; border-radius: 20px; padding: 20px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <div style="font-size: 18px; font-weight: 700; color: #E91E63; margin-bottom: 8px;">December 2025</div>
+                            <div style="font-size: 14px; color: #666;">Track your health appointments & reminders</div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center;">
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Sun</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Mon</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Tue</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Wed</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Thu</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Fri</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #999;">Sat</div>
+                            
+                            <div style="font-size: 14px; color: #ccc;">30</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">1</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">2</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">3</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">4</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">5</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">6</div>
+                            
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">7</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">8</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">9</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">10</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">11</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px; background: #FFE4EC; color: #E91E63; font-weight: 700;">12</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">13</div>
+                            
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">14</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">15</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">16</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">17</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">18</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">19</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">20</div>
+                            
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">21</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">22</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">23</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">24</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">25</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">26</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">27</div>
+                            
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px; background: #E91E63; color: white; font-weight: 700;">28</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">29</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px; background: #FFF3E0; color: #FF9800; font-weight: 700;">30</div>
+                            <div style="font-size: 14px; padding: 8px; border-radius: 8px;">31</div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #F0F0F0;">
+                            <div style="display: flex; gap: 16px; font-size: 12px;">
+                                <div style="display: flex; align-items: center; gap: 6px;">
+                                    <div style="width: 12px; height: 12px; border-radius: 6px; background: #E91E63;"></div>
+                                    <span style="color: #666;">Today</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 6px;">
+                                    <div style="width: 12px; height: 12px; border-radius: 6px; background: #FFE4EC;"></div>
+                                    <span style="color: #666;">Appointment</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 6px;">
+                                    <div style="width: 12px; height: 12px; border-radius: 6px; background: #FFF3E0;"></div>
+                                    <span style="color: #666;">Reminder</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-title">Upcoming Reminders</div>
+                        <div class="see-all">View All →</div>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #E91E63;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #333; margin-bottom: 4px;">🏥 Gynecologist Checkup</div>
+                                    <div style="font-size: 13px; color: #666;">Dr. Anitha Reddy - Apollo Hospital</div>
+                                </div>
+                                <div style="font-size: 11px; padding: 4px 8px; border-radius: 8px; background: #FFE4EC; color: #E91E63; font-weight: 700;">TODAY</div>
+                            </div>
+                            <div style="font-size: 13px; color: #666; display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
+                                ⏰ 3:00 PM - 3:30 PM
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button style="flex: 1; padding: 8px; border-radius: 12px; border: none; background: #E91E63; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">✓ Confirm</button>
+                                <button style="flex: 1; padding: 8px; border-radius: 12px; border: none; background: #F5F5F5; color: #666; font-size: 13px; font-weight: 600; cursor: pointer;">Reschedule</button>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #FF9800;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #333; margin-bottom: 4px;">💊 Medication Reminder</div>
+                                    <div style="font-size: 13px; color: #666;">Iron supplement - After breakfast</div>
+                                </div>
+                                <div style="font-size: 11px; padding: 4px 8px; border-radius: 8px; background: #FFF3E0; color: #FF9800; font-weight: 700;">DAILY</div>
+                            </div>
+                            <div style="font-size: 13px; color: #666; display: flex; align-items: center; gap: 6px;">
+                                ⏰ 9:00 AM
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #4CAF50;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #333; margin-bottom: 4px;">💉 HPV Vaccination</div>
+                                    <div style="font-size: 13px; color: #666;">2nd dose scheduled</div>
+                                </div>
+                                <div style="font-size: 11px; padding: 4px 8px; border-radius: 8px; background: #E8F5E9; color: #4CAF50; font-weight: 700;">DEC 30</div>
+                            </div>
+                            <div style="font-size: 13px; color: #666; display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
+                                ⏰ 10:00 AM - Cloudnine Hospital
+                            </div>
+                            <button style="width: 100%; padding: 8px; border-radius: 12px; border: 2px solid #4CAF50; background: white; color: #4CAF50; font-size: 13px; font-weight: 600; cursor: pointer;">📍 Get Directions</button>
+                        </div>
+                        
+                        <div style="background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #9C27B0;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #333; margin-bottom: 4px;">🩺 Blood Test</div>
+                                    <div style="font-size: 13px; color: #666;">Annual health checkup - Fasting required</div>
+                                </div>
+                                <div style="font-size: 11px; padding: 4px 8px; border-radius: 8px; background: #F3E5F5; color: #9C27B0; font-weight: 700;">JAN 5</div>
+                            </div>
+                            <div style="font-size: 13px; color: #666; display: flex; align-items: center; gap: 6px;">
+                                ⏰ 7:30 AM - Apollo Diagnostics
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" style="margin-top: 16px;">
+                            ➕ Add New Reminder
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">5. Health Calendar & Reminders</div>
+        </div>
+        
+        <!-- Screen 6: Safe Women Parking Places -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span>11:30 AM</span>
+                    <div class="status-icons">
+                        <span>📶</span>
+                        <span>🔋 100%</span>
+                    </div>
+                </div>
+                
+                <div class="header">
+                    <button class="back-btn">←</button>
+                    <div class="header-title">Safe Parking Zones</div>
+                </div>
+                
+                <div style="padding: 20px; padding-bottom: 100px;">
+                    <div style="background: linear-gradient(135deg, #4CAF50, #00E676); border-radius: 20px; padding: 20px; color: white; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);">
+                        <div style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">🛡️ Women-Safe Parking</div>
+                        <div style="font-size: 14px; opacity: 0.95; line-height: 1.6;">
+                            Well-lit, CCTV monitored parking areas with dedicated women's parking spaces and security personnel.
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-title">Nearby Safe Zones</div>
+                        <div class="see-all">View Map →</div>
+                    </div>
+                    
+                    <div class="parking-list">
+                        <div class="parking-card">
+                            <div class="parking-name">
+                                🅿️ City Center Women's Parking
+                            </div>
+                            <div class="parking-address">
+                                📍 Opposite Forum Mall, Road No. 5, Banjara Hills, Hyderabad
+                            </div>
+                            <div class="parking-features">
+                                <div class="parking-feature">
+                                    <span>📹</span>
+                                    <span>24/7 CCTV</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>👮</span>
+                                    <span>Security Guard</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>💡</span>
+                                    <span>Well-lit</span>
+                                </div>
+                            </div>
+                            <div class="parking-distance-info">
+                                <div style="font-size: 14px; color: #666;">
+                                    📍 1.2 km away • ₹30/hr
+                                </div>
+                                <button style="padding: 8px 16px; border-radius: 12px; border: none; background: #4CAF50; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">🗺️ Navigate</button>
+                            </div>
+                        </div>
+                        
+                        <div class="parking-card">
+                            <div class="parking-name">
+                                🅿️ Metro Station Safe Parking
+                            </div>
+                            <div class="parking-address">
+                                📍 Jubilee Hills Metro Station, Jubilee Hills, Hyderabad
+                            </div>
+                            <div class="parking-features">
+                                <div class="parking-feature">
+                                    <span>📹</span>
+                                    <span>CCTV</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>🚨</span>
+                                    <span>Emergency SOS</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>🚇</span>
+                                    <span>Metro Access</span>
+                                </div>
+                            </div>
+                            <div class="parking-distance-info">
+                                <div style="font-size: 14px; color: #666;">
+                                    📍 2.5 km away • ₹20/hr
+                                </div>
+                                <button style="padding: 8px 16px; border-radius: 12px; border: none; background: #4CAF50; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">🗺️ Navigate</button>
+                            </div>
+                        </div>
+                        
+                        <div class="parking-card">
+                            <div class="parking-name">
+                                🅿️ Hospital Multi-level Parking
+                            </div>
+                            <div class="parking-address">
+                                📍 Apollo Hospital Complex, Jubilee Hills, Hyderabad
+                            </div>
+                            <div class="parking-features">
+                                <div class="parking-feature">
+                                    <span>📹</span>
+                                    <span>Multi-level CCTV</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>👮</span>
+                                    <span>24/7 Security</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>♿</span>
+                                    <span>Accessible</span>
+                                </div>
+                            </div>
+                            <div class="parking-distance-info">
+                                <div style="font-size: 14px; color: #666;">
+                                    📍 3.2 km away • ₹40/hr
+                                </div>
+                                <button style="padding: 8px 16px; border-radius: 12px; border: none; background: #4CAF50; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">🗺️ Navigate</button>
+                            </div>
+                        </div>
+                        
+                        <div class="parking-card">
+                            <div class="parking-name">
+                                🅿️ Women's Priority Parking - GVK One
+                            </div>
+                            <div class="parking-address">
+                                📍 GVK One Mall, Banjara Hills, Hyderabad
+                            </div>
+                            <div class="parking-features">
+                                <div class="parking-feature">
+                                    <span>📹</span>
+                                    <span>CCTV</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>👮</span>
+                                    <span>Security Patrol</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>🚻</span>
+                                    <span>Washroom Nearby</span>
+                                </div>
+                            </div>
+                            <div class="parking-distance-info">
+                                <div style="font-size: 14px; color: #666;">
+                                    📍 3.8 km away • ₹50/hr
+                                </div>
+                                <button style="padding: 8px 16px; border-radius: 12px; border: none; background: #4CAF50; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">🗺️ Navigate</button>
+                            </div>
+                        </div>
+                        
+                        <div class="parking-card">
+                            <div class="parking-name">
+                                🅿️ IT Park Secured Parking
+                            </div>
+                            <div class="parking-address">
+                                📍 Mindspace IT Park, HITEC City, Hyderabad
+                            </div>
+                            <div class="parking-features">
+                                <div class="parking-feature">
+                                    <span>📹</span>
+                                    <span>HD CCTV</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>🆔</span>
+                                    <span>ID Verification</span>
+                                </div>
+                                <div class="parking-feature">
+                                    <span>🚪</span>
+                                    <span>Barrier Access</span>
+                                </div>
+                            </div>
+                            <div class="parking-distance-info">
+                                <div style="font-size: 14px; color: #666;">
+                                    📍 5.5 km away • ₹25/hr
+                                </div>
+                                <button style="padding: 8px 16px; border-radius: 12px; border: none; background: #4CAF50; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">🗺️ Navigate</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #FFF5F7, #FFFFFF); border-radius: 16px; padding: 20px; margin-top: 24px; border-left: 4px solid #E91E63;">
+                        <div style="font-size: 16px; font-weight: 700; color: #E91E63; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                            💡 Safety Tips
+                        </div>
+                        <ul style="padding-left: 20px; margin: 0;">
+                            <li style="font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 8px;">Always park in well-lit, busy areas</li>
+                            <li style="font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 8px;">Keep your keys ready before reaching your car</li>
+                            <li style="font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 8px;">Check inside and around your vehicle before entering</li>
+                            <li style="font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 8px;">Use the app's "Share Location" feature with trusted contacts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">6. Safe Women Parking Places</div>
+        </div>
+        
+        <!-- Screen 7: Disease Detail View -->
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span>11:30 AM</span>
+                    <div class="status-icons">
+                        <span>📶</span>
+                        <span>🔋 100%</span>
+                    </div>
+                </div>
+                
+                <div class="header">
+                    <button class="back-btn">←</button>
+                    <div class="header-title">PCOS Details</div>
+                </div>
+                
+                <div style="padding: 20px; padding-bottom: 100px;">
+                    <div style="background: linear-gradient(135deg, #E91E63, #FF4081); border-radius: 24px; padding: 24px; color: white; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);">
+                        <div style="font-size: 24px; font-weight: 800; margin-bottom: 12px;">🩺 Polycystic Ovary Syndrome</div>
+                        <div style="font-size: 14px; opacity: 0.95; line-height: 1.6;">
+                            A common hormonal disorder affecting women of reproductive age, characterized by irregular menstrual periods, excess androgen levels, and polycystic ovaries.
+                        </div>
+                    </div>
+                    
+                    <!-- Symptoms -->
+                    <div style="background: white; border-radius: 20px; padding: 20px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+                        <div style="font-size: 18px; font-weight: 700; color: #E91E63; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            🔍 Common Symptoms
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFE4EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📅</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Irregular Periods</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Infrequent, irregular, or prolonged menstrual cycles</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFE4EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">💇</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Excess Hair Growth</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Hirsutism - excess facial and body hair</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFE4EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🎯</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Weight Gain</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Difficulty losing weight or unexplained weight gain</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFE4EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🌟</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Acne & Oily Skin</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Severe acne or excessively oily skin</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFE4EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🌓</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Dark Skin Patches</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Darkening of skin in body creases (neck, armpits)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Causes -->
+                    <div style="background: white; border-radius: 20px; padding: 20px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+                        <div style="font-size: 18px; font-weight: 700; color: #FF9800; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            ⚡ Root Causes
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFF3E0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">⚖️</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Insulin Resistance</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Excess insulin may increase androgen production</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFF3E0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🧬</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Genetic Factors</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Family history increases likelihood of PCOS</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFF3E0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🔬</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Hormonal Imbalance</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Excess androgens (male hormones) in women</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #FFF3E0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🔥</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Low-grade Inflammation</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Chronic inflammation may trigger insulin resistance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Prevention & Management -->
+                    <div style="background: white; border-radius: 20px; padding: 20px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+                        <div style="font-size: 18px; font-weight: 700; color: #4CAF50; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            ✅ Prevention & Management
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #E8F5E9; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🥗</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Healthy Diet</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Low-GI foods, whole grains, lean proteins, fruits & vegetables</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #E8F5E9; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🏃‍♀️</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Regular Exercise</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">150 minutes/week of moderate activity improves insulin sensitivity</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #E8F5E9; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">⚖️</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Weight Management</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Even 5-10% weight loss can significantly improve symptoms</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #E8F5E9; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">💊</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Medical Treatment</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Birth control pills, metformin, or fertility medications as prescribed</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                <div style="width: 32px; height: 32px; border-radius: 16px; background: #E8F5E9; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">😌</div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px;">Stress Management</div>
+                                    <div style="font-size: 13px; color: #666; line-height: 1.5;">Yoga, meditation, adequate sleep to reduce cortisol levels</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="margin-bottom: 12px;">
+                        📞 Consult a Specialist
+                    </button>
+                    <button class="btn btn-secondary">
+                        💬 Join PCOS Support Group
+                    </button>
+                </div>
+            </div>
+            <div class="screen-label">7. Disease Detail View (PCOS Example)</div>
+        </div>
+        
+    </div>
+</body>
+</html>
