@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Swasthya Samuday - Women's Health App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #E91E63 0%, #F48FB1 50%, #FCE4EC 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .screens-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+            gap: 40px;
+            max-width: 1800px;
+            width: 100%;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 30px;
+            background: black;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px 8px;
+            font-size: 13px;
+            color: #333;
+        }
+        
+        .screen-header {
+            background: linear-gradient(135deg, #C2185B 0%, #E91E63 100%);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(233, 30, 99, 0.3);
+        }
+        
+        .header-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .header-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .content-area {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 80px;
+            background: #F8F8F8;
+        }
+        
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: #999;
+            font-size: 11px;
+            cursor: pointer;
+        }
+        
+        .nav-item.active {
+            color: #C2185B;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+        }
+        
+        .screen-label {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        /* Health Profile Screen Styles */
+        .progress-indicator {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .profile-option {
+            margin: 15px 20px;
+            padding: 18px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .option-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .option-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .option-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .toggle-switch {
+            width: 50px;
+            height: 28px;
+            background: #DDD;
+            border-radius: 14px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .toggle-switch.active {
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+        }
+        
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: left 0.3s;
+        }
+        
+        .toggle-switch.active::after {
+            left: 24px;
+        }
+        
+        .condition-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+        
+        .condition-tag {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .action-button {
+            margin: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+            width: calc(100% - 40px);
+        }
+        
+        .skip-button {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        /* Landing Page Styles */
+        .welcome-section {
+            padding: 20px;
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .welcome-text {
+            flex: 1;
+        }
+        
+        .greeting {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .user-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .search-icon {
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.15);
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 12px;
+        }
+        
+        .feature-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .feature-subtitle {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        /* Hospital Finder Styles */
+        .search-bar {
+            margin: 15px 20px;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            padding: 0 20px 15px;
+            overflow-x: auto;
+        }
+        
+        .filter-tab {
+            padding: 8px 16px;
+            background: white;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            white-space: nowrap;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-tab.active {
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+        }
+        
+        .hospital-card {
+            margin: 15px 20px;
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.15);
+        }
+        
+        .hospital-header {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .hospital-image {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+        
+        .hospital-info {
+            flex: 1;
+        }
+        
+        .hospital-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .stars {
+            color: #FFB300;
+            font-size: 14px;
+        }
+        
+        .rating-text {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .distance {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .service-tag {
+            padding: 5px 12px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .hospital-status {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #4CAF50;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            flex: 1;
+            padding: 12px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .btn-icon {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border: 2px solid #E91E63;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #E91E63;
+            cursor: pointer;
+        }
+        
+        /* Insurance Card Styles */
+        .insurance-card {
+            margin: 15px 20px;
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.15);
+            border-left: 4px solid #E91E63;
+        }
+        
+        .insurance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+        
+        .insurance-provider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .provider-logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .provider-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .badge {
+            padding: 4px 10px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        
+        .badge.popular {
+            background: #FF9800;
+        }
+        
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #E91E63;
+            margin-bottom: 10px;
+        }
+        
+        .coverage-list {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+        
+        .coverage-list li {
+            font-size: 12px;
+            color: #555;
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .coverage-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: 700;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #E91E63;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        /* Product Card Styles */
+        .product-card {
+            margin: 15px 20px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .product-details {
+            padding: 15px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .product-description {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #E91E63;
+            margin-bottom: 10px;
+        }
+        
+        .compare-button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="screens-container">
+        
+        <!-- Screen 1: Health Profile Setup -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 📡 🔋</span>
+                </div>
+                
+                <div class="screen-header">
+                    <div class="header-title">Nari Swasthya Samuday</div>
+                    <div class="header-subtitle">Women's Health Community</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="progress-indicator">
+                        <span style="color: #E91E63; font-weight: 700;">⚫</span> 4 of 4
+                    </div>
+                    
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="font-size: 22px; font-weight: 700; color: #333; margin-bottom: 10px;">
+                            Health Profile (Optional)
+                        </div>
+                        <div style="font-size: 14px; color: #666;">
+                            Help us personalize your experience
+                        </div>
+                    </div>
+                    
+                    <div class="profile-option">
+                        <div class="option-left">
+                            <div class="option-icon">🌸</div>
+                            <div class="option-text">Track Menstrual Cycle</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                    
+                    <div class="profile-option">
+                        <div class="option-left">
+                            <div class="option-icon">🤰</div>
+                            <div class="option-text">Pregnancy Tracking</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                    
+                    <div class="profile-option">
+                        <div class="option-left">
+                            <div class="option-icon">💉</div>
+                            <div class="option-text">Vaccination Reminders</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                    
+                    <div class="profile-option">
+                        <div class="option-left">
+                            <div class="option-icon">🛡️</div>
+                            <div class="option-text">Insurance Information</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                    
+                    <div class="profile-option">
+                        <div class="option-left">
+                            <div class="option-icon">💊</div>
+                            <div class="option-text">Chronic Conditions</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                    
+                    <div class="condition-tags">
+                        <div class="condition-tag">PCOS</div>
+                        <div class="condition-tag">Thyroid</div>
+                        <div class="condition-tag">Diabetes</div>
+                        <div class="condition-tag">Nutrition</div>
+                        <div class="condition-tag">Fitness</div>
+                        <div class="condition-tag">Mental Health</div>
+                    </div>
+                    
+                    <button class="action-button">Complete Setup</button>
+                    <div class="skip-button">Skip for now</div>
+                </div>
+            </div>
+            <div class="screen-label">Screen 1: Health Profile Setup</div>
+        </div>
+        
+        <!-- Screen 2: Landing Page / Home -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 📡 🔋</span>
+                </div>
+                
+                <div class="welcome-section">
+                    <div class="profile-pic">👩</div>
+                    <div class="welcome-text">
+                        <div class="greeting">Hello,</div>
+                        <div class="user-name">Priya!</div>
+                    </div>
+                    <div class="search-icon">🔍</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">📚</div>
+                            <div class="feature-title">Knowledge Hub</div>
+                            <div class="feature-subtitle">Diseases & Conditions</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">💉</div>
+                            <div class="feature-title">Vaccination</div>
+                            <div class="feature-subtitle">Schedule & Tracking</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🏥</div>
+                            <div class="feature-title">Find Clinics</div>
+                            <div class="feature-subtitle">Nearby Hospitals & Centers</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <div class="feature-title">Insurance</div>
+                            <div class="feature-subtitle">Compare Products</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">👩‍⚕️</div>
+                            <div class="feature-title">Gynecologists</div>
+                            <div class="feature-subtitle">Book Appointments</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <div class="feature-title">Product Finder</div>
+                            <div class="feature-subtitle">Compare like Skyscanner</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item active">
+                        <div class="nav-icon">🏠</div>
+                        <div>Home</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">❤️</div>
+                        <div>Health</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👥</div>
+                        <div>Community</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Screen 2: Landing Page / Home</div>
+        </div>
+        
+        <!-- Screen 3: Hospital Finder -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 📡 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">Women's Clinics</div>
+                    <div class="header-subtitle">Near You</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="search-bar">
+                        <span>📍</span>
+                        <input type="text" placeholder="Bangalore, Koramangala">
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <div class="filter-tab active">Distance</div>
+                        <div class="filter-tab">Rating</div>
+                        <div class="filter-tab">Services</div>
+                        <div class="filter-tab">Open Now</div>
+                    </div>
+                    
+                    <div class="hospital-card">
+                        <div class="hospital-header">
+                            <div class="hospital-image">🏥</div>
+                            <div class="hospital-info">
+                                <div class="hospital-name">Cloudnine Hospital</div>
+                                <div class="rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="rating-text">4.8 stars (1,240 reviews)</div>
+                                </div>
+                                <div class="distance">2.3 km away</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-tags">
+                            <div class="service-tag">Gynecology</div>
+                            <div class="service-tag">Maternity</div>
+                            <div class="service-tag">IVF</div>
+                        </div>
+                        
+                        <div class="hospital-status">
+                            <span>🟢</span> Open 24/7
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">Book Appointment</button>
+                            <div class="btn-icon">📞</div>
+                            <div class="btn-icon">🗺️</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hospital-card">
+                        <div class="hospital-header">
+                            <div class="hospital-image">🏥</div>
+                            <div class="hospital-info">
+                                <div class="hospital-name">Aster Women's Clinic</div>
+                                <div class="rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="rating-text">4.5 stars (856 reviews)</div>
+                                </div>
+                                <div class="distance">3.5 km away</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-tags">
+                            <div class="service-tag">Pediatrics</div>
+                            <div class="service-tag">Women's Wellness</div>
+                        </div>
+                        
+                        <div class="hospital-status">
+                            <span>🟢</span> Open until 8 PM
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">Book Appointment</button>
+                            <div class="btn-icon">📞</div>
+                            <div class="btn-icon">🗺️</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hospital-card">
+                        <div class="hospital-header">
+                            <div class="hospital-image">🏥</div>
+                            <div class="hospital-info">
+                                <div class="hospital-name">Fortis Women's Hospital</div>
+                                <div class="rating">
+                                    <div class="stars">⭐⭐⭐⭐</div>
+                                    <div class="rating-text">4.3 stars (542 reviews)</div>
+                                </div>
+                                <div class="distance">4.2 km away</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-tags">
+                            <div class="service-tag">Gynecology</div>
+                            <div class="service-tag">Surgery</div>
+                        </div>
+                        
+                        <div class="hospital-status">
+                            <span>🟢</span> Open 24/7
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">Book Appointment</button>
+                            <div class="btn-icon">📞</div>
+                            <div class="btn-icon">🗺️</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏠</div>
+                        <div>Home</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">🏥</div>
+                        <div>Clinics</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👥</div>
+                        <div>Community</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Screen 3: Hospital Finder</div>
+        </div>
+        
+        <!-- Screen 4: Gynecologist Finder -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 📡 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">Gynecologists</div>
+                    <div class="header-subtitle">Find & Book Appointments</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search for doctors...">
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <div class="filter-tab active">All</div>
+                        <div class="filter-tab">Top Rated</div>
+                        <div class="filter-tab">Available Today</div>
+                        <div class="filter-tab">Experience</div>
+                    </div>
+                    
+                    <div class="hospital-card">
+                        <div class="hospital-header">
+                            <div class="hospital-image">👩‍⚕️</div>
+                            <div class="hospital-info">
+                                <div class="hospital-name">Dr. Priya Sharma</div>
+                                <div style="font-size: 13px; color: #666; margin-bottom: 3px;">
+                                    MBBS, MD (OB-GYN)
+                                </div>
+                                <div style="font-size: 12px; color: #999; margin-bottom: 5px;">
+                                    15 years experience
+                                </div>
+                                <div class="rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="rating-text">4.9 (235 reviews)</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-tags">
+                            <div class="service-tag">PCOS</div>
+                            <div class="service-tag">Pregnancy</div>
+                            <div class="service-tag">IVF</div>
+                        </div>
+                        
+                        <div style="font-size: 12px; color: #333; margin: 10px 0;">
+                            📍 Cloudnine Hospital, Koramangala
+                        </div>
+                        
+                        <div style="font-size: 12px; color: #4CAF50; font-weight: 600; margin-bottom: 12px;">
+                            🟢 Available Today - Next slot at 3:30 PM
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">Book Appointment</button>
+                            <div class="btn-icon">💬</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hospital-card">
+                        <div class="hospital-header">
+                            <div class="hospital-image">👩‍⚕️</div>
+                            <div class="hospital-info">
+                                <div class="hospital-name">Dr. Anjali Menon</div>
+                                <div style="font-size: 13px; color: #666; margin-bottom: 3px;">
+                                    MBBS, DNB (OB-GYN)
+                                </div>
+                                <div style="font-size: 12px; color: #999; margin-bottom: 5px;">
+                                    12 years experience
+                                </div>
+                                <div class="rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="rating-text">4.8 (189 reviews)</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-tags">
+                            <div class="service-tag">High-Risk Pregnancy</div>
+                            <div class="service-tag">Endometriosis</div>
+                        </div>
+                        
+                        <div style="font-size: 12px; color: #333; margin: 10px 0;">
+                            📍 Aster Women's Clinic, Indiranagar
+                        </div>
+                        
+                        <div style="font-size: 12px; color: #FF9800; font-weight: 600; margin-bottom: 12px;">
+                            🟡 Next available: Tomorrow 10:00 AM
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">Book Appointment</button>
+                            <div class="btn-icon">💬</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hospital-card">
+                        <div class="hospital-header">
+                            <div class="hospital-image">👩‍⚕️</div>
+                            <div class="hospital-info">
+                                <div class="hospital-name">Dr. Kavita Reddy</div>
+                                <div style="font-size: 13px; color: #666; margin-bottom: 3px;">
+                                    MBBS, MS (OB-GYN)
+                                </div>
+                                <div style="font-size: 12px; color: #999; margin-bottom: 5px;">
+                                    20 years experience
+                                </div>
+                                <div class="rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="rating-text">4.7 (312 reviews)</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-tags">
+                            <div class="service-tag">Laparoscopy</div>
+                            <div class="service-tag">Menopause</div>
+                        </div>
+                        
+                        <div style="font-size: 12px; color: #333; margin: 10px 0;">
+                            📍 Fortis Women's Hospital, HSR Layout
+                        </div>
+                        
+                        <div style="font-size: 12px; color: #4CAF50; font-weight: 600; margin-bottom: 12px;">
+                            🟢 Available Today - Next slot at 5:00 PM
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">Book Appointment</button>
+                            <div class="btn-icon">💬</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏠</div>
+                        <div>Home</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">👩‍⚕️</div>
+                        <div>Doctors</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👥</div>
+                        <div>Community</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Screen 4: Gynecologist Finder</div>
+        </div>
+        
+        <!-- Screen 5: Women's Insurance Listing -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 📡 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">Women's Insurance</div>
+                    <div class="header-subtitle">Compare Plans</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search insurance plans">
+                    </div>
+                    
+                    <div class="insurance-card">
+                        <div class="insurance-header">
+                            <div class="insurance-provider">
+                                <div class="provider-logo">🏥</div>
+                                <div>
+                                    <div class="provider-name">Care Supreme</div>
+                                </div>
+                            </div>
+                            <div class="badge">Best Value</div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <div class="checkbox"></div>
+                            <div class="price">₹15,000/year</div>
+                            <div class="rating">
+                                <div class="stars">⭐</div>
+                                <div class="rating-text">4.5</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="coverage-list">
+                            <li>Coverage ₹5L</li>
+                            <li>Maternity coverage included</li>
+                            <li>Annual health checkups</li>
+                            <li>No waiting period for accidents</li>
+                        </ul>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">View Details</button>
+                            <div class="btn-icon" style="width: auto; padding: 0 15px;">Compare</div>
+                        </div>
+                    </div>
+                    
+                    <div class="insurance-card">
+                        <div class="insurance-header">
+                            <div class="insurance-provider">
+                                <div class="provider-logo">🏦</div>
+                                <div>
+                                    <div class="provider-name">Star Health</div>
+                                </div>
+                            </div>
+                            <div class="badge popular">Most Popular</div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <div class="checkbox"></div>
+                            <div class="price">₹18,500/year</div>
+                            <div class="rating">
+                                <div class="stars">⭐</div>
+                                <div class="rating-text">4.7</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="coverage-list">
+                            <li>Coverage ₹7L</li>
+                            <li>Critical illness cover</li>
+                            <li>No claim bonus</li>
+                            <li>Wellness benefits included</li>
+                        </ul>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">View Details</button>
+                            <div class="btn-icon" style="width: auto; padding: 0 15px;">Compare</div>
+                        </div>
+                    </div>
+                    
+                    <div class="insurance-card">
+                        <div class="insurance-header">
+                            <div class="insurance-provider">
+                                <div class="provider-logo">💼</div>
+                                <div>
+                                    <div class="provider-name">Max Bupa</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <div class="checkbox"></div>
+                            <div class="price">₹12,000/year</div>
+                            <div class="rating">
+                                <div class="stars">⭐</div>
+                                <div class="rating-text">4.3</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="coverage-list">
+                            <li>Coverage ₹3L</li>
+                            <li>OPD cover included</li>
+                            <li>Health checkups</li>
+                            <li>Preventive care benefits</li>
+                        </ul>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary">View Details</button>
+                            <div class="btn-icon" style="width: auto; padding: 0 15px;">Compare</div>
+                        </div>
+                    </div>
+                    
+                    <button class="action-button">Compare Selected (0)</button>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏠</div>
+                        <div>Home</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">🛡️</div>
+                        <div>Insurance</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👥</div>
+                        <div>Community</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Screen 5: Women's Insurance Listing</div>
+        </div>
+        
+        <!-- Screen 6: Product Finder / Comparison -->
+        <div>
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <span>📶 📡 🔋</span>
+                </div>
+                
+                <div class="screen-header" style="position: relative;">
+                    <div class="back-button">←</div>
+                    <div class="header-title">Product Finder</div>
+                    <div class="header-subtitle">Compare Women's Health Products</div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search products (medicines, supplements...)">
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <div class="filter-tab active">All</div>
+                        <div class="filter-tab">Medicines</div>
+                        <div class="filter-tab">Supplements</div>
+                        <div class="filter-tab">Hygiene</div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">💊</div>
+                        <div class="product-details">
+                            <div class="product-name">Folic Acid Tablets</div>
+                            <div class="product-description">
+                                Essential supplement for pregnant women. Helps prevent neural tube defects. 90 tablets pack.
+                            </div>
+                            <div class="rating">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <div class="rating-text">4.7 (1,234 reviews)</div>
+                            </div>
+                            <div class="product-price">₹249 - ₹399</div>
+                            <div style="font-size: 11px; color: #4CAF50; margin-bottom: 10px;">
+                                Available at 12 stores nearby
+                            </div>
+                            <button class="compare-button">Compare Prices</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">🧴</div>
+                        <div class="product-details">
+                            <div class="product-name">Prenatal Vitamins</div>
+                            <div class="product-description">
+                                Complete multivitamin for pregnancy. Contains DHA, Iron, and essential nutrients. 60 capsules.
+                            </div>
+                            <div class="rating">
+                                <div class="stars">⭐⭐⭐⭐</div>
+                                <div class="rating-text">4.5 (892 reviews)</div>
+                            </div>
+                            <div class="product-price">₹599 - ₹899</div>
+                            <div style="font-size: 11px; color: #4CAF50; margin-bottom: 10px;">
+                                Available at 8 stores nearby
+                            </div>
+                            <button class="compare-button">Compare Prices</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">🩹</div>
+                        <div class="product-details">
+                            <div class="product-name">Menstrual Pain Relief</div>
+                            <div class="product-description">
+                                Fast-acting pain relief for menstrual cramps. Non-drowsy formula. 20 tablets.
+                            </div>
+                            <div class="rating">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <div class="rating-text">4.8 (2,145 reviews)</div>
+                            </div>
+                            <div class="product-price">₹149 - ₹249</div>
+                            <div style="font-size: 11px; color: #4CAF50; margin-bottom: 10px;">
+                                Available at 15 stores nearby
+                            </div>
+                            <button class="compare-button">Compare Prices</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div class="nav-item">
+                        <div class="nav-icon">🏠</div>
+                        <div>Home</div>
+                    </div>
+                    <div class="nav-item active">
+                        <div class="nav-icon">🔍</div>
+                        <div>Products</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👥</div>
+                        <div>Community</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-icon">👤</div>
+                        <div>Profile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Screen 6: Product Finder / Comparison</div>
+        </div>
+        
+    </div>
+</body>
+</html>
