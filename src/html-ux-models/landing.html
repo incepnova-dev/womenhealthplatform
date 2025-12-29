@@ -3,263 +3,1142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nari Swasthya Samuday - Home</title>
+    <title>Women's Health Hub - Welcome</title>
     <style>
-        /* Theme extracted from communitydiscovery.html */
-        :root {
-            --primary-pink: #E91E63;
-            --secondary-pink: #FF4081;
-            --dark-pink: #C2185B;
-            --bg-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            --card-gradient: linear-gradient(180deg, #E91E63 0%, #C2185B 100%);
-            --light-bg: #F9F7F7;
-            --white: #FFFFFF;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #FFE4E9;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 506px;
+            margin: 0 auto;
+            background: white;
             min-height: 100vh;
-            background: var(--bg-gradient); /* */
-            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        .phone-frame {
-            width: 375px;
-            height: 812px;
-            background: #111;
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 0 0 14px #222, 0 40px 80px rgba(0, 0, 0, 0.6);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: var(--light-bg); /* */
-            border-radius: 28px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Top Header Area matching landing.jpg */
-        .header-top {
-            padding: 50px 20px 20px;
+        /* Status Bar */
+        .status-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: white;
+            padding: 8px 20px;
+            background: #fff;
+            font-size: 14px;
+            font-weight: 600;
         }
 
-        .user-profile {
+        .status-right {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* Top Menu */
+        .top-menu {
+            background: #FF4081;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-logo {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .about-btn {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .about-btn:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        /* Header Section */
+        .header-section {
+            background: linear-gradient(135deg, #FF4081 0%, #FF6B9D 100%);
+            padding: 30px 20px 25px;
+            border-radius: 0 0 30px 30px;
+            color: white;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .user-name {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            background: white;
+            border-radius: 25px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
         }
 
-        .avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: #ddd;
-            border: 2px solid var(--primary-pink);
-        }
-
-        .greeting h2 {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .search-container {
-            flex: 1;
-            margin-left: 15px;
-            position: relative;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 10px 15px 10px 35px;
-            border-radius: 12px;
-            border: 1px solid #eee;
-            background: #f8f8f8;
-            font-size: 12px;
+        .search-bar input {
+            border: none;
             outline: none;
+            flex: 1;
+            font-size: 16px;
+            color: #666;
         }
 
         .search-icon {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 14px;
+            font-size: 20px;
             color: #999;
         }
 
-        /* Dashboard Grid Layout */
-        .dashboard-grid {
+        /* Icon Grid */
+        .icon-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            padding: 20px;
-            overflow-y: auto;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .icon-item {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 20px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .icon-item:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .icon-emoji {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .icon-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 25px 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .see-all-btn {
+            color: #FF4081;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Chatbot Banner */
+        .chatbot-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 25px;
+            color: white;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .chatbot-banner:hover {
+            transform: scale(1.02);
+        }
+
+        .chatbot-banner::before {
+            content: "🤖";
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            font-size: 120px;
+            opacity: 0.1;
+        }
+
+        .chatbot-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .chatbot-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .chat-now-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Story Card with Icon */
+        .story-card {
+            background: linear-gradient(135deg, #FFE5EE 0%, #FFD5E5 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .story-category {
+            display: inline-block;
+            background: #FF4081;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .story-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .story-icon {
+            font-size: 48px;
+            flex-shrink: 0;
+        }
+
+        .story-text {
             flex: 1;
         }
 
-        .menu-card {
-            background: white;
-            border-radius: 24px;
-            padding: 20px 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
+        .story-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .story-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .story-footer {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            border-top: 4px solid var(--primary-pink); /* */
+            margin-top: 12px;
         }
 
-        .menu-card:active {
-            transform: scale(0.95);
+        .story-author {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
         }
 
-        .icon-box {
-            width: 60px;
-            height: 60px;
+        .story-read-time {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Health Conditions Section */
+        .health-conditions-section {
+            margin-bottom: 30px;
+        }
+
+        .condition-card {
+            background: #FFF8FB;
+            border-radius: 20px;
+            padding: 20px;
             margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .condition-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .condition-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .condition-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--light-bg);
-            border-radius: 18px;
-            color: var(--primary-pink); /* */
-            font-size: 30px;
+            font-size: 28px;
         }
 
-        .menu-card h3 {
-            font-size: 14px;
+        .condition-name {
+            font-size: 18px;
             font-weight: 700;
             color: #333;
-            margin-bottom: 4px;
         }
 
-        .menu-card p {
-            font-size: 10px;
-            color: #777;
+        .condition-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
-        /* Bottom Nav matching landing.jpg and communitydiscovery.html */
-        .bottom-nav {
-            height: 70px;
+        .condition-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tag-pink {
+            background: #FFE5F0;
+            color: #FF4081;
+        }
+
+        .tag-green {
+            background: #E8F5E9;
+            color: #4CAF50;
+        }
+
+        .tag-orange {
+            background: #FFF3E0;
+            color: #FF9800;
+        }
+
+        /* Library Topics */
+        .library-topics {
+            background: #FFF8FB;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .library-header {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .topic-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topic-chip {
             background: white;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #999;
-            font-size: 10px;
+            color: #FF4081;
+            border: 2px solid #FF4081;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
         }
 
-        .nav-item.active {
-            color: var(--primary-pink); /* */
+        .topic-chip:hover {
+            background: #FF4081;
+            color: white;
         }
 
-        .nav-icon {
+        /* Research Articles */
+        .research-section {
+            margin-bottom: 30px;
+        }
+
+        .research-card {
+            background: white;
+            border-left: 4px solid #FF4081;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transform: translateX(4px);
+        }
+
+        .research-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .research-authors {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .research-journal {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            background: #FFF8FB;
+            border-radius: 20px;
+            padding: 20px 15px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #FF4081;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .product-image {
+            text-align: center;
+            font-size: 60px;
+            margin: 20px 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-brand {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .product-price {
             font-size: 22px;
-            margin-bottom: 2px;
+            font-weight: 700;
+            color: #FF4081;
+            margin-bottom: 5px;
+        }
+
+        .product-original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 12px;
+        }
+
+        .vendor-info {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .vendor-icon {
+            font-size: 14px;
+        }
+
+        /* Insurance Section */
+        .insurance-section {
+            margin-bottom: 30px;
+        }
+
+        .insurance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .insurance-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .insurance-icon {
+            width: 60px;
+            height: 60px;
+            background: #FFE5F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .insurance-title-section {
+            flex: 1;
+        }
+
+        .insurance-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .insurance-provider {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .insurance-features {
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .feature-check {
+            color: #4CAF50;
+            font-size: 18px;
+        }
+
+        .insurance-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .insurance-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #FF4081;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .view-details-btn {
+            background: white;
+            color: #FF4081;
+            border: 2px solid #FF4081;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .view-details-btn:hover {
+            background: #FF4081;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 506px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 25px;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #FF4081;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-link {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #FF4081;
+        }
+
+        .footer-info {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #ecf0f1;
+        }
+
+        .footer-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .footer-icon {
+            font-size: 16px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 12px;
+            color: #95a5a6;
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #FF4081;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255,64,129,0.4);
+            font-size: 24px;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-4px);
         }
     </style>
 </head>
 <body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span>11:30 AM</span>
+            <div class="status-right">
+                <span>📶</span>
+                <span>🔋</span>
+                <span>100%</span>
+            </div>
+        </div>
 
-    <div class="phone-frame">
-        <div class="phone-screen">
-            <div class="header-top">
-                <div class="user-profile">
-                    <div class="avatar"></div>
-                    <div class="greeting">
-                        <p style="font-size: 12px; color: #777;">Hello,</p>
-                        <h2>Priya!</h2>
-                    </div>
-                </div>
-                <div class="search-container">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" class="search-bar" placeholder="Search for health topics...">
-                </div>
+        <!-- Top Menu -->
+        <div class="top-menu">
+            <div class="menu-logo">Women's Health Hub 💖</div>
+            <button class="about-btn" onclick="window.location.href='womens_health_about.html'">About Us</button>
+        </div>
+
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="welcome-text">Welcome back,</div>
+            <div class="user-name">Priya 👋</div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search products, conditions, doctor">
             </div>
 
-            <div class="dashboard-grid">
-                <div class="menu-card">
-                    <div class="icon-box">📖</div>
-                    <h3>Knowledge Hub</h3>
-                    <p>Diseases & Conditions</p>
+            <!-- Icon Grid -->
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <div class="icon-emoji">💊</div>
+                    <div class="icon-label">Healthcare Products</div>
                 </div>
-                <div class="menu-card">
-                    <div class="icon-box">💉</div>
-                    <h3>Vaccination</h3>
-                    <p>Schedule & Tracking</p>
+                <div class="icon-item">
+                    <div class="icon-emoji">🏥</div>
+                    <div class="icon-label">Hospitals</div>
                 </div>
-                <div class="menu-card">
-                    <div class="icon-box">🏥</div>
-                    <h3>Find Clinics</h3>
-                    <p>Nearby Hospitals & Centers</p>
+                <div class="icon-item">
+                    <div class="icon-emoji">👩‍⚕️</div>
+                    <div class="icon-label">Doctors</div>
                 </div>
-                <div class="menu-card">
-                    <div class="icon-box">🛡️</div>
-                    <h3>Insurance</h3>
-                    <p>Compare Products</p>
-                </div>
-                <div class="menu-card">
-                    <div class="icon-box">👩‍⚕️</div>
-                    <h3>Gynecologists</h3>
-                    <p>Book Appointments</p>
-                </div>
-                <div class="menu-card">
-                    <div class="icon-box">🛒</div>
-                    <h3>Product Finder</h3>
-                    <p>Compare like Skyscanner</p>
-                </div>
-            </div>
-
-            <div class="bottom-nav">
-                <div class="nav-item active">
-                    <span class="nav-icon">🏠</span>
-                    <span>Home</span>
-                </div>
-                <div class="nav-item">
-                    <span class="nav-icon">❤️</span>
-                    <span>Health</span>
-                </div>
-                <div class="nav-item">
-                    <span class="nav-icon">👥</span>
-                    <span>Community</span>
-                </div>
-                <div class="nav-item">
-                    <span class="nav-icon">👤</span>
-                    <span>Profile</span>
+                <div class="icon-item">
+                    <div class="icon-emoji">💉</div>
+                    <div class="icon-label">Vaccine Schedules</div>
                 </div>
             </div>
         </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- AI Chatbot Banner -->
+            <div class="chatbot-banner">
+                <div class="chatbot-title">Meet Your AI Health Assistant 🤖</div>
+                <div class="chatbot-subtitle">Get instant answers to your women's health questions, 24/7</div>
+                <button class="chat-now-btn">Chat Now</button>
+            </div>
+
+            <!-- Women's Health Stories -->
+            <div class="section-header">
+                <h2 class="section-title">Women's Health Stories</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="story-card">
+                <span class="story-category">Wellness</span>
+                <div class="story-content">
+                    <div class="story-icon">🌸</div>
+                    <div class="story-text">
+                        <h3 class="story-title">PCOS Management: A Holistic Approach</h3>
+                        <p class="story-description">Understanding polycystic ovary syndrome and effective lifestyle strategies for better hormone balance...</p>
+                        <div class="story-footer">
+                            <span class="story-author">Dr. Priya Sharma</span>
+                            <span class="story-read-time">⏱ 6 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card">
+                <span class="story-category">Pregnancy</span>
+                <div class="story-content">
+                    <div class="story-icon">🤰</div>
+                    <div class="story-text">
+                        <h3 class="story-title">Navigating Your First Trimester: Expert Tips</h3>
+                        <p class="story-description">Essential nutrition, wellness practices, and what to expect during your first 12 weeks of pregnancy...</p>
+                        <div class="story-footer">
+                            <span class="story-author">Dr. Sarah Williams</span>
+                            <span class="story-read-time">⏱ 8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Conditions Guide -->
+            <div class="section-header">
+                <h2 class="section-title">Health Conditions Guide</h2>
+                <a href="#" class="see-all-btn">View All 20 →</a>
+            </div>
+
+            <div class="health-conditions-section">
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <div class="condition-icon">🩺</div>
+                        <h3 class="condition-name">Polycystic Ovary Syndrome (PCOS)</h3>
+                    </div>
+                    <p class="condition-description">Hormonal disorder causing enlarged ovaries with small cysts. Affects 1 in 10 women of childbearing age.</p>
+                    <div class="condition-tags">
+                        <span class="tag tag-pink">Irregular periods</span>
+                        <span class="tag tag-green">Lifestyle changes</span>
+                        <span class="tag tag-orange">Hormonal imbalance</span>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <div class="condition-icon">🎀</div>
+                        <h3 class="condition-name">Breast Cancer</h3>
+                    </div>
+                    <p class="condition-description">Cancer that forms in breast cells. Early detection through regular screening significantly improves outcomes.</p>
+                    <div class="condition-tags">
+                        <span class="tag tag-pink">Breast lump</span>
+                        <span class="tag tag-green">Regular screening</span>
+                        <span class="tag tag-orange">Genetic factors</span>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <div class="condition-icon">🤰</div>
+                        <h3 class="condition-name">Endometriosis</h3>
+                    </div>
+                    <p class="condition-description">Tissue similar to uterine lining grows outside the uterus, causing pain and fertility issues.</p>
+                    <div class="condition-tags">
+                        <span class="tag tag-pink">Pelvic pain</span>
+                        <span class="tag tag-green">Early diagnosis</span>
+                        <span class="tag tag-orange">Unknown origin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending Library Topics -->
+            <div class="library-topics">
+                <h3 class="library-header">🔥 Trending Library Topics</h3>
+                <div class="topic-chips">
+                    <div class="topic-chip">Endometriosis</div>
+                    <div class="topic-chip">Breast Health</div>
+                    <div class="topic-chip">Fertility</div>
+                    <div class="topic-chip">Thyroid Disorders</div>
+                    <div class="topic-chip">Prenatal Care</div>
+                    <div class="topic-chip">Menstrual Health</div>
+                    <div class="topic-chip">Bone Health</div>
+                    <div class="topic-chip">Reproductive Rights</div>
+                </div>
+            </div>
+
+            <!-- Latest Research -->
+            <div class="section-header">
+                <h2 class="section-title">Latest Research 📚</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="research-section">
+                <div class="research-card">
+                    <h4 class="research-title">Impact of Mediterranean Diet on PCOS Outcomes</h4>
+                    <p class="research-authors">Johnson M., et al.</p>
+                    <p class="research-journal">Journal of Women's Health • Dec 2024</p>
+                </div>
+
+                <div class="research-card">
+                    <h4 class="research-title">Novel Biomarkers for Early Detection of Ovarian Cancer</h4>
+                    <p class="research-authors">Chen L., Rodriguez A., Singh K.</p>
+                    <p class="research-journal">Nature Medicine • Nov 2024</p>
+                </div>
+
+                <div class="research-card">
+                    <h4 class="research-title">Postpartum Depression: AI-Assisted Screening Models</h4>
+                    <p class="research-authors">Williams R., Thompson S.</p>
+                    <p class="research-journal">JAMA Psychiatry • Dec 2024</p>
+                </div>
+
+                <div class="research-card">
+                    <h4 class="research-title">Exercise Interventions for Menopausal Bone Health</h4>
+                    <p class="research-authors">Davis K., et al.</p>
+                    <p class="research-journal">The Lancet • Nov 2024</p>
+                </div>
+            </div>
+
+            <!-- Healthcare Products -->
+            <div class="section-header">
+                <h2 class="section-title">Healthcare Products</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="discount-badge">30% OFF</div>
+                    <div class="product-image">🧴</div>
+                    <div class="product-name">Prenatal Vitamins</div>
+                    <div class="product-brand">HealthPlus</div>
+                    <div class="product-price">₹349 <span class="product-original-price">₹499</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Amazon</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">📞</span>
+                        <span>1mg</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">25% OFF</div>
+                    <div class="product-image">🩺</div>
+                    <div class="product-name">Menstrual Pain Relief</div>
+                    <div class="product-brand">WellnessRx</div>
+                    <div class="product-price">₹225 <span class="product-original-price">₹300</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Flipkart</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">📞</span>
+                        <span>Netmeds</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">40% OFF</div>
+                    <div class="product-image">🧘‍♀️</div>
+                    <div class="product-name">Yoga Mat Premium</div>
+                    <div class="product-brand">FitLife</div>
+                    <div class="product-price">₹599 <span class="product-original-price">₹999</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Amazon</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">📞</span>
+                        <span>Myntra</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">35% OFF</div>
+                    <div class="product-image">💊</div>
+                    <div class="product-name">Iron Supplements</div>
+                    <div class="product-brand">NutriCare</div>
+                    <div class="product-price">₹299 <span class="product-original-price">₹459</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>1mg</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">📞</span>
+                        <span>PharmEasy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insurance Plans -->
+            <div class="section-header">
+                <h2 class="section-title">Insurance Plans</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="insurance-section">
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-icon">🛡️</div>
+                        <div class="insurance-title-section">
+                            <h3 class="insurance-name">Women's Health Shield</h3>
+                            <p class="insurance-provider">Star Health Insurance</p>
+                        </div>
+                    </div>
+                    <div class="insurance-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Maternity coverage up to ₹2L</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Cancer treatment covered</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Annual health checkup included</span>
+                        </div>
+                    </div>
+                    <div class="insurance-footer">
+                        <div>
+                            <div class="insurance-price">₹8,999</div>
+                            <div class="price-period">per year</div>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-icon">💖</div>
+                        <div class="insurance-title-section">
+                            <h3 class="insurance-name">Maternity Care Plus</h3>
+                            <p class="insurance-provider">ICICI Lombard</p>
+                        </div>
+                    </div>
+                    <div class="insurance-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Pre & post natal coverage</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Newborn baby cover (90 days)</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Ambulance charges covered</span>
+                        </div>
+                    </div>
+                    <div class="insurance-footer">
+                        <div>
+                            <div class="insurance-price">₹12,499</div>
+                            <div class="price-period">per year</div>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Seva Health Network</h3>
+                    <div class="footer-info">
+                        <div class="footer-info-item">
+                            <span class="footer-icon">🕐</span>
+                            <span>Working Hours: Mon-Sat, 9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="footer-info-item">
+                            <span class="footer-icon">📧</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9cac6c7ddc8cadde9daccdfc8c1ccc8c5ddc1c7ccdddec6dbc287cac6c4">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="footer-info-item">
+                            <span class="footer-icon">📞</span>
+                            <span>+91 1800-XXX-XXXX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Product Overview</a>
+                        <a href="#" class="footer-link">Partner with Us</a>
+                        <a href="#" class="footer-link">Privacy & Data Security</a>
+                        <a href="#" class="footer-link">Compliant with Ayushman Bharat Privacy</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Seva Health Network. All rights reserved.</p>
+                    <p style="margin-top: 8px;">Committed to your health and privacy</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top -->
+        <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
     </div>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Show scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        // Add smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
