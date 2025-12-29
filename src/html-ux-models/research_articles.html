@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Research Articles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 506px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Status Bar */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+            background: #fff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status-right {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* Header with Back Button */
+        .page-header {
+            background: linear-gradient(135deg, #FF4081 0%, #FF6B9D 100%);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .back-btn {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.5);
+            transform: scale(1.1);
+        }
+
+        .page-title {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            flex: 1;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 30px 20px;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-bottom: 35px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            font-size: 28px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .video-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .doctor-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .doctor-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FF4081 0%, #FF6B9D 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .doctor-details {
+            flex: 1;
+        }
+
+        .doctor-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .doctor-specialty {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Research Categories */
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 20px 0;
+            margin-bottom: 10px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-tab {
+            background: white;
+            color: #666;
+            border: 2px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .category-tab.active {
+            background: #FF4081;
+            color: white;
+            border-color: #FF4081;
+        }
+
+        .category-tab:hover {
+            border-color: #FF4081;
+        }
+
+        /* Research Article Cards */
+        .research-card {
+            background: white;
+            border-left: 5px solid #FF4081;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .research-badge {
+            display: inline-block;
+            background: #FFE5F0;
+            color: #FF4081;
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .research-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .research-authors {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .research-journal {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .research-abstract {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tag-pink {
+            background: #FFE5F0;
+            color: #FF4081;
+        }
+
+        .tag-purple {
+            background: #F3E5F5;
+            color: #9C27B0;
+        }
+
+        .tag-blue {
+            background: #E3F2FD;
+            color: #2196F3;
+        }
+
+        .tag-green {
+            background: #E8F5E9;
+            color: #4CAF50;
+        }
+
+        .tag-orange {
+            background: #FFF3E0;
+            color: #FF9800;
+        }
+
+        .research-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .read-full-btn {
+            background: #FF4081;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .read-full-btn:hover {
+            background: #E91E63;
+            transform: scale(1.05);
+        }
+
+        .research-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Featured Research */
+        .featured-research {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .featured-badge-white {
+            background: rgba(255,255,255,0.3);
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .featured-research .research-title {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .featured-research .research-authors,
+        .featured-research .research-journal,
+        .featured-research .research-abstract {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .featured-research .read-full-btn {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 15px 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-home-btn {
+            background: linear-gradient(135deg, #FF4081 0%, #FF6B9D 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-home-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(255,64,129,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span>11:30 AM</span>
+            <div class="status-right">
+                <span>📶</span>
+                <span>📶</span>
+                <span>100%</span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="page-header">
+            <button class="back-btn" onclick="window.location.href='landing.html'">←</button>
+            <h1 class="page-title">Latest Research</h1>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-icon">🔬</div>
+            <h2 class="hero-title">Cutting-Edge Research</h2>
+            <p class="hero-subtitle">Stay informed with the latest breakthroughs in women's health research and medical advances</p>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- Video Section -->
+            <div class="video-section">
+                <div class="section-header">
+                    <span class="section-icon">🎥</span>
+                    <h3 class="section-title">Expert Insights</h3>
+                </div>
+
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/pD6bshLxFxk" 
+                                title="Understanding PCOS: A Gynecologist's Perspective" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">Understanding PCOS: A Gynecologist's Perspective</h4>
+                        <div class="video-meta">
+                            <span>📅 Dec 2024</span>
+                            <span>•</span>
+                            <span>⏱️ 12:45</span>
+                            <span>•</span>
+                            <span>👁️ 45K views</span>
+                        </div>
+                        <p class="research-abstract">Dr. Sarah Johnson explains the latest research on Polycystic Ovary Syndrome, including diagnostic criteria, treatment options, and lifestyle interventions that can help manage symptoms effectively.</p>
+                        <div class="doctor-info">
+                            <div class="doctor-avatar">👩‍⚕️</div>
+                            <div class="doctor-details">
+                                <div class="doctor-name">Dr. Sarah Johnson, MD</div>
+                                <div class="doctor-specialty">Gynecologist & Reproductive Endocrinologist</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZUJq6hP6gLk" 
+                                title="Breast Health & Cancer Prevention" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">Breast Health & Cancer Prevention: What Every Woman Should Know</h4>
+                        <div class="video-meta">
+                            <span>📅 Dec 2024</span>
+                            <span>•</span>
+                            <span>⏱️ 15:30</span>
+                            <span>•</span>
+                            <span>👁️ 67K views</span>
+                        </div>
+                        <p class="research-abstract">Dr. Priya Mehta discusses breast cancer prevention strategies, the importance of early detection, screening guidelines, and recent advances in treatment options that are improving survival rates.</p>
+                        <div class="doctor-info">
+                            <div class="doctor-avatar">👩‍⚕️</div>
+                            <div class="doctor-details">
+                                <div class="doctor-name">Dr. Priya Mehta, MD</div>
+                                <div class="doctor-specialty">Oncologist & Breast Cancer Specialist</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <div class="category-tab active">All Research</div>
+                <div class="category-tab">PCOS</div>
+                <div class="category-tab">Cancer</div>
+                <div class="category-tab">Pregnancy</div>
+                <div class="category-tab">Menopause</div>
+                <div class="category-tab">Fertility</div>
+            </div>
+
+            <!-- Featured Research -->
+            <div class="featured-research">
+                <span class="featured-badge-white">⭐ Breakthrough Study</span>
+                <h3 class="research-title">Revolutionary AI Model Detects Ovarian Cancer 2 Years Earlier Than Current Methods</h3>
+                <p class="research-authors">Chen L., Rodriguez A., Singh K., et al.</p>
+                <p class="research-journal">Nature Medicine • December 2024</p>
+                <p class="research-abstract">A groundbreaking machine learning algorithm analyzes blood biomarkers to detect ovarian cancer up to 24 months before conventional diagnostic methods, potentially saving thousands of lives annually...</p>
+                <button class="read-full-btn">Read Full Study →</button>
+            </div>
+
+            <!-- Research Category: PCOS & Hormonal Health -->
+            <div class="section-header">
+                <span class="section-icon">🔬</span>
+                <h3 class="section-title">PCOS & Hormonal Health</h3>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">NEW</span>
+                <h4 class="research-title">Impact of Mediterranean Diet on PCOS Outcomes: A Randomized Controlled Trial</h4>
+                <p class="research-authors">Johnson M., Williams E., Brown S., Anderson K.</p>
+                <p class="research-journal">Journal of Women's Health • December 2024</p>
+                <p class="research-abstract">This 12-month study of 250 women with PCOS found that adherence to a Mediterranean diet resulted in significant improvements in insulin resistance (42%), menstrual regularity (67%), and hormone levels compared to standard dietary recommendations.</p>
+                <div class="research-tags">
+                    <span class="tag tag-pink">PCOS</span>
+                    <span class="tag tag-green">Nutrition</span>
+                    <span class="tag tag-blue">Clinical Trial</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 4.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">PEER-REVIEWED</span>
+                <h4 class="research-title">Novel Biomarkers for Early Endometriosis Detection Using Salivary Testing</h4>
+                <p class="research-authors">Kumar R., Patel S., Lee M., Thompson A.</p>
+                <p class="research-journal">The Lancet • November 2024</p>
+                <p class="research-abstract">Researchers identified three specific protein markers in saliva that can detect endometriosis with 89% accuracy, offering a non-invasive alternative to laparoscopic surgery for diagnosis. This breakthrough could reduce the average 7-year diagnostic delay.</p>
+                <div class="research-tags">
+                    <span class="tag tag-purple">Endometriosis</span>
+                    <span class="tag tag-blue">Diagnostics</span>
+                    <span class="tag tag-green">Biomarkers</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 59.1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Category: Cancer Research -->
+            <div class="section-header">
+                <span class="section-icon">🩺</span>
+                <h3 class="section-title">Cancer Research</h3>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">BREAKTHROUGH</span>
+                <h4 class="research-title">Immunotherapy Combination Increases Ovarian Cancer Survival by 40%</h4>
+                <p class="research-authors">Zhang Y., O'Connor M., Davis K., Rodriguez J.</p>
+                <p class="research-journal">New England Journal of Medicine • December 2024</p>
+                <p class="research-abstract">A phase III clinical trial demonstrated that combining two immunotherapy drugs (pembrolizumab and niraparib) with chemotherapy significantly improved overall survival rates in advanced ovarian cancer patients compared to chemotherapy alone.</p>
+                <div class="research-tags">
+                    <span class="tag tag-pink">Ovarian Cancer</span>
+                    <span class="tag tag-orange">Immunotherapy</span>
+                    <span class="tag tag-blue">Clinical Trial</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 91.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">META-ANALYSIS</span>
+                <h4 class="research-title">Breast Cancer Screening: Optimal Age and Frequency Guidelines Updated</h4>
+                <p class="research-authors">Martinez C., Wilson R., Taylor H., et al.</p>
+                <p class="research-journal">JAMA Oncology • November 2024</p>
+                <p class="research-abstract">Comprehensive analysis of 85 studies involving 2.3 million women suggests starting annual mammography at age 40 (rather than 50) reduces mortality by 25% in average-risk women, with benefits outweighing potential harms.</p>
+                <div class="research-tags">
+                    <span class="tag tag-pink">Breast Cancer</span>
+                    <span class="tag tag-green">Screening</span>
+                    <span class="tag tag-blue">Prevention</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 24.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Category: Maternal Health -->
+            <div class="section-header">
+                <span class="section-icon">🤰</span>
+                <h3 class="section-title">Maternal & Pregnancy Health</h3>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">AI-POWERED</span>
+                <h4 class="research-title">Postpartum Depression: AI-Assisted Screening Models Achieve 92% Accuracy</h4>
+                <p class="research-authors">Williams R., Thompson S., Lee K., Anderson P.</p>
+                <p class="research-journal">JAMA Psychiatry • December 2024</p>
+                <p class="research-abstract">Machine learning algorithm analyzing speech patterns, social media activity, and wearable device data can predict postpartum depression risk with 92% accuracy, enabling early intervention and support for at-risk mothers.</p>
+                <div class="research-tags">
+                    <span class="tag tag-purple">Mental Health</span>
+                    <span class="tag tag-blue">AI Technology</span>
+                    <span class="tag tag-pink">Postpartum</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 17.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">LONGITUDINAL</span>
+                <h4 class="research-title">Preeclampsia Risk Reduced 60% with Low-Dose Aspirin in High-Risk Pregnancies</h4>
+                <p class="research-authors">Garcia M., Cohen S., Patel N., et al.</p>
+                <p class="research-journal">Obstetrics & Gynecology • November 2024</p>
+                <p class="research-abstract">10-year study of 15,000 high-risk pregnancies confirms that daily low-dose aspirin (150mg) started before 16 weeks gestation significantly reduces preeclampsia risk with minimal adverse effects, potentially preventing thousands of maternal deaths annually.</p>
+                <div class="research-tags">
+                    <span class="tag tag-orange">Preeclampsia</span>
+                    <span class="tag tag-green">Prevention</span>
+                    <span class="tag tag-blue">High-Risk</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 6.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Category: Menopause -->
+            <div class="section-header">
+                <span class="section-icon">🌸</span>
+                <h3 class="section-title">Menopause & Aging</h3>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">NEW</span>
+                <h4 class="research-title">Exercise Interventions for Menopausal Bone Health: Resistance Training Superior to Aerobic</h4>
+                <p class="research-authors">Davis K., Morrison T., White L., et al.</p>
+                <p class="research-journal">The Lancet • November 2024</p>
+                <p class="research-abstract">Randomized trial of 500 postmenopausal women found that progressive resistance training increased bone mineral density by 3.2% over 18 months, significantly outperforming aerobic exercise (0.8% increase) in preventing osteoporosis.</p>
+                <div class="research-tags">
+                    <span class="tag tag-green">Bone Health</span>
+                    <span class="tag tag-blue">Exercise</span>
+                    <span class="tag tag-purple">Menopause</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 59.1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">REVIEW</span>
+                <h4 class="research-title">Hormone Replacement Therapy: Updated Safety Profile and Personalized Treatment Approaches</h4>
+                <p class="research-authors">Bennett J., Clarke R., Sullivan K., et al.</p>
+                <p class="research-journal">Menopause Journal • December 2024</p>
+                <p class="research-abstract">Comprehensive review of 20 years of data suggests individualized HRT strategies, accounting for genetic factors and health history, can safely alleviate menopausal symptoms while minimizing cardiovascular and cancer risks in most women under 60.</p>
+                <div class="research-tags">
+                    <span class="tag tag-purple">Menopause</span>
+                    <span class="tag tag-orange">HRT</span>
+                    <span class="tag tag-green">Personalized Medicine</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 5.3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Category: Fertility -->
+            <div class="section-header">
+                <span class="section-icon">🧬</span>
+                <h3 class="section-title">Fertility & Reproductive Health</h3>
+            </div>
+
+            <div class="research-card">
+                <span class="research-badge">CLINICAL TRIAL</span>
+                <h4 class="research-title">Novel IVF Protocol Increases Live Birth Rate by 35% in Women Over 40</h4>
+                <p class="research-authors">Liu X., Yamamoto K., Schmidt A., et al.</p>
+                <p class="research-journal">Fertility and Sterility • December 2024</p>
+                <p class="research-abstract">Modified embryo selection protocol using time-lapse imaging and AI analysis significantly improved live birth rates in older women undergoing IVF (from 21% to 28% per cycle), offering new hope for age-related infertility.</p>
+                <div class="research-tags">
+                    <span class="tag tag-blue">IVF</span>
+                    <span class="tag tag-purple">Fertility</span>
+                    <span class="tag tag-orange">AI Technology</span>
+                </div>
+                <div class="research-footer">
+                    <button class="read-full-btn">Read Full Article</button>
+                    <div class="research-stats">
+                        <span>📊 Impact Factor: 6.6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-home-btn" onclick="window.location.href='landing.html'">
+                <span>🏠</span>
+                <span>Back to Home</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
