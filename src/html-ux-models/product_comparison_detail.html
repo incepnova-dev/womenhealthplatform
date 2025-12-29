@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Control Pills Comparison - Nari Swasthya Samuday</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #E91E63 0%, #F48FB1 50%, #FCE4EC 100%);
+            font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+            padding: 40px 20px;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 
+                0 0 0 14px #222,
+                0 40px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 28px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .phone-screen::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .phone-screen::-webkit-scrollbar-thumb {
+            background: rgba(233, 30, 99, 0.3);
+            border-radius: 2px;
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px 8px;
+            font-size: 13px;
+            color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 102;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .screen-header {
+            background: linear-gradient(135deg, #C2185B 0%, #E91E63 100%);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(233, 30, 99, 0.3);
+            position: sticky;
+            top: 44px;
+            z-index: 101;
+            position: relative;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .header-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+        
+        .header-subtitle {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .content-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 0 20px 0;
+            background: #FCE4EC;
+        }
+        
+        .retailers-container {
+            padding: 0 20px;
+        }
+        
+        .product-header {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .product-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #E91E63;
+            margin-bottom: 8px;
+        }
+        
+        .product-price-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .product-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: #E3F2FD;
+            color: #1976D2;
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 15px 20px 15px;
+            background: transparent;
+        }
+        
+        .retailer-card {
+            background: white;
+            margin: 0 0 15px 0;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .retailer-card.best-price {
+            border: 2px solid #4CAF50;
+            margin: 0 0 15px 0;
+            box-shadow: 0 6px 16px rgba(76, 175, 80, 0.25);
+        }
+        
+        .retailer-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .best-price-badge {
+            position: absolute;
+            top: -1px;
+            left: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .retailer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+        
+        .retailer-icon {
+            width: 45px;
+            height: 45px;
+            background: #F5F5F5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .retailer-info {
+            flex: 1;
+        }
+        
+        .retailer-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .retailer-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .star {
+            color: #FFB300;
+        }
+        
+        .delivery-time {
+            font-size: 11px;
+            color: #4CAF50;
+            margin-top: 2px;
+        }
+        
+        .retailer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+        
+        .price-range {
+            font-size: 18px;
+            font-weight: 700;
+            color: #E91E63;
+        }
+        
+        .view-button {
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .view-button:hover {
+            background: linear-gradient(135deg, #C2185B, #AD1457);
+        }
+        
+        .bottom-nav {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+            flex-shrink: 0;
+            z-index: 100;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: #999;
+            font-size: 11px;
+            cursor: pointer;
+        }
+        
+        .nav-item.active {
+            color: #C2185B;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>📶 📡 🔋</span>
+            </div>
+            
+            <div class="screen-header">
+                <div class="back-button">←</div>
+                <div class="header-title">Birth Control Pills (Oral Contraceptive - 21 tablets)</div>
+                <div class="header-subtitle">Compare prices from 4 retailers</div>
+            </div>
+            
+            <div class="content-area">
+                <div class="product-header">
+                    <div class="product-title">Birth Control Pills (Oral Contraceptive - 21 tablets)</div>
+                    <div class="product-price-badge">From ₹145</div>
+                    <div class="product-subtitle">Combined oral contraceptive - Monthly supply</div>
+                    <div class="category-badge">Contraceptives</div>
+                </div>
+                
+                <div class="section-title">Available at (4 Retailers)</div>
+                
+                <div class="retailers-container">
+                <div class="retailer-card">
+                    <div class="retailer-left">
+                        <div class="retailer-icon">📦</div>
+                        <div class="retailer-info">
+                            <div class="retailer-name">Amazon</div>
+                            <div class="retailer-rating">
+                                <span class="star">⭐</span>
+                                <span>4.3</span>
+                                <span style="margin-left: 5px; color: #999;">2-3 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retailer-right">
+                        <div class="price-range">₹150-350</div>
+                        <button class="view-button">View 🔗</button>
+                    </div>
+                </div>
+                
+                <div class="retailer-card">
+                    <div class="retailer-left">
+                        <div class="retailer-icon">🛒</div>
+                        <div class="retailer-info">
+                            <div class="retailer-name">Flipkart</div>
+                            <div class="retailer-rating">
+                                <span class="star">⭐</span>
+                                <span>4.2</span>
+                                <span style="margin-left: 5px; color: #999;">2-4 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retailer-right">
+                        <div class="price-range">₹180-380</div>
+                        <button class="view-button">View 🔗</button>
+                    </div>
+                </div>
+                
+                <div class="retailer-card best-price">
+                    <div class="best-price-badge">BEST PRICE</div>
+                    <div class="retailer-left">
+                        <div class="retailer-icon">1️⃣</div>
+                        <div class="retailer-info">
+                            <div class="retailer-name">1mg</div>
+                            <div class="retailer-rating">
+                                <span class="star">⭐</span>
+                                <span>4.6</span>
+                                <span style="margin-left: 5px; color: #999;">1-2 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retailer-right">
+                        <div class="price-range">₹145-320</div>
+                        <button class="view-button">View 🔗</button>
+                    </div>
+                </div>
+                
+                <div class="retailer-card">
+                    <div class="retailer-left">
+                        <div class="retailer-icon">💊</div>
+                        <div class="retailer-info">
+                            <div class="retailer-name">PharmEasy</div>
+                            <div class="retailer-rating">
+                                <span class="star">⭐</span>
+                                <span>4.4</span>
+                                <span style="margin-left: 5px; color: #999;">1-2 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retailer-right">
+                        <div class="price-range">₹155-340</div>
+                        <button class="view-button">View 🔗</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <div class="nav-item">
+                    <div class="nav-icon">🏠</div>
+                    <div>Home</div>
+                </div>
+                <div class="nav-item active">
+                    <div class="nav-icon">🔍</div>
+                    <div>Products</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">👥</div>
+                    <div>Community</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">👤</div>
+                    <div>Profile</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
