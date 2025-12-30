@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habits - Step 5 of 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #FFB3C6;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 506px;
+            margin: 0 auto;
+            background: #FFB3C6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #FF4081;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .step-indicator {
+            background: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .content-section {
+            background: white;
+            margin: 20px;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .radio-option:hover {
+            background: #FFF0F5;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #FF4081;
+        }
+
+        .radio-label {
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .slider-container {
+            padding: 15px 10px;
+        }
+
+        .slider-label {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #FFE5F0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #FF4081;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #FF4081;
+            cursor: pointer;
+            border: none;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #FF4081;
+        }
+
+        .checkbox-label {
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .expandable-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #FFF8FB;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .expandable-item:hover {
+            background: #FFE5F0;
+        }
+
+        .expandable-text {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .arrow-icon {
+            color: #999;
+            font-size: 18px;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 18px;
+            background: #FF4081;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s;
+        }
+
+        .continue-btn:hover {
+            background: #E91E63;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,64,129,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="header">Daily Habits</div>
+        
+        <div class="step-indicator">⚫ 5 of 6</div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Daily Habits</h2>
+            
+            <div class="form-group">
+                <label class="form-label">Activity Level</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="activity" value="sedentary">
+                        <span class="radio-label">○ Sedentary</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="activity" value="lightly" checked>
+                        <span class="radio-label">● Lightly Active</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="activity" value="moderately">
+                        <span class="radio-label">○ Moderately Active</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="activity" value="very">
+                        <span class="radio-label">○ Very Active</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Sleep Goal</label>
+                <div class="slider-container">
+                    <div class="slider-label">7-9 hours</div>
+                    <input type="range" min="4" max="12" value="8" class="slider">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Notification Types</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-option">
+                        <input type="checkbox" checked>
+                        <span class="checkbox-label">[✓] Period Reminders</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" checked>
+                        <span class="checkbox-label">[✓] Health Tips</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" checked>
+                        <span class="checkbox-label">[✓] Medication</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" checked>
+                        <span class="checkbox-label">[✓] Water Reminders</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox">
+                        <span class="checkbox-label">[ ] Daily Check-ins</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Privacy Settings</label>
+                <div class="expandable-item">
+                    <span class="expandable-text">[>] Data Sharing Preferences</span>
+                    <span class="arrow-icon">›</span>
+                </div>
+            </div>
+            
+            <button class="continue-btn">[Continue]</button>
+        </div>
+    </div>
+</body>
+</html>

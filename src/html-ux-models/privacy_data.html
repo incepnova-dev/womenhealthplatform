@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Data</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #FFB3C6;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 506px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #FF4081;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+        }
+
+        .back-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .content-section {
+            padding: 25px 20px;
+        }
+
+        .section-group {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .setting-card {
+            background: #FFF8FB;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #FFE5F0;
+        }
+
+        .setting-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .setting-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .toggle-switch {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .toggle-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .toggle-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #FF4081;
+        }
+
+        .toggle-label {
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .setting-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .action-buttons {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 18px;
+            background: white;
+            color: #FF4081;
+            border: 2px solid #FF4081;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+
+        .action-btn:hover {
+            background: #FFF0F5;
+        }
+
+        .action-btn.danger {
+            color: #f44336;
+            border-color: #f44336;
+        }
+
+        .action-btn.danger:hover {
+            background: #ffebee;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="header">
+            <button class="back-btn">◀</button>
+            <h1 class="header-title">Privacy & Data</h1>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-group">
+                <h2 class="section-title">Data Collection</h2>
+                
+                <div class="setting-card">
+                    <div class="setting-header">
+                        <span class="setting-name">Usage Analytics</span>
+                        <div class="toggle-switch">
+                            <label class="toggle-option">
+                                <input type="radio" name="analytics" value="on" checked>
+                                <span class="toggle-label">● On</span>
+                            </label>
+                            <label class="toggle-option">
+                                <input type="radio" name="analytics" value="off">
+                                <span class="toggle-label">○ Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="setting-description">Helps improve app</p>
+                </div>
+            </div>
+            
+            <div class="section-group">
+                <h2 class="section-title">Data Usage</h2>
+                
+                <div class="setting-card">
+                    <div class="setting-header">
+                        <span class="setting-name">Personalized Content</span>
+                        <div class="toggle-switch">
+                            <label class="toggle-option">
+                                <input type="radio" name="content" value="on" checked>
+                                <span class="toggle-label">● On</span>
+                            </label>
+                            <label class="toggle-option">
+                                <input type="radio" name="content" value="off">
+                                <span class="toggle-label">○ Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="setting-description">Uses your profile for suggestions</p>
+                </div>
+            </div>
+            
+            <div class="section-group">
+                <h2 class="section-title">Emergency Access</h2>
+                
+                <div class="setting-card">
+                    <div class="setting-header">
+                        <span class="setting-name">Medical ID</span>
+                        <div class="toggle-switch">
+                            <label class="toggle-option">
+                                <input type="radio" name="medical-id" value="on">
+                                <span class="toggle-label">○ On</span>
+                            </label>
+                            <label class="toggle-option">
+                                <input type="radio" name="medical-id" value="off" checked>
+                                <span class="toggle-label">● Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="setting-description">Show key info on locked screen</p>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn">[Export All Data]</button>
+                <button class="action-btn danger">[Delete Account]</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
