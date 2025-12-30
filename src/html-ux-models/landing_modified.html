@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Hub - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 506px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Status Bar */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+            background: #fff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status-right {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* Top Menu */
+        .top-menu {
+            background: #FF4081;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-logo {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .about-btn {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .about-btn:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        /* Header Section */
+        .header-section {
+            background: linear-gradient(135deg, #FF4081 0%, #FF6B9D 100%);
+            padding: 30px 20px 25px;
+            border-radius: 0 0 30px 30px;
+            color: white;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .user-name {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            background: white;
+            border-radius: 25px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            color: #999;
+        }
+
+        /* Icon Grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .icon-item {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 20px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .icon-item:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .icon-emoji {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .icon-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 25px 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .see-all-btn {
+            color: #FF4081;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Chatbot Banner */
+        .chatbot-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 25px;
+            color: white;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .chatbot-banner:hover {
+            transform: scale(1.02);
+        }
+
+        .chatbot-banner::before {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            font-size: 120px;
+            opacity: 0.1;
+        }
+
+        .chatbot-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .chatbot-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .chat-now-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Enhanced Story Cards */
+        .story-card {
+            background: linear-gradient(135deg, #FFE5EE 0%, #FFD5E5 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .story-card.pregnancy {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        }
+
+        .story-card.reproductive {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+        }
+
+        .story-card.perimenopause {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+        }
+
+        .story-card.menopause {
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+        }
+
+        .story-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .story-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .story-subtitle {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .story-description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* Health Conditions Section */
+        .health-conditions-section {
+            margin-bottom: 30px;
+        }
+
+        .condition-card {
+            background: #FFF8FB;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .condition-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .condition-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .condition-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .condition-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .condition-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .condition-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tag-pink {
+            background: #FFE5F0;
+            color: #FF4081;
+        }
+
+        .tag-green {
+            background: #E8F5E9;
+            color: #4CAF50;
+        }
+
+        .tag-orange {
+            background: #FFF3E0;
+            color: #FF9800;
+        }
+
+        /* Library Topics */
+        .library-topics {
+            background: #FFF8FB;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .library-header {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .topic-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topic-chip {
+            background: white;
+            color: #FF4081;
+            border: 2px solid #FF4081;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .topic-chip:hover {
+            background: #FF4081;
+            color: white;
+        }
+
+        /* Research Articles */
+        .research-section {
+            margin-bottom: 30px;
+        }
+
+        .research-card {
+            background: white;
+            border-left: 4px solid #FF4081;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transform: translateX(4px);
+        }
+
+        .research-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .research-authors {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .research-journal {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-bottom: 30px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: #FFE5F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            position: relative;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 64, 129, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .video-content {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .video-channel {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .video-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            background: #FFF8FB;
+            border-radius: 20px;
+            padding: 20px 15px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #FF4081;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .product-image {
+            text-align: center;
+            font-size: 60px;
+            margin: 20px 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-brand {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .product-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FF4081;
+            margin-bottom: 5px;
+        }
+
+        .product-original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 12px;
+        }
+
+        .vendor-info {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .vendor-icon {
+            font-size: 14px;
+        }
+
+        /* Insurance Section */
+        .insurance-section {
+            margin-bottom: 30px;
+        }
+
+        .insurance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .insurance-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .insurance-icon {
+            width: 60px;
+            height: 60px;
+            background: #FFE5F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .insurance-title-section {
+            flex: 1;
+        }
+
+        .insurance-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .insurance-provider {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .insurance-features {
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .feature-check {
+            color: #4CAF50;
+            font-size: 18px;
+        }
+
+        .insurance-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .insurance-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #FF4081;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .view-details-btn {
+            background: white;
+            color: #FF4081;
+            border: 2px solid #FF4081;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .view-details-btn:hover {
+            background: #FF4081;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 506px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 25px;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #FF4081;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-link {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #FF4081;
+        }
+
+        .footer-info {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #ecf0f1;
+        }
+
+        .footer-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .footer-icon {
+            font-size: 16px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 12px;
+            color: #95a5a6;
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #FF4081;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255,64,129,0.4);
+            font-size: 24px;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span>11:30 AM</span>
+            <div class="status-right">
+                <span>📶</span>
+                <span>📡</span>
+                <span>100%</span>
+            </div>
+        </div>
+
+        <!-- Top Menu -->
+        <div class="top-menu">
+            <div class="menu-logo">Women's Health Hub 💗</div>
+            <button class="about-btn" onclick="window.location.href='womens_health_about.html'">About Us</button>
+        </div>
+
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="welcome-text">Welcome back,</div>
+            <div class="user-name">Priya 👋</div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search products, conditions, doctor">
+            </div>
+
+            <!-- Icon Grid -->
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <div class="icon-emoji">💊</div>
+                    <div class="icon-label">Healthcare Products</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-emoji">🏥</div>
+                    <div class="icon-label">Hospitals</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-emoji">👩‍⚕️</div>
+                    <div class="icon-label">Doctors</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-emoji">💉</div>
+                    <div class="icon-label">Vaccine Schedules</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- AI Chatbot Banner -->
+            <div class="chatbot-banner">
+                <div class="chatbot-title">Meet Your AI Health Assistant 🤖</div>
+                <div class="chatbot-subtitle">Get instant answers to your women's health questions, 24/7</div>
+                <button class="chat-now-btn">Chat Now</button>
+            </div>
+
+            <!-- Women's Health Stories - Enhanced with Age Groups -->
+            <div class="section-header">
+                <h2 class="section-title">Women's Health Stories</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="story-card pregnancy">
+                <div class="story-icon">🤰</div>
+                <h3 class="story-title">Pregnancy Journey</h3>
+                <p class="story-subtitle">Nurturing new life, embracing transformation</p>
+                <p class="story-description">"Every kick, every flutter reminds me of the miracle within. Pregnancy isn't just about growing a baby—it's about discovering strength you never knew you had. From morning sickness to that first heartbeat, every moment is precious. You're not just expecting a baby; you're becoming a superhero."</p>
+            </div>
+
+            <div class="story-card reproductive">
+                <div class="story-icon">🌸</div>
+                <h3 class="story-title">Reproductive Health</h3>
+                <p class="story-subtitle">Understanding your body, owning your choices</p>
+                <p class="story-description">"Your reproductive health is your power. Whether managing PCOS, planning a family, or simply understanding your cycle better—knowledge is empowerment. Regular checkups, honest conversations with your doctor, and listening to your body are acts of self-love. You deserve care, understanding, and respect."</p>
+            </div>
+
+            <div class="story-card perimenopause">
+                <div class="story-icon">🌅</div>
+                <h3 class="story-title">Perimenopause Transition</h3>
+                <p class="story-subtitle">The bridge to a new chapter of vitality</p>
+                <p class="story-description">"Hot flashes? Mood swings? Welcome to the transition that no one talks about enough! Perimenopause is your body's way of preparing for wisdom years. It's not an ending—it's a transformation. Stay active, eat well, seek support, and remember: this phase brings clarity, confidence, and freedom you've been working toward your whole life."</p>
+            </div>
+
+            <div class="story-card menopause">
+                <div class="story-icon">🦋</div>
+                <h3 class="story-title">Menopause & Beyond</h3>
+                <p class="story-subtitle">Celebrating wisdom, strength, and new beginnings</p>
+                <p class="story-description">"Menopause is your body's way of saying: 'You've done enough caregiving for others—now it's YOUR time!' No more periods, no pregnancy worries, just pure freedom to focus on YOU. This is when many women start businesses, travel the world, or finally pursue that dream. Bone health, heart health, and mental wellness become priorities. You're not aging—you're ascending!"</p>
+            </div>
+
+            <!-- Latest Research Articles - NEW SECTION -->
+            <div class="section-header">
+                <h2 class="section-title">Latest Research 📚</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="research-section">
+                <div class="research-card" onclick="window.open('https://jamanetwork.com/collections/42139/womens-health', '_blank')">
+                    <h4 class="research-title">Advances in Management of Obesity, Menopause, and Osteoporosis</h4>
+                    <p class="research-authors">JAMA Network Research Team</p>
+                    <p class="research-journal">JAMA Women's Health • 2025</p>
+                </div>
+
+                <div class="research-card" onclick="window.open('https://www.healthaffairs.org/doi/10.1377/hlthaff.2024.01004', '_blank')">
+                    <h4 class="research-title">New Directions For Women's Health: Expanding Understanding and Research</h4>
+                    <p class="research-authors">Health Affairs Research Initiative</p>
+                    <p class="research-journal">Health Affairs • January 2025</p>
+                </div>
+
+                <div class="research-card" onclick="window.open('https://asm.org/articles/2025/may/closing-the-women-s-health-gap', '_blank')">
+                    <h4 class="research-title">Closing the Women's Health Gap: Diagnostic Delays and Tailored Treatments</h4>
+                    <p class="research-authors">American Society for Microbiology</p>
+                    <p class="research-journal">ASM Research • May 2025</p>
+                </div>
+
+                <div class="research-card" onclick="window.open('https://www.nationalacademies.org/projects/HMD-BPH-23-04/publication/28586', '_blank')">
+                    <h4 class="research-title">A New Vision for Women's Health Research Across NIH</h4>
+                    <p class="research-authors">National Academies of Sciences</p>
+                    <p class="research-journal">National Academies Press • December 2024</p>
+                </div>
+
+                <div class="research-card">
+                    <h4 class="research-title">Single-Dose HPV Vaccine: Breakthrough in Cervical Cancer Prevention</h4>
+                    <p class="research-authors">Gates Foundation Research</p>
+                    <p class="research-journal">Women's Health Technology • 2024</p>
+                </div>
+            </div>
+
+            <!-- Expert Gynecologist Videos - NEW SECTION -->
+            <div class="section-header">
+                <h2 class="section-title">Expert Advice from Gynecologists 🎥</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="video-section">
+                <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=7KX2x0d42EE', '_blank')">
+                    <div class="video-thumbnail">
+                        <img src="https://i.ytimg.com/vi/7KX2x0d42EE/hq720.jpg" alt="Women's Health Science">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">The Science of Women's Health: Ob/Gyn Reveals 10 Truths You Need to Know</h3>
+                        <p class="video-channel">Mel Robbins • Expert Interview</p>
+                        <div class="video-stats">
+                            <span>👁️ 210K views</span>
+                            <span>⏱️ 1:07:13</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=EkqVrsrIgAI', '_blank')">
+                    <div class="video-thumbnail">
+                        <img src="https://i.ytimg.com/vi/EkqVrsrIgAI/hq720.jpg" alt="Getting Pregnant Tips">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">5 Things Your Gynecologist Wants You To Know: Getting Pregnant</h3>
+                        <p class="video-channel">Mama Doctor Jones • Board Certified ObGyn</p>
+                        <div class="video-stats">
+                            <span>👁️ 1.2M views</span>
+                            <span>⏱️ 10:29</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Healthcare Products -->
+            <div class="section-header">
+                <h2 class="section-title">Healthcare Products 💊</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="discount-badge">30% OFF</div>
+                    <div class="product-image">💊</div>
+                    <div class="product-name">Prenatal Vitamins</div>
+                    <div class="product-brand">HealthPlus</div>
+                    <div class="product-price">₹349 <span class="product-original-price">₹499</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Amazon</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>1mg</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">25% OFF</div>
+                    <div class="product-image">💊</div>
+                    <div class="product-name">Menstrual Pain Relief</div>
+                    <div class="product-brand">WellnessRx</div>
+                    <div class="product-price">₹225 <span class="product-original-price">₹300</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Flipkart</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>Netmeds</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">40% OFF</div>
+                    <div class="product-image">🧘‍♀️</div>
+                    <div class="product-name">Yoga Mat Premium</div>
+                    <div class="product-brand">FitLife</div>
+                    <div class="product-price">₹599 <span class="product-original-price">₹999</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Amazon</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">👗</span>
+                        <span>Myntra</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">35% OFF</div>
+                    <div class="product-image">💊</div>
+                    <div class="product-name">Iron Supplements</div>
+                    <div class="product-brand">NutriCare</div>
+                    <div class="product-price">₹299 <span class="product-original-price">₹459</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>1mg</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>PharmEasy</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">20% OFF</div>
+                    <div class="product-image">🌡️</div>
+                    <div class="product-name">Digital Thermometer</div>
+                    <div class="product-brand">MediTech</div>
+                    <div class="product-price">₹399 <span class="product-original-price">₹499</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🛒</span>
+                        <span>Amazon</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>1mg</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="discount-badge">45% OFF</div>
+                    <div class="product-image">🩸</div>
+                    <div class="product-name">Calcium + Vitamin D</div>
+                    <div class="product-brand">BoneStrong</div>
+                    <div class="product-price">₹349 <span class="product-original-price">₹635</span></div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>Netmeds</span>
+                    </div>
+                    <div class="vendor-info">
+                        <span class="vendor-icon">🏥</span>
+                        <span>PharmEasy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insurance Plans -->
+            <div class="section-header">
+                <h2 class="section-title">Insurance Plans 🛡️</h2>
+                <a href="#" class="see-all-btn">See All →</a>
+            </div>
+
+            <div class="insurance-section">
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-icon">🏥</div>
+                        <div class="insurance-title-section">
+                            <h3 class="insurance-name">Women's Health Shield</h3>
+                            <p class="insurance-provider">Star Health Insurance</p>
+                        </div>
+                    </div>
+                    <div class="insurance-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Maternity coverage up to ₹2L</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Cancer treatment covered</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Annual health checkup included</span>
+                        </div>
+                    </div>
+                    <div class="insurance-footer">
+                        <div>
+                            <div class="insurance-price">₹8,999</div>
+                            <div class="price-period">per year</div>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-icon">🤰</div>
+                        <div class="insurance-title-section">
+                            <h3 class="insurance-name">Maternity Care Plus</h3>
+                            <p class="insurance-provider">ICICI Lombard</p>
+                        </div>
+                    </div>
+                    <div class="insurance-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Pre & post natal coverage</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Newborn baby cover (90 days)</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Ambulance charges covered</span>
+                        </div>
+                    </div>
+                    <div class="insurance-footer">
+                        <div>
+                            <div class="insurance-price">₹12,499</div>
+                            <div class="price-period">per year</div>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-icon">🩺</div>
+                        <div class="insurance-title-section">
+                            <h3 class="insurance-name">Complete Women's Wellness</h3>
+                            <p class="insurance-provider">Max Bupa Health Insurance</p>
+                        </div>
+                    </div>
+                    <div class="insurance-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>PCOS & Thyroid treatment covered</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Fertility consultations included</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Mental health support covered</span>
+                        </div>
+                    </div>
+                    <div class="insurance-footer">
+                        <div>
+                            <div class="insurance-price">₹10,999</div>
+                            <div class="price-period">per year</div>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Conditions Guide -->
+            <div class="section-header">
+                <h2 class="section-title">Health Conditions Guide</h2>
+                <a href="#" class="see-all-btn">View All 20 →</a>
+            </div>
+
+            <div class="health-conditions-section">
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <div class="condition-icon">🩺</div>
+                        <h3 class="condition-name">Polycystic Ovary Syndrome (PCOS)</h3>
+                    </div>
+                    <p class="condition-description">Hormonal disorder causing enlarged ovaries with small cysts. Affects 1 in 10 women of childbearing age.</p>
+                    <div class="condition-tags">
+                        <span class="tag tag-pink">Irregular periods</span>
+                        <span class="tag tag-green">Lifestyle changes</span>
+                        <span class="tag tag-orange">Hormonal imbalance</span>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <div class="condition-icon">🎗️</div>
+                        <h3 class="condition-name">Breast Cancer</h3>
+                    </div>
+                    <p class="condition-description">Cancer that forms in breast cells. Early detection through regular screening significantly improves outcomes.</p>
+                    <div class="condition-tags">
+                        <span class="tag tag-pink">Breast lump</span>
+                        <span class="tag tag-green">Regular screening</span>
+                        <span class="tag tag-orange">Genetic factors</span>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <div class="condition-icon">💢</div>
+                        <h3 class="condition-name">Endometriosis</h3>
+                    </div>
+                    <p class="condition-description">Tissue similar to uterine lining grows outside the uterus, causing pain and fertility issues.</p>
+                    <div class="condition-tags">
+                        <span class="tag tag-pink">Pelvic pain</span>
+                        <span class="tag tag-green">Early diagnosis</span>
+                        <span class="tag tag-orange">Unknown origin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Seva Health Network</h3>
+                    <div class="footer-info">
+                        <div class="footer-info-item">
+                            <span class="footer-icon">🕐</span>
+                            <span>Working Hours: Mon-Sat, 9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="footer-info-item">
+                            <span class="footer-icon">✉️</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f1c10110b1e1c0b3f0c1a091e171a1e130b17111a0b08100d14511c1012">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="footer-info-item">
+                            <span class="footer-icon">📞</span>
+                            <span>+91 1800-XXX-XXXX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Product Overview</a>
+                        <a href="#" class="footer-link">Partner with Us</a>
+                        <a href="#" class="footer-link">Privacy & Data Security</a>
+                        <a href="#" class="footer-link">Compliant with Ayushman Bharat Privacy</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Seva Health Network. All rights reserved.</p>
+                    <p style="margin-top: 8px;">Committed to your health and privacy 💗</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top -->
+        <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Show scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        // Add smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
